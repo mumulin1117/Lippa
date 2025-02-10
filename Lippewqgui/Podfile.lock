@@ -1,0 +1,38 @@
+PODS:
+  - Cosmos (25.0.1)
+  - IQKeyboardManager (6.5.19)
+  - SnapKit (5.7.1)
+  - SSCustomTabbar (2.0.7)
+  - SwiftMessages (10.0.1):
+    - SwiftMessages/App (= 10.0.1)
+  - SwiftMessages/App (10.0.1)
+  - SwiftyStoreKit (0.16.1)
+
+DEPENDENCIES:
+  - Cosmos
+  - IQKeyboardManager
+  - SnapKit
+  - SSCustomTabbar
+  - SwiftMessages
+  - SwiftyStoreKit
+
+SPEC REPOS:
+  trunk:
+    - Cosmos
+    - IQKeyboardManager
+    - SnapKit
+    - SSCustomTabbar
+    - SwiftMessages
+    - SwiftyStoreKit
+
+SPEC CHECKSUMS:
+  Cosmos: 02db0a1c953107049bfd2d7af19ceef55ecb7e98
+  IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+  SSCustomTabbar: da05060b9916312a3b9af6b7640d6a298a335dfe
+  SwiftMessages: 759b4a0bf5c3a116a0d7e8a34b098ba83c458625
+  SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
+
+PODFILE CHECKSUM: 8056c052e66245dad0620fb3ce1b62206df0521d
+
+COCOAPODS: 1.16.2
