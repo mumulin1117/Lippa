@@ -11,6 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LipSigggneSnmingertips" customModule="Lippewqgui" customModuleProvider="target">
             <connections>
+                <outlet property="entrtSSIPOEmail" destination="Fkd-Ya-9xi" id="tQS-ni-C9a"/>
+                <outlet property="entrtSSIPOPsw" destination="k92-nT-hVd" id="mmc-us-hmJ"/>
+                <outlet property="signSSIPin" destination="Bdn-Bx-L1i" id="Jx1-In-ilv"/>
+                <outlet property="statauseSSIP" destination="1vf-1w-Ceg" id="c9W-km-zW9"/>
                 <outlet property="view" destination="tWs-ts-eAo" id="5re-7L-N43"/>
             </connections>
         </placeholder>
@@ -31,6 +35,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="ELUA &gt;"/>
+                    <connections>
+                        <action selector="welcomnoingSSSIP:" destination="-1" eventType="touchUpInside" id="iMh-YA-Vcq"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf1-ov-5Nz">
                     <rect key="frame" x="116.66666666666669" y="210" width="160" height="39"/>
@@ -113,6 +120,12 @@
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="SIGN IN"/>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If no account, one will be auto-created for you. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sO5-PX-ndP">
+                    <rect key="frame" x="53" y="587" width="287" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="6yJ-uG-FxF"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -124,6 +137,7 @@
                 <constraint firstItem="bf1-ov-5Nz" firstAttribute="top" secondItem="hPT-dS-7nd" secondAttribute="bottom" constant="111" id="S08-Y2-UHS"/>
                 <constraint firstItem="Bdn-Bx-L1i" firstAttribute="leading" secondItem="6yJ-uG-FxF" secondAttribute="leading" constant="25" id="V9w-YX-dcm"/>
                 <constraint firstItem="vg1-Dz-blC" firstAttribute="leading" secondItem="1vf-1w-Ceg" secondAttribute="trailing" constant="10" id="VJJ-3z-VZf"/>
+                <constraint firstItem="sO5-PX-ndP" firstAttribute="centerX" secondItem="Bdn-Bx-L1i" secondAttribute="centerX" id="Voh-QN-2hP"/>
                 <constraint firstItem="1vf-1w-Ceg" firstAttribute="leading" secondItem="6yJ-uG-FxF" secondAttribute="leading" constant="16" id="YEq-54-WOZ"/>
                 <constraint firstItem="6yJ-uG-FxF" firstAttribute="trailing" secondItem="hPT-dS-7nd" secondAttribute="trailing" constant="17" id="YOZ-lJ-zbm"/>
                 <constraint firstItem="hPT-dS-7nd" firstAttribute="top" secondItem="6yJ-uG-FxF" secondAttribute="top" constant="8" id="bR9-qr-2ed"/>
@@ -135,6 +149,7 @@
                 <constraint firstItem="Bdn-Bx-L1i" firstAttribute="top" secondItem="QBx-q8-GDh" secondAttribute="bottom" constant="-29" id="pF9-1L-Vbf"/>
                 <constraint firstItem="6yJ-uG-FxF" firstAttribute="trailing" secondItem="QBx-q8-GDh" secondAttribute="trailing" constant="12" id="qaI-Pm-2iW"/>
                 <constraint firstItem="6yJ-uG-FxF" firstAttribute="trailing" secondItem="Bdn-Bx-L1i" secondAttribute="trailing" constant="25" id="qo3-XZ-Lpv"/>
+                <constraint firstItem="sO5-PX-ndP" firstAttribute="top" secondItem="Bdn-Bx-L1i" secondAttribute="bottom" constant="17" id="qyT-fo-Zp0"/>
                 <constraint firstItem="6yJ-uG-FxF" firstAttribute="trailing" secondItem="vg1-Dz-blC" secondAttribute="trailing" constant="20" id="rDz-CM-Lul"/>
                 <constraint firstItem="VCd-B5-zSa" firstAttribute="trailing" secondItem="6yJ-uG-FxF" secondAttribute="trailing" id="uns-ra-DW2"/>
             </constraints>

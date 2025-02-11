@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiSSpAIBriefrbucue" customModule="Lippewqgui" customModuleProvider="target">
             <connections>
+                <outlet property="ChokenSSIP" destination="U0Q-X8-3qb" id="JBn-Yf-7jq"/>
                 <outlet property="view" destination="2wt-JP-Pqg" id="5Tz-4c-3Tx"/>
             </connections>
         </placeholder>
@@ -46,9 +47,9 @@
                     <rect key="frame" x="0.0" y="63" width="393" height="653"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9i-TP-K6K">
-                    <rect key="frame" x="50" y="475" width="293" height="153"/>
+                    <rect key="frame" x="50" y="494.33333333333331" width="293" height="133.66666666666669"/>
                     <string key="text">Hey, collectors! Doubting your collectibles' authenticity or rarity? Found a mysterious or unique item and want its value? We're here. Snap clear pics from all angles, highlighting details. Hit upload, and let our AI and experts unveil the secrets.</string>
-                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>

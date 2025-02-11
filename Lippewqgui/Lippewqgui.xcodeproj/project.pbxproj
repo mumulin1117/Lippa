@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042D1C432D5B1F5C00854E10 /* LiSSpEditFrBucue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D1C412D5B1F5C00854E10 /* LiSSpEditFrBucue.swift */; };
+		042D1C442D5B1F5C00854E10 /* LiSSpEditFrBucue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042D1C422D5B1F5C00854E10 /* LiSSpEditFrBucue.xib */; };
+		042D1C462D5B292300854E10 /* SSIPUjgun.plist in Resources */ = {isa = PBXBuildFile; fileRef = 042D1C452D5B292300854E10 /* SSIPUjgun.plist */; };
 		04CD3FB02D59928F001D403C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD3FAA2D59928F001D403C /* AppDelegate.swift */; };
 		04CD3FB12D59928F001D403C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CD3FAB2D59928F001D403C /* Assets.xcassets */; };
 		04CD3FB32D59928F001D403C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CD3FAE2D59928F001D403C /* LaunchScreen.storyboard */; };
@@ -42,10 +45,27 @@
 		04CD3FFD2D5A03AD001D403C /* LiSSpTieZIPostfrbucue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CD3FFB2D5A03AD001D403C /* LiSSpTieZIPostfrbucue.xib */; };
 		04CD40002D5A03CD001D403C /* LiSSpSearcZIPostfrbucue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD3FFE2D5A03CD001D403C /* LiSSpSearcZIPostfrbucue.swift */; };
 		04CD40012D5A03CD001D403C /* LiSSpSearcZIPostfrbucue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CD3FFF2D5A03CD001D403C /* LiSSpSearcZIPostfrbucue.xib */; };
+		04CD40042D5AE9E0001D403C /* LiSSpPersionlistPostfrbucue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD40022D5AE9E0001D403C /* LiSSpPersionlistPostfrbucue.swift */; };
+		04CD40052D5AE9E0001D403C /* LiSSpPersionlistPostfrbucue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CD40032D5AE9E0001D403C /* LiSSpPersionlistPostfrbucue.xib */; };
+		04CD40082D5AEA19001D403C /* LiSSpChatstfrbucue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD40062D5AEA19001D403C /* LiSSpChatstfrbucue.swift */; };
+		04CD40092D5AEA19001D403C /* LiSSpChatstfrbucue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CD40072D5AEA19001D403C /* LiSSpChatstfrbucue.xib */; };
+		04CD400C2D5AEA37001D403C /* LiSSpChatVideostfrbucue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CD400B2D5AEA37001D403C /* LiSSpChatVideostfrbucue.xib */; };
+		04CD400D2D5AEA37001D403C /* LiSSpChatVideostfrbucue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD400A2D5AEA37001D403C /* LiSSpChatVideostfrbucue.swift */; };
+		04CD40102D5AF70C001D403C /* LiSSpPesoncenstfrbucue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD400E2D5AF70C001D403C /* LiSSpPesoncenstfrbucue.swift */; };
+		04CD40112D5AF70C001D403C /* LiSSpPesoncenstfrbucue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CD400F2D5AF70C001D403C /* LiSSpPesoncenstfrbucue.xib */; };
+		04D695322D5B18D8004A38E5 /* LiSSpItmeringBucue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D695302D5B18D8004A38E5 /* LiSSpItmeringBucue.swift */; };
+		04D695332D5B18D8004A38E5 /* LiSSpItmeringBucue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D695312D5B18D8004A38E5 /* LiSSpItmeringBucue.xib */; };
+		04D695362D5B1A72004A38E5 /* LiSSpWallwnetBucue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D695342D5B1A72004A38E5 /* LiSSpWallwnetBucue.swift */; };
+		04D695372D5B1A72004A38E5 /* LiSSpWallwnetBucue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D695352D5B1A72004A38E5 /* LiSSpWallwnetBucue.xib */; };
+		04D6953A2D5B1D4F004A38E5 /* LiSSpWallwnetvierell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D695382D5B1D4F004A38E5 /* LiSSpWallwnetvierell.swift */; };
+		04D6953B2D5B1D4F004A38E5 /* LiSSpWallwnetvierell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D695392D5B1D4F004A38E5 /* LiSSpWallwnetvierell.xib */; };
 		C5A91C6F2A45D122E1C52895 /* Pods_Lippewqgui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8844666650FA56509B7B4F /* Pods_Lippewqgui.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042D1C412D5B1F5C00854E10 /* LiSSpEditFrBucue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiSSpEditFrBucue.swift; sourceTree = "<group>"; };
+		042D1C422D5B1F5C00854E10 /* LiSSpEditFrBucue.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiSSpEditFrBucue.xib; sourceTree = "<group>"; };
+		042D1C452D5B292300854E10 /* SSIPUjgun.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SSIPUjgun.plist; sourceTree = "<group>"; };
 		04CD3F922D599265001D403C /* Lippewqgui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lippewqgui.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CD3FAA2D59928F001D403C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04CD3FAB2D59928F001D403C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +103,20 @@
 		04CD3FFB2D5A03AD001D403C /* LiSSpTieZIPostfrbucue.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiSSpTieZIPostfrbucue.xib; sourceTree = "<group>"; };
 		04CD3FFE2D5A03CD001D403C /* LiSSpSearcZIPostfrbucue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiSSpSearcZIPostfrbucue.swift; sourceTree = "<group>"; };
 		04CD3FFF2D5A03CD001D403C /* LiSSpSearcZIPostfrbucue.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiSSpSearcZIPostfrbucue.xib; sourceTree = "<group>"; };
+		04CD40022D5AE9E0001D403C /* LiSSpPersionlistPostfrbucue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiSSpPersionlistPostfrbucue.swift; sourceTree = "<group>"; };
+		04CD40032D5AE9E0001D403C /* LiSSpPersionlistPostfrbucue.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiSSpPersionlistPostfrbucue.xib; sourceTree = "<group>"; };
+		04CD40062D5AEA19001D403C /* LiSSpChatstfrbucue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiSSpChatstfrbucue.swift; sourceTree = "<group>"; };
+		04CD40072D5AEA19001D403C /* LiSSpChatstfrbucue.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiSSpChatstfrbucue.xib; sourceTree = "<group>"; };
+		04CD400A2D5AEA37001D403C /* LiSSpChatVideostfrbucue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiSSpChatVideostfrbucue.swift; sourceTree = "<group>"; };
+		04CD400B2D5AEA37001D403C /* LiSSpChatVideostfrbucue.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiSSpChatVideostfrbucue.xib; sourceTree = "<group>"; };
+		04CD400E2D5AF70C001D403C /* LiSSpPesoncenstfrbucue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiSSpPesoncenstfrbucue.swift; sourceTree = "<group>"; };
+		04CD400F2D5AF70C001D403C /* LiSSpPesoncenstfrbucue.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiSSpPesoncenstfrbucue.xib; sourceTree = "<group>"; };
+		04D695302D5B18D8004A38E5 /* LiSSpItmeringBucue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiSSpItmeringBucue.swift; sourceTree = "<group>"; };
+		04D695312D5B18D8004A38E5 /* LiSSpItmeringBucue.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiSSpItmeringBucue.xib; sourceTree = "<group>"; };
+		04D695342D5B1A72004A38E5 /* LiSSpWallwnetBucue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiSSpWallwnetBucue.swift; sourceTree = "<group>"; };
+		04D695352D5B1A72004A38E5 /* LiSSpWallwnetBucue.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiSSpWallwnetBucue.xib; sourceTree = "<group>"; };
+		04D695382D5B1D4F004A38E5 /* LiSSpWallwnetvierell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiSSpWallwnetvierell.swift; sourceTree = "<group>"; };
+		04D695392D5B1D4F004A38E5 /* LiSSpWallwnetvierell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiSSpWallwnetvierell.xib; sourceTree = "<group>"; };
 		061EB7F6F7AF2F70F5981D64 /* Pods-Lippewqgui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lippewqgui.release.xcconfig"; path = "Target Support Files/Pods-Lippewqgui/Pods-Lippewqgui.release.xcconfig"; sourceTree = "<group>"; };
 		6C8844666650FA56509B7B4F /* Pods_Lippewqgui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lippewqgui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92EADF3B99FDD32D50637B8B /* Pods-Lippewqgui.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lippewqgui.debug.xcconfig"; path = "Target Support Files/Pods-Lippewqgui/Pods-Lippewqgui.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +169,7 @@
 				04CD3FB52D5998C3001D403C /* LipSigggneSnmingertips.xib */,
 				04CD3FB82D59AD86001D403C /* LiSSpBArbucue.swift */,
 				04CD3FBA2D59AE20001D403C /* LiSSpBArBootomrbucue.swift */,
+				042D1C452D5B292300854E10 /* SSIPUjgun.plist */,
 			);
 			path = Lippewqgui;
 			sourceTree = "<group>";
@@ -175,6 +210,12 @@
 			children = (
 				04CD3FD12D59DA03001D403C /* LiSSpMeaddgeBootomrbucue.swift */,
 				04CD3FD22D59DA03001D403C /* LiSSpMeaddgeBootomrbucue.xib */,
+				04CD40022D5AE9E0001D403C /* LiSSpPersionlistPostfrbucue.swift */,
+				04CD40032D5AE9E0001D403C /* LiSSpPersionlistPostfrbucue.xib */,
+				04CD40062D5AEA19001D403C /* LiSSpChatstfrbucue.swift */,
+				04CD40072D5AEA19001D403C /* LiSSpChatstfrbucue.xib */,
+				04CD400A2D5AEA37001D403C /* LiSSpChatVideostfrbucue.swift */,
+				04CD400B2D5AEA37001D403C /* LiSSpChatVideostfrbucue.xib */,
 			);
 			path = LiSSp_message;
 			sourceTree = "<group>";
@@ -184,6 +225,16 @@
 			children = (
 				04CD3FD52D59DA11001D403C /* LiSSpMeBootomrbucue.swift */,
 				04CD3FD62D59DA11001D403C /* LiSSpMeBootomrbucue.xib */,
+				04CD400E2D5AF70C001D403C /* LiSSpPesoncenstfrbucue.swift */,
+				04CD400F2D5AF70C001D403C /* LiSSpPesoncenstfrbucue.xib */,
+				04D695302D5B18D8004A38E5 /* LiSSpItmeringBucue.swift */,
+				04D695312D5B18D8004A38E5 /* LiSSpItmeringBucue.xib */,
+				04D695342D5B1A72004A38E5 /* LiSSpWallwnetBucue.swift */,
+				04D695352D5B1A72004A38E5 /* LiSSpWallwnetBucue.xib */,
+				04D695382D5B1D4F004A38E5 /* LiSSpWallwnetvierell.swift */,
+				04D695392D5B1D4F004A38E5 /* LiSSpWallwnetvierell.xib */,
+				042D1C412D5B1F5C00854E10 /* LiSSpEditFrBucue.swift */,
+				042D1C422D5B1F5C00854E10 /* LiSSpEditFrBucue.xib */,
 			);
 			path = LiSSp_Me;
 			sourceTree = "<group>";
@@ -281,6 +332,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				04CD3FF52D5A0361001D403C /* LiSSpCommwnentsingefrbucue.xib in Resources */,
+				042D1C462D5B292300854E10 /* SSIPUjgun.plist in Resources */,
+				04D695332D5B18D8004A38E5 /* LiSSpItmeringBucue.xib in Resources */,
+				04CD40092D5AEA19001D403C /* LiSSpChatstfrbucue.xib in Resources */,
+				042D1C442D5B1F5C00854E10 /* LiSSpEditFrBucue.xib in Resources */,
+				04D695372D5B1A72004A38E5 /* LiSSpWallwnetBucue.xib in Resources */,
 				04CD3FCB2D59D9DF001D403C /* LiSSpHomeBootomrbucue.xib in Resources */,
 				04CD3FE02D59F577001D403C /* LiSSpEnterDetailBootomrbucue.xib in Resources */,
 				04CD3FD32D59DA03001D403C /* LiSSpMeaddgeBootomrbucue.xib in Resources */,
@@ -288,11 +344,15 @@
 				04CD40012D5A03CD001D403C /* LiSSpSearcZIPostfrbucue.xib in Resources */,
 				04CD3FDB2D59E0E6001D403C /* LiSSpELUABootomrbucue.xib in Resources */,
 				04CD3FED2D59FE58001D403C /* LiSSpAIUploasingefrbucue.xib in Resources */,
+				04CD400C2D5AEA37001D403C /* LiSSpChatVideostfrbucue.xib in Resources */,
 				04CD3FB12D59928F001D403C /* Assets.xcassets in Resources */,
+				04D6953B2D5B1D4F004A38E5 /* LiSSpWallwnetvierell.xib in Resources */,
+				04CD40052D5AE9E0001D403C /* LiSSpPersionlistPostfrbucue.xib in Resources */,
 				04CD3FD72D59DA11001D403C /* LiSSpMeBootomrbucue.xib in Resources */,
 				04CD3FF12D5A0008001D403C /* LiSSpAIResuiltingsingefrbucue.xib in Resources */,
 				04CD3FB32D59928F001D403C /* LaunchScreen.storyboard in Resources */,
 				04CD3FE42D59F8AF001D403C /* LiSSpPostColtomrbucue.xib in Resources */,
+				04CD40112D5AF70C001D403C /* LiSSpPesoncenstfrbucue.xib in Resources */,
 				04CD3FFD2D5A03AD001D403C /* LiSSpTieZIPostfrbucue.xib in Resources */,
 				04CD3FB72D5998C3001D403C /* LipSigggneSnmingertips.xib in Resources */,
 				04CD3FCF2D59D9F1001D403C /* LiSSpDynamicBootomrbucue.xib in Resources */,
@@ -354,6 +414,7 @@
 				04CD3FD42D59DA03001D403C /* LiSSpMeaddgeBootomrbucue.swift in Sources */,
 				04CD3FDF2D59F577001D403C /* LiSSpEnterDetailBootomrbucue.swift in Sources */,
 				04CD3FE82D59FC0F001D403C /* LiSSpAIBriefrbucue.swift in Sources */,
+				04CD40082D5AEA19001D403C /* LiSSpChatstfrbucue.swift in Sources */,
 				04CD3FCC2D59D9DF001D403C /* LiSSpHomeBootomrbucue.swift in Sources */,
 				04CD3FB02D59928F001D403C /* AppDelegate.swift in Sources */,
 				04CD3FE32D59F8AF001D403C /* LiSSpPostColtomrbucue.swift in Sources */,
@@ -361,12 +422,19 @@
 				04CD3FB62D5998C3001D403C /* LipSigggneSnmingertips.swift in Sources */,
 				04CD3FBB2D59AE20001D403C /* LiSSpBArBootomrbucue.swift in Sources */,
 				04CD3FF82D5A0372001D403C /* LiSSpTieZIngefrbucue.swift in Sources */,
+				04CD400D2D5AEA37001D403C /* LiSSpChatVideostfrbucue.swift in Sources */,
+				04CD40042D5AE9E0001D403C /* LiSSpPersionlistPostfrbucue.swift in Sources */,
 				04CD40002D5A03CD001D403C /* LiSSpSearcZIPostfrbucue.swift in Sources */,
+				04D695362D5B1A72004A38E5 /* LiSSpWallwnetBucue.swift in Sources */,
 				04CD3FD02D59D9F1001D403C /* LiSSpDynamicBootomrbucue.swift in Sources */,
 				04CD3FF02D5A0008001D403C /* LiSSpAIResuiltingsingefrbucue.swift in Sources */,
+				04D6953A2D5B1D4F004A38E5 /* LiSSpWallwnetvierell.swift in Sources */,
+				04CD40102D5AF70C001D403C /* LiSSpPesoncenstfrbucue.swift in Sources */,
 				04CD3FD82D59DA11001D403C /* LiSSpMeBootomrbucue.swift in Sources */,
 				04CD3FFC2D5A03AD001D403C /* LiSSpTieZIPostfrbucue.swift in Sources */,
 				04CD3FDC2D59E0E6001D403C /* LiSSpELUABootomrbucue.swift in Sources */,
+				042D1C432D5B1F5C00854E10 /* LiSSpEditFrBucue.swift in Sources */,
+				04D695322D5B18D8004A38E5 /* LiSSpItmeringBucue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

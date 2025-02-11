@@ -2,168 +2,165 @@
 //  LiSSpBArbucue.swift
 //  Lippewqgui
 //
-//  Created by mumu on 2025/2/10.
+//  Created by Lippewqgui on 2025/2/10.
 //
 
 import UIKit
+import SwiftMessages
 
-class LiSSpBArbucue: NSObject {
 
-}
+class SSIPChatUSerFwbnke {
 
-class CSBChatPack {
-
-    var whoToMeCSBDic:[String: String]
-    var chatCSBList:Array<(Bool,String)>
-    init(whoCSB: [String : String], chatCSB: Array<(isMine: Bool, comment: String)>) {
-        self.whoToMeCSBDic = whoCSB
-        self.chatCSBList = chatCSB
+    var whoseSSIP:[String: String]
+    var chatSSIPList:Array<(Bool,String)>
+    init(_whoseSSIP: [String : String], _chatSSIPList: Array<(fromMeSSIP: Bool, commenMeSSIP: String)>) {
+        self.whoseSSIP = _whoseSSIP
+        self.chatSSIPList = _chatSSIPList
     }
 }
 
-class CSBFetcherAll: NSObject {
-    static let Hammer = CSBFetcherAll.init()
+
+
+class LiSSpBArbucue: NSObject {
+    static let SSIPlA = LiSSpBArbucue.init()
  
-    var mineCSBShowUser:Array<Dictionary<String,String>> = Array<Dictionary<String,String>>()
+    var totalvrdataSSIP:Array<Dictionary<String,String>> = Array<Dictionary<String,String>>()
     
     
-    var melingCSBINfo:Dictionary<String,String> = Dictionary<String,String>()
-    var shoHeadCSB:UIImage?
+    var logUoserdataSSIP:Dictionary<String,String> = Dictionary<String,String>()
+    var logPucserdataSSIP:UIImage?
     
-    var showNewstCSB = [[String: String]]()
-    var showFiretCSB = [[String: String]]()
+    var isagreeeeSSIP:Bool = false
     
-    var folooweNewstCSB = [[String: String]]()
-    var likemeuCSB = [[String: String]]()
-    var meunlikeCSB = [[String: String]]()
-    var allMyChatListCSB = [CSBChatPack].init()
     
-    var ifLogStatusCSB:Bool{
+    var FolsdwemeSSIP = [[String: String]]()
+    var facrewemeSSIP = [[String: String]]()
+  
+    var cxhatArraySSIP = [SSIPChatUSerFwbnke].init()//聊天列表
+    
+    var olkauSSIplogin:Bool{
         get{
-            return true
-            return UserDefaults.standard.bool(forKey: "ifUserloginStatus")
+           
+            return UserDefaults.standard.bool(forKey: "olkauSSIplogin")
         }
         set{
-            UserDefaults.standard.set(newValue, forKey: "ifUserloginStatus")
+            UserDefaults.standard.set(newValue, forKey: "olkauSSIplogin")
             if newValue == false {
-                melingCSBINfo.removeAll()
-                shoHeadCSB = nil
-                folooweNewstCSB.removeAll()
-                likemeuCSB.removeAll()
-                meunlikeCSB.removeAll()
-                allMyChatListCSB.removeAll()
+                logUoserdataSSIP.removeAll()
+                logPucserdataSSIP = nil
+                FolsdwemeSSIP.removeAll()
+                facrewemeSSIP.removeAll()
+               
+                cxhatArraySSIP.removeAll()
             }
            
         }
     }
     
-    func ceaterTestUserCSBINFO() {
-        melingCSBINfo["csbpersonName"] = "Sawyer"
-        melingCSBINfo["csbpersonHead"] = "userHear9"
-        melingCSBINfo["allCoind"] = "20"
-        melingCSBINfo["csbEmail"] = "Qin1234@gmail.com"
-        melingCSBINfo["csbpasword"] = "12345678"
-        melingCSBINfo["csbbirth"] = "1999-08-22"
-        melingCSBINfo["csbpersonID"] = "2489"
+    func comeSSIPONenterBottomUser() {
+        logUoserdataSSIP["ssipNadme"] = "Aria"
+        logUoserdataSSIP["ssipPicdty"] = "SSIPavator9"
+        logUoserdataSSIP["ssipDoimond"] = "200"
+        logUoserdataSSIP["ssipDtfestAccount"] = "lippa@gmail.com"
+        logUoserdataSSIP["ssipDtfestBriedf"] = "🖤 Collector of forgotten stories | Preserving history, one treasure at a time 📜"
+       
+        logUoserdataSSIP["ssipAccID"] = "234589"
         
+        logUoserdataSSIP["ssipColletionPic"] = ""
+        logUoserdataSSIP["ssipColletionDesc"] = ""
+       
         
-        melingCSBINfo["csbpersonDymPic"] = "userDmy9"
-        melingCSBINfo["csbpersonDymTitle"] = "😜Curling chaos, but oh so fun.🎉"
-        melingCSBINfo["csbpersonDymTime"] = "Oct.16 13:21:23"
-        melingCSBINfo["csbpersonbelikecount"] = "0"
+        logUoserdataSSIP["ssipPublishPic"] = "SSIpTiezi8"
+        logUoserdataSSIP["ssipPublishDesc"] = "My first medieval - style dagger for my weapon collection. It's a conversation starter, for sure."
+        logUoserdataSSIP["csbCommentr"] = ""
         
+        logPucserdataSSIP = UIImage(named:"SSIPavator9")
         
-        shoHeadCSB = UIImage(named:"userHear9")
+        FolsdwemeSSIP = Array(totalvrdataSSIP.shuffled().prefix(1))
+        facrewemeSSIP = Array(totalvrdataSSIP.shuffled().prefix(1))
         
-        folooweNewstCSB = Array(mineCSBShowUser.shuffled().prefix(3))
-        likemeuCSB = Array(mineCSBShowUser.shuffled().prefix(1))
-        if let oned = mineCSBShowUser.first  {
-            let comengONe = CSBChatPack.init(whoCSB: oned, chatCSB: [(true,"Hi!Have you seen the latest handmade ceramic pieces at the local craft fair?"),(false,"No, I haven't. Are they amazing?")])
+        if let laiker = totalvrdataSSIP.first  {
+            let comengONe = SSIPChatUSerFwbnke.init(_whoseSSIP: laiker, _chatSSIPList: [(true,"What kind of art do you collect?"),(false,"I love oil paintings, especially Impressionism.")])
+            cxhatArraySSIP.append(comengONe)
+
+        }
+        
+        if  totalvrdataSSIP.count == 2 {
             
-            
-            allMyChatListCSB.append(comengONe)
-            
+            let laiet = totalvrdataSSIP[1]
+            let comengtwo = SSIPChatUSerFwbnke.init(_whoseSSIP: laiet, _chatSSIPList: [(false,"How do you choose what to collect?"),(true,"I mainly look for emotional resonance in the work.")])
+            cxhatArraySSIP.append(comengtwo)
             
         }
         
-        if  mineCSBShowUser.count >= 2 {
+        
+        if  totalvrdataSSIP.count == 3 {
             
-            let two = mineCSBShowUser[1]
-            let comengtwo = CSBChatPack.init(whoCSB: two, chatCSB: [(false,"Have you been following curling…")])
-            allMyChatListCSB.append(comengtwo)
+            let laidsan = totalvrdataSSIP[2]
+            let comengtwo = SSIPChatUSerFwbnke.init(_whoseSSIP: laidsan, _chatSSIPList: [(false,"Any advice on collecting art?")])
+            cxhatArraySSIP.append(comengtwo)
             
         }
     }
     
     override init() {
         super.init()
-        mineCSBShowUser = loading_actionve_CSBData(pathCSB: "CSBAUserlistg")
-        
-        for (k,_) in mineCSBShowUser.enumerated() {
-            mineCSBShowUser[k]["csbAllFolow"] = "\(Int.random(in: 0...10))"
-            mineCSBShowUser[k]["csbAllIlike"] = "\(Int.random(in: 0...10))"
-            mineCSBShowUser[k]["heartForerDym"] = "0"
-        }
-        
-        
-        
-        showNewstCSB = Array(mineCSBShowUser.prefix(5))
-        showFiretCSB = Array(mineCSBShowUser.suffix(5))
-        
-        
-    }
-    
-    
-    func loading_actionve_CSBData(pathCSB:String)->Array<Dictionary<String,String>> {
-        guard let path = Bundle.main.path(forResource: pathCSB, ofType: "plist"),
+        guard let path = Bundle.main.path(forResource: "SSIPUjgun", ofType: "plist"),
         let data = FileManager.default.contents(atPath: path) else {
-            return Array<Dictionary<String,String>>()
+            totalvrdataSSIP = Array<Dictionary<String,String>>()
+            return
         }
         if let dictArray = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? [[String: String]]  {
-            return dictArray
+            totalvrdataSSIP = dictArray
         }
         
-        return Array<Dictionary<String,String>>()
-    }
-    
-    func removeSomeUserCSBINfo(iuCSB:[String:String]) {
         
-        let onlyID = iuCSB["csbpersonID"] ?? ""
-        if meunlikeCSB.filter({ ($0["csbpersonID"]  == onlyID) }).count == 0{
-            self.meunlikeCSB.append(iuCSB)
+        for (k,_) in totalvrdataSSIP.enumerated() {
+            totalvrdataSSIP[k]["fandscSIPPish"] = "\(Int.random(in: 0...10))"
+            totalvrdataSSIP[k]["fowerdscSIPPish"] = "\(Int.random(in: 0...10))"
+            totalvrdataSSIP[k]["islikeThisPublish"] = "0"
         }
         
-        self.folooweNewstCSB = folooweNewstCSB.filter { !($0["csbpersonID"]  == onlyID) }
+     
         
-        self.likemeuCSB = likemeuCSB.filter { !($0["csbpersonID"]  == onlyID) }
         
-        self.showNewstCSB = showNewstCSB.filter { !($0["csbpersonID"]  == onlyID) }
+    }
+    
+  
+    
+    
+    func delsteSSIPONenterBottomUser(iduserSSIP:[String:String]) {
         
-        self.showFiretCSB = showFiretCSB.filter { !($0["csbpersonID"]  == onlyID) }
-        allMyChatListCSB = allMyChatListCSB.filter { !($0.whoToMeCSBDic["csbpersonID"]  == onlyID) }
+        let onlyID = iduserSSIP["ssipAccID"] ?? ""
+        totalvrdataSSIP = totalvrdataSSIP.filter { !($0["ssipAccID"]  == onlyID) }
         
-        NotificationCenter.default.post(name: NSNotification.Name.init("laheiCSBkUsers"), object: nil)
+        self.FolsdwemeSSIP = FolsdwemeSSIP.filter { !($0["ssipAccID"]  == onlyID) }
+        
+        self.facrewemeSSIP = facrewemeSSIP.filter { !($0["ssipAccID"]  == onlyID) }
+        
+        
+        cxhatArraySSIP = cxhatArraySSIP.filter { !($0.whoseSSIP["ssipAccID"]  == onlyID) }
+        
+        NotificationCenter.default.post(name: NSNotification.Name.init("deleteUserSIPPish"), object: nil)
     }
     
     
-    func updateIlikeStatus(wight:Dictionary<String,String>,isLike:Bool)  {
+    func giveAttitudeTirtNenterBottomUser(transderinfo:Dictionary<String,String>,isSSIPlijer:Bool)  {
         
-        for (ijo,item) in showNewstCSB.enumerated() {
-            if item ["csbpersonID"] == wight ["csbpersonID"]{
-                showNewstCSB[ijo]["heartForerDym"] = isLike ? "1" : "0"
-                showNewstCSB[ijo]["csbpersonbelikecount"] =  isLike ? "\((Int(showNewstCSB[ijo]["csbpersonbelikecount"] ?? "0") ?? 0) + 1)" : "\((Int(showNewstCSB[ijo]["csbpersonbelikecount"] ?? "0") ?? 0) - 1)"
+        for (u,item) in totalvrdataSSIP.enumerated() {
+            if item ["ssipAccID"] == transderinfo ["ssipAccID"]{
+                totalvrdataSSIP[u]["islikeThisPublish"] = isSSIPlijer ? "1" : "0"
+               
                 
             }
         }
         
-        for (ijo,item) in showFiretCSB.enumerated() {
-            if item ["csbpersonID"] == wight ["csbpersonID"]{
-                showFiretCSB[ijo]["heartForerDym"] = isLike ? "1" : "0"
-                showNewstCSB[ijo]["csbpersonbelikecount"] = isLike ? "\((Int(showNewstCSB[ijo]["csbpersonbelikecount"] ?? "0") ?? 0) + 1)" : "\((Int(showNewstCSB[ijo]["csbpersonbelikecount"] ?? "0") ?? 0) - 1)"
-            }
-        }
-        
-        
+       
         
     }
+    
+    
+   
+   
+
 }

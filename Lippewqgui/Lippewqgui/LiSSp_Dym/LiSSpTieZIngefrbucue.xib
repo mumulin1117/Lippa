@@ -66,6 +66,12 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01R-bA-RBa">
+                            <rect key="frame" x="113" y="644" width="24" height="24"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="colGreywe"/>
+                            <state key="selected" image="yellowCol"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.035294117649999998" green="0.2666666667" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -76,12 +82,14 @@
                         <constraint firstItem="aWh-a2-ZxV" firstAttribute="leading" secondItem="Ygo-bW-6Gc" secondAttribute="trailing" constant="16" id="LNk-Hb-dWR"/>
                         <constraint firstAttribute="trailing" secondItem="iyI-sO-BTc" secondAttribute="trailing" constant="12" id="LlR-n2-8Rg"/>
                         <constraint firstItem="c3s-gi-NJH" firstAttribute="leading" secondItem="6w9-Av-uMA" secondAttribute="leading" constant="24" id="WZN-zx-y2c"/>
+                        <constraint firstItem="01R-bA-RBa" firstAttribute="centerY" secondItem="aWh-a2-ZxV" secondAttribute="centerY" id="XLO-IN-SEr"/>
                         <constraint firstAttribute="bottom" secondItem="Ygo-bW-6Gc" secondAttribute="bottom" constant="25" id="ZuX-kV-8EI"/>
                         <constraint firstItem="Ygo-bW-6Gc" firstAttribute="leading" secondItem="6w9-Av-uMA" secondAttribute="leading" constant="24" id="aul-rb-eKx"/>
                         <constraint firstItem="aWh-a2-ZxV" firstAttribute="height" secondItem="Ygo-bW-6Gc" secondAttribute="height" multiplier="0.75" id="axa-qk-EGa"/>
                         <constraint firstItem="iyI-sO-BTc" firstAttribute="top" secondItem="CMO-lL-8VP" secondAttribute="bottom" constant="32" id="b0d-Nb-s20"/>
                         <constraint firstItem="aWh-a2-ZxV" firstAttribute="centerY" secondItem="Ygo-bW-6Gc" secondAttribute="centerY" id="dXL-Ne-Dkv"/>
                         <constraint firstItem="Ygo-bW-6Gc" firstAttribute="top" secondItem="c3s-gi-NJH" secondAttribute="bottom" constant="32" id="gGW-DR-oGk"/>
+                        <constraint firstItem="01R-bA-RBa" firstAttribute="leading" secondItem="aWh-a2-ZxV" secondAttribute="trailing" constant="17" id="gsl-OA-4g5"/>
                         <constraint firstItem="c3s-gi-NJH" firstAttribute="top" secondItem="iyI-sO-BTc" secondAttribute="bottom" constant="22" id="hut-KY-zZy"/>
                     </constraints>
                 </view>
@@ -92,11 +100,21 @@
                         <constraint firstAttribute="width" constant="43" id="afy-6f-5zH"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiY-x8-AbN">
+                    <rect key="frame" x="349" y="59" width="28" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="U4I-BQ-r0H"/>
+                        <constraint firstAttribute="width" constant="28" id="eOV-zY-Kwz"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="moreportSSIPre"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="6w9-Av-uMA" firstAttribute="top" secondItem="b5J-fa-RpP" secondAttribute="top" constant="-20" id="4NA-RC-8T0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yiY-x8-AbN" secondAttribute="trailing" constant="16" id="7V9-dq-QwC"/>
                 <constraint firstItem="ld5-Ba-t0J" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="AeP-Ta-Ofn"/>
                 <constraint firstItem="6w9-Av-uMA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="Gkc-FE-jwx"/>
                 <constraint firstItem="CMO-lL-8VP" firstAttribute="centerY" secondItem="b5J-fa-RpP" secondAttribute="centerY" id="Iqh-qn-aJU"/>
@@ -104,6 +122,7 @@
                 <constraint firstItem="6w9-Av-uMA" firstAttribute="top" secondItem="ld5-Ba-t0J" secondAttribute="bottom" constant="24" id="Ql1-C8-1uB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6w9-Av-uMA" secondAttribute="bottom" constant="10" id="b10-xb-6mY"/>
                 <constraint firstItem="ga9-fW-hye" firstAttribute="centerY" secondItem="ld5-Ba-t0J" secondAttribute="centerY" id="bON-vH-wcw"/>
+                <constraint firstItem="yiY-x8-AbN" firstAttribute="centerY" secondItem="ld5-Ba-t0J" secondAttribute="centerY" id="fWz-6m-hpV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6w9-Av-uMA" secondAttribute="trailing" constant="12" id="k0i-Od-fxz"/>
                 <constraint firstItem="ga9-fW-hye" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ody-gk-n3S"/>
                 <constraint firstItem="ld5-Ba-t0J" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="yTo-0i-PZK"/>
@@ -114,7 +133,10 @@
     <resources>
         <image name="LiSSpback" width="28" height="28"/>
         <image name="buliadingSSIP" width="24" height="24"/>
+        <image name="colGreywe" width="24" height="24"/>
         <image name="liadingSSIP" width="24" height="24"/>
+        <image name="moreportSSIPre" width="28" height="28"/>
         <image name="setSSIPreview" width="24" height="24"/>
+        <image name="yellowCol" width="24" height="24"/>
     </resources>
 </document>

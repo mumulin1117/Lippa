@@ -10,6 +10,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiSSpELUABootomrbucue" customModule="Lippewqgui" customModuleProvider="target">
             <connections>
+                <outlet property="cancekSSIP" destination="Sbb-dB-iL3" id="SpX-mW-jK0"/>
+                <outlet property="contentSSIPview" destination="IiC-Cx-EwI" id="371-Yx-KQr"/>
+                <outlet property="eluaSSIPtiitle" destination="vAK-LD-W9B" id="r0r-KH-W3q"/>
+                <outlet property="haodeSSIP" destination="Gn5-5X-5yM" id="IiF-g5-JXj"/>
+                <outlet property="pppirpSSIP" destination="A2V-qi-MBs" id="Bb3-Ge-K7J"/>
+                <outlet property="teeermSSIP" destination="8MC-MH-4oo" id="vku-6l-z4F"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,10 +30,10 @@
                     <color key="textColor" red="0.91764705879999997" green="0.1647058824" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IiC-Cx-EwI">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiC-Cx-EwI">
                     <rect key="frame" x="20" y="124" width="353" height="510"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <mutableString key="text">Effective Date: [2025-02-25]
+                    <string key="text">Effective Date: [2025-02-25]
 
 1. Acceptance of Terms
 
@@ -60,7 +66,7 @@ Lippa reserves the right to modify this EULA at any time. Your continued use of 
 
 8. Governing Law
 
-This EULA shall be governed by the laws of [insert jurisdiction].</mutableString>
+This EULA shall be governed by the laws of [insert jurisdiction].</string>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

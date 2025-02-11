@@ -2,7 +2,7 @@
 //  LiSSpBArBootomrbucue.swift
 //  Lippewqgui
 //
-//  Created by mumu on 2025/2/10.
+//  Created by Lippewqgui on 2025/2/10.
 //
 
 import UIKit
@@ -27,11 +27,12 @@ class LiSSpBArBootomrbucue:UITabBarController {
         
         
         
-        let firstViewController = LiSSpNavitSnmingertips.init(rootViewController: UIViewController())
-               
-        let secondViewController = LiSSpNavitSnmingertips.init(rootViewController: UIViewController())
-        let thirdViewController = LiSSpNavitSnmingertips.init(rootViewController: UIViewController())
-        
+        let firstViewController = LiSSpNavitSnmingertips.init(rootViewController: LiSSpHomeBootomrbucue())
+//
+        let secondViewController = LiSSpNavitSnmingertips.init(rootViewController: LiSSpDynamicBootomrbucue())
+        let thirdViewController = LiSSpNavitSnmingertips.init(rootViewController: LiSSpMeaddgeBootomrbucue())
+ 
+         
         let items = [
            
             UITabBarItem.init(title: "HOME", image: UIImage(named: "LiSSphome_black"), selectedImage: UIImage(named: "LiSSphome_pink")!.withRenderingMode(.alwaysOriginal)),
