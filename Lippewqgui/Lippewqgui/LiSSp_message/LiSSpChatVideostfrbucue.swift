@@ -7,23 +7,18 @@
 
 import UIKit
 
-class LiSSpChatVideostfrbucue: UIViewController {
-
+class LiSSpChatVideostfrbucue:  LissipSecondFrbucue {
+    @IBOutlet weak var ChokenSSIP: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
 
-        // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(ctterBsdNoingSSIP), name: NSNotification.Name.init("deleteUserSIPPish"), object: nil)
+       
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }

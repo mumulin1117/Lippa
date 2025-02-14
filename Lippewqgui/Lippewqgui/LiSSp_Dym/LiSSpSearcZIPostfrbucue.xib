@@ -11,6 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiSSpSearcZIPostfrbucue" customModule="Lippewqgui" customModuleProvider="target">
             <connections>
+                <outlet property="ChokenSSIP" destination="u2Y-Mx-q99" id="dvE-UH-xXZ"/>
+                <outlet property="empholderSSIP" destination="D63-cX-qf4" id="Kv2-mp-pan"/>
+                <outlet property="empholdercontentSSIP" destination="vcL-Y4-5EH" id="XaH-4B-OLD"/>
+                <outlet property="inserTextSSIpView" destination="iCi-G3-wfq" id="7kE-Ev-ArQ"/>
+                <outlet property="serachBackWhiteSSIp" destination="Aby-dw-9z1" id="5XW-DB-K1I"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,8 +24,8 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xz-nS-3BT">
-                    <rect key="frame" x="179" y="62.666666666666657" width="35" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xz-nS-3BT">
+                    <rect key="frame" x="169.33333333333334" y="62.666666666666657" width="54.666666666666657" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -70,8 +75,8 @@
                         <constraint firstAttribute="height" constant="128" id="wPD-Kk-Pdx"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, unable to load the contents" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcL-Y4-5EH">
-                    <rect key="frame" x="73.000000000000014" y="523" width="247.33333333333337" height="18"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter to start search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcL-Y4-5EH">
+                    <rect key="frame" x="121.66666666666669" y="523" width="150" height="18"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <color key="textColor" red="0.78431372549019607" green="0.74117647058823533" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>

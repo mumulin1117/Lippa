@@ -7,12 +7,13 @@
 
 import UIKit
 
-class LiSSpEditFrBucue: UIViewController {
-
+class LiSSpEditFrBucue:  LissipSecondFrbucue {
+    @IBOutlet weak var ChokenSSIP: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
 
-        // Do any additional setup after loading the view.
     }
 
 

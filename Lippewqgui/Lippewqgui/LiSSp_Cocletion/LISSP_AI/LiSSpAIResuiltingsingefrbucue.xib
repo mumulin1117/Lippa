@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiSSpAIResuiltingsingefrbucue" customModule="Lippewqgui" customModuleProvider="target">
             <connections>
+                <outlet property="ChokenSSIP" destination="FNx-lE-hJf" id="XYr-aN-CSr"/>
                 <outlet property="appCiateSSIP" destination="5bo-Qv-wVa" id="Lgy-pT-GWa"/>
                 <outlet property="sedescribitTextView" destination="mvc-N9-Ybz" id="JQL-hA-eFF"/>
                 <outlet property="view" destination="jAl-de-1Fx" id="Znv-m2-eTH"/>
@@ -24,17 +25,6 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SSip_AIBG" translatesAutoresizingMaskIntoConstraints="NO" id="rXD-KX-BgF">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RP6-A3-fdX">
-                    <rect key="frame" x="94.666666666666686" y="734" width="204" height="54"/>
-                    <color key="backgroundColor" red="0.91764705879999997" green="0.1647058824" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="54" id="1Do-ra-qcd"/>
-                        <constraint firstAttribute="width" constant="204" id="Ii4-wc-lr1"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Upload"/>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNx-lE-hJf">
                     <rect key="frame" x="17" y="63" width="28" height="28"/>
                     <constraints>
@@ -44,7 +34,7 @@
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="LiSSpback"/>
                 </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jingliangupimg_g" translatesAutoresizingMaskIntoConstraints="NO" id="5bo-Qv-wVa">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5bo-Qv-wVa">
                     <rect key="frame" x="24" y="107" width="345" height="200"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="Hde-z3-NDo"/>
@@ -58,6 +48,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="lipss_mofre"/>
+                    <connections>
+                        <action selector="shingcaseOriginReport:" destination="-1" eventType="touchUpInside" id="B1w-0T-4Ee"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appreciation results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyL-ys-zgK">
                     <rect key="frame" x="118" y="66.666666666666671" width="157" height="21"/>
@@ -65,6 +58,13 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Waiting result" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mvc-N9-Ybz">
+                    <rect key="frame" x="24" y="321" width="350" height="487"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" systemColor="underPageBackgroundColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Item Submitted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYt-A2-uLs">
                     <rect key="frame" x="16" y="337" width="149" height="36"/>
                     <color key="backgroundColor" red="0.91764705879999997" green="0.1647058824" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -76,13 +76,6 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Describ it:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mvc-N9-Ybz">
-                    <rect key="frame" x="24" y="321" width="350" height="388"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="textColor" systemColor="underPageBackgroundColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="0DZ-3R-WTL"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -93,16 +86,14 @@
                 <constraint firstItem="rXD-KX-BgF" firstAttribute="top" secondItem="jAl-de-1Fx" secondAttribute="top" id="34H-AE-esI"/>
                 <constraint firstItem="0DZ-3R-WTL" firstAttribute="trailing" secondItem="5bo-Qv-wVa" secondAttribute="trailing" constant="24" id="AB7-Uz-Whf"/>
                 <constraint firstItem="0DZ-3R-WTL" firstAttribute="trailing" secondItem="VAy-NF-spr" secondAttribute="trailing" constant="17" id="Hso-c9-rqR"/>
-                <constraint firstItem="0DZ-3R-WTL" firstAttribute="bottom" secondItem="RP6-A3-fdX" secondAttribute="bottom" constant="30" id="N2J-2z-KNb"/>
                 <constraint firstItem="uyL-ys-zgK" firstAttribute="centerY" secondItem="FNx-lE-hJf" secondAttribute="centerY" id="Qdn-1s-FXI"/>
                 <constraint firstItem="0DZ-3R-WTL" firstAttribute="trailing" secondItem="mvc-N9-Ybz" secondAttribute="trailing" constant="19" id="S7c-m6-lGi"/>
+                <constraint firstItem="0DZ-3R-WTL" firstAttribute="bottom" secondItem="mvc-N9-Ybz" secondAttribute="bottom" constant="10" id="TD5-Qa-C2M"/>
                 <constraint firstItem="FNx-lE-hJf" firstAttribute="top" secondItem="0DZ-3R-WTL" secondAttribute="top" constant="4" id="TUg-78-H4J"/>
                 <constraint firstItem="fYt-A2-uLs" firstAttribute="leading" secondItem="0DZ-3R-WTL" secondAttribute="leading" constant="16" id="Wct-k2-63s"/>
                 <constraint firstItem="FNx-lE-hJf" firstAttribute="leading" secondItem="0DZ-3R-WTL" secondAttribute="leading" constant="17" id="Xct-b9-7MZ"/>
                 <constraint firstAttribute="bottom" secondItem="rXD-KX-BgF" secondAttribute="bottom" id="Y2m-JI-edQ"/>
-                <constraint firstItem="RP6-A3-fdX" firstAttribute="top" secondItem="mvc-N9-Ybz" secondAttribute="bottom" constant="25" id="aHb-Yi-UU3"/>
                 <constraint firstItem="rXD-KX-BgF" firstAttribute="trailing" secondItem="0DZ-3R-WTL" secondAttribute="trailing" id="bbb-W8-ZA9"/>
-                <constraint firstItem="RP6-A3-fdX" firstAttribute="centerX" secondItem="jAl-de-1Fx" secondAttribute="centerX" id="fcx-dM-8b8"/>
                 <constraint firstItem="VAy-NF-spr" firstAttribute="centerY" secondItem="FNx-lE-hJf" secondAttribute="centerY" id="hiW-dx-VMP"/>
                 <constraint firstItem="uyL-ys-zgK" firstAttribute="centerX" secondItem="jAl-de-1Fx" secondAttribute="centerX" id="iWv-6n-fF1"/>
                 <constraint firstItem="rXD-KX-BgF" firstAttribute="leading" secondItem="0DZ-3R-WTL" secondAttribute="leading" id="n0O-6K-OSM"/>
@@ -115,7 +106,6 @@
     <resources>
         <image name="LiSSpback" width="28" height="28"/>
         <image name="SSip_AIBG" width="375" height="812"/>
-        <image name="jingliangupimg_g" width="375" height="146"/>
         <image name="lipss_mofre" width="28" height="28"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

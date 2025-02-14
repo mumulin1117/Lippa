@@ -39,7 +39,7 @@ class LipSigggneSnmingertips: UIViewController {
     
     @objc func hihiiSSIP() {
         if LiSSpBArbucue.SSIPlA.isagreeeeSSIP == false {
-            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Please read and agree to the terms and conditions first.")
+            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Please read and agree to the terms and conditions first.", loaingShowView: self.view)
           
             return
         }
@@ -49,21 +49,21 @@ class LipSigggneSnmingertips: UIViewController {
         let contetntPaseSSIP = entrtSSIPOPsw.text,
               !contenEmailSSIP.isEmpty,
         !contetntPaseSSIP.isEmpty else {
-            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Email address or password can not be empty")
+            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Email address or password can not be empty", loaingShowView: self.view)
             return
         }
         
         
         if contetntPaseSSIP.count < 6 || contetntPaseSSIP.count > 12 {
-            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "password count should be in (6-12 characters)")
+            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "password count should be in (6-12 characters)", loaingShowView: self.view)
             return
         }
        
         if contenEmailSSIP == "lippa@gmail.com" {
-            AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "log in ....")
+            AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "log in ....", loaingShowView: self.view)
            
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
-                AppDelegate.hideLoadingSSIPTipsIndicator()
+                AppDelegate.hideLoadingSSIPTipsIndicator( loaingShowView: self.view)
                 AppDelegate.showSSIPSuccessTips(acccusString: "Log in successful!")
                 
                 LiSSpBArbucue.SSIPlA.comeSSIPONenterBottomUser()
@@ -80,13 +80,13 @@ class LipSigggneSnmingertips: UIViewController {
             let emailPreSSIPO = NSPredicate(format:"SELF MATCHES %@", presSSIP)
             let boollSSIP = emailPreSSIPO.evaluate(with: contenEmailSSIP)
             if boollSSIP == false {
-                AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "The email format you entered is incorrect")
+                AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "The email format you entered is incorrect", loaingShowView: self.view)
                 
             }else{
-                AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Create in ....")
+                AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Create in ....", loaingShowView: self.view)
                
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
-                    AppDelegate.hideLoadingSSIPTipsIndicator()
+                    AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
                     LiSSpBArbucue.SSIPlA.olkauSSIplogin = true
                     
                     

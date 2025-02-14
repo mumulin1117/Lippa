@@ -61,6 +61,10 @@
                 <constraint firstItem="RbE-Nj-vIz" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="wtP-Zd-EPS"/>
             </constraints>
             <size key="customSize" width="374" height="108"/>
+            <connections>
+                <outlet property="ownedThisSSIP" destination="hVT-vj-wyT" id="DCy-dx-mfH"/>
+                <outlet property="speendTisSSIP" destination="QE2-2E-agc" id="tGc-2o-ke2"/>
+            </connections>
             <point key="canvasLocation" x="386.25954198473283" y="40.845070422535215"/>
         </collectionViewCell>
     </objects>

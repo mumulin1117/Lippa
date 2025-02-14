@@ -7,23 +7,30 @@
 
 import UIKit
 /// 评论
-class LiSSpCommwnentsingefrbucue: UIViewController {
-
+class LiSSpCommwnentsingefrbucue:  LissipSecondFrbucue {
+    @IBOutlet weak var ChokenSSIP: UIButton!
+    
+    
+    @IBOutlet weak var sendcommCOntetnSSIP: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
 
-        // Do any additional setup after loading the view.
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+   @objc func ctterBsdNoingSSIPDissmiss()  {
+       self.dismiss(animated: true)
     }
-    */
 
+    @IBAction func syresendSSIp(_ sender: UIButton) {
+        
+        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Sending.....", loaingShowView: self.view)
+        self.performBlockAfterDelayINSSIP(secondsSSIP: 0.5) {
+            AppDelegate.showSSIPSuccessTips(acccusString: "Send successful, your comment will be displayed after review")
+            
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
 }

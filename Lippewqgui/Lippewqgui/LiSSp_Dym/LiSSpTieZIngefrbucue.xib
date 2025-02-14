@@ -10,6 +10,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiSSpTieZIngefrbucue" customModule="Lippewqgui" customModuleProvider="target">
             <connections>
+                <outlet property="ChokenSSIP" destination="ld5-Ba-t0J" id="IDU-iy-qJY"/>
+                <outlet property="coaprmentSSIP" destination="Ygo-bW-6Gc" id="Kcs-Ea-FM7"/>
+                <outlet property="collecPost" destination="01R-bA-RBa" id="lUk-5d-6kK"/>
+                <outlet property="postingCOntentCAseSSIP" destination="iyI-sO-BTc" id="Ilb-zY-eK5"/>
+                <outlet property="postingContetntesxrSSIP" destination="c3s-gi-NJH" id="r8O-bw-qEW"/>
+                <outlet property="postingUserimgSSIP" destination="b5J-fa-RpP" id="Fbm-rK-qhe"/>
+                <outlet property="postusernamSSIP" destination="CMO-lL-8VP" id="yDe-xT-v4x"/>
+                <outlet property="tibluebackSSIP" destination="6w9-Av-uMA" id="vt9-Qa-pwd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -43,7 +51,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iyI-sO-BTc">
-                            <rect key="frame" x="12" y="81" width="345" height="488"/>
+                            <rect key="frame" x="12" y="81" width="345" height="455"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygo-bW-6Gc">
                             <rect key="frame" x="24" y="640" width="32" height="32"/>
@@ -53,43 +61,56 @@
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="setSSIPreview"/>
+                            <connections>
+                                <action selector="giventSSUP:" destination="-1" eventType="touchUpInside" id="6yx-sP-6sS"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWh-a2-ZxV">
-                            <rect key="frame" x="72" y="644" width="24" height="24"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="buliadingSSIP"/>
-                            <state key="selected" image="liadingSSIP"/>
-                        </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMMENTS" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3s-gi-NJH">
-                            <rect key="frame" x="24" y="591" width="321" height="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="COMMENTSfgncfgnxfgnfgnfcgncfgnfcgncfgncfgncfgncfgncfgncfgncfgncfgncfgn" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3s-gi-NJH">
+                            <rect key="frame" x="24" y="558" width="321" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="wh1-eE-zM5"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01R-bA-RBa">
-                            <rect key="frame" x="113" y="644" width="24" height="24"/>
+                            <rect key="frame" x="83" y="644" width="24" height="24"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="colGreywe"/>
                             <state key="selected" image="yellowCol"/>
+                            <connections>
+                                <action selector="colllectioChagentSSUP:" destination="-1" eventType="touchUpInside" id="Lxd-gM-suW"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPj-Bi-VCz">
+                            <rect key="frame" x="142" y="22.666666666666657" width="38" height="38"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="38" id="Q1V-Wp-3YQ"/>
+                                <constraint firstAttribute="height" constant="38" id="gPM-WZ-kXn"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="gintentSIP"/>
+                            <connections>
+                                <action selector="getinguserSSUP:" destination="-1" eventType="touchUpInside" id="FzR-hS-VcA"/>
+                                <action selector="shingcaseOriginReport:" destination="-1" eventType="touchUpInside" id="ZTU-gl-rp9"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.035294117649999998" green="0.2666666667" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="CMO-lL-8VP" firstAttribute="leading" secondItem="6w9-Av-uMA" secondAttribute="leading" constant="61" id="3qR-li-Zw1"/>
                         <constraint firstItem="iyI-sO-BTc" firstAttribute="leading" secondItem="6w9-Av-uMA" secondAttribute="leading" constant="12" id="8kA-SP-AyV"/>
+                        <constraint firstItem="01R-bA-RBa" firstAttribute="leading" secondItem="Ygo-bW-6Gc" secondAttribute="trailing" constant="27" id="BDv-U9-qwF"/>
                         <constraint firstAttribute="trailing" secondItem="c3s-gi-NJH" secondAttribute="trailing" constant="24" id="Fwt-9P-CZc"/>
-                        <constraint firstItem="aWh-a2-ZxV" firstAttribute="width" secondItem="Ygo-bW-6Gc" secondAttribute="width" multiplier="0.75" id="IGs-5g-jna"/>
-                        <constraint firstItem="aWh-a2-ZxV" firstAttribute="leading" secondItem="Ygo-bW-6Gc" secondAttribute="trailing" constant="16" id="LNk-Hb-dWR"/>
+                        <constraint firstItem="bPj-Bi-VCz" firstAttribute="leading" secondItem="CMO-lL-8VP" secondAttribute="trailing" constant="8" symbolic="YES" id="LeK-HT-eOO"/>
                         <constraint firstAttribute="trailing" secondItem="iyI-sO-BTc" secondAttribute="trailing" constant="12" id="LlR-n2-8Rg"/>
+                        <constraint firstItem="01R-bA-RBa" firstAttribute="centerY" secondItem="Ygo-bW-6Gc" secondAttribute="centerY" id="UYS-G1-yT8"/>
                         <constraint firstItem="c3s-gi-NJH" firstAttribute="leading" secondItem="6w9-Av-uMA" secondAttribute="leading" constant="24" id="WZN-zx-y2c"/>
-                        <constraint firstItem="01R-bA-RBa" firstAttribute="centerY" secondItem="aWh-a2-ZxV" secondAttribute="centerY" id="XLO-IN-SEr"/>
                         <constraint firstAttribute="bottom" secondItem="Ygo-bW-6Gc" secondAttribute="bottom" constant="25" id="ZuX-kV-8EI"/>
                         <constraint firstItem="Ygo-bW-6Gc" firstAttribute="leading" secondItem="6w9-Av-uMA" secondAttribute="leading" constant="24" id="aul-rb-eKx"/>
-                        <constraint firstItem="aWh-a2-ZxV" firstAttribute="height" secondItem="Ygo-bW-6Gc" secondAttribute="height" multiplier="0.75" id="axa-qk-EGa"/>
                         <constraint firstItem="iyI-sO-BTc" firstAttribute="top" secondItem="CMO-lL-8VP" secondAttribute="bottom" constant="32" id="b0d-Nb-s20"/>
-                        <constraint firstItem="aWh-a2-ZxV" firstAttribute="centerY" secondItem="Ygo-bW-6Gc" secondAttribute="centerY" id="dXL-Ne-Dkv"/>
                         <constraint firstItem="Ygo-bW-6Gc" firstAttribute="top" secondItem="c3s-gi-NJH" secondAttribute="bottom" constant="32" id="gGW-DR-oGk"/>
-                        <constraint firstItem="01R-bA-RBa" firstAttribute="leading" secondItem="aWh-a2-ZxV" secondAttribute="trailing" constant="17" id="gsl-OA-4g5"/>
                         <constraint firstItem="c3s-gi-NJH" firstAttribute="top" secondItem="iyI-sO-BTc" secondAttribute="bottom" constant="22" id="hut-KY-zZy"/>
                     </constraints>
                 </view>
@@ -108,6 +129,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="moreportSSIPre"/>
+                    <connections>
+                        <action selector="shingcaseOriginReport:" destination="-1" eventType="touchUpInside" id="ZGT-HN-gc4"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -121,6 +145,7 @@
                 <constraint firstItem="b5J-fa-RpP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="22" id="Ofp-dz-Bjg"/>
                 <constraint firstItem="6w9-Av-uMA" firstAttribute="top" secondItem="ld5-Ba-t0J" secondAttribute="bottom" constant="24" id="Ql1-C8-1uB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6w9-Av-uMA" secondAttribute="bottom" constant="10" id="b10-xb-6mY"/>
+                <constraint firstItem="bPj-Bi-VCz" firstAttribute="centerY" secondItem="b5J-fa-RpP" secondAttribute="centerY" id="bAi-c5-JKZ"/>
                 <constraint firstItem="ga9-fW-hye" firstAttribute="centerY" secondItem="ld5-Ba-t0J" secondAttribute="centerY" id="bON-vH-wcw"/>
                 <constraint firstItem="yiY-x8-AbN" firstAttribute="centerY" secondItem="ld5-Ba-t0J" secondAttribute="centerY" id="fWz-6m-hpV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6w9-Av-uMA" secondAttribute="trailing" constant="12" id="k0i-Od-fxz"/>
@@ -132,9 +157,8 @@
     </objects>
     <resources>
         <image name="LiSSpback" width="28" height="28"/>
-        <image name="buliadingSSIP" width="24" height="24"/>
         <image name="colGreywe" width="24" height="24"/>
-        <image name="liadingSSIP" width="24" height="24"/>
+        <image name="gintentSIP" width="16" height="16"/>
         <image name="moreportSSIPre" width="28" height="28"/>
         <image name="setSSIPreview" width="24" height="24"/>
         <image name="yellowCol" width="24" height="24"/>

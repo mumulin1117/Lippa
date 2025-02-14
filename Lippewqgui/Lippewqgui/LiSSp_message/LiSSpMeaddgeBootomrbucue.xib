@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiSSpMeaddgeBootomrbucue" customModule="Lippewqgui" customModuleProvider="target">
             <connections>
+                <outlet property="activVieSSIP" destination="rEI-sF-lwS" id="WKg-Ak-wrR"/>
+                <outlet property="notifationViewSSIP" destination="ezb-xI-yDS" id="6Pp-Qq-TmP"/>
+                <outlet property="relationlistSSIP" destination="Bbf-64-3T9" id="jUT-vF-K1E"/>
                 <outlet property="view" destination="WRA-Sv-2rB" id="uBj-ke-epa"/>
             </connections>
         </placeholder>
@@ -52,7 +55,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ezb-xI-yDS">
-                    <rect key="frame" x="20" y="315" width="361" height="503"/>
+                    <rect key="frame" x="12" y="315" width="369" height="503"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AoB-ga-X14">
                         <size key="itemSize" width="128" height="128"/>
@@ -82,7 +85,7 @@
                 <constraint firstItem="nFm-X1-scz" firstAttribute="leading" secondItem="Vjl-N5-nGT" secondAttribute="leading" id="fE1-6Y-MFy"/>
                 <constraint firstItem="rEI-sF-lwS" firstAttribute="trailing" secondItem="Vjl-N5-nGT" secondAttribute="trailing" id="fxc-KM-qlk"/>
                 <constraint firstItem="Bbf-64-3T9" firstAttribute="centerY" secondItem="ip8-7d-gdo" secondAttribute="centerY" id="iC7-WW-ApC"/>
-                <constraint firstItem="ezb-xI-yDS" firstAttribute="leading" secondItem="PG9-2H-zwu" secondAttribute="leading" id="k33-k8-5Ck"/>
+                <constraint firstItem="ezb-xI-yDS" firstAttribute="leading" secondItem="Vjl-N5-nGT" secondAttribute="leading" constant="12" id="j92-1t-VvM"/>
                 <constraint firstItem="nFm-X1-scz" firstAttribute="top" secondItem="WRA-Sv-2rB" secondAttribute="top" id="ktZ-cz-GJE"/>
                 <constraint firstItem="Vjl-N5-nGT" firstAttribute="trailing" secondItem="Bbf-64-3T9" secondAttribute="trailing" constant="16" id="ma3-Su-YZh"/>
                 <constraint firstItem="nFm-X1-scz" firstAttribute="trailing" secondItem="Vjl-N5-nGT" secondAttribute="trailing" id="pS9-yy-Qus"/>

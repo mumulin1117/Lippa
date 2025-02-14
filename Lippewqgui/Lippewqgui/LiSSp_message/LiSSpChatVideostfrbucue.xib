@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiSSpChatVideostfrbucue" customModule="Lippewqgui" customModuleProvider="target">
             <connections>
+                <outlet property="ChokenSSIP" destination="h5j-QB-5cg" id="eQX-S7-H9V"/>
                 <outlet property="view" destination="LBO-q8-fff" id="DA3-yQ-qhG"/>
             </connections>
         </placeholder>

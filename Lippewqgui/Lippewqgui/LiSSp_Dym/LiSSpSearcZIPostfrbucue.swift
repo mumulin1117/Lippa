@@ -7,23 +7,43 @@
 
 import UIKit
 
-class LiSSpSearcZIPostfrbucue: UIViewController {
-
+class LiSSpSearcZIPostfrbucue:  LissipSecondFrbucue,UITextFieldDelegate {
+    @IBOutlet weak var ChokenSSIP: UIButton!
+    
+    @IBOutlet weak var serachBackWhiteSSIp: UIView!
+    
+    
+    @IBOutlet weak var inserTextSSIpView: UITextField!
+    
+    @IBOutlet weak var empholderSSIP: UIImageView!
+    
+    @IBOutlet weak var empholdercontentSSIP: UILabel!
+    
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
+        empholderSSIP.isHidden = true
+        serachBackWhiteSSIp.maskLippaRoundCorner(rMakLSSIpadius: 27.5)
+        inserTextSSIpView.returnKeyType = .search
+        inserTextSSIpView.delegate = self
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let contextSSip = textField.text ,contextSSip.isEmpty == false{
+            empholdercontentSSIP.text = "Searching..."
+            AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Searching....", loaingShowView: self.view)
+            self.performBlockAfterDelayINSSIP(secondsSSIP: 2.5) {
+                AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
+                self.empholdercontentSSIP.text =  "Sorry, unable to load the contents"
+                self.empholderSSIP.isHidden = false
+            }
+        }
+        
+        
+        return true
     }
-    */
 
 }

@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiSSpWallwnetBucue" customModule="Lippewqgui" customModuleProvider="target">
             <connections>
+                <outlet property="ChokenSSIP" destination="kCY-72-O5x" id="3xj-MF-WOm"/>
+                <outlet property="mincolViewSIPP" destination="REV-Vb-I7r" id="UcI-si-V1b"/>
+                <outlet property="mineOladSSIP" destination="sGg-iy-YcM" id="v1B-J9-ozm"/>
                 <outlet property="view" destination="dZo-rW-v9H" id="qql-Oe-czT"/>
             </connections>
         </placeholder>

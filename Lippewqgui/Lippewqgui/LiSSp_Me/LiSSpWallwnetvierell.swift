@@ -9,9 +9,17 @@ import UIKit
 
 class LiSSpWallwnetvierell: UICollectionViewCell {
 
+    @IBOutlet weak var ownedThisSSIP: UILabel!
+    
+    
+    @IBOutlet weak var speendTisSSIP: UILabel!
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        speendTisSSIP.maskLippaRoundCorner(rMakLSSIpadius: 17)
     }
 
 }

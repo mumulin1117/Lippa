@@ -59,7 +59,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     class  func showSSIPSuccessTips(acccusString:String) {
         let view = MessageView.viewFromNib(layout: .messageView)
-        view.configureContent(title: "Success", body: acccusString)
+        
+        view.configureContent(title: "Success", body: acccusString,iconImage: UIImage.init(named: "LiSSpred_sel")!)
         view.button?.isHidden = true // 隐藏按钮
 
         var config = SwiftMessages.defaultConfig
@@ -69,21 +70,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SwiftMessages.show(config: config, view: view)
     }
 
-    class func showLoadingSSIPTipsIndicator(ladogdetailtext:String) {
-        let view = MessageView.viewFromNib(layout: .cardView)
-//        view.backgroundView.backgroundColor = UIColor.black.withAlphaComponent(0.7)
-        view.titleLabel?.text = "Loading..."
-        view.bodyLabel?.text = ladogdetailtext
-        
+    class func showLoadingSSIPTipsIndicator(ladogdetailtext:String,loaingShowView:UIView) {
+        let view = MessageView.viewFromNib(layout:.messageView)
+        view.configureContent(title: ladogdetailtext, body: "",iconImage: UIImage.init(named: "moreportSSIPre")!)
+        view.button?.isHidden = true // 隐藏按钮
+        view.backgroundColor = UIColor(red: 0.92, green: 0.16, blue: 0.75, alpha: 1)
         // 使用一个活动指示器
-        let activityIndicator = UIActivityIndicatorView(style: .medium)
+        let activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.startAnimating()
-        
-        view.addSubview(activityIndicator)
+        activityIndicator.tag = 999
+        loaingShowView.addSubview(activityIndicator)
         NSLayoutConstraint.activate([
-            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            activityIndicator.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+            activityIndicator.centerYAnchor.constraint(equalTo: loaingShowView.centerYAnchor),
+            activityIndicator.trailingAnchor.constraint(equalTo: loaingShowView.centerXAnchor)
         ])
 
         var config = SwiftMessages.defaultConfig
@@ -93,12 +93,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     // 隐藏加载指示器
-    class func hideLoadingSSIPTipsIndicator() {
+    class func hideLoadingSSIPTipsIndicator(loaingShowView:UIView) {
         SwiftMessages.hide()
+        let taganiview = loaingShowView.viewWithTag(999) as? UIActivityIndicatorView
+        taganiview?.stopAnimating()
     }
 
     
-    class func showINfoSSIPTipsMessage(ladogdetailtext:String) {
+    class func showINfoSSIPTipsMessage(ladogdetailtext:String,loaingShowView:UIView) {
         let view = MessageView.viewFromNib(layout: .messageView)
         view.configureContent(title: "Tips", body: ladogdetailtext)
         view.button?.isHidden = true
@@ -108,5 +110,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         config.presentationContext = .window(windowLevel: .statusBar)
 
         SwiftMessages.show(config: config, view: view)
+        
+        let taganiview = loaingShowView.viewWithTag(999) as? UIActivityIndicatorView
+        taganiview?.stopAnimating()
+        
+    }
+    
+    
+    
+}
+
+
+extension UIView {
+    func maskLippaRoundCorner(rMakLSSIpadius: CGFloat) {
+        self.layer.cornerRadius = rMakLSSIpadius
+        self.layer.masksToBounds = true
+    }
+}
+
+
+extension UIViewController{
+    func performBlockAfterDelayINSSIP(secondsSSIP: TimeInterval, completionSSIP: @escaping () -> Void) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + secondsSSIP) {
+            completionSSIP()
+        }
     }
 }

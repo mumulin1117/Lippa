@@ -29,30 +29,53 @@ class LiSSpHomeBootomrbucue: LiSSpNOrmalSnmingertips {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sjhocaseSSIP.layer.cornerRadius = 12
-        sjhocaseSSIP.layer.masksToBounds = true
+        sjhocaseSSIP.isUserInteractionEnabled = true
+        sjhocaseSSIP.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(atpdetaioCollecART)))
+        sjhocaseSSIP.maskLippaRoundCorner(rMakLSSIpadius: 12)
         
-        mecenIconLISSP.layer.cornerRadius = 16
-        mecenIconLISSP.layer.masksToBounds = true
+        mecenIconLISSP.maskLippaRoundCorner(rMakLSSIpadius: 16)
         
+       
+        
+    }
+
+    
+    
+   @objc func atpdetaioCollecART()  {
+       let namerIma = LiSSpBArbucue.SSIPlA.totalvrdataSSIP[refreshindex]["ssipColletionPic"]
+       let artdescIma = LiSSpBArbucue.SSIPlA.totalvrdataSSIP[refreshindex]["ssipColletionDesc"]
+      let artcolvc = LiSSpEnterDetailBootomrbucue.init(collectionARTData: (imaName: namerIma, imagerARTdesc: artdescIma))
+       self.navigationController?.pushViewController(artcolvc, animated: true)
+    }
+    
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         mecenIconLISSP.image = LiSSpBArbucue.SSIPlA.logPucserdataSSIP
+    }
+    
+    
+    //用户中心
+    @IBAction func toUserveSSIPCenter(_ sender: UIButton) {
+        let centerg = LiSSpMeBootomrbucue.init()
+        self.navigationController?.pushViewController(centerg, animated: true)
         
     }
-
-
-    @IBAction func toSiteMeCenterLiSSP(_ sender: UIButton) {
-        self.navigationController?.pushViewController(LiSSpMeaddgeBootomrbucue.init(), animated: true)
-    }
+    
+    
     
     
     
     @IBAction func refreshDataeingLISSP(_ sender: UIButton) {
-        if refreshindex < (LiSSpBArbucue.SSIPlA.totalvrdataSSIP.count) {
+        if refreshindex < (LiSSpBArbucue.SSIPlA.totalvrdataSSIP.count - 1) {
             refreshindex += 1
         }else{
             
             refreshindex = 0
         }
+        
         sjhocaseSSIP.image = UIImage(named: LiSSpBArbucue.SSIPlA.totalvrdataSSIP[refreshindex]["ssipColletionPic"] ?? "")
         abountINFoLissp.text = LiSSpBArbucue.SSIPlA.totalvrdataSSIP[refreshindex]["ssipColletionDesc"]
         
@@ -66,7 +89,7 @@ class LiSSpHomeBootomrbucue: LiSSpNOrmalSnmingertips {
     
     
     @IBAction func uploadeingLISSP(_ sender: UIButton) {
-        self.navigationController?.pushViewController(LiSSpAIUploasingefrbucue.init(), animated: true)
+        self.navigationController?.pushViewController(LiSSpPostColtomrbucue.init(), animated: true)
     }
     
     

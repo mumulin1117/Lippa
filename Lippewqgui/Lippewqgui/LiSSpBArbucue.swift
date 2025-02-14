@@ -149,7 +149,7 @@ class LiSSpBArbucue: NSObject {
         
         for (u,item) in totalvrdataSSIP.enumerated() {
             if item ["ssipAccID"] == transderinfo ["ssipAccID"]{
-                totalvrdataSSIP[u]["islikeThisPublish"] = isSSIPlijer ? "1" : "0"
+                totalvrdataSSIP[u]["islikeThisPublish"] = isSSIPlijer ? "SSIPLike" : "SSIPUNLike"
                
                 
             }

@@ -11,6 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiSSpTieZIPostfrbucue" customModule="Lippewqgui" customModuleProvider="target">
             <connections>
+                <outlet property="ChokenSSIP" destination="mWL-yq-3wG" id="3un-9W-7qX"/>
+                <outlet property="sedescribitTextView" destination="EZ6-8h-ODq" id="Qsc-Yq-18T"/>
+                <outlet property="sureaddINgLIPSS" destination="ce2-Ek-eFS" id="eHd-ge-ISm"/>
+                <outlet property="takeColIconLIPSS" destination="dsd-hB-lYk" id="zqS-MY-4jJ"/>
                 <outlet property="view" destination="6jc-PV-cYW" id="00G-q6-YWt"/>
             </connections>
         </placeholder>
@@ -46,6 +50,9 @@
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="POST"/>
+                    <connections>
+                        <action selector="surestareAiUpload:" destination="-1" eventType="touchUpInside" id="EAI-dG-slH"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWL-yq-3wG">
                     <rect key="frame" x="17" y="63" width="28" height="28"/>
@@ -71,6 +78,9 @@
                     <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="meiguitjtp"/>
+                    <connections>
+                        <action selector="stakwingToArtsee:" destination="-1" eventType="touchUpInside" id="BU4-rl-cQd"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload a picture " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIG-lO-o2N">
                     <rect key="frame" x="130" y="392" width="133" height="21"/>

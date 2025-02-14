@@ -8,23 +8,109 @@
 import UIKit
 
 /// 帖子详情
-class LiSSpTieZIngefrbucue: UIViewController {
-
+class LiSSpTieZIngefrbucue:  LissipSecondFrbucue {
+    @IBOutlet weak var ChokenSSIP: UIButton!
+    
+    
+    
+    @IBOutlet weak var postingUserimgSSIP: UIImageView!
+    
+    @IBOutlet weak var postusernamSSIP: UILabel!
+    
+    
+    @IBOutlet weak var postingCOntentCAseSSIP: UIImageView!
+    
+    
+    
+    @IBOutlet weak var postingContetntesxrSSIP: UILabel!
+    
+    
+    
+    @IBOutlet weak var coaprmentSSIP: UIButton!
+    
+    @IBOutlet weak var tibluebackSSIP: UIView!
+    
+    @IBOutlet weak var collecPost: UIButton!
+    
+    var postCenDataSSIP:Dictionary<String,String>
+    init(postCenDataSSIP: Dictionary<String, String>) {
+    
+        self.postCenDataSSIP = postCenDataSSIP
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+     required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
+        postingUserimgSSIP.maskLippaRoundCorner(rMakLSSIpadius: 21.5)
+        collecPost.isSelected = (postCenDataSSIP["islikeThisPublish"] == "SSIPLike")
+        
+        collecPost.isSelected = (postCenDataSSIP["islikeThisPublish"] == "SSIPLike")
+        postingUserimgSSIP.image = UIImage(named: postCenDataSSIP["ssipPicdty"] ?? "")
+        postusernamSSIP.text = postCenDataSSIP["ssipNadme"]
+        
+        postingCOntentCAseSSIP.image = UIImage(named: postCenDataSSIP["ssipPublishPic"] ?? "")
+        
+        postingContetntesxrSSIP.text = postCenDataSSIP["ssipPublishDesc"]
+        
+        tibluebackSSIP.maskLippaRoundCorner(rMakLSSIpadius: 20)
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func shingcaseOriginReport(_ sender: UIButton) {
+        
+        let normailAreport = UIAlertController(title: "Report Content", message:nil, preferredStyle: .actionSheet)
+        let reasonsdonin = ["Harassment or Bullying","Inappropriate Content","Spam or Scam Attempts","Hate Speech"]
+        
+        for item in reasonsdonin {
+            normailAreport.addAction(UIAlertAction(title: item, style: .default, handler: { alertSSIP in
+                AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "", loaingShowView: self.view)
+                self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
+                    AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
+                    AppDelegate.showSSIPSuccessTips(acccusString: "Thank you for your supervision. We will verify and handle it as soon as possible")
+                }
+               
+            }))
+        }
+       
+        
+        normailAreport.addAction(UIAlertAction(title: "cancel", style: .default))
+        
+        self.present(normailAreport, animated: true)
+        
+        
     }
-    */
+    
+    
+    
+    @IBAction func giventSSUP(_ sender: UIButton) {
+        
+        self.present(LiSSpCommwnentsingefrbucue.init(), animated: true)
+    }
+    
+    
+    @IBAction func getinguserSSUP(_ sender: UIButton) {
+        let usermingming = postCenDataSSIP
+        
+        self.present(LiSSpPesoncenstfrbucue.init(), animated: true)
+    }
+    
+    @IBAction func colllectioChagentSSUP(_ sender: UIButton) {
+        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Requesting...", loaingShowView: self.view)
+        self.performBlockAfterDelayINSSIP(secondsSSIP: 1.0) {
+            sender.isSelected = !sender.isSelected
+            
+            LiSSpBArbucue.SSIPlA.giveAttitudeTirtNenterBottomUser(transderinfo: self.postCenDataSSIP, isSSIPlijer:  sender.isSelected)
+            AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
+        }
+      
+    }
+    
+    
 
 }

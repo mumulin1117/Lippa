@@ -11,8 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiSSpEnterDetailBootomrbucue" customModule="Lippewqgui" customModuleProvider="target">
             <connections>
+                <outlet property="ChokenSSIP" destination="oL5-yx-qE8" id="ol4-eJ-27T"/>
                 <outlet property="abountINFoLissp" destination="PhH-96-4xx" id="Xhc-zs-tc1"/>
                 <outlet property="collecShingIConLISSP" destination="82A-f7-WhP" id="UX9-9A-3xD"/>
+                <outlet property="sippoBackground" destination="RiD-7u-j4o" id="D9M-Rn-60q"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,6 +34,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="lipss_mofre"/>
+                    <connections>
+                        <action selector="shingcaseOriginReport:" destination="-1" eventType="touchUpInside" id="0d7-vC-dVQ"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oL5-yx-qE8">
                     <rect key="frame" x="17" y="63" width="28" height="28"/>
