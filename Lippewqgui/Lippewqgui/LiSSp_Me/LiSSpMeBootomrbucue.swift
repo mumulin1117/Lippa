@@ -31,19 +31,21 @@ class LiSSpMeBootomrbucue:  LissipSecondFrbucue,UICollectionViewDelegate,UIColle
    
     @IBOutlet weak var thinhXOCinbg: UIView!
     
+    static  var FolsdwemeSSIP = [[String: String]]()
     
+    static var facrewemeSSIP = [[String: String]]()
     
     let minSetinggoSipp = [("Wallet","walSSIPlet"),("My profile","SSIPProfile"),("Star","FeedSSIPback"),("User Agreement","walSSIPlet"),("Privacy Policy","walSSIPlet")]
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        ownedSIpp.image = LiSSpBArbucue.SSIPlA.logPucserdataSSIP
+        ownedSIpp.image = LipSigggneSnmingertips.logPucserdataSSIP
         
-        whonameSIPP.text = LiSSpBArbucue.SSIPlA.logUoserdataSSIP["ssipNadme"]
+        whonameSIPP.text = LipSigggneSnmingertips.logUoserdataSSIP["ssipNadme"]
         
-        fancereCountSIpp.text = "\(LiSSpBArbucue.SSIPlA.facrewemeSSIP.count)"
+        fancereCountSIpp.text = "\(LiSSpMeBootomrbucue.facrewemeSSIP.count)"
         
-        fowerereCountSIpp.text = "\(LiSSpBArbucue.SSIPlA.FolsdwemeSSIP.count)"
+        fowerereCountSIpp.text = "\(LiSSpMeBootomrbucue.FolsdwemeSSIP.count)"
     
     }
     
@@ -92,6 +94,8 @@ class LiSSpMeBootomrbucue:  LissipSecondFrbucue,UICollectionViewDelegate,UIColle
            
            self.performBlockAfterDelayINSSIP(secondsSSIP: 1.0) {
                ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpNavitSnmingertips(rootViewController: LipSigggneSnmingertips.init())
+               
+               self.quiteAlRemoveAccount()
                AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
            }
        }))
@@ -102,7 +106,15 @@ class LiSSpMeBootomrbucue:  LissipSecondFrbucue,UICollectionViewDelegate,UIColle
     
     
     @objc func quiteAlRemoveAccount() {
-        LiSSpBArbucue.SSIPlA.olkauSSIplogin = true
+//        LiSSpBArbucue.SSIPlA.olkauSSIplogin = true
+//        UserDefaults.standard.set(true, forKey: "olkauSSIplogin")
+        
+        LipSigggneSnmingertips.logUoserdataSSIP.removeAll()
+        LipSigggneSnmingertips.logPucserdataSSIP = nil
+        LiSSpMeBootomrbucue.FolsdwemeSSIP.removeAll()
+        LiSSpMeBootomrbucue.facrewemeSSIP.removeAll()
+       
+        LiSSpMeaddgeBootomrbucue.cxhatArraySSIP.removeAll()
         
         ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpNavitSnmingertips(rootViewController: LipSigggneSnmingertips.init())
     

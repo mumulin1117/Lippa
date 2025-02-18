@@ -32,15 +32,15 @@ class LiSSpPesoncenstfrbucue:   LissipSecondFrbucue {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        ownedSIpp.image = LiSSpBArbucue.SSIPlA.logPucserdataSSIP
-        opwerSIPP.image = LiSSpBArbucue.SSIPlA.logPucserdataSSIP
-        whonameSIPP.text = LiSSpBArbucue.SSIPlA.logUoserdataSSIP["ssipNadme"]
+        ownedSIpp.image = LipSigggneSnmingertips.logPucserdataSSIP
+        opwerSIPP.image = LipSigggneSnmingertips.logPucserdataSSIP
+        whonameSIPP.text = LipSigggneSnmingertips.logUoserdataSSIP["ssipNadme"]
         
-        fancereCountSIpp.text = "\(LiSSpBArbucue.SSIPlA.facrewemeSSIP.count)"
+        fancereCountSIpp.text = "\(LiSSpMeBootomrbucue.facrewemeSSIP.count)"
         
-        fowerereCountSIpp.text = "\(LiSSpBArbucue.SSIPlA.FolsdwemeSSIP.count)"
+        fowerereCountSIpp.text = "\(LiSSpMeBootomrbucue.FolsdwemeSSIP.count)"
         
-        descnameSIPP.text = LiSSpBArbucue.SSIPlA.logUoserdataSSIP["ssipDtfestBriedf"]
+        descnameSIPP.text = LipSigggneSnmingertips.logUoserdataSSIP["ssipDtfestBriedf"]
         opwerSIPP.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMinYCorner]
     }
     

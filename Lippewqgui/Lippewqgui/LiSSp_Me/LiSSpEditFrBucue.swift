@@ -21,9 +21,9 @@ class LiSSpEditFrBucue:  LissipSecondFrbucue , UIImagePickerControllerDelegate &
     override func viewDidLoad() {
         super.viewDidLoad()
         ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
-        shoingNameSSIP.text = LiSSpBArbucue.SSIPlA.logUoserdataSSIP["ssipDtfestBriedf"]
-        shaingmrSSIP.text = LiSSpBArbucue.SSIPlA.logUoserdataSSIP["ssipNadme"]
-        shineView.image = LiSSpBArbucue.SSIPlA.logPucserdataSSIP
+        shoingNameSSIP.text = LipSigggneSnmingertips.logUoserdataSSIP["ssipDtfestBriedf"]
+        shaingmrSSIP.text = LipSigggneSnmingertips.logUoserdataSSIP["ssipNadme"]
+        shineView.image = LipSigggneSnmingertips.logPucserdataSSIP
         
         shineView.maskLippaRoundCorner(rMakLSSIpadius: 28)
     }
@@ -58,10 +58,10 @@ class LiSSpEditFrBucue:  LissipSecondFrbucue , UIImagePickerControllerDelegate &
         }
         
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Changeing....", loaingShowView: self.view)
-        LiSSpBArbucue.SSIPlA.logUoserdataSSIP["ssipNadme"] = namesipp
+        LipSigggneSnmingertips.logUoserdataSSIP["ssipNadme"] = namesipp
         
-        LiSSpBArbucue.SSIPlA.logUoserdataSSIP["ssipDtfestBriedf"] = aboutsipp
-        LiSSpBArbucue.SSIPlA.logPucserdataSSIP = self.shineView.image
+        LipSigggneSnmingertips.logUoserdataSSIP["ssipDtfestBriedf"] = aboutsipp
+        LipSigggneSnmingertips.logPucserdataSSIP = self.shineView.image
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5){
             AppDelegate.showSSIPSuccessTips(acccusString: "update complete!")
             

@@ -160,7 +160,8 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
    @objc func cancekSSIPIOJIJJi(SIPP:UIButton)  {
        if SIPP == self.cancekSSIP {
            if controllerSSIPType == 0 {
-               LiSSpBArbucue.SSIPlA.isagreeeeSSIP = false
+               UserDefaults.standard.set(false, forKey: "isagreeeeSSIP")
+//               LiSSpBArbucue.SSIPlA.isagreeeeSSIP = false
            }
           
            self.navigationController?.popViewController(animated: true)
@@ -168,7 +169,8 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
        
        if SIPP == self.haodeSSIP  {
            if controllerSSIPType == 0 {
-               LiSSpBArbucue.SSIPlA.isagreeeeSSIP = true
+               UserDefaults.standard.set(true, forKey: "isagreeeeSSIP")
+//               LiSSpBArbucue.SSIPlA.isagreeeeSSIP = true
            }
            
            self.navigationController?.popViewController(animated: true)

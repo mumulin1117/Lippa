@@ -31,7 +31,7 @@ class LiSSpPostColtomrbucue: LissipSecondFrbucue , UIImagePickerControllerDelega
         
         sureaddINgLIPSS.maskLippaRoundCorner(rMakLSSIpadius: 26)
        
-        
+        sedescribitTextView.maskLippaRoundCorner(rMakLSSIpadius: 26)
     }
 
     @IBAction func stakwingToArtsee(_ sender: UIButton) {

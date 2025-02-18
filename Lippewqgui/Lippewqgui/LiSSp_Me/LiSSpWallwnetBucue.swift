@@ -47,7 +47,7 @@ class LiSSpWallwnetBucue:  LissipSecondFrbucue,UICollectionViewDelegateFlowLayou
         mincolViewSIPP.delegate = self
         mincolViewSIPP.dataSource = self
         mincolViewSIPP.register(UINib.init(nibName: "LiSSpWallwnetvierell", bundle: nil), forCellWithReuseIdentifier: "LiSSpWallwnetBucueReused")
-        if let oldamone = Int(LiSSpBArbucue.SSIPlA.logUoserdataSSIP["ssipDoimond"] ?? "0"){
+        if let oldamone = Int(LipSigggneSnmingertips.logUoserdataSSIP["ssipDoimond"] ?? "0"){
    
             mineOladSSIP.text  = "\(oldamone)"
              
@@ -101,10 +101,10 @@ extension LiSSpWallwnetBucue:UICollectionViewDelegate,UICollectionViewDataSource
                 }
                 
                 self.view.isUserInteractionEnabled = true
-                if var oldamone = Int(LiSSpBArbucue.SSIPlA.logUoserdataSSIP["ssipDoimond"] ?? "0"){
+                if var oldamone = Int(LipSigggneSnmingertips.logUoserdataSSIP["ssipDoimond"] ?? "0"){
                    
                     oldamone = oldamone + selidINdfo.2
-                    LiSSpBArbucue.SSIPlA.logUoserdataSSIP["ssipDoimond"] = "\(oldamone)"
+                    LipSigggneSnmingertips.logUoserdataSSIP["ssipDoimond"] = "\(oldamone)"
                     self.mineOladSSIP.text  = "\(oldamone)"
                  }
                 

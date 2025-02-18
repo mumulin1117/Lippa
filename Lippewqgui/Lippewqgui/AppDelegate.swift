@@ -12,24 +12,49 @@ import SwiftyStoreKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-
+    var totalvrdataSSIP:Array<Dictionary<String,String>> {
+        
+        get{
+            var dataSSSIP = Array<Dictionary<String,String>>()
+            
+            guard let path = Bundle.main.path(forResource: "SSIPUjgun", ofType: "plist"),
+            let data = FileManager.default.contents(atPath: path) else {
+                dataSSSIP = Array<Dictionary<String,String>>()
+                return dataSSSIP
+            }
+            if let dictArray = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? [[String: String]]  {
+                dataSSSIP = dictArray
+            }
+            
+            
+            for (k,_) in dataSSSIP.enumerated() {
+                dataSSSIP[k]["fandscSIPPish"] = "\(Int.random(in: 0...10))"
+                dataSSSIP[k]["fowerdscSIPPish"] = "\(Int.random(in: 0...10))"
+                dataSSSIP[k]["islikeThisPublish"] = "0"
+            }
+            return dataSSSIP
+        }set{
+            
+        }
+        
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
     
         
-        if LiSSpBArbucue.SSIPlA.olkauSSIplogin == false {
+//        if UserDefaults.standard.bool(forKey: "olkauSSIplogin") != true {
             
             self.window?.rootViewController = LiSSpNavitSnmingertips(rootViewController: LipSigggneSnmingertips.init())
             
-        }else{
-            LiSSpBArbucue.SSIPlA.olkauSSIplogin = true
-            
-            LiSSpBArbucue.SSIPlA.comeSSIPONenterBottomUser()
-            self.window?.rootViewController = LiSSpBArBootomrbucue.init()
-           
-        }
+//        }else{
+//           
+//            
+//            LipSigggneSnmingertips.comeSSIPONenterBottomUser()
+//            self.window?.rootViewController = LiSSpBArBootomrbucue.init()
+//           
+//        }
        
         window?.makeKeyAndVisible()
         
@@ -77,6 +102,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         view.backgroundColor = UIColor(red: 0.92, green: 0.16, blue: 0.75, alpha: 1)
         // 使用一个活动指示器
         let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.color = .white
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.startAnimating()
         activityIndicator.tag = 999

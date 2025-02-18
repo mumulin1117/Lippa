@@ -105,7 +105,18 @@ class LiSSpTieZIngefrbucue:  LissipSecondFrbucue {
         self.performBlockAfterDelayINSSIP(secondsSSIP: 1.0) {
             sender.isSelected = !sender.isSelected
             
-            LiSSpBArbucue.SSIPlA.giveAttitudeTirtNenterBottomUser(transderinfo: self.postCenDataSSIP, isSSIPlijer:  sender.isSelected)
+//            LiSSpBArbucue.SSIPlA.giveAttitudeTirtNenterBottomUser(transderinfo: self.postCenDataSSIP, isSSIPlijer:  sender.isSelected)
+            if let appledeelgate = (UIApplication.shared.delegate) as? AppDelegate {
+              
+                for (u,item) in appledeelgate.totalvrdataSSIP.enumerated() {
+                    if item ["ssipAccID"] == self.postCenDataSSIP ["ssipAccID"]{
+                        appledeelgate.totalvrdataSSIP[u]["islikeThisPublish"] = sender.isSelected ? "SSIPLike" : "SSIPUNLike"
+                       
+                        
+                    }
+                }
+            }
+            
             AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
         }
       

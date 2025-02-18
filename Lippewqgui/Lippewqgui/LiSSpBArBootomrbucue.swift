@@ -27,13 +27,13 @@ class LiSSpBArBootomrbucue:UITabBarController {
         
         
         
-        let firstViewController = LiSSpNavitSnmingertips.init(rootViewController: LiSSpHomeBootomrbucue())
+        let ewHomePage = LiSSpNavitSnmingertips.init(rootViewController: LiSSpHomeBootomrbucue())
 //
-        let secondViewController = LiSSpNavitSnmingertips.init(rootViewController: LiSSpDynamicBootomrbucue())
-        let thirdViewController = LiSSpNavitSnmingertips.init(rootViewController: LiSSpMeaddgeBootomrbucue())
+        let olkaoPageSSiptroller = LiSSpNavitSnmingertips.init(rootViewController: LiSSpDynamicBootomrbucue())
+        let meaadhepageller = LiSSpNavitSnmingertips.init(rootViewController: LiSSpMeaddgeBootomrbucue())
  
          
-        let items = [
+        let ilisat = [
            
             UITabBarItem.init(title: "HOME", image: UIImage(named: "LiSSphome_black"), selectedImage: UIImage(named: "LiSSphome_pink")!.withRenderingMode(.alwaysOriginal)),
             UITabBarItem.init(title: "POST", image: UIImage(named: "LiSSp_posBar_black"), selectedImage: UIImage(named: "LiSSp_posBar_pink")!.withRenderingMode(.alwaysOriginal)),
@@ -41,13 +41,13 @@ class LiSSpBArBootomrbucue:UITabBarController {
             
         ]
         
-        firstViewController.tabBarItem = items[0]
-        secondViewController.tabBarItem = items[1]
-        thirdViewController.tabBarItem = items[2]
+        ewHomePage.tabBarItem = ilisat[0]
+        olkaoPageSSiptroller.tabBarItem = ilisat[1]
+        meaadhepageller.tabBarItem = ilisat[2]
        
         self.tabBar.backgroundColor = UIColor(red: 0.06, green: 0.05, blue: 0.13, alpha: 1)
           
-        viewControllers = [firstViewController, secondViewController,thirdViewController]
+        viewControllers = [ewHomePage, olkaoPageSSiptroller,meaadhepageller]
     }
     
    
@@ -67,14 +67,25 @@ class LiSSpNavitSnmingertips: UINavigationController {
 
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
       
-        if children.count > 0  && !viewController.isMember(of:LiSSpNOrmalSnmingertips.self) {
+        if children.count > 0   {
+            if !viewController.isMember(of:LiSSpNOrmalSnmingertips.self) {
+                transfortSIEP(hiddentroller:viewController)
+            }
            
-            viewController.hidesBottomBarWhenPushed = true
         }
        
         super.pushViewController(viewController, animated: false)
     }
+    
+    
+    
+    
+    private func transfortSIEP(hiddentroller:UIViewController) {
+        hiddentroller.hidesBottomBarWhenPushed = true
+    }
 }
+
+
 
 
 class LiSSpNOrmalSnmingertips: UIViewController {

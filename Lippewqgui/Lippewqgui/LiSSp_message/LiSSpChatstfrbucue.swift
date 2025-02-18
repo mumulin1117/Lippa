@@ -47,16 +47,16 @@ class LiSSpChatstfrbucue: LissipSecondFrbucue,UITableViewDelegate,UITableViewDat
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        for (id,itru) in LiSSpBArbucue.SSIPlA.cxhatArraySSIP.enumerated() {
+        for (id,itru) in LiSSpMeaddgeBootomrbucue.cxhatArraySSIP.enumerated() {
             if itru.whoseSSIP["ssipAccID"] == PChatUSerFwbnke.whoseSSIP["ssipAccID"]{
-                LiSSpBArbucue.SSIPlA.cxhatArraySSIP[id] = PChatUSerFwbnke
+                LiSSpMeaddgeBootomrbucue.cxhatArraySSIP[id] = PChatUSerFwbnke
             }
         }
         
-        if LiSSpBArbucue.SSIPlA.cxhatArraySSIP.filter({ SSIPChatUSerFwbnked in
+        if LiSSpMeaddgeBootomrbucue.cxhatArraySSIP.filter({ SSIPChatUSerFwbnked in
             return SSIPChatUSerFwbnked.whoseSSIP["ssipAccID"] == PChatUSerFwbnke.whoseSSIP["ssipAccID"]
         }).count == 0 {
-            LiSSpBArbucue.SSIPlA.cxhatArraySSIP.append(PChatUSerFwbnke)
+            LiSSpMeaddgeBootomrbucue.cxhatArraySSIP.append(PChatUSerFwbnke)
         }
     }
     override func viewDidLoad() {
@@ -86,7 +86,7 @@ class LiSSpChatstfrbucue: LissipSecondFrbucue,UITableViewDelegate,UITableViewDat
             self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
                 AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
                 AppDelegate.showSSIPSuccessTips(acccusString: "Black successful!")
-                LiSSpBArbucue.SSIPlA.delsteSSIPONenterBottomUser(iduserSSIP: self.PChatUSerFwbnke.whoseSSIP)
+                self.delsteSSIPONenterBottomUser(iduserSSIP: self.PChatUSerFwbnke.whoseSSIP)
             }
            
         }))

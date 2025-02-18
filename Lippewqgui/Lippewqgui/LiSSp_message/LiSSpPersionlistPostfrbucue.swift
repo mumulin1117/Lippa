@@ -67,9 +67,9 @@ extension LiSSpPersionlistPostfrbucue:UICollectionViewDelegate,UICollectionViewD
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if facerSSIp.isSelected  {
-            return LiSSpBArbucue.SSIPlA.facrewemeSSIP.count
+            return LiSSpMeBootomrbucue.facrewemeSSIP.count
         }else{
-            return LiSSpBArbucue.SSIPlA.FolsdwemeSSIP.count
+            return LiSSpMeBootomrbucue.FolsdwemeSSIP.count
         }
     }
     
@@ -87,12 +87,12 @@ extension LiSSpPersionlistPostfrbucue:UICollectionViewDelegate,UICollectionViewD
         
         if facerSSIp.isSelected  {
             
-            lippcee.babdaerView.image = UIImage(named: LiSSpBArbucue.SSIPlA.facrewemeSSIP[indexPath.row]["ssipPicdty"] ?? "")
-            lippcee.nicmerSSIP.text = LiSSpBArbucue.SSIPlA.facrewemeSSIP[indexPath.row]["ssipNadme"]
+            lippcee.babdaerView.image = UIImage(named: LiSSpMeBootomrbucue.facrewemeSSIP[indexPath.row]["ssipPicdty"] ?? "")
+            lippcee.nicmerSSIP.text = LiSSpMeBootomrbucue.facrewemeSSIP[indexPath.row]["ssipNadme"]
            
         }else{
-            lippcee.babdaerView.image = UIImage(named: LiSSpBArbucue.SSIPlA.FolsdwemeSSIP[indexPath.row]["ssipPicdty"] ?? "")
-            lippcee.nicmerSSIP.text = LiSSpBArbucue.SSIPlA.FolsdwemeSSIP[indexPath.row]["ssipNadme"]
+            lippcee.babdaerView.image = UIImage(named: LiSSpMeBootomrbucue.FolsdwemeSSIP[indexPath.row]["ssipPicdty"] ?? "")
+            lippcee.nicmerSSIP.text = LiSSpMeBootomrbucue.FolsdwemeSSIP[indexPath.row]["ssipNadme"]
            
         }
         
@@ -101,11 +101,11 @@ extension LiSSpPersionlistPostfrbucue:UICollectionViewDelegate,UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if facerSSIp.isSelected  {
-            let userssip = LiSSpBArbucue.SSIPlA.facrewemeSSIP[indexPath.row]
+            let userssip = LiSSpMeBootomrbucue.facrewemeSSIP[indexPath.row]
             self.navigationController?.pushViewController(LiSSpItmeringBucue.init(postCenDataSSIP: userssip), animated: true)
             
         }else{
-            let userssip = LiSSpBArbucue.SSIPlA.FolsdwemeSSIP[indexPath.row]
+            let userssip = LiSSpMeBootomrbucue.FolsdwemeSSIP[indexPath.row]
             self.navigationController?.pushViewController(LiSSpItmeringBucue.init(postCenDataSSIP: userssip), animated: true)
         }
         

@@ -10,16 +10,23 @@ import SnapKit
 /// 动态贴子
 class LiSSpDynamicBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDataSource,UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return LiSSpBArbucue.SSIPlA.totalvrdataSSIP.count
+        if let appledeelgate = (UIApplication.shared.delegate) as? AppDelegate { return appledeelgate.totalvrdataSSIP.count}
+        return 0
+       
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        
         
-        let selidINdfo =  LiSSpBArbucue.SSIPlA.totalvrdataSSIP[indexPath.row]
+        
         let CellIDSIPP = collectionView.dequeueReusableCell(withReuseIdentifier: "LiSSpSeeingPOsecellreused", for: indexPath) as! LiSSpSeeingPOsecell
-        CellIDSIPP.postCenDataSSIP = selidINdfo
-        CellIDSIPP.collecPost.isSelected = (selidINdfo["islikeThisPublish"] == "SSIPLike")
+        if let appledeelgate = (UIApplication.shared.delegate) as? AppDelegate {
+            let selidINdfo =  appledeelgate.totalvrdataSSIP[indexPath.row]
+            
+            CellIDSIPP.postCenDataSSIP = selidINdfo
+            CellIDSIPP.collecPost.isSelected = (selidINdfo["islikeThisPublish"] == "SSIPLike")
+        }
+       
         return CellIDSIPP
        
     }
@@ -69,8 +76,12 @@ class LiSSpDynamicBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDataSour
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selidINdfo =  LiSSpBArbucue.SSIPlA.totalvrdataSSIP[indexPath.row]
-        self.navigationController?.pushViewController(LiSSpTieZIngefrbucue.init(postCenDataSSIP: selidINdfo), animated: true)
+        if let appledeelgate = (UIApplication.shared.delegate) as? AppDelegate {
+            
+            let selidINdfo =  appledeelgate.totalvrdataSSIP[indexPath.row]
+            self.navigationController?.pushViewController(LiSSpTieZIngefrbucue.init(postCenDataSSIP: selidINdfo), animated: true)
+        }
+        
     }
     
     

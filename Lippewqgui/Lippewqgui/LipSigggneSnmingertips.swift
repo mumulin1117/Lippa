@@ -20,9 +20,16 @@ class LipSigggneSnmingertips: UIViewController {
     @IBOutlet weak var statauseSSIP: UIButton!
     
     
+    static var logUoserdataSSIP:Dictionary<String,String> = Dictionary<String,String>()
+    
+    static var logPucserdataSSIP:UIImage?
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        statauseSSIP.isSelected = LiSSpBArbucue.SSIPlA.isagreeeeSSIP
+        let ifAgreenREsult = UserDefaults.standard.bool(forKey: "isagreeeeSSIP")
+        
+        statauseSSIP.isSelected = ifAgreenREsult
         
     }
     
@@ -36,8 +43,7 @@ class LipSigggneSnmingertips: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         IQKeyboardManager.shared().isEnabled = true
-        signSSIPin.layer.cornerRadius = 27
-        signSSIPin.layer.masksToBounds = true
+        signSSIPin.maskLippaRoundCorner(rMakLSSIpadius: 27)
         
         addLinkkkUrelSSIP()
         statauseSSIP.addTarget(self, action: #selector(statusdiihiiSSIP), for: .touchUpInside)
@@ -56,7 +62,7 @@ class LipSigggneSnmingertips: UIViewController {
         self.entrtSSIPOPsw.resignFirstResponder()
        
         
-        if LiSSpBArbucue.SSIPlA.isagreeeeSSIP == false {
+        if statauseSSIP.isSelected == false {
             AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Please read and agree to the terms and conditions first.", loaingShowView: self.view)
           
             return
@@ -84,9 +90,9 @@ class LipSigggneSnmingertips: UIViewController {
                 AppDelegate.hideLoadingSSIPTipsIndicator( loaingShowView: self.view)
                 AppDelegate.showSSIPSuccessTips(acccusString: "Log in successful!")
                 
-                LiSSpBArbucue.SSIPlA.comeSSIPONenterBottomUser()
-                LiSSpBArbucue.SSIPlA.olkauSSIplogin = true
-               
+                self.comeSSIPONenterBottomUser()
+//                LiSSpBArbucue.SSIPlA.olkauSSIplogin = true
+//                UserDefaults.standard.set(true, forKey: "olkauSSIplogin")
                 ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpBArBootomrbucue.init()
                 return
             }))
@@ -105,18 +111,18 @@ class LipSigggneSnmingertips: UIViewController {
                
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
                     AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
-                    LiSSpBArbucue.SSIPlA.olkauSSIplogin = true
-                    
+//                    LiSSpBArbucue.SSIPlA.olkauSSIplogin = true
+//                    UserDefaults.standard.set(true, forKey: "olkauSSIplogin")
                     
                     AppDelegate.showSSIPSuccessTips(acccusString: "Log in successful!")
                     
-                    LiSSpBArbucue.SSIPlA.logUoserdataSSIP["ssipDtfestAccount"] = contenEmailSSIP
-                    LiSSpBArbucue.SSIPlA.logUoserdataSSIP["ssipAccID"] = "\(Int.random(in: 50000...60000))"
-                    LiSSpBArbucue.SSIPlA.logUoserdataSSIP["ssipPicdty"] = "userHear9"
+                    LipSigggneSnmingertips.logUoserdataSSIP["ssipDtfestAccount"] = contenEmailSSIP
+                    LipSigggneSnmingertips.logUoserdataSSIP["ssipAccID"] = "\(Int.random(in: 50000...60000))"
+                    LipSigggneSnmingertips.logUoserdataSSIP["ssipPicdty"] = "userHear9"
                     
-                    LiSSpBArbucue.SSIPlA.logUoserdataSSIP["ssipNadme"] = "NULL"
+                    LipSigggneSnmingertips.logUoserdataSSIP["ssipNadme"] = "NULL"
                     
-                    LiSSpBArbucue.SSIPlA.logPucserdataSSIP = UIImage(named: "wode_mrtx")
+                    LipSigggneSnmingertips.logPucserdataSSIP = UIImage(named: "wode_mrtx")
                     
                     ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpBArBootomrbucue.init()
                   
@@ -131,8 +137,8 @@ class LipSigggneSnmingertips: UIViewController {
 
     @objc func statusdiihiiSSIP() {
         statauseSSIP.isSelected = !statauseSSIP.isSelected
-        
-        LiSSpBArbucue.SSIPlA.isagreeeeSSIP = statauseSSIP.isSelected
+        UserDefaults.standard.set(statauseSSIP.isSelected, forKey: "isagreeeeSSIP")
+//        LiSSpBArbucue.SSIPlA.isagreeeeSSIP = statauseSSIP.isSelected
     }
     
     
@@ -141,5 +147,51 @@ class LipSigggneSnmingertips: UIViewController {
         
         self.navigationController?.pushViewController(LiSSpELUABootomrbucue.init(controllerSSIPType: 0), animated: true)
         
+    }
+    
+    
+    func comeSSIPONenterBottomUser() {
+        LipSigggneSnmingertips.logUoserdataSSIP = ["ssipNadme":"Aria",
+                                          "ssipPicdty":"SSIPavator9",
+                                          "ssipDoimond":"200",
+                                          "ssipDtfestAccount":"lippa@gmail.com",
+                                          "ssipDtfestBriedf":"🖤 Collector of forgotten stories | Preserving history, one treasure at a time 📜",
+                                          "ssipAccID":"234589"
+                                         
+                                          
+        
+        ]
+
+        LipSigggneSnmingertips.logPucserdataSSIP = UIImage(named:"SSIPavator9")
+        
+        if let appledeelgate = (UIApplication.shared.delegate) as? AppDelegate {
+            
+            LiSSpMeBootomrbucue.FolsdwemeSSIP = Array(appledeelgate.totalvrdataSSIP.shuffled().prefix(1))
+            LiSSpMeBootomrbucue.facrewemeSSIP = Array(appledeelgate.totalvrdataSSIP.shuffled().prefix(1))
+            
+            if let laiker = appledeelgate.totalvrdataSSIP.first  {
+                let comengONe = SSIPChatUSerFwbnke.init(_whoseSSIP: laiker, _chatSSIPList: [(true,"What kind of art do you collect?"),(false,"I love oil paintings, especially Impressionism.")])
+                LiSSpMeaddgeBootomrbucue.cxhatArraySSIP.append(comengONe)
+
+            }
+            
+            if  appledeelgate.totalvrdataSSIP.count >= 2 {
+                
+                let laiet = appledeelgate.totalvrdataSSIP[1]
+                let comengtwo = SSIPChatUSerFwbnke.init(_whoseSSIP: laiet, _chatSSIPList: [(false,"How do you choose what to collect?"),(true,"I mainly look for emotional resonance in the work.")])
+                LiSSpMeaddgeBootomrbucue.cxhatArraySSIP.append(comengtwo)
+                
+            }
+            
+            
+            if  appledeelgate.totalvrdataSSIP.count >= 3 {
+                
+                let laidsan = appledeelgate.totalvrdataSSIP[2]
+                let comengtwo = SSIPChatUSerFwbnke.init(_whoseSSIP: laidsan, _chatSSIPList: [(false,"Any advice on collecting art?")])
+                LiSSpMeaddgeBootomrbucue.cxhatArraySSIP.append(comengtwo)
+                
+            }
+        }
+       
     }
 }

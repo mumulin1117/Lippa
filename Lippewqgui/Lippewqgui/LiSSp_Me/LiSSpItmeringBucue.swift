@@ -54,7 +54,7 @@ class LiSSpItmeringBucue:  LissipSecondFrbucue {
         ownedSIpp.image = UIImage(named: postCenDataSSIP["ssipPicdty"] ?? "")
         whonameSIPP.text = postCenDataSSIP["ssipNadme"]
         backDAtaimgeSSIP.setBackgroundImage(UIImage.init(named: postCenDataSSIP["ssipColletionPic"] ?? ""), for: .normal)
-        focusSSSIPo.isSelected = (LiSSpBArbucue.SSIPlA.FolsdwemeSSIP.filter({ SSIPDIC in
+        focusSSSIPo.isSelected = (LiSSpMeBootomrbucue.FolsdwemeSSIP.filter({ SSIPDIC in
             return postCenDataSSIP["ssipAccID"] == SSIPDIC["ssipAccID"]
         }).count > 0)
         
@@ -76,7 +76,7 @@ class LiSSpItmeringBucue:  LissipSecondFrbucue {
 
     @IBAction func collectiontableSSIP(_ sender: UIButton) {
         if sender.tag == 990 {
-            if let whoseSSIP = LiSSpBArbucue.SSIPlA.cxhatArraySSIP.filter({ SSIPChatUSerFwbnkeEr in
+            if let whoseSSIP = LiSSpMeaddgeBootomrbucue.cxhatArraySSIP.filter({ SSIPChatUSerFwbnkeEr in
                 return SSIPChatUSerFwbnkeEr.whoseSSIP["ssipAccID"] == postCenDataSSIP["ssipAccID"]
             }).first {
                 
@@ -151,10 +151,10 @@ class LiSSpItmeringBucue:  LissipSecondFrbucue {
        focusSSSIPo.isSelected = !focusSSSIPo.isSelected
        
       
-       if LiSSpBArbucue.SSIPlA.FolsdwemeSSIP.filter({ dioi in
+       if LiSSpMeBootomrbucue.FolsdwemeSSIP.filter({ dioi in
            return dioi[""] == postCenDataSSIP[""]
        }).count == 0 && focusSSSIPo.isSelected{
-           LiSSpBArbucue.SSIPlA.FolsdwemeSSIP.insert(postCenDataSSIP, at: 0)
+           LiSSpMeBootomrbucue.FolsdwemeSSIP.insert(postCenDataSSIP, at: 0)
        }
     }
     
@@ -167,7 +167,7 @@ class LiSSpItmeringBucue:  LissipSecondFrbucue {
             self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
                 AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
                 AppDelegate.showSSIPSuccessTips(acccusString: "Black successful!")
-                LiSSpBArbucue.SSIPlA.delsteSSIPONenterBottomUser(iduserSSIP: self.postCenDataSSIP)
+                self.delsteSSIPONenterBottomUser(iduserSSIP: self.postCenDataSSIP)
                 
                 
             }

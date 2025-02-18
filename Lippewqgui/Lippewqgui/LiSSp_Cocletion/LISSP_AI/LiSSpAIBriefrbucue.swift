@@ -21,7 +21,7 @@ class LiSSpAIBriefrbucue: LissipSecondFrbucue {
 
   
     @IBAction func SSipToPaying(_ sender: Any) {
-        var ssipDoimond = Int(LiSSpBArbucue.SSIPlA.logUoserdataSSIP["ssipDoimond"] ?? "0") ?? 0
+        var ssipDoimond = Int(LipSigggneSnmingertips.logUoserdataSSIP["ssipDoimond"] ?? "0") ?? 0
        
         if ssipDoimond < 200 {
             self.navigationController?.pushViewController(LiSSpWallwnetBucue.init(), animated: true)
@@ -30,7 +30,7 @@ class LiSSpAIBriefrbucue: LissipSecondFrbucue {
         
        
         ssipDoimond -= 200
-        LiSSpBArbucue.SSIPlA.logUoserdataSSIP["ssipDoimond"] = "\(ssipDoimond)"
+        LipSigggneSnmingertips.logUoserdataSSIP["ssipDoimond"] = "\(ssipDoimond)"
         
         let startupload = LiSSpAIUploasingefrbucue.init()
         
@@ -45,5 +45,23 @@ class LissipSecondFrbucue: UIViewController {
     @objc func ctterBsdNoingSSIP()  {
         self.navigationController?.popViewController(animated: true)
         
+    }
+    
+    func delsteSSIPONenterBottomUser(iduserSSIP:[String:String]) {
+       
+        
+        let onlyID = iduserSSIP["ssipAccID"] ?? ""
+        if let appledeelgate = (UIApplication.shared.delegate) as? AppDelegate {
+            appledeelgate.totalvrdataSSIP = appledeelgate.totalvrdataSSIP.filter { !($0["ssipAccID"]  == onlyID) }
+           
+        }
+        LiSSpMeBootomrbucue.FolsdwemeSSIP = LiSSpMeBootomrbucue.FolsdwemeSSIP.filter { !($0["ssipAccID"]  == onlyID) }
+        
+        LiSSpMeBootomrbucue.facrewemeSSIP = LiSSpMeBootomrbucue.facrewemeSSIP.filter { !($0["ssipAccID"]  == onlyID) }
+        
+        
+        LiSSpMeaddgeBootomrbucue.cxhatArraySSIP = LiSSpMeaddgeBootomrbucue.cxhatArraySSIP.filter { !($0.whoseSSIP["ssipAccID"]  == onlyID) }
+        
+        NotificationCenter.default.post(name: NSNotification.Name.init("deleteUserSIPPish"), object: nil)
     }
 }

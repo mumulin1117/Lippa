@@ -17,7 +17,6 @@
 		04CD3FB32D59928F001D403C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CD3FAE2D59928F001D403C /* LaunchScreen.storyboard */; };
 		04CD3FB62D5998C3001D403C /* LipSigggneSnmingertips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD3FB42D5998C3001D403C /* LipSigggneSnmingertips.swift */; };
 		04CD3FB72D5998C3001D403C /* LipSigggneSnmingertips.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CD3FB52D5998C3001D403C /* LipSigggneSnmingertips.xib */; };
-		04CD3FB92D59AD86001D403C /* LiSSpBArbucue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD3FB82D59AD86001D403C /* LiSSpBArbucue.swift */; };
 		04CD3FBB2D59AE20001D403C /* LiSSpBArBootomrbucue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD3FBA2D59AE20001D403C /* LiSSpBArBootomrbucue.swift */; };
 		04CD3FCB2D59D9DF001D403C /* LiSSpHomeBootomrbucue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CD3FCA2D59D9DF001D403C /* LiSSpHomeBootomrbucue.xib */; };
 		04CD3FCC2D59D9DF001D403C /* LiSSpHomeBootomrbucue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD3FC92D59D9DF001D403C /* LiSSpHomeBootomrbucue.swift */; };
@@ -79,7 +78,6 @@
 		04CD3FAD2D59928F001D403C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04CD3FB42D5998C3001D403C /* LipSigggneSnmingertips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipSigggneSnmingertips.swift; sourceTree = "<group>"; };
 		04CD3FB52D5998C3001D403C /* LipSigggneSnmingertips.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LipSigggneSnmingertips.xib; sourceTree = "<group>"; };
-		04CD3FB82D59AD86001D403C /* LiSSpBArbucue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiSSpBArbucue.swift; sourceTree = "<group>"; };
 		04CD3FBA2D59AE20001D403C /* LiSSpBArBootomrbucue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiSSpBArBootomrbucue.swift; sourceTree = "<group>"; };
 		04CD3FC92D59D9DF001D403C /* LiSSpHomeBootomrbucue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiSSpHomeBootomrbucue.swift; sourceTree = "<group>"; };
 		04CD3FCA2D59D9DF001D403C /* LiSSpHomeBootomrbucue.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiSSpHomeBootomrbucue.xib; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 				04CD3FDA2D59E0E6001D403C /* LiSSpELUABootomrbucue.xib */,
 				04CD3FB42D5998C3001D403C /* LipSigggneSnmingertips.swift */,
 				04CD3FB52D5998C3001D403C /* LipSigggneSnmingertips.xib */,
-				04CD3FB82D59AD86001D403C /* LiSSpBArbucue.swift */,
 				04CD3FBA2D59AE20001D403C /* LiSSpBArBootomrbucue.swift */,
 				042D1C452D5B292300854E10 /* SSIPUjgun.plist */,
 			);
@@ -432,7 +429,6 @@
 				04CD3FB02D59928F001D403C /* AppDelegate.swift in Sources */,
 				04CD3FE32D59F8AF001D403C /* LiSSpPostColtomrbucue.swift in Sources */,
 				04E0832D2D632A1B00A8FD1A /* LiSSTagwCell.swift in Sources */,
-				04CD3FB92D59AD86001D403C /* LiSSpBArbucue.swift in Sources */,
 				04CD3FB62D5998C3001D403C /* LipSigggneSnmingertips.swift in Sources */,
 				04CD3FBB2D59AE20001D403C /* LiSSpBArBootomrbucue.swift in Sources */,
 				042D1C492D5DC07300854E10 /* LiSSpSeeingPOsecell.swift in Sources */,

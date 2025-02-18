@@ -22,7 +22,7 @@ class LiSSpmeassgrLifarCell: UICollectionViewCell {
             if firstgcomg?.0 == true {
                 
                 nicmerSSIP.text = "Me"
-//                babdaerView.image = LiSSpBArbucue.SSIPlA.logPucserdataSSIP
+//                babdaerView.image = LipSigggneSnmingertips.logPucserdataSSIP
             }else{
                 nicmerSSIP.text = datagking?["ssipNadme"] ?? ""
                 

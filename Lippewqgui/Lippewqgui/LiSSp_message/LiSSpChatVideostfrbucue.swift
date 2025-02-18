@@ -39,7 +39,7 @@ class LiSSpChatVideostfrbucue:  LissipSecondFrbucue {
         shinmaskerlayerSSip.maskLippaRoundCorner(rMakLSSIpadius: 21)
         
         
-        shinmaskerlayerSSip.image = LiSSpBArbucue.SSIPlA.logPucserdataSSIP
+        shinmaskerlayerSSip.image = LipSigggneSnmingertips.logPucserdataSSIP
         NotificationCenter.default.addObserver(self, selector: #selector(ctterBsdNoingSSIP), name: NSNotification.Name.init("deleteUserSIPPish"), object: nil)
         
         
@@ -83,7 +83,7 @@ class LiSSpChatVideostfrbucue:  LissipSecondFrbucue {
             self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
                 AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
                 AppDelegate.showSSIPSuccessTips(acccusString: "Black successful!")
-                LiSSpBArbucue.SSIPlA.delsteSSIPONenterBottomUser(iduserSSIP: self.postCenDataSSIP)
+                self.delsteSSIPONenterBottomUser(iduserSSIP: self.postCenDataSSIP)
                
                 
             }

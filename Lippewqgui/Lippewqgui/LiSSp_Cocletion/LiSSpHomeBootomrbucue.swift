@@ -42,10 +42,14 @@ class LiSSpHomeBootomrbucue: LiSSpNOrmalSnmingertips {
     
     
    @objc func atpdetaioCollecART()  {
-       let namerIma = LiSSpBArbucue.SSIPlA.totalvrdataSSIP[refreshindex]["ssipColletionPic"]
-       let artdescIma = LiSSpBArbucue.SSIPlA.totalvrdataSSIP[refreshindex]["ssipColletionDesc"]
-      let artcolvc = LiSSpEnterDetailBootomrbucue.init(collectionARTData: (imaName: namerIma, imagerARTdesc: artdescIma))
-       self.navigationController?.pushViewController(artcolvc, animated: true)
+       if let appledeelgate = (UIApplication.shared.delegate) as? AppDelegate {
+           let namerIma = appledeelgate.totalvrdataSSIP[refreshindex]["ssipColletionPic"]
+           let artdescIma = appledeelgate.totalvrdataSSIP[refreshindex]["ssipColletionDesc"]
+          let artcolvc = LiSSpEnterDetailBootomrbucue.init(collectionARTData: (imaName: namerIma, imagerARTdesc: artdescIma))
+           self.navigationController?.pushViewController(artcolvc, animated: true)
+       }
+       
+       
     }
     
     
@@ -53,7 +57,7 @@ class LiSSpHomeBootomrbucue: LiSSpNOrmalSnmingertips {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        mecenIconLISSP.image = LiSSpBArbucue.SSIPlA.logPucserdataSSIP
+        mecenIconLISSP.image = LipSigggneSnmingertips.logPucserdataSSIP
     }
     
     
@@ -69,15 +73,22 @@ class LiSSpHomeBootomrbucue: LiSSpNOrmalSnmingertips {
     
     
     @IBAction func refreshDataeingLISSP(_ sender: UIButton) {
-        if refreshindex < (LiSSpBArbucue.SSIPlA.totalvrdataSSIP.count - 1) {
+        
+        if let appledeelgate = (UIApplication.shared.delegate) as? AppDelegate {
+            
+            
+       
+        if refreshindex < (appledeelgate.totalvrdataSSIP.count - 1) {
             refreshindex += 1
         }else{
             
             refreshindex = 0
         }
         
-        sjhocaseSSIP.image = UIImage(named: LiSSpBArbucue.SSIPlA.totalvrdataSSIP[refreshindex]["ssipColletionPic"] ?? "")
-        abountINFoLissp.text = LiSSpBArbucue.SSIPlA.totalvrdataSSIP[refreshindex]["ssipColletionDesc"]
+        sjhocaseSSIP.image = UIImage(named: appledeelgate.totalvrdataSSIP[refreshindex]["ssipColletionPic"] ?? "")
+        abountINFoLissp.text = appledeelgate.totalvrdataSSIP[refreshindex]["ssipColletionDesc"]
+            
+        }
         
     }
     
