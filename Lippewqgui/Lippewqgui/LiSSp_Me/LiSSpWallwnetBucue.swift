@@ -27,37 +27,46 @@ class LiSSpWallwnetBucue:  LissipSecondFrbucue,UICollectionViewDelegateFlowLayou
         12
     }
     
+    var blanceidSSIPayID:Array<(String,String,Int)> = Array<(String,String,Int)>()
     
-    let blanceidSSIPayID = [("nqixcbnohmlxhlrc","$0.99",400),
-                     ("pxoxebhhktzklezg","$1.99",600),
-                            ("lioopgnzhunahgfy","$2.99",1150),
-                           
-                     ("rjcaopufshgxmmch","$4.99",2450),
-                            ("sdrgnhnjutyjtyjr","$5.99",2650),
-                            ("oaijeghutgfhfgtt","$8.99",4650),
-                     ("hwisjrlbpnklyzcq","$9.99",4900),
-                     ("vpjxrayqjkswcwpc","$19.99",9800),
-                     ("nyrjetssfpqjltkh","$49.99",24500),
-                     ("cotnxwosshqinyda","$99.99",49000)
-                            ]
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
+        
+        blanceidSSIPayID = [("nqixcbnohmlxhlrc","$0.99",400),
+                         ("pxoxebhhktzklezg","$1.99",600),
+                                ("pxoxebhhktzklllip","$2.99",1150),
+                               
+                         ("rjcaopufshgxmmch","$4.99",2450),
+                                ("sdrgnhnjutyjtyjr","$5.99",2650),
+                                ("oaijeghutgfhfgtt","$8.99",4650),
+                         ("hwisjrlbpnklyzcq","$9.99",4900),
+                         ("vpjxrayqjkswcwpc","$19.99",9800),
+                         ("nyrjetssfpqjltkh","$49.99",24500),
+                         ("cotnxwosshqinyda","$99.99",49000)
+                                ]
+        ssuitreatNet()
+        mincolViewSIPP.register(UINib.init(nibName: "LiSSpWallwnetvierell", bundle: nil), forCellWithReuseIdentifier: "LiSSpWallwnetBucueReused")
+        
+        ssuipCreaNet()
+        
+        mincolViewSIPP.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 280, right: 0)
+    }
+
+    private func ssuipCreaNet() {
         mincolViewSIPP.delegate = self
         mincolViewSIPP.dataSource = self
-        mincolViewSIPP.register(UINib.init(nibName: "LiSSpWallwnetvierell", bundle: nil), forCellWithReuseIdentifier: "LiSSpWallwnetBucueReused")
+    }
+    
+    private func ssuitreatNet() {
         if let oldamone = Int(LipSigggneSnmingertips.logUoserdataSSIP["ssipDoimond"] ?? "0"){
    
             mineOladSSIP.text  = "\(oldamone)"
              
          }
-        
-        
-        mincolViewSIPP.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 280, right: 0)
     }
-
-
    
 
 }
@@ -80,6 +89,21 @@ extension LiSSpWallwnetBucue:UICollectionViewDelegate,UICollectionViewDataSource
         
     }
     
+    private func getingReallIDREsultSSSIp(diomondAccount:Int)  {
+        
+        if var oldamone = Int(LipSigggneSnmingertips.logUoserdataSSIP["ssipDoimond"] ?? "0"){
+           
+            oldamone = oldamone + diomondAccount
+            LipSigggneSnmingertips.logUoserdataSSIP["ssipDoimond"] = "\(oldamone)"
+            self.mineOladSSIP.text  = "\(oldamone)"
+         }
+        
+        
+        AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
+       
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         view.isUserInteractionEnabled = false
@@ -88,40 +112,37 @@ extension LiSSpWallwnetBucue:UICollectionViewDelegate,UICollectionViewDataSource
         let selidINdfo = self.blanceidSSIPayID[indexPath.row]
         
         SwiftyStoreKit.purchaseProduct(selidINdfo.0, atomically: true) { psResult in
-            
-            if case .success(let psPurch) = psResult {
-                let psdownloads = psPurch.transaction.downloads
+            self.view.isUserInteractionEnabled = true
+            if case .success(let coacadpos) = psResult {
+                
+                self.getingReallIDREsultSSSIp(diomondAccount: selidINdfo.2)
+                
+                let psdownloads = coacadpos.transaction.downloads
                 
                 if !psdownloads.isEmpty {
                     SwiftyStoreKit.start(psdownloads)
                 }
                 
-                if psPurch.needsFinishTransaction {
-                    SwiftyStoreKit.finishTransaction(psPurch.transaction)
+                if coacadpos.needsFinishTransaction {
+                    SwiftyStoreKit.finishTransaction(coacadpos.transaction)
                 }
-                
-                self.view.isUserInteractionEnabled = true
-                if var oldamone = Int(LipSigggneSnmingertips.logUoserdataSSIP["ssipDoimond"] ?? "0"){
-                   
-                    oldamone = oldamone + selidINdfo.2
-                    LipSigggneSnmingertips.logUoserdataSSIP["ssipDoimond"] = "\(oldamone)"
-                    self.mineOladSSIP.text  = "\(oldamone)"
-                 }
-                
-                
-                AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
-               
-                self.navigationController?.popViewController(animated: true)
-          
+
             }else if case .error(let error) = psResult {
-                self.view.isUserInteractionEnabled = true
+                
                 AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
+                
                 if error.code != .paymentCancelled {
-                    AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: error.localizedDescription, loaingShowView: self.view)
-                   
+//                    AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: error.localizedDescription, loaingShowView: self.view)
+                    self.ChuanZaoErtoSSIP(errorDesc: error.localizedDescription)
                 }
             }
         }
     }
     
+    
+    private func ChuanZaoErtoSSIP(errorDesc:String)  {
+        
+        AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext:errorDesc , loaingShowView: self.view)
+       
+    }
 }

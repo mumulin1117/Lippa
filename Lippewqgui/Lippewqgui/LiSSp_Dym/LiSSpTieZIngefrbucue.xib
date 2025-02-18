@@ -18,6 +18,7 @@
                 <outlet property="postingUserimgSSIP" destination="b5J-fa-RpP" id="Fbm-rK-qhe"/>
                 <outlet property="postusernamSSIP" destination="CMO-lL-8VP" id="yDe-xT-v4x"/>
                 <outlet property="tibluebackSSIP" destination="6w9-Av-uMA" id="vt9-Qa-pwd"/>
+                <outlet property="tioewziSIPP" destination="ga9-fW-hye" id="365-Se-oyI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

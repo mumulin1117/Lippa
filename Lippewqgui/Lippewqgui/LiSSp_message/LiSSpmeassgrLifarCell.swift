@@ -32,7 +32,13 @@ class LiSSpmeassgrLifarCell: UICollectionViewCell {
         }
     }
     
+    private func ssuipCreaNet() {
+        
+    }
     
+    private func ssuitreatNet() {
+        
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)

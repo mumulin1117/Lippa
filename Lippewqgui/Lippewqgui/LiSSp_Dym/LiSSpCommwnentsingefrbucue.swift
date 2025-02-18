@@ -23,14 +23,22 @@ class LiSSpCommwnentsingefrbucue:  LissipSecondFrbucue {
    @objc func ctterBsdNoingSSIPDissmiss()  {
        self.dismiss(animated: true)
     }
-
+    private func ssuipCreaNet() {
+        
+    }
+    
+    private func ssuitreatNet() {
+        
+    }
     @IBAction func syresendSSIp(_ sender: UIButton) {
         
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Sending.....", loaingShowView: self.view)
         self.performBlockAfterDelayINSSIP(secondsSSIP: 0.5) {
-            AppDelegate.showSSIPSuccessTips(acccusString: "Send successful, your comment will be displayed after review")
+            AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
+            self.dismiss(animated: true)
             
-            self.navigationController?.popViewController(animated: true)
+            AppDelegate.showSSIPSuccessTips(acccusString: "Send successful, your comment will be displayed after review")
+          
         }
     }
 }

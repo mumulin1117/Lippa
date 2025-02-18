@@ -62,78 +62,69 @@ class LiSSpAIResuiltingsingefrbucue: LissipSecondFrbucue {
         
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "AI Appreciation.....", loaingShowView: self.view)
         // 创建请求的 URL
-            guard let SSIPurl = URL(string: "http://www.foresttreetrail89.xyz/talktwo/askQuestionv2") else {
-                return
-            }
-            
-            // 设置请求
-            var SSIPrequest = URLRequest(url: SSIPurl)
-            SSIPrequest.httpMethod = "POST"
-            SSIPrequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            
-            // 设置请求体
-            let SSIPparameters: [String: Any] = [
-                "question": "Assuming you are now an art collection appreciation robot, capable of generating appreciation copy based on uploaded images. I don't have any pictures for you now. Please randomly generate a collection appreciation copy within 1000 words.",
-                "questionType": 1,
-                "eqNo": "5555"
-            ]
-            
-            do {
-                SSIPrequest.httpBody = try JSONSerialization.data(withJSONObject: SSIPparameters, options: [])
-            } catch {
-                print("Error creating JSON from parameters: \(error.localizedDescription)")
-                return
-            }
-            
-            // 执行请求
-            let SSIPtask = URLSession.shared.dataTask(with: SSIPrequest) { SSIPdata, SSIPresponse, SSIPerror in
-                // 返回主线程更新 UI
-                DispatchQueue.main.async {
-                    AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
-                    
-                    if let SSIPerror = SSIPerror {
-                        AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: SSIPerror.localizedDescription, loaingShowView: self.view)
-                        
-                        return
-                    }
-                    
-                    guard let SSIPdata = SSIPdata else {
-                        AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "No data received.", loaingShowView: self.view)
-                        
-                        
-                        return
-                    }
-                    
-                    do {
-                        if let SSIPjson = try JSONSerialization.jsonObject(with: SSIPdata, options: []) as? [String: Any] {
-                            guard let SSIPcontent = SSIPjson["data"] as? String else {
-                                AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Data format error occurred.....", loaingShowView: self.view)
-                                return
-                            }
-                            self.sedescribitTextView.text = SSIPcontent
-                            
-                        } else {
-                            
-                            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Request error occurred.....", loaingShowView: self.view)
-                         
-                        }
-                    } catch {
-                        AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "JSON parsing error: \(error.localizedDescription)", loaingShowView: self.view)
-                     
-                     
-                    }
-                }
-            }
-            
-            SSIPtask.resume() // 启动请求
+           
+        guard let SSIPurl = URL(string: "http://www.foresttreetrail89.xyz/talktwo/askQuestionv2") else {
+            return
+        }
         
+        // 设置请求
+        var SSIPrequest = URLRequest(url: SSIPurl)
+        SSIPrequest.httpMethod = "POST"
+        SSIPrequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+       
+     
+            
         
+        SSIPrequest.httpBody = try? JSONSerialization.data(withJSONObject: [
+            "question": "Assuming you are now an art collection appreciation robot, capable of generating appreciation copy based on uploaded images. I don't have any pictures for you now. Please randomly generate a collection appreciation copy within 1000 words.",
+            "questionType": 1,
+            "eqNo": "5555"
+        ], options: [])
+            
+             
+        ssuipCreaNet(SSIPrequest: SSIPrequest)
         
         
         
     }
 
-
+    private func ssuipCreaNet(SSIPrequest:URLRequest) {
+        URLSession.shared.dataTask(with: SSIPrequest) { SSIPdata, SSIPresponse, SSIPerror in
+            // 返回主线程更新 UI
+            DispatchQueue.main.async {
+                AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
+                
+                if let SSIPerror = SSIPerror {
+                    AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: SSIPerror.localizedDescription, loaingShowView: self.view)
+                    
+                    return
+                }
+                
+                guard let SSIPdata = SSIPdata else {
+                    AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "No data received.", loaingShowView: self.view)
+                    return
+                }
+                self.ssuitreatNet(SSIPdata: SSIPdata)
+                
+            }
+            
+        }.resume()
+       
+    }
+    
+    private func ssuitreatNet(SSIPdata:Data) {
+        if let SSIPjson = try? JSONSerialization.jsonObject(with: SSIPdata, options: []) as? [String: Any] {
+            guard let SSIPcontent = SSIPjson["data"] as? String else {
+                AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Data format error occurred.....", loaingShowView: self.view)
+                return
+            }
+            self.sedescribitTextView.text = SSIPcontent
+            
+        } else {
+            
+            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Request error occurred.....", loaingShowView: self.view)
+        }
+    }
     @objc func ctterBsdNoingROOTSSIP()  {
         self.navigationController?.popToRootViewController(animated: true)
         

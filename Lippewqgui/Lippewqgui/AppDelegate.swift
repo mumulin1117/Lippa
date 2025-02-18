@@ -12,51 +12,36 @@ import SwiftyStoreKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    var totalvrdataSSIP:Array<Dictionary<String,String>> {
-        
-        get{
-            var dataSSSIP = Array<Dictionary<String,String>>()
-            
-            guard let path = Bundle.main.path(forResource: "SSIPUjgun", ofType: "plist"),
-            let data = FileManager.default.contents(atPath: path) else {
-                dataSSSIP = Array<Dictionary<String,String>>()
-                return dataSSSIP
-            }
-            if let dictArray = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? [[String: String]]  {
-                dataSSSIP = dictArray
-            }
-            
-            
-            for (k,_) in dataSSSIP.enumerated() {
-                dataSSSIP[k]["fandscSIPPish"] = "\(Int.random(in: 0...10))"
-                dataSSSIP[k]["fowerdscSIPPish"] = "\(Int.random(in: 0...10))"
-                dataSSSIP[k]["islikeThisPublish"] = "0"
-            }
-            return dataSSSIP
-        }set{
-            
-        }
-        
-    }
+    var totalvrdataSSIP:Array<Dictionary<String,String>> = Array<Dictionary<String,String>>()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
-    
-        
-//        if UserDefaults.standard.bool(forKey: "olkauSSIplogin") != true {
-            
-            self.window?.rootViewController = LiSSpNavitSnmingertips(rootViewController: LipSigggneSnmingertips.init())
-            
-//        }else{
-//           
-//            
-//            LipSigggneSnmingertips.comeSSIPONenterBottomUser()
-//            self.window?.rootViewController = LiSSpBArBootomrbucue.init()
-//           
-//        }
+        ssuitreatNet()
+        ssuipCreaNet()
+
        
         window?.makeKeyAndVisible()
+        
+        
+        return true
+    }
+
+    private func ssuipCreaNet() {
+        self.window?.rootViewController = LiSSpNavitSnmingertips(rootViewController: LipSigggneSnmingertips.init())
+       
+    }
+    
+    private func ssuitreatNet() {
+        
+        var dataSSSIP = Array<Dictionary<String,String>>()
+        
+        guard let path = Bundle.main.path(forResource: "SSIPUjgun", ofType: "plist"),
+        let data = FileManager.default.contents(atPath: path) else {
+            dataSSSIP = Array<Dictionary<String,String>>()
+            return
+        }
+        
         
         SwiftyStoreKit.completeTransactions(atomically: true) { paurean in
            
@@ -76,10 +61,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         }
-        return true
+        
+        if let dictArray = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? [[String: String]]  {
+            dataSSSIP = dictArray
+        }
+        
+        
+        for (k,_) in dataSSSIP.enumerated() {
+            dataSSSIP[k]["fandscSIPPish"] = "\(Int.random(in: 0...10))"
+            dataSSSIP[k]["fowerdscSIPPish"] = "\(Int.random(in: 0...10))"
+            dataSSSIP[k]["islikeThisPublish"] = "0"
+        }
+        totalvrdataSSIP = dataSSSIP
+        
     }
-
-    
     
     
     class  func showSSIPSuccessTips(acccusString:String) {
@@ -133,7 +128,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         var config = SwiftMessages.defaultConfig
         config.duration = .seconds(seconds: 2)
-        config.presentationContext = .window(windowLevel: .statusBar)
+        config.presentationContext = .window(windowLevel: .alert)
 
         SwiftMessages.show(config: config, view: view)
         

@@ -12,6 +12,7 @@ class LiSSpTieZIngefrbucue:  LissipSecondFrbucue {
     @IBOutlet weak var ChokenSSIP: UIButton!
     
     
+    @IBOutlet weak var tioewziSIPP: UILabel!
     
     @IBOutlet weak var postingUserimgSSIP: UIImageView!
     
@@ -32,16 +33,16 @@ class LiSSpTieZIngefrbucue:  LissipSecondFrbucue {
     
     @IBOutlet weak var collecPost: UIButton!
     
-    var postCenDataSSIP:Dictionary<String,String>
-    init(postCenDataSSIP: Dictionary<String, String>) {
-    
-        self.postCenDataSSIP = postCenDataSSIP
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    var postCenDataSSIP:Dictionary<String,String> = Dictionary<String,String>()
+//    init(postCenDataSSIP: Dictionary<String, String>) {
+//    
+//        self.postCenDataSSIP = postCenDataSSIP
+//        super.init(nibName: nil, bundle: nil)
+//    }
+//    
+//     required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
     
     
@@ -49,19 +50,33 @@ class LiSSpTieZIngefrbucue:  LissipSecondFrbucue {
         super.viewDidLoad()
         ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
         postingUserimgSSIP.maskLippaRoundCorner(rMakLSSIpadius: 21.5)
-        collecPost.isSelected = (postCenDataSSIP["islikeThisPublish"] == "SSIPLike")
+        
+        
+//        collecPost.isSelected = (postCenDataSSIP["islikeThisPublish"] == "SSIPLike")
         NotificationCenter.default.addObserver(self, selector: #selector(ctterBsdNoingSSIP), name: NSNotification.Name.init("deleteUserSIPPish"), object: nil)
-        collecPost.isSelected = (postCenDataSSIP["islikeThisPublish"] == "SSIPLike")
-        postingUserimgSSIP.image = UIImage(named: postCenDataSSIP["ssipPicdty"] ?? "")
-        postusernamSSIP.text = postCenDataSSIP["ssipNadme"]
         
-        postingCOntentCAseSSIP.image = UIImage(named: postCenDataSSIP["ssipPublishPic"] ?? "")
-        
-        postingContetntesxrSSIP.text = postCenDataSSIP["ssipPublishDesc"]
         
         tibluebackSSIP.maskLippaRoundCorner(rMakLSSIpadius: 20)
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        collecPost.isSelected = (postCenDataSSIP["islikeThisPublish"] == "SSIPLike")
+        collecPost.isSelected = (postCenDataSSIP["islikeThisPublish"] == "SSIPLike")
+        postingUserimgSSIP.image = UIImage(named: postCenDataSSIP["ssipPicdty"] ?? "")
+        ssuipCreaNet()
+    }
+    private func ssuipCreaNet() {
+        
+        postusernamSSIP.text = postCenDataSSIP["ssipNadme"]
+        tioewziSIPP.text = "Dynamic Details"
+        postingCOntentCAseSSIP.image = UIImage(named: postCenDataSSIP["ssipPublishPic"] ?? "")
+        
+        postingContetntesxrSSIP.text = postCenDataSSIP["ssipPublishDesc"]
+    }
+    
+   
     @IBAction func shingcaseOriginReport(_ sender: UIButton) {
         
         let normailAreport = UIAlertController(title: "Report Content", message:nil, preferredStyle: .actionSheet)
@@ -69,11 +84,7 @@ class LiSSpTieZIngefrbucue:  LissipSecondFrbucue {
         
         for item in reasonsdonin {
             normailAreport.addAction(UIAlertAction(title: item, style: .default, handler: { alertSSIP in
-                AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "", loaingShowView: self.view)
-                self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
-                    AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
-                    AppDelegate.showSSIPSuccessTips(acccusString: "Thank you for your supervision. We will verify and handle it as soon as possible")
-                }
+                self.ssuitreatNet()
                
             }))
         }
@@ -85,7 +96,13 @@ class LiSSpTieZIngefrbucue:  LissipSecondFrbucue {
         
         
     }
-    
+    private func ssuitreatNet() {
+        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "", loaingShowView: self.view)
+        self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
+            AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
+            AppDelegate.showSSIPSuccessTips(acccusString: "Thank you for your supervision. We will verify and handle it as soon as possible")
+        }
+    }
     
     
     @IBAction func giventSSUP(_ sender: UIButton) {
@@ -96,7 +113,11 @@ class LiSSpTieZIngefrbucue:  LissipSecondFrbucue {
     
     @IBAction func getinguserSSUP(_ sender: UIButton) {
         let usermingming = postCenDataSSIP
-        self.navigationController?.pushViewController(LiSSpItmeringBucue.init(postCenDataSSIP: usermingming), animated: true)
+        
+        let useriSSIP = LiSSpItmeringBucue.init()
+        useriSSIP.postCenDataSSIP = usermingming
+        self.navigationController?.pushViewController(useriSSIP, animated: true)
+       
         
     }
     

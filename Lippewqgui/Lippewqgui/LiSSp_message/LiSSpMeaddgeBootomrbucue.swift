@@ -6,16 +6,20 @@
 //
 
 import UIKit
-class SSIPChatUSerFwbnke {
+struct SSIPChatUSerFwbnke {
     var whoseSSIP:[String: String]
     var chatSSIPList:Array<(Bool,String)>
-    init(_whoseSSIP: [String : String], _chatSSIPList: Array<(fromMeSSIP: Bool, commenMeSSIP: String)>) {
-        self.whoseSSIP = _whoseSSIP
-        self.chatSSIPList = _chatSSIPList
-    }
+//    init(_whoseSSIP: [String : String], _chatSSIPList: Array<(fromMeSSIP: Bool, commenMeSSIP: String)>) {
+//        self.whoseSSIP = _whoseSSIP
+//        self.chatSSIPList = _chatSSIPList
+//    }
 }
 
 class LiSSpMeaddgeBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UICollectionViewDelegate {
+    
+    
+    @IBOutlet weak var nomesagtipSSIP: UILabel!
+    
     
     static var cxhatArraySSIP = [SSIPChatUSerFwbnke].init()//聊天列表
     
@@ -32,13 +36,23 @@ class LiSSpMeaddgeBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.activVieSSIP {
             
-            if let appledeelgate = (UIApplication.shared.delegate) as? AppDelegate { return appledeelgate.totalvrdataSSIP.count}
-            return 0
+            if let appledeelgate = (UIApplication.shared.delegate) as? AppDelegate {
+                return appledeelgate.totalvrdataSSIP.count
+            }else{
+                return 0
+            }
+            
         }else{
             return LiSSpMeaddgeBootomrbucue.cxhatArraySSIP.count
         }
     }
     
+    
+    private func ssuipCreaNet() {
+        notifationViewSSIP.register(LiSSpmeassgrLifarCell.self, forCellWithReuseIdentifier: "LiSSpmeassgrLifarCellUsed")
+        activVieSSIP.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "actieavtoerUsed")
+       
+    }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.activVieSSIP {
            
@@ -83,7 +97,11 @@ class LiSSpMeaddgeBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDelegate
             if let appledeelgate = (UIApplication.shared.delegate) as? AppDelegate {
                 let userssip = appledeelgate.totalvrdataSSIP[indexPath.row]
                 
-                self.navigationController?.pushViewController(LiSSpItmeringBucue.init(postCenDataSSIP: userssip), animated: true)
+                let useriSSIP = LiSSpItmeringBucue.init()
+                useriSSIP.postCenDataSSIP = userssip
+                self.navigationController?.pushViewController(useriSSIP, animated: true)
+              
+               
             }
            
         }else{
@@ -112,6 +130,8 @@ class LiSSpMeaddgeBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDelegate
        self.notifationViewSSIP.reloadData()
        
        self.activVieSSIP.reloadData()
+       
+       nomesagtipSSIP.isHidden = !(LiSSpMeaddgeBootomrbucue.cxhatArraySSIP.count == 0)
     }
     
     
@@ -122,25 +142,19 @@ class LiSSpMeaddgeBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDelegate
     }
     
     
+  
     
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(updataSSIPUI), name: NSNotification.Name.init("deleteUserSIPPish"), object: nil)
         
-        activVieSSIP.delegate = self
-        activVieSSIP.dataSource = self
-    
-        notifationViewSSIP.delegate = self
-        notifationViewSSIP.dataSource = self
+        ssuitreatNet()
         
-        
-        
+        ssuipCreaNet()
         self.activVieSSIP.isHidden = true
         self.notifationViewSSIP.isHidden = true
      
-        notifationViewSSIP.register(LiSSpmeassgrLifarCell.self, forCellWithReuseIdentifier: "LiSSpmeassgrLifarCellUsed")
-        activVieSSIP.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "actieavtoerUsed")
         
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "loading...", loaingShowView: self.view)
         
@@ -151,6 +165,14 @@ class LiSSpMeaddgeBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDelegate
         }
     }
 
-
+    private func ssuitreatNet() {
+        activVieSSIP.delegate = self
+        activVieSSIP.dataSource = self
+        NotificationCenter.default.addObserver(self, selector: #selector(updataSSIPUI), name: NSNotification.Name.init("deleteUserSIPPish"), object: nil)
+      
+        notifationViewSSIP.delegate = self
+        notifationViewSSIP.dataSource = self
+        
+    }
 
 }

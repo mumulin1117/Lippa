@@ -28,18 +28,13 @@ class LiSSpItmeringBucue:  LissipSecondFrbucue {
     @IBOutlet weak var focusSSSIPo: UIButton!
     
     
-    var postCenDataSSIP:Dictionary<String,String>
-    init(postCenDataSSIP: Dictionary<String, String>) {
+    var postCenDataSSIP:Dictionary<String,String>?
     
-        self.postCenDataSSIP = postCenDataSSIP
-        super.init(nibName: nil, bundle: nil)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        ssuipCreaNet()
     }
-    
-     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
+
     @IBOutlet weak var backDAtaimgeSSIP: UIButton!
     
     
@@ -48,23 +43,9 @@ class LiSSpItmeringBucue:  LissipSecondFrbucue {
       
         NotificationCenter.default.addObserver(self, selector: #selector(ctterBsdNoingSSIP), name: NSNotification.Name.init("deleteUserSIPPish"), object: nil)
         
-        ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
         
-        opwerSIPP.image = UIImage(named: postCenDataSSIP["ssipPicdty"] ?? "")
-        ownedSIpp.image = UIImage(named: postCenDataSSIP["ssipPicdty"] ?? "")
-        whonameSIPP.text = postCenDataSSIP["ssipNadme"]
-        backDAtaimgeSSIP.setBackgroundImage(UIImage.init(named: postCenDataSSIP["ssipColletionPic"] ?? ""), for: .normal)
-        focusSSSIPo.isSelected = (LiSSpMeBootomrbucue.FolsdwemeSSIP.filter({ SSIPDIC in
-            return postCenDataSSIP["ssipAccID"] == SSIPDIC["ssipAccID"]
-        }).count > 0)
-        
-        fancereCountSIpp.text = postCenDataSSIP["fandscSIPPish"]
-        
-        fowerereCountSIpp.text = postCenDataSSIP["fowerdscSIPPish"]
-        
-        descnameSIPP.text = postCenDataSSIP["ssipDtfestBriedf"]
-        
-        
+       
+       
         focusSSSIPo.maskLippaRoundCorner(rMakLSSIpadius: 16)
         ownedSIpp.maskLippaRoundCorner(rMakLSSIpadius: 38)
         
@@ -73,17 +54,39 @@ class LiSSpItmeringBucue:  LissipSecondFrbucue {
        
         
     }
-
+    private func ssuipCreaNet() {
+        
+        if let achiole = view.viewWithTag(34) as? UIButton,achiole.isSelected == true {
+            backDAtaimgeSSIP.setBackgroundImage(UIImage.init(named: postCenDataSSIP?["ssipColletionPic"] ?? ""), for: .normal)
+        }
+        
+        opwerSIPP.image = UIImage(named: postCenDataSSIP?["ssipPicdty"] ?? "")
+        ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
+        ownedSIpp.image = UIImage(named: postCenDataSSIP?["ssipPicdty"] ?? "")
+        whonameSIPP.text = postCenDataSSIP?["ssipNadme"]
+        
+        focusSSSIPo.isSelected = (LiSSpMeBootomrbucue.FolsdwemeSSIP.filter({ SSIPDIC in
+            return postCenDataSSIP?["ssipAccID"] == SSIPDIC["ssipAccID"]
+        }).count > 0)
+        
+        fancereCountSIpp.text = postCenDataSSIP?["fandscSIPPish"]
+        
+        fowerereCountSIpp.text = postCenDataSSIP?["fowerdscSIPPish"]
+        
+        descnameSIPP.text = postCenDataSSIP?["ssipDtfestBriedf"]
+    }
+    
+   
     @IBAction func collectiontableSSIP(_ sender: UIButton) {
         if sender.tag == 990 {
             if let whoseSSIP = LiSSpMeaddgeBootomrbucue.cxhatArraySSIP.filter({ SSIPChatUSerFwbnkeEr in
-                return SSIPChatUSerFwbnkeEr.whoseSSIP["ssipAccID"] == postCenDataSSIP["ssipAccID"]
+                return SSIPChatUSerFwbnkeEr.whoseSSIP["ssipAccID"] == postCenDataSSIP?["ssipAccID"]
             }).first {
                 
                 self.navigationController?.pushViewController(LiSSpChatstfrbucue.init(_PChatUSerFwbnke: whoseSSIP), animated: true)
                
             }else{
-             let achat =   SSIPChatUSerFwbnke.init(_whoseSSIP: postCenDataSSIP, _chatSSIPList: [])
+                let achat =   SSIPChatUSerFwbnke.init(whoseSSIP: postCenDataSSIP ?? [:], chatSSIPList: [])
                 
                 self.navigationController?.pushViewController(LiSSpChatstfrbucue.init(_PChatUSerFwbnke: achat), animated: true)
                
@@ -96,7 +99,7 @@ class LiSSpItmeringBucue:  LissipSecondFrbucue {
         
         if sender.tag == 991 {
            
-            self.navigationController?.pushViewController(LiSSpChatVideostfrbucue.init(postCenDataSSIP: postCenDataSSIP), animated: true)
+            self.navigationController?.pushViewController(LiSSpChatVideostfrbucue.init(postCenDataSSIP: postCenDataSSIP ?? [:]), animated: true)
             
             return
         }
@@ -106,8 +109,8 @@ class LiSSpItmeringBucue:  LissipSecondFrbucue {
         let achiole60 = view.viewWithTag(60) as? UIButton
         
         if sender.tag == 60 && achiole?.isSelected == true {
-            let namerIma = postCenDataSSIP["ssipColletionPic"]
-            let artdescIma = postCenDataSSIP["ssipColletionDesc"]
+            let namerIma = postCenDataSSIP?["ssipColletionPic"]
+            let artdescIma = postCenDataSSIP?["ssipColletionDesc"]
             self.navigationController?.pushViewController(LiSSpEnterDetailBootomrbucue.init(collectionARTData: (namerIma,artdescIma)), animated: true)
             
             return
@@ -115,8 +118,9 @@ class LiSSpItmeringBucue:  LissipSecondFrbucue {
         
         
         if sender.tag == 60 && achiole1?.isSelected == true {
-           
-            self.navigationController?.pushViewController(LiSSpTieZIngefrbucue.init(postCenDataSSIP: postCenDataSSIP), animated: true)
+            let teizige = LiSSpTieZIngefrbucue.init()
+            teizige.postCenDataSSIP = postCenDataSSIP ?? [:]
+            self.navigationController?.pushViewController(teizige, animated: true)
             
             return
         }
@@ -130,13 +134,13 @@ class LiSSpItmeringBucue:  LissipSecondFrbucue {
         
         sender.isSelected = true
         if sender.tag == 34 {
-            backDAtaimgeSSIP.setBackgroundImage(UIImage.init(named: postCenDataSSIP["ssipColletionPic"] ?? ""), for: .normal)
+            backDAtaimgeSSIP.setBackgroundImage(UIImage.init(named: postCenDataSSIP?["ssipColletionPic"] ?? ""), for: .normal)
           
         }
         
         
         if sender.tag == 35 {
-            backDAtaimgeSSIP.setBackgroundImage(UIImage.init(named: postCenDataSSIP["ssipPublishPic"] ?? ""), for: .normal)
+            backDAtaimgeSSIP.setBackgroundImage(UIImage.init(named: postCenDataSSIP?["ssipPublishPic"] ?? ""), for: .normal)
           
           
         }
@@ -152,60 +156,20 @@ class LiSSpItmeringBucue:  LissipSecondFrbucue {
        
       
        if LiSSpMeBootomrbucue.FolsdwemeSSIP.filter({ dioi in
-           return dioi[""] == postCenDataSSIP[""]
+           return dioi["ssipAccID"] == postCenDataSSIP?["ssipAccID"]
        }).count == 0 && focusSSSIPo.isSelected{
-           LiSSpMeBootomrbucue.FolsdwemeSSIP.insert(postCenDataSSIP, at: 0)
+           LiSSpMeBootomrbucue.FolsdwemeSSIP.insert(postCenDataSSIP ?? [:], at: 0)
        }
     }
     
     @IBAction func chpickedCLIKSSip(_ sender: UIButton) {
-        
-        let normailAreport = UIAlertController(title: "Report OR Black", message:nil, preferredStyle: .actionSheet)
-        
-        normailAreport.addAction(UIAlertAction(title: "Black", style: .default, handler: { alertSSIP in
-            AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Requesting...", loaingShowView: self.view)
-            self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
-                AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
-                AppDelegate.showSSIPSuccessTips(acccusString: "Black successful!")
-                self.delsteSSIPONenterBottomUser(iduserSSIP: self.postCenDataSSIP)
-                
-                
-            }
-           
-        }))
+        let onlyID = self.postCenDataSSIP?["ssipAccID"] ?? ""
        
-        normailAreport.addAction(UIAlertAction(title: "Report", style: .default, handler: { alertSSIP in
-            self.shingcaseOriginReport()
-           
-        }))
-        normailAreport.addAction(UIAlertAction(title: "cancel", style: .default))
-        
-        self.present(normailAreport, animated: true)
+        showingBloakjPickVC(withBloackID: onlyID)
+      
     }
     
     
     
-    private  func shingcaseOriginReport()  {
-        
-        let normailAreport = UIAlertController(title: "Report User Reason", message:nil, preferredStyle: .actionSheet)
-        let reasonsdonin = ["Offensive Language","Inaccuracy","Privacy Violation","Spam or Irrelevance"]
-        
-        for item in reasonsdonin {
-            normailAreport.addAction(UIAlertAction(title: item, style: .default, handler: { alertSSIP in
-                AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "", loaingShowView: self.view)
-                self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
-                    AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
-                    AppDelegate.showSSIPSuccessTips(acccusString: "Thank you for your report. We will verify and handle it as soon as possible")
-                }
-               
-            }))
-        }
-       
-        
-        normailAreport.addAction(UIAlertAction(title: "cancel", style: .default))
-        
-        self.present(normailAreport, animated: true)
-        
-        
-    }
+    
 }

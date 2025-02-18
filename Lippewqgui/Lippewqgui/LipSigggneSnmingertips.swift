@@ -35,11 +35,14 @@ class LipSigggneSnmingertips: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if LiSSpELUABootomrbucue.ifShowendNoewLISSAP == false {
-            self.navigationController?.pushViewController(LiSSpELUABootomrbucue.init(controllerSSIPType: 0), animated: true)
-            LiSSpELUABootomrbucue.ifShowendNoewLISSAP = true
+        let ifseawedREsult = UserDefaults.standard.bool(forKey: "ifShowendNoewLISSAP")
+        
+        if ifseawedREsult == false {
+            ssuitreatNet()
         }
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         IQKeyboardManager.shared().isEnabled = true
@@ -50,7 +53,14 @@ class LipSigggneSnmingertips: UIViewController {
         signSSIPin.addTarget(self, action: #selector(hihiiSSIP), for: .touchUpInside)
         
     }
+   
     
+    private func ssuitreatNet() {
+        
+        
+        self.navigationController?.pushViewController(LiSSpELUABootomrbucue.init(controllerSSIPType: nil), animated: true)
+        UserDefaults.standard.set(true, forKey: "ifShowendNoewLISSAP")
+    }
     
     private func addLinkkkUrelSSIP()  {
         linkerConditonSSIp.isUserInteractionEnabled = true
@@ -84,68 +94,44 @@ class LipSigggneSnmingertips: UIViewController {
         }
        
         if contenEmailSSIP == "lippa@gmail.com" {
-            AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "log in ....", loaingShowView: self.view)
-           
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
-                AppDelegate.hideLoadingSSIPTipsIndicator( loaingShowView: self.view)
-                AppDelegate.showSSIPSuccessTips(acccusString: "Log in successful!")
-                
-                self.comeSSIPONenterBottomUser()
-//                LiSSpBArbucue.SSIPlA.olkauSSIplogin = true
-//                UserDefaults.standard.set(true, forKey: "olkauSSIplogin")
-                ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpBArBootomrbucue.init()
-                return
-            }))
+            ssuipCreaNet()
             
+            return
 
-        }else{
-            let presSSIP = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-                   
-            let emailPreSSIPO = NSPredicate(format:"SELF MATCHES %@", presSSIP)
-            let boollSSIP = emailPreSSIPO.evaluate(with: contenEmailSSIP)
-            if boollSSIP == false {
-                AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "The email format you entered is incorrect", loaingShowView: self.view)
-                
-            }else{
-                AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Create in ....", loaingShowView: self.view)
-               
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
-                    AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
-//                    LiSSpBArbucue.SSIPlA.olkauSSIplogin = true
-//                    UserDefaults.standard.set(true, forKey: "olkauSSIplogin")
-                    
-                    AppDelegate.showSSIPSuccessTips(acccusString: "Log in successful!")
-                    
-                    LipSigggneSnmingertips.logUoserdataSSIP["ssipDtfestAccount"] = contenEmailSSIP
-                    LipSigggneSnmingertips.logUoserdataSSIP["ssipAccID"] = "\(Int.random(in: 50000...60000))"
-                    LipSigggneSnmingertips.logUoserdataSSIP["ssipPicdty"] = "userHear9"
-                    
-                    LipSigggneSnmingertips.logUoserdataSSIP["ssipNadme"] = "NULL"
-                    
-                    LipSigggneSnmingertips.logPucserdataSSIP = UIImage(named: "wode_mrtx")
-                    
-                    ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpBArBootomrbucue.init()
-                  
-                }))
-                
-            }
-            
         }
         
+        self.readyLippaToCreateNew(contenEmailSSIP: contenEmailSSIP)
         
     }
+    
+    private func ssuipCreaNet() {
+        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "log in ....", loaingShowView: self.view)
+        self.performBlockAfterDelayINSSIP(secondsSSIP: 1.5) {
+            AppDelegate.hideLoadingSSIPTipsIndicator( loaingShowView: self.view)
+           
+            self.comeSSIPONenterBottomUser()
+
+            ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpBArBootomrbucue.init()
+           
+            AppDelegate.showSSIPSuccessTips(acccusString: "Log in successful!")
+           
+        }
+
+    }
+    
+    
 
     @objc func statusdiihiiSSIP() {
         statauseSSIP.isSelected = !statauseSSIP.isSelected
         UserDefaults.standard.set(statauseSSIP.isSelected, forKey: "isagreeeeSSIP")
-//        LiSSpBArbucue.SSIPlA.isagreeeeSSIP = statauseSSIP.isSelected
+
     }
     
     
     
     @IBAction func welcomnoingSSSIP(_ sender: UIButton) {
         
-        self.navigationController?.pushViewController(LiSSpELUABootomrbucue.init(controllerSSIPType: 0), animated: true)
+        self.navigationController?.pushViewController(LiSSpELUABootomrbucue.init(controllerSSIPType: nil), animated: true)
         
     }
     
@@ -170,7 +156,7 @@ class LipSigggneSnmingertips: UIViewController {
             LiSSpMeBootomrbucue.facrewemeSSIP = Array(appledeelgate.totalvrdataSSIP.shuffled().prefix(1))
             
             if let laiker = appledeelgate.totalvrdataSSIP.first  {
-                let comengONe = SSIPChatUSerFwbnke.init(_whoseSSIP: laiker, _chatSSIPList: [(true,"What kind of art do you collect?"),(false,"I love oil paintings, especially Impressionism.")])
+                let comengONe = SSIPChatUSerFwbnke(whoseSSIP: laiker, chatSSIPList: [(true,"What kind of art do you collect?"),(false,"I love oil paintings, especially Impressionism.")])//.init(_whoseSSIP: laiker, _chatSSIPList: [(true,"What kind of art do you collect?"),(false,"I love oil paintings, especially Impressionism.")])
                 LiSSpMeaddgeBootomrbucue.cxhatArraySSIP.append(comengONe)
 
             }
@@ -178,7 +164,7 @@ class LipSigggneSnmingertips: UIViewController {
             if  appledeelgate.totalvrdataSSIP.count >= 2 {
                 
                 let laiet = appledeelgate.totalvrdataSSIP[1]
-                let comengtwo = SSIPChatUSerFwbnke.init(_whoseSSIP: laiet, _chatSSIPList: [(false,"How do you choose what to collect?"),(true,"I mainly look for emotional resonance in the work.")])
+                let comengtwo = SSIPChatUSerFwbnke.init(whoseSSIP: laiet, chatSSIPList: [(false,"How do you choose what to collect?"),(true,"I mainly look for emotional resonance in the work.")])
                 LiSSpMeaddgeBootomrbucue.cxhatArraySSIP.append(comengtwo)
                 
             }
@@ -187,11 +173,54 @@ class LipSigggneSnmingertips: UIViewController {
             if  appledeelgate.totalvrdataSSIP.count >= 3 {
                 
                 let laidsan = appledeelgate.totalvrdataSSIP[2]
-                let comengtwo = SSIPChatUSerFwbnke.init(_whoseSSIP: laidsan, _chatSSIPList: [(false,"Any advice on collecting art?")])
+                let comengtwo = SSIPChatUSerFwbnke.init(whoseSSIP: laidsan, chatSSIPList: [(false,"Any advice on collecting art?")])
                 LiSSpMeaddgeBootomrbucue.cxhatArraySSIP.append(comengtwo)
                 
             }
         }
        
     }
+}
+
+
+extension LipSigggneSnmingertips{
+    
+    private func readyLippaToCreateNew(contenEmailSSIP:String)  {
+     
+        let presSSIP = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+
+        let emailPreSSIPO = NSPredicate(format:"SELF MATCHES %@", presSSIP)
+        let boollSSIP = emailPreSSIPO.evaluate(with: contenEmailSSIP)
+        if boollSSIP == false {
+            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "The email format you entered is incorrect", loaingShowView: self.view)
+            return
+        }
+        
+        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Create in ....", loaingShowView: self.view)
+        self.performBlockAfterDelayINSSIP(secondsSSIP: 1.5) {
+            AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
+
+        
+            LipSigggneSnmingertips.logUoserdataSSIP["ssipDtfestAccount"] = contenEmailSSIP
+           
+            ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpBArBootomrbucue.init()
+            self.createNewrAccounSSIp()
+            
+            AppDelegate.showSSIPSuccessTips(acccusString: "Log in successful!")
+
+        }
+       
+    }
+    
+    
+    private func createNewrAccounSSIp()  {
+        LipSigggneSnmingertips.logUoserdataSSIP["ssipAccID"] = "\(Int.random(in: 50000...60000))"
+        LipSigggneSnmingertips.logUoserdataSSIP["ssipPicdty"] = "userHear9"
+
+        LipSigggneSnmingertips.logUoserdataSSIP["ssipNadme"] = "NULL"
+
+        LipSigggneSnmingertips.logPucserdataSSIP = UIImage(named: "wode_mrtx")
+
+    }
+    
 }

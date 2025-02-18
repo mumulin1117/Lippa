@@ -36,10 +36,20 @@ class LiSSpEnterDetailBootomrbucue: LissipSecondFrbucue {
         if let imagnamrj = collectionARTData.imaName {
             collecShingIConLISSP.image = UIImage(named:imagnamrj )
         }
-        sippoBackground.maskLippaRoundCorner(rMakLSSIpadius: 12)
+        ssuipCreaNet()
     }
 
-
+    private func ssuipCreaNet() {
+        sippoBackground.maskLippaRoundCorner(rMakLSSIpadius: 12)
+    }
+    
+    private func ssuitreatNet() {
+        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Request...", loaingShowView: self.view)
+        self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
+            AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
+            AppDelegate.showSSIPSuccessTips(acccusString: "Thank you for your supervision. We will verify and handle it as soon as possible")
+        }
+    }
     @IBAction func shingcaseOriginReport(_ sender: UIButton) {
         
         let normailAreport = UIAlertController(title: "Report Content", message:nil, preferredStyle: .actionSheet)
@@ -47,11 +57,7 @@ class LiSSpEnterDetailBootomrbucue: LissipSecondFrbucue {
         
         for item in reasonsdonin {
             normailAreport.addAction(UIAlertAction(title: item, style: .default, handler: { alertSSIP in
-                AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "", loaingShowView: self.view)
-                self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
-                    AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
-                    AppDelegate.showSSIPSuccessTips(acccusString: "Thank you for your supervision. We will verify and handle it as soon as possible")
-                }
+                self.ssuitreatNet()
                
             }))
         }
@@ -64,6 +70,6 @@ class LiSSpEnterDetailBootomrbucue: LissipSecondFrbucue {
         
     }
     
-    
+   
 
 }

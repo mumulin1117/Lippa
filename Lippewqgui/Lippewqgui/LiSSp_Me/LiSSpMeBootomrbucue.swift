@@ -40,15 +40,19 @@ class LiSSpMeBootomrbucue:  LissipSecondFrbucue,UICollectionViewDelegate,UIColle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         ownedSIpp.image = LipSigggneSnmingertips.logPucserdataSSIP
-        
+        ssuipCreaNet()
+       
+        fowerereCountSIpp.text = "\(LiSSpMeBootomrbucue.FolsdwemeSSIP.count)"
+    
+    }
+    private func ssuipCreaNet() {
         whonameSIPP.text = LipSigggneSnmingertips.logUoserdataSSIP["ssipNadme"]
         
         fancereCountSIpp.text = "\(LiSSpMeBootomrbucue.facrewemeSSIP.count)"
         
-        fowerereCountSIpp.text = "\(LiSSpMeBootomrbucue.FolsdwemeSSIP.count)"
-    
     }
     
+   
     @IBAction func fanceToSIPP(_ sender: UIButton) {
         let akoij = LiSSpPersionlistPostfrbucue.init()
         akoij.tatSSipype = 0
@@ -84,7 +88,7 @@ class LiSSpMeBootomrbucue:  LissipSecondFrbucue,UICollectionViewDelegate,UIColle
         ownedSIpp.maskLippaRoundCorner(rMakLSSIpadius: 38)
     }
     
-    
+   
    @objc func shanAlRemoveAccount() {
         
        let ssipoAlera = UIAlertController(title: "Delete Account", message: "After deleting the account, all information related to the account will be removed!", preferredStyle:.alert)
@@ -106,20 +110,21 @@ class LiSSpMeBootomrbucue:  LissipSecondFrbucue,UICollectionViewDelegate,UIColle
     
     
     @objc func quiteAlRemoveAccount() {
-//        LiSSpBArbucue.SSIPlA.olkauSSIplogin = true
-//        UserDefaults.standard.set(true, forKey: "olkauSSIplogin")
-        
+
+        ssuitreatNet()
         LipSigggneSnmingertips.logUoserdataSSIP.removeAll()
         LipSigggneSnmingertips.logPucserdataSSIP = nil
+       
+        ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpNavitSnmingertips(rootViewController: LipSigggneSnmingertips.init())
+    
+    }
+    private func ssuitreatNet() {
         LiSSpMeBootomrbucue.FolsdwemeSSIP.removeAll()
         LiSSpMeBootomrbucue.facrewemeSSIP.removeAll()
        
         LiSSpMeaddgeBootomrbucue.cxhatArraySSIP.removeAll()
         
-        ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpNavitSnmingertips(rootViewController: LipSigggneSnmingertips.init())
-    
     }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize.init(width: UIScreen.main.bounds.size.width - 76, height: 58)
     }
@@ -157,15 +162,22 @@ class LiSSpMeBootomrbucue:  LissipSecondFrbucue,UICollectionViewDelegate,UIColle
             self.navigationController?.pushViewController(LiSSpPesoncenstfrbucue.init(), animated: true)
             
         case 2:
-#warning("idYOUR_APP_ID")
-            if let url = URL(string: "itms-apps://itunes.apple.com/app/idYOUR_APP_ID?action=write-review") {
+//#warning("idYOUR_APP_ID")
+            if let url = URL(string: "itms-apps://itunes.apple.com/app/6742132987?action=write-review") {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 
             }
         case 3:
-            self.navigationController?.pushViewController(LiSSpELUABootomrbucue.init(controllerSSIPType: 2), animated: true)
+            let priSSIPLabe = UILabel.init()
+            priSSIPLabe.text = "Lippa Privacy Policy"
+            
+            self.navigationController?.pushViewController(LiSSpELUABootomrbucue.init(controllerSSIPType: priSSIPLabe), animated: true)
+           
         case 4:
-            self.navigationController?.pushViewController(LiSSpELUABootomrbucue.init(controllerSSIPType: 1), animated: true)
+            let priSSIPLabe = UILabel.init()
+            priSSIPLabe.text = "Lippa User Terms"
+            
+            self.navigationController?.pushViewController(LiSSpELUABootomrbucue.init(controllerSSIPType: priSSIPLabe), animated: true)
         default:
             break
         }
@@ -187,9 +199,7 @@ class LiSSpMininfoCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         otherqoSIPPA.image = UIImage.init(named: "ssipNertback")
-        contentView.addSubview(otherAuicSIPPA)
-        contentView.addSubview(otherkuioSIPPA)
-        contentView.addSubview(otherqoSIPPA)
+        ssuitreatNet() 
         contentView.backgroundColor = UIColor(red: 0.84, green: 0.88, blue: 0.13, alpha: 1)
         contentView.maskLippaRoundCorner(rMakLSSIpadius: 16)
         otherkuioSIPPA.snp.makeConstraints { make in
@@ -212,7 +222,12 @@ class LiSSpMininfoCell: UICollectionViewCell {
             
         }
     }
-    
+    private func ssuitreatNet() {
+        contentView.addSubview(otherAuicSIPPA)
+        contentView.addSubview(otherkuioSIPPA)
+        contentView.addSubview(otherqoSIPPA)
+        
+    }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

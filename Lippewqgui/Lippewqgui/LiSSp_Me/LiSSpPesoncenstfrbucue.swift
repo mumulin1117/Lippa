@@ -33,15 +33,12 @@ class LiSSpPesoncenstfrbucue:   LissipSecondFrbucue {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         ownedSIpp.image = LipSigggneSnmingertips.logPucserdataSSIP
-        opwerSIPP.image = LipSigggneSnmingertips.logPucserdataSSIP
+        
         whonameSIPP.text = LipSigggneSnmingertips.logUoserdataSSIP["ssipNadme"]
         
         fancereCountSIpp.text = "\(LiSSpMeBootomrbucue.facrewemeSSIP.count)"
         
-        fowerereCountSIpp.text = "\(LiSSpMeBootomrbucue.FolsdwemeSSIP.count)"
-        
-        descnameSIPP.text = LipSigggneSnmingertips.logUoserdataSSIP["ssipDtfestBriedf"]
-        opwerSIPP.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMinYCorner]
+        ssuipCreaNet()
     }
     
     override func viewDidLoad() {
@@ -57,7 +54,19 @@ class LiSSpPesoncenstfrbucue:   LissipSecondFrbucue {
         
     }
 
+    private func ssuipCreaNet() {
+        fowerereCountSIpp.text = "\(LiSSpMeBootomrbucue.FolsdwemeSSIP.count)"
+        opwerSIPP.image = LipSigggneSnmingertips.logPucserdataSSIP
+        descnameSIPP.text = LipSigggneSnmingertips.logUoserdataSSIP["ssipDtfestBriedf"]
+        opwerSIPP.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMinYCorner]
+    }
     
+    private func ssuitreatNet() {
+        let achiole = view.viewWithTag(34) as? UIButton
+        let achiole1 = view.viewWithTag(35) as? UIButton
+        achiole?.isSelected = false
+        achiole1?.isSelected = false
+    }
     
     @IBAction func collectiontableSSIP(_ sender: UIButton) {
         if sender.tag == 990 {
@@ -66,11 +75,8 @@ class LiSSpPesoncenstfrbucue:   LissipSecondFrbucue {
             
             return
         }
-        let achiole = view.viewWithTag(34) as? UIButton
-        let achiole1 = view.viewWithTag(35) as? UIButton
-        achiole?.isSelected = false
-        achiole1?.isSelected = false
-        
+       
+        ssuitreatNet()
         
         sender.isSelected = true
     }

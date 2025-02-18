@@ -24,10 +24,10 @@ class LiSSpELUABootomrbucue: UIViewController {
     @IBOutlet weak var cancekSSIP: UIButton!
     
     
-    static var ifShowendNoewLISSAP:Bool = false
+//    static var ifShowendNoewLISSAP:Bool = false
     
-    var controllerSSIPType:Int = 0
-    init( controllerSSIPType: Int) {
+    var controllerSSIPType:UILabel?
+    init( controllerSSIPType: UILabel?) {
         self.controllerSSIPType = controllerSSIPType
         super.init(nibName: nil, bundle: nil)
     }
@@ -37,29 +37,10 @@ class LiSSpELUABootomrbucue: UIViewController {
     }
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    private func ssuipCreaNet() {
+        //
         
-        cancekSSIP.addTarget(self, action: #selector(cancekSSIPIOJIJJi), for: .touchUpInside)
-        
-        haodeSSIP.addTarget(self, action: #selector(cancekSSIPIOJIJJi), for: .touchUpInside)
-        
-        pppirpSSIP.addTarget(self, action: #selector(cancekSSIPIOJIJJi), for: .touchUpInside)
-        
-        teeermSSIP.addTarget(self, action: #selector(cancekSSIPIOJIJJi), for: .touchUpInside)
-        
-       
-        
-        haodeSSIP.layer.cornerRadius = 26
-        haodeSSIP.layer.masksToBounds = true
-        if controllerSSIPType != 0 {
-            teeermSSIP.isHidden = true
-            pppirpSSIP.isHidden = true
-            
-            if controllerSSIPType == 1 {
-                eluaSSIPtiitle.text = "Lippa Privacy Policy"
-                
-                contentSSIPview.text = """
+        contentSSIPview.text = """
 Effective Date: [2025-02-25]
 
 1. Introduction
@@ -75,10 +56,11 @@ Usage Data: We collect data regarding how you use the App, including device info
 
 We use your information for the following purposes:
 
-To provide and maintain the App.
-To process your requests and manage your account.
 To communicate with you about updates, promotions, and events.
 To analyze and improve our services.
+To provide and maintain the App.
+To process your requests and manage your account.
+
 4. Sharing of Information
 
 We do not sell your personal information to third parties. We may share your information:
@@ -95,59 +77,93 @@ You have the right to access, correct, or delete your personal information. For 
 
 7. Changes to This Policy
 
-We may update this Privacy Policy from time to time. Any changes will be posted within the App, and we encourage you to review it periodically.
+We may update this Privacy Policy from time to time. Any changes will be posted within the Lippa App, and we encourage you to review it periodically.
 
 
 """
+    }
+    
+    private func ssuitreatNet() {
+//        eluaSSIPtiitle.text = "Lippa User Terms"
+        
+        contentSSIPview.text = """
+Effective Date: [2025-02-25]
+
+1. Acceptance of Terms
+
+By accessing or using the Lippa App, you agree to be bound by these User Terms. If you do not agree, do not use the App.
+
+2. Eligibility
+
+You must be at least 13 years old to use the App. By using the App, you represent that you meet this requirement.
+
+3. User Conduct
+
+You agree not to:
+
+Harass, threaten, or abuse other users.
+Post false or misleading information about collectibles.
+Upload content that infringes the intellectual property rights of others.
+4. Intellectual Property
+
+All content and materials within the App are owned by Lippa or its licensors. You may not use any content without express permission.
+
+5. Community Guidelines
+
+Users should engage respectfully and constructively within the community. Disrespectful or harmful behavior can result in account suspension or termination.
+
+6. Feedback
+
+If you provide feedback or suggestions about the App, you grant Lippa the right to use such feedback without any obligation to you.
+
+7. Disclaimer of Warranties
+
+Lippa makes no warranties regarding the reliability, availability, or performance of the App.
+
+8. Changes to Terms
+
+Lippa may modify these User Terms at any time. Your continued use of the App after changes indicates acceptance of the new terms.
+
+9. Contact Us
+
+For questions or concerns regarding these agreements, please contact us at LippaGgmail.com.
+
+"""
+    
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if let contetnty =  controllerSSIPType?.text {
+            eluaSSIPtiitle.text = contetnty
+        }else{
+            eluaSSIPtiitle.text = "Lippa ELUA"
+        }
+        
+        cancekSSIP.addTarget(self, action: #selector(cancekSSIPIOJIJJi), for: .touchUpInside)
+        
+        haodeSSIP.addTarget(self, action: #selector(cancekSSIPIOJIJJi), for: .touchUpInside)
+        
+        pppirpSSIP.addTarget(self, action: #selector(cancekSSIPIOJIJJi), for: .touchUpInside)
+        
+        teeermSSIP.addTarget(self, action: #selector(cancekSSIPIOJIJJi), for: .touchUpInside)
+        
+       
+        
+        haodeSSIP.layer.cornerRadius = 26
+        haodeSSIP.layer.masksToBounds = true
+        if controllerSSIPType != nil {
+            teeermSSIP.isHidden = true
+            pppirpSSIP.isHidden = true
+            
+            if controllerSSIPType?.text == "Lippa Privacy Policy" {
+                ssuipCreaNet()
             }
             
             
-            if controllerSSIPType == 2 {
-                eluaSSIPtiitle.text = "Lippa User Terms"
-                
-                contentSSIPview.text = """
-  Effective Date: [2025-02-25]
-
-  1. Acceptance of Terms
-
-  By accessing or using the Lippa App, you agree to be bound by these User Terms. If you do not agree, do not use the App.
-
-  2. Eligibility
-
-  You must be at least 13 years old to use the App. By using the App, you represent that you meet this requirement.
-
-  3. User Conduct
-
-  You agree not to:
-
-  Harass, threaten, or abuse other users.
-  Post false or misleading information about collectibles.
-  Upload content that infringes the intellectual property rights of others.
-  4. Intellectual Property
-
-  All content and materials within the App are owned by Lippa or its licensors. You may not use any content without express permission.
-
-  5. Community Guidelines
-
-  Users should engage respectfully and constructively within the community. Disrespectful or harmful behavior can result in account suspension or termination.
-
-  6. Feedback
-
-  If you provide feedback or suggestions about the App, you grant Lippa the right to use such feedback without any obligation to you.
-
-  7. Disclaimer of Warranties
-
-  Lippa makes no warranties regarding the reliability, availability, or performance of the App.
-
-  8. Changes to Terms
-
-  Lippa may modify these User Terms at any time. Your continued use of the App after changes indicates acceptance of the new terms.
-
-  9. Contact Us
-
-      For questions or concerns regarding these agreements, please contact us at LippaGgmail.com.
-
-"""
+            if controllerSSIPType?.text == "Lippa User Terms" {
+                ssuitreatNet()
             }
         }
         
@@ -159,18 +175,18 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
     
    @objc func cancekSSIPIOJIJJi(SIPP:UIButton)  {
        if SIPP == self.cancekSSIP {
-           if controllerSSIPType == 0 {
+           if controllerSSIPType == nil {
                UserDefaults.standard.set(false, forKey: "isagreeeeSSIP")
-//               LiSSpBArbucue.SSIPlA.isagreeeeSSIP = false
+
            }
           
            self.navigationController?.popViewController(animated: true)
        }
        
        if SIPP == self.haodeSSIP  {
-           if controllerSSIPType == 0 {
+           if controllerSSIPType == nil {
                UserDefaults.standard.set(true, forKey: "isagreeeeSSIP")
-//               LiSSpBArbucue.SSIPlA.isagreeeeSSIP = true
+
            }
            
            self.navigationController?.popViewController(animated: true)
@@ -178,12 +194,19 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
   
        
         if SIPP == self.pppirpSSIP   {
-            self.navigationController?.pushViewController(LiSSpELUABootomrbucue.init(controllerSSIPType: 1), animated: true)
+            
+            let priSSIPLabe = UILabel.init()
+            priSSIPLabe.text = "Lippa Privacy Policy"
+            
+            self.navigationController?.pushViewController(LiSSpELUABootomrbucue.init(controllerSSIPType: priSSIPLabe), animated: true)
        }
        
        
        if SIPP == self.teeermSSIP   {
-           self.navigationController?.pushViewController(LiSSpELUABootomrbucue.init(controllerSSIPType: 2), animated: true)
+           let priSSIPLabe = UILabel.init()
+           priSSIPLabe.text = "Lippa User Terms"
+          
+           self.navigationController?.pushViewController(LiSSpELUABootomrbucue.init(controllerSSIPType: priSSIPLabe), animated: true)
       }
    }
     

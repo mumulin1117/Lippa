@@ -14,8 +14,7 @@ class LiSSpWallwnetvierell: UICollectionViewCell {
     
     @IBOutlet weak var speendTisSSIP: UILabel!
     
-    
-    
+   
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -27,6 +27,16 @@ class LiSSpChatVideostfrbucue:  LissipSecondFrbucue {
     
     @IBOutlet weak var babdaerView: UIImageView!
     
+    
+    private func ssuipCreaNet() {
+        
+    }
+    
+    private func ssuitreatNet() {
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -76,53 +86,13 @@ class LiSSpChatVideostfrbucue:  LissipSecondFrbucue {
 
     @IBAction func chpickedCLIKSSip(_ sender: UIButton) {
         
-        let normailAreport = UIAlertController(title: "Report OR Black", message:nil, preferredStyle: .actionSheet)
-        
-        normailAreport.addAction(UIAlertAction(title: "Black", style: .default, handler: { alertSSIP in
-            AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Requesting...", loaingShowView: self.view)
-            self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
-                AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
-                AppDelegate.showSSIPSuccessTips(acccusString: "Black successful!")
-                self.delsteSSIPONenterBottomUser(iduserSSIP: self.postCenDataSSIP)
-               
-                
-            }
-           
-        }))
-       
-        normailAreport.addAction(UIAlertAction(title: "Report", style: .default, handler: { alertSSIP in
-            self.shingcaseOriginReport()
-           
-        }))
-        normailAreport.addAction(UIAlertAction(title: "cancel", style: .default))
-        
-        self.present(normailAreport, animated: true)
+        let onlyID = self.postCenDataSSIP["ssipAccID"] ?? ""
+        showingBloakjPickVC(withBloackID: onlyID)
+                            
+                            
+      
     }
     
     
-    
-    private  func shingcaseOriginReport()  {
-        
-        let normailAreport = UIAlertController(title: "Report User Reason", message:nil, preferredStyle: .actionSheet)
-        let reasonsdonin = ["Offensive Language","Inaccuracy","Privacy Violation","Spam or Irrelevance"]
-        
-        for item in reasonsdonin {
-            normailAreport.addAction(UIAlertAction(title: item, style: .default, handler: { alertSSIP in
-                AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "", loaingShowView: self.view)
-                self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
-                    AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
-                    AppDelegate.showSSIPSuccessTips(acccusString: "Thank you for your report. We will verify and handle it as soon as possible")
-                }
-               
-            }))
-        }
-       
-        
-        normailAreport.addAction(UIAlertAction(title: "cancel", style: .default))
-        
-        self.present(normailAreport, animated: true)
-        
-        
-    }
-
+  
 }

@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiSSpMeaddgeBootomrbucue" customModule="Lippewqgui" customModuleProvider="target">
             <connections>
                 <outlet property="activVieSSIP" destination="rEI-sF-lwS" id="BNb-fH-tga"/>
+                <outlet property="nomesagtipSSIP" destination="JW1-1s-tQe" id="MH8-F2-4YA"/>
                 <outlet property="notifationViewSSIP" destination="ezb-xI-yDS" id="OSB-fR-Ofl"/>
                 <outlet property="relationlistSSIP" destination="Bbf-64-3T9" id="jUT-vF-K1E"/>
                 <outlet property="view" destination="WRA-Sv-2rB" id="uBj-ke-epa"/>
@@ -73,6 +74,12 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Message Yet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JW1-1s-tQe">
+                    <rect key="frame" x="133.66666666666666" y="543" width="125.99999999999997" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Vjl-N5-nGT"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -91,8 +98,10 @@
                 <constraint firstItem="ezb-xI-yDS" firstAttribute="leading" secondItem="Vjl-N5-nGT" secondAttribute="leading" constant="12" id="j92-1t-VvM"/>
                 <constraint firstItem="nFm-X1-scz" firstAttribute="top" secondItem="WRA-Sv-2rB" secondAttribute="top" id="ktZ-cz-GJE"/>
                 <constraint firstItem="Vjl-N5-nGT" firstAttribute="trailing" secondItem="Bbf-64-3T9" secondAttribute="trailing" constant="16" id="ma3-Su-YZh"/>
+                <constraint firstItem="JW1-1s-tQe" firstAttribute="centerX" secondItem="WRA-Sv-2rB" secondAttribute="centerX" id="oda-bf-KVb"/>
                 <constraint firstItem="nFm-X1-scz" firstAttribute="trailing" secondItem="Vjl-N5-nGT" secondAttribute="trailing" id="pS9-yy-Qus"/>
                 <constraint firstItem="ip8-7d-gdo" firstAttribute="leading" secondItem="Vjl-N5-nGT" secondAttribute="leading" id="pv8-NV-z32"/>
+                <constraint firstItem="JW1-1s-tQe" firstAttribute="top" secondItem="rEI-sF-lwS" secondAttribute="bottom" constant="260" id="rx1-Mh-CfU"/>
                 <constraint firstItem="rEI-sF-lwS" firstAttribute="leading" secondItem="PG9-2H-zwu" secondAttribute="leading" id="s9K-XB-2Ca"/>
                 <constraint firstItem="Vjl-N5-nGT" firstAttribute="bottom" secondItem="ezb-xI-yDS" secondAttribute="bottom" id="zEi-tx-hGo"/>
             </constraints>

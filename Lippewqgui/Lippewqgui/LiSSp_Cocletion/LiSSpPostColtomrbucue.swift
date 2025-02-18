@@ -26,61 +26,66 @@ class LiSSpPostColtomrbucue: LissipSecondFrbucue , UIImagePickerControllerDelega
         ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
 
         takeColIconLIPSS.maskLippaRoundCorner(rMakLSSIpadius: 24)
-        
-        sedescribitTextView.contentInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
-        
-        sureaddINgLIPSS.maskLippaRoundCorner(rMakLSSIpadius: 26)
-       
-        sedescribitTextView.maskLippaRoundCorner(rMakLSSIpadius: 26)
+        ssuipCreaNet()
     }
-
+    
+     private func ssuipCreaNet() {
+         
+         sedescribitTextView.contentInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+         
+         sureaddINgLIPSS.maskLippaRoundCorner(rMakLSSIpadius: 26)
+        
+         sedescribitTextView.maskLippaRoundCorner(rMakLSSIpadius: 26)
+     }
+     
     @IBAction func stakwingToArtsee(_ sender: UIButton) {
         let status = AVCaptureDevice.authorizationStatus(for: .video)
                 
         if status == .authorized {
             self.openMineTakeSSIPCamera()
+            pickerSSIPVC?.delegate = self
         } else if status == .notDetermined {
             AVCaptureDevice.requestAccess(for: .video) { granted in
                 if granted {
                     DispatchQueue.main.async {
                         self.openMineTakeSSIPCamera()
+                        self.pickerSSIPVC?.delegate = self
                     }
                 }
             }
         } else {
             // 提示用户打开相机权限
-            let alert = UIAlertController(title: "Camera Permission Denied", message: "Please enable camera access in the Settings.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
+            shiVabyuiogPermisson()
         }
         
     }
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-
-        if let image = info[.originalImage] as? UIImage {
-            self.manSSIPStataus = image
-            takeColIconLIPSS.setBackgroundImage(image, for:.normal)
+        
+        
+        guard let image : UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else{
+            picker.dismiss(animated: true, completion: nil)
+            return
         }
-        dismiss(animated: true, completion: nil)
        
+        ssuitreatNet(gibernSSIP: image)
+        picker.dismiss(animated: true, completion: nil)
     }
     
     
-    private func openMineTakeSSIPCamera() {
+    private func ssuitreatNet(gibernSSIP:UIImage) {
+        DispatchQueue.main.async(execute: DispatchWorkItem(block: {
            
-        let piscshoingSSIPPicker = UIImagePickerController()
-        piscshoingSSIPPicker.delegate = self
-        piscshoingSSIPPicker.sourceType = .camera
-        present(piscshoingSSIPPicker, animated: true, completion: nil)
+            self.manSSIPStataus = gibernSSIP
+            self.takeColIconLIPSS.setBackgroundImage(gibernSSIP, for:.normal)
+        }))
     }
+ 
     
     
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
-    }
-    
+   
+   
     
     @IBAction func surestareAiUpload(_ sender: UIButton) {
         if self.manSSIPStataus == nil {
@@ -94,13 +99,21 @@ class LiSSpPostColtomrbucue: LissipSecondFrbucue , UIImagePickerControllerDelega
             return
         }
         
-        
+        ssuitreatNet()
+       
+    }
+    
+    
+    private func ssuitreatNet() {
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "uploading.....", loaingShowView: self.view)
         self.performBlockAfterDelayINSSIP(secondsSSIP: 2.5) {
-            AppDelegate.showSSIPSuccessTips(acccusString: "Upload successful, your sharing will be displayed after review")
+            AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
             
             self.navigationController?.popViewController(animated: true)
+            
+            
+            AppDelegate.showSSIPSuccessTips(acccusString: "Upload successful, your sharing will be displayed after review")
+           
         }
     }
-
 }

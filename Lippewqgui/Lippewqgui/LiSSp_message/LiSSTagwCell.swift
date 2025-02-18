@@ -67,7 +67,13 @@ class LiSSTagwCell: UITableViewCell {
         }
     }
     
+    private func ssuipCreaNet() {
+        
+    }
     
+    private func ssuitreatNet() {
+        
+    }
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         buberryoleSSIP.textColor = .white

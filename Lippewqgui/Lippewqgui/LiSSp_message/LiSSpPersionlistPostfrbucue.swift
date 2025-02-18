@@ -18,7 +18,7 @@ class LiSSpPersionlistPostfrbucue:  LissipSecondFrbucue {
     
     @IBOutlet weak var pesinRelationSSIP: UICollectionView!
     
-    var tatSSipype:Int = 0
+    var tatSSipype:CFloat = 0
     
     
     
@@ -34,16 +34,19 @@ class LiSSpPersionlistPostfrbucue:  LissipSecondFrbucue {
         }
         ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
         pesinRelationSSIP.delegate = self
+       
+       
+        ssuitreatNet()
+    }
+
+    
+    private func ssuitreatNet() {
         pesinRelationSSIP.dataSource = self
         
         pesinRelationSSIP.backgroundColor = .clear
         pesinRelationSSIP.register(LiSSRelaotuinCell.self, forCellWithReuseIdentifier: "LiSSRelaotuinCellIS")
         
-       
-        
     }
-
-
     @IBAction func updachicedShingh(_ sender: UIButton) {
         
         facerSSIp.isSelected = false
@@ -102,15 +105,27 @@ extension LiSSpPersionlistPostfrbucue:UICollectionViewDelegate,UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if facerSSIp.isSelected  {
             let userssip = LiSSpMeBootomrbucue.facrewemeSSIP[indexPath.row]
-            self.navigationController?.pushViewController(LiSSpItmeringBucue.init(postCenDataSSIP: userssip), animated: true)
             
-        }else{
-            let userssip = LiSSpMeBootomrbucue.FolsdwemeSSIP[indexPath.row]
-            self.navigationController?.pushViewController(LiSSpItmeringBucue.init(postCenDataSSIP: userssip), animated: true)
+            let useriSSIP = LiSSpItmeringBucue.init()
+            useriSSIP.postCenDataSSIP = userssip
+            self.navigationController?.pushViewController(useriSSIP, animated: true)
+            return
         }
+        
+        ssuipCreaNet(intre: indexPath.row)
         
         
        
+    }
+    
+    
+    
+    private func ssuipCreaNet(intre:Int) {
+        let userssip = LiSSpMeBootomrbucue.FolsdwemeSSIP[intre]
+        
+        let useriSSIP = LiSSpItmeringBucue.init()
+        useriSSIP.postCenDataSSIP = userssip
+        self.navigationController?.pushViewController(useriSSIP, animated: true)
     }
     
 }
@@ -131,14 +146,23 @@ class LiSSRelaotuinCell: UICollectionViewCell {
         self.maskLippaRoundCorner(rMakLSSIpadius: 20)
         self.contentView.backgroundColor = UIColor(red: 0.04, green: 0.27, blue: 0.8, alpha: 1)
         
+        ssuipCreaNet()
+        ssuitreatNet()
+    }
+    private func ssuipCreaNet() {
         contentView.addSubview(babdaerView)
-        contentView.addSubview(nicmerSSIP)
-        
         babdaerView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.width.height.equalTo(60)
             make.top.equalToSuperview().offset(14)
         }
+        
+    }
+    
+    private func ssuitreatNet() {
+        contentView.addSubview(nicmerSSIP)
+        
+       
         
         nicmerSSIP.snp.makeConstraints { make in
             make.top.equalTo(babdaerView.snp.bottom).offset(11)
@@ -146,7 +170,6 @@ class LiSSRelaotuinCell: UICollectionViewCell {
             
         }
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

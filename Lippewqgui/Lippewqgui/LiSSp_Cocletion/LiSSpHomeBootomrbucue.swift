@@ -31,15 +31,16 @@ class LiSSpHomeBootomrbucue: LiSSpNOrmalSnmingertips {
         super.viewDidLoad()
         sjhocaseSSIP.isUserInteractionEnabled = true
         sjhocaseSSIP.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(atpdetaioCollecART)))
-        sjhocaseSSIP.maskLippaRoundCorner(rMakLSSIpadius: 12)
         
-        mecenIconLISSP.maskLippaRoundCorner(rMakLSSIpadius: 16)
+        if let appledeelgate = (UIApplication.shared.delegate) as? AppDelegate {
+            sjhocaseSSIP.image = UIImage(named: appledeelgate.totalvrdataSSIP[refreshindex]["ssipColletionPic"] ?? "")
+            abountINFoLissp.text = appledeelgate.totalvrdataSSIP[refreshindex]["ssipColletionDesc"]
+        }
         
-       
+        ssuipCreaNet()
         
     }
 
-    
     
    @objc func atpdetaioCollecART()  {
        if let appledeelgate = (UIApplication.shared.delegate) as? AppDelegate {
@@ -54,6 +55,14 @@ class LiSSpHomeBootomrbucue: LiSSpNOrmalSnmingertips {
     
     
     
+    private func ssuipCreaNet() {
+        sjhocaseSSIP.maskLippaRoundCorner(rMakLSSIpadius: 12)
+        
+        mecenIconLISSP.maskLippaRoundCorner(rMakLSSIpadius: 16)
+       
+    }
+    
+   
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -92,7 +101,7 @@ class LiSSpHomeBootomrbucue: LiSSpNOrmalSnmingertips {
         
     }
     
-    
+   
     
     @IBAction func aiartaeingLISSP(_ sender: UIButton) {
         self.navigationController?.pushViewController(LiSSpAIBriefrbucue.init(), animated: true)

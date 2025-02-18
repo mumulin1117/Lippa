@@ -13,22 +13,12 @@ class LiSSpBArBootomrbucue:UITabBarController {
     override func viewDidLoad() {
      
         super.viewDidLoad()
-        let appearenceLIpad = UITabBarAppearance()
-        
-        appearenceLIpad.backgroundColor = UIColor(red: 0.06, green: 0.05, blue: 0.13, alpha: 1)
-        appearenceLIpad.stackedLayoutAppearance.normal.titleTextAttributes = [
-            .foregroundColor:  UIColor(red: 0.36, green: 0.18, blue: 0.32, alpha: 1)
-        ]
-        appearenceLIpad.stackedLayoutAppearance.selected.titleTextAttributes = [
-            .foregroundColor:UIColor(red: 0.92, green: 0.16, blue: 0.75, alpha: 1)
-        ]
-        tabBar.standardAppearance = appearenceLIpad
-        tabBar.scrollEdgeAppearance = appearenceLIpad
         
         
+        ssuipCreaNet()
         
         let ewHomePage = LiSSpNavitSnmingertips.init(rootViewController: LiSSpHomeBootomrbucue())
-//
+
         let olkaoPageSSiptroller = LiSSpNavitSnmingertips.init(rootViewController: LiSSpDynamicBootomrbucue())
         let meaadhepageller = LiSSpNavitSnmingertips.init(rootViewController: LiSSpMeaddgeBootomrbucue())
  
@@ -45,13 +35,30 @@ class LiSSpBArBootomrbucue:UITabBarController {
         olkaoPageSSiptroller.tabBarItem = ilisat[1]
         meaadhepageller.tabBarItem = ilisat[2]
        
-        self.tabBar.backgroundColor = UIColor(red: 0.06, green: 0.05, blue: 0.13, alpha: 1)
+        ssuitreatNet()
           
         viewControllers = [ewHomePage, olkaoPageSSiptroller,meaadhepageller]
     }
     
    
-   
+    private func ssuipCreaNet() {
+        let appearenceLIpad = UITabBarAppearance()
+        
+        
+        appearenceLIpad.stackedLayoutAppearance.normal.titleTextAttributes = [
+            .foregroundColor:  UIColor(red: 0.36, green: 0.18, blue: 0.32, alpha: 1)
+        ]
+        appearenceLIpad.backgroundColor = UIColor(red: 0.06, green: 0.05, blue: 0.13, alpha: 1)
+        appearenceLIpad.stackedLayoutAppearance.selected.titleTextAttributes = [
+            .foregroundColor:UIColor(red: 0.92, green: 0.16, blue: 0.75, alpha: 1)
+        ]
+        tabBar.standardAppearance = appearenceLIpad
+        tabBar.scrollEdgeAppearance = appearenceLIpad
+    }
+    
+    private func ssuitreatNet() {
+        self.tabBar.backgroundColor = UIColor(red: 0.06, green: 0.05, blue: 0.13, alpha: 1)
+    }
 }
 
 
@@ -61,10 +68,12 @@ class LiSSpNavitSnmingertips: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        self.navigationBar.isHidden = true
+        ssuipCreaNet()
     }
     
-
+    private func ssuipCreaNet() {
+        self.navigationBar.isHidden = true
+    }
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
       
         if children.count > 0   {
@@ -91,6 +100,11 @@ class LiSSpNavitSnmingertips: UINavigationController {
 class LiSSpNOrmalSnmingertips: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        ssuipCreaNet()
+    }
+    private func ssuipCreaNet() {
         view.backgroundColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
     }
+    
+   
 }

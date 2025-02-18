@@ -36,12 +36,18 @@ class LiSSpDynamicBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDataSour
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        ssuipCreaNet()
         
-        _rundatabviewSIPP?.reloadData()
     }
     
     var  _rundatabviewSIPP:UICollectionView?
     
+    
+    private func ssuipCreaNet() {
+        _rundatabviewSIPP?.reloadData()
+    }
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         let funflow  = UICollectionViewFlowLayout()
@@ -74,12 +80,17 @@ class LiSSpDynamicBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDataSour
         }
         _rundatabviewSIPP = rundatabviewSIPP
     }
-
+    private func ssuitreatNet() {
+        
+    }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let appledeelgate = (UIApplication.shared.delegate) as? AppDelegate {
             
             let selidINdfo =  appledeelgate.totalvrdataSSIP[indexPath.row]
-            self.navigationController?.pushViewController(LiSSpTieZIngefrbucue.init(postCenDataSSIP: selidINdfo), animated: true)
+            
+            let teizige = LiSSpTieZIngefrbucue.init()
+            teizige.postCenDataSSIP = selidINdfo
+            self.navigationController?.pushViewController(teizige, animated: true)
         }
         
     }

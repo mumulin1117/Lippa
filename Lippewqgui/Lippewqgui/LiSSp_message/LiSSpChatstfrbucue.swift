@@ -59,8 +59,21 @@ class LiSSpChatstfrbucue: LissipSecondFrbucue,UITableViewDelegate,UITableViewDat
             LiSSpMeaddgeBootomrbucue.cxhatArraySSIP.append(PChatUSerFwbnke)
         }
     }
+    
+   
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        ssuitreatNet()
+        appChatMeassgeSSIP.delegate = self
+        appChatMeassgeSSIP.dataSource = self
+
+       
+    }
+
+    
+    private func ssuitreatNet() {
         ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
         nicmerSSIP.text = PChatUSerFwbnke.whoseSSIP["ssipNadme"] ?? ""
         babdaerView.image = UIImage(named: PChatUSerFwbnke.whoseSSIP["ssipPicdty"] ?? "")
@@ -71,60 +84,17 @@ class LiSSpChatstfrbucue: LissipSecondFrbucue,UITableViewDelegate,UITableViewDat
 
         appChatMeassgeSSIP.separatorStyle = .none
         appChatMeassgeSSIP.register(LiSSTagwCell.self, forCellReuseIdentifier: "LiSSTagwCellID")
-        appChatMeassgeSSIP.delegate = self
-        appChatMeassgeSSIP.dataSource = self
-
-       
     }
-
+    
+    
     @IBAction func chpickedCLIKSSip(_ sender: UIButton) {
+        let onlyID = self.PChatUSerFwbnke.whoseSSIP["ssipAccID"] ?? ""
         
-        let normailAreport = UIAlertController(title: "Report OR Black", message:nil, preferredStyle: .actionSheet)
-        
-        normailAreport.addAction(UIAlertAction(title: "Black", style: .default, handler: { alertSSIP in
-            AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Requesting...", loaingShowView: self.view)
-            self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
-                AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
-                AppDelegate.showSSIPSuccessTips(acccusString: "Black successful!")
-                self.delsteSSIPONenterBottomUser(iduserSSIP: self.PChatUSerFwbnke.whoseSSIP)
-            }
-           
-        }))
-       
-        normailAreport.addAction(UIAlertAction(title: "Report", style: .default, handler: { alertSSIP in
-            self.shingcaseOriginReport()
-           
-        }))
-        normailAreport.addAction(UIAlertAction(title: "cancel", style: .default))
-        
-        self.present(normailAreport, animated: true)
+        showingBloakjPickVC(withBloackID: onlyID)
     }
     
     
-    
-    private  func shingcaseOriginReport()  {
-        
-        let normailAreport = UIAlertController(title: "Report User Reason", message:nil, preferredStyle: .actionSheet)
-        let reasonsdonin = ["Offensive Language","Inaccuracy","Privacy Violation","Spam or Irrelevance"]
-        
-        for item in reasonsdonin {
-            normailAreport.addAction(UIAlertAction(title: item, style: .default, handler: { alertSSIP in
-                AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "", loaingShowView: self.view)
-                self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
-                    AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
-                    AppDelegate.showSSIPSuccessTips(acccusString: "Thank you for your report. We will verify and handle it as soon as possible")
-                }
-               
-            }))
-        }
-       
-        
-        normailAreport.addAction(UIAlertAction(title: "cancel", style: .default))
-        
-        self.present(normailAreport, animated: true)
-        
-        
-    }
+
     
     @IBAction func surepostingSSIp(_ sender: UIButton) {
       
@@ -135,10 +105,12 @@ class LiSSpChatstfrbucue: LissipSecondFrbucue,UITableViewDelegate,UITableViewDat
         let newmesag = (true,puictertView)
         
         PChatUSerFwbnke.chatSSIPList.append(newmesag)
-        appChatMeassgeSSIP.reloadData()
-        puitertView.resignFirstResponder()
+        ssuipCreaNet()
         puitertView.text = nil
     }
-    
+    private func ssuipCreaNet() {
+        appChatMeassgeSSIP.reloadData()
+        puitertView.resignFirstResponder()
+    }
 
 }

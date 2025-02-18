@@ -29,10 +29,7 @@ class LiSSpSeeingPOsecell: UICollectionViewCell {
     var postCenDataSSIP:Dictionary<String,String> = [:]{
         didSet{
             postingUserimgSSIP.image = UIImage(named: postCenDataSSIP["ssipPicdty"] ?? "")
-            postusernamSSIP.text = postCenDataSSIP["ssipNadme"]
-            
-            postingCOntentCAseSSIP.image = UIImage(named: postCenDataSSIP["ssipPublishPic"] ?? "")
-            
+            ssuipCreaNet()
             postingContetntesxrSSIP.text = postCenDataSSIP["ssipPublishDesc"]
         }
     }
@@ -41,8 +38,17 @@ class LiSSpSeeingPOsecell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.maskLippaRoundCorner(rMakLSSIpadius: 20)
+        ssuitreatNet()
+    }
+    private func ssuipCreaNet() {
+        postusernamSSIP.text = postCenDataSSIP["ssipNadme"]
+        
+        postingCOntentCAseSSIP.image = UIImage(named: postCenDataSSIP["ssipPublishPic"] ?? "")
+      
+    }
+    
+    private func ssuitreatNet() {
         beautufulbl.maskLippaRoundCorner(rMakLSSIpadius: 17)
         postingUserimgSSIP.maskLippaRoundCorner(rMakLSSIpadius: 21.5)
     }
-
 }
