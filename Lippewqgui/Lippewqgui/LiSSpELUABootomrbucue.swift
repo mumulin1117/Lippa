@@ -24,6 +24,8 @@ class LiSSpELUABootomrbucue: UIViewController {
     @IBOutlet weak var cancekSSIP: UIButton!
     
     
+    static var ifShowendNoewLISSAP:Bool = false
+    
     var controllerSSIPType:Int = 0
     init( controllerSSIPType: Int) {
         self.controllerSSIPType = controllerSSIPType

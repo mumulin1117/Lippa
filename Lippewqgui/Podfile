@@ -8,11 +8,11 @@ target 'Lippewqgui' do
   # Pods for Lippewqgui
 
 pod 'SnapKit'
-pod 'Cosmos'
-pod 'IQKeyboardManager'
-pod
-pod 'SwiftyStoreKit'
 pod 'SwiftMessages'
+pod 'IQKeyboardManager'
+
+pod 'SwiftyStoreKit'
+
 
 end
 post_install do |installer_representation|

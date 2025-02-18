@@ -2,8 +2,7 @@
 //  LiSSpmeassgrLifarCell.swift
 //  Lippewqgui
 //
-//  Created by mumu on 2025/2/13.
-//
+
 
 import UIKit
 
@@ -23,15 +22,17 @@ class LiSSpmeassgrLifarCell: UICollectionViewCell {
             if firstgcomg?.0 == true {
                 
                 nicmerSSIP.text = "Me"
-                babdaerView.image = LiSSpBArbucue.SSIPlA.logPucserdataSSIP
+//                babdaerView.image = LiSSpBArbucue.SSIPlA.logPucserdataSSIP
             }else{
                 nicmerSSIP.text = datagking?["ssipNadme"] ?? ""
-                babdaerView.image = UIImage(named: datagking?["ssipPicdty"] ?? "")
+                
             }
-            
+            babdaerView.image = UIImage(named: datagking?["ssipPicdty"] ?? "")
             sauingSSIP.text = firstgcomg?.1
         }
     }
+    
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)

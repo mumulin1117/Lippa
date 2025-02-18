@@ -14,6 +14,7 @@
                 <outlet property="facerSSIp" destination="sFO-A4-pqx" id="Ias-g8-cu1"/>
                 <outlet property="foowlererSSIp" destination="0JI-7w-Ezu" id="ZsK-eW-czt"/>
                 <outlet property="pesinRelationSSIP" destination="eTu-UO-fbK" id="BRV-dx-EbJ"/>
+                <outlet property="view" destination="tOW-D4-eWP" id="tvt-9M-Epa"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -85,7 +86,7 @@
                 <constraint firstItem="sFO-A4-pqx" firstAttribute="centerY" secondItem="epA-I1-SLJ" secondAttribute="centerY" id="bRZ-SA-TXq"/>
                 <constraint firstItem="0JI-7w-Ezu" firstAttribute="centerY" secondItem="sFO-A4-pqx" secondAttribute="centerY" id="liA-Hu-FgL"/>
             </constraints>
-            <point key="canvasLocation" x="136.64122137404578" y="20.422535211267608"/>
+            <point key="canvasLocation" x="285" y="35"/>
         </view>
     </objects>
     <resources>

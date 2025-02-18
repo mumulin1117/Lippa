@@ -9,8 +9,10 @@ import UIKit
 
 class LiSSpMeaddgeBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UICollectionViewDelegate {
     
+    
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if collectionView == self.relationlistSSIP {
+        if collectionView == self.activVieSSIP {
             return CGSize.init(width: 65, height: 65)
         }else{
             return CGSize.init(width: UIScreen.main.bounds.size.width - 24, height: 88)
@@ -20,7 +22,7 @@ class LiSSpMeaddgeBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDelegate
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == self.relationlistSSIP {
+        if collectionView == self.activVieSSIP {
             return LiSSpBArbucue.SSIPlA.totalvrdataSSIP.count
         }else{
             return LiSSpBArbucue.SSIPlA.cxhatArraySSIP.count
@@ -28,9 +30,9 @@ class LiSSpMeaddgeBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDelegate
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == self.relationlistSSIP {
-            
-            let cokiactivecell = collectionView.dequeueReusableCell(withReuseIdentifier: "actieavtoerUsed", for: indexPath) as! UICollectionViewCell
+        if collectionView == self.activVieSSIP {
+           
+            let cokiactivecell = collectionView.dequeueReusableCell(withReuseIdentifier: "actieavtoerUsed", for: indexPath)
             
             if let avotoer = cokiactivecell.viewWithTag(33) as? UIImageView {
                 avotoer.image = UIImage.init(named: LiSSpBArbucue.SSIPlA.totalvrdataSSIP[indexPath.row]["ssipPicdty"] ?? "")
@@ -50,16 +52,34 @@ class LiSSpMeaddgeBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDelegate
             return cokiactivecell
         }else{
             
-            let cokiactivecell = collectionView.dequeueReusableCell(withReuseIdentifier: "actieavtoerUsed", for: indexPath) as! LiSSpmeassgrLifarCell
+            let cokiactivecell = collectionView.dequeueReusableCell(withReuseIdentifier: "LiSSpmeassgrLifarCellUsed", for: indexPath) as! LiSSpmeassgrLifarCell
             cokiactivecell.talkingSang = LiSSpBArbucue.SSIPlA.cxhatArraySSIP[indexPath.row]
             return cokiactivecell
         }
+        
+        
+        
     }
     
 
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == self.activVieSSIP {
+            let userssip = LiSSpBArbucue.SSIPlA.totalvrdataSSIP[indexPath.row]
+            
+            self.navigationController?.pushViewController(LiSSpItmeringBucue.init(postCenDataSSIP: userssip), animated: true)
+        }else{
+            let userssip = LiSSpBArbucue.SSIPlA.cxhatArraySSIP[indexPath.row]
+            
+            self.navigationController?.pushViewController(LiSSpChatstfrbucue.init(_PChatUSerFwbnke: userssip), animated: true)
+        }
+    }
     @IBOutlet weak var relationlistSSIP: UIButton!
     
+    
+  
     @IBOutlet weak var activVieSSIP: UICollectionView!
+    
     
     
     @IBOutlet weak var notifationViewSSIP: UICollectionView!
@@ -77,6 +97,14 @@ class LiSSpMeaddgeBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDelegate
     }
     
     
+    @IBAction func fanceToSIPP(_ sender: UIButton) {
+        let akoij = LiSSpPersionlistPostfrbucue.init()
+       
+        self.navigationController?.pushViewController(akoij, animated: true)
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -84,11 +112,25 @@ class LiSSpMeaddgeBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDelegate
         
         activVieSSIP.delegate = self
         activVieSSIP.dataSource = self
-        activVieSSIP.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "actieavtoerUsed")
+    
         notifationViewSSIP.delegate = self
         notifationViewSSIP.dataSource = self
         
-        activVieSSIP.register(LiSSpmeassgrLifarCell.self, forCellWithReuseIdentifier: "LiSSpmeassgrLifarCellUsed")
+        
+        
+        self.activVieSSIP.isHidden = true
+        self.notifationViewSSIP.isHidden = true
+     
+        notifationViewSSIP.register(LiSSpmeassgrLifarCell.self, forCellWithReuseIdentifier: "LiSSpmeassgrLifarCellUsed")
+        activVieSSIP.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "actieavtoerUsed")
+        
+        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "loading...", loaingShowView: self.view)
+        
+        self.performBlockAfterDelayINSSIP(secondsSSIP: 1.0) {
+            self.activVieSSIP.isHidden = false
+            self.notifationViewSSIP.isHidden = false
+            AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
+        }
     }
 
 

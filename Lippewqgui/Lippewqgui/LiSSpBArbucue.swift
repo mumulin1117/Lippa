@@ -66,9 +66,9 @@ class LiSSpBArbucue: NSObject {
        
         logUoserdataSSIP["ssipAccID"] = "234589"
         
-        logUoserdataSSIP["ssipColletionPic"] = ""
-        logUoserdataSSIP["ssipColletionDesc"] = ""
-       
+//        logUoserdataSSIP["ssipColletionPic"] = ""
+//        logUoserdataSSIP["ssipColletionDesc"] = ""
+//       
         
         logUoserdataSSIP["ssipPublishPic"] = "SSIpTiezi8"
         logUoserdataSSIP["ssipPublishDesc"] = "My first medieval - style dagger for my weapon collection. It's a conversation starter, for sure."
@@ -85,7 +85,7 @@ class LiSSpBArbucue: NSObject {
 
         }
         
-        if  totalvrdataSSIP.count == 2 {
+        if  totalvrdataSSIP.count >= 2 {
             
             let laiet = totalvrdataSSIP[1]
             let comengtwo = SSIPChatUSerFwbnke.init(_whoseSSIP: laiet, _chatSSIPList: [(false,"How do you choose what to collect?"),(true,"I mainly look for emotional resonance in the work.")])
@@ -94,7 +94,7 @@ class LiSSpBArbucue: NSObject {
         }
         
         
-        if  totalvrdataSSIP.count == 3 {
+        if  totalvrdataSSIP.count >= 3 {
             
             let laidsan = totalvrdataSSIP[2]
             let comengtwo = SSIPChatUSerFwbnke.init(_whoseSSIP: laidsan, _chatSSIPList: [(false,"Any advice on collecting art?")])

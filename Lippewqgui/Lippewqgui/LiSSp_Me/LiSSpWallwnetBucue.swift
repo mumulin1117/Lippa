@@ -28,23 +28,25 @@ class LiSSpWallwnetBucue:  LissipSecondFrbucue,UICollectionViewDelegateFlowLayou
     }
     
     
-    let blanceidSSIPayID = [("kfjrqnnqxocflepb","$0.99",400),
-                     ("biweszoeilytsbgs","$1.99",800),
-                     ("tlmmfhlksivndxai","$4.99",2450),
-                     ("rvzrbfaqfnwxzrox","$9.99",4900),
-                     ("lzofkqenkgnahgfy","$19.99",9800),
-                     ("mefusbmssgedxvtm","$49.99",24500),
-                     ("ytdeolwwgwygcbtw","$99.99",49000),
-                            ("lzofkqenkgnahgfy","$19.99",9800),
-                            ("mefusbmssgedxvtm","$49.99",24500),
-                            ("ytdeolwwgwygcbtw","$99.99",49000)]
+    let blanceidSSIPayID = [("nqixcbnohmlxhlrc","$0.99",400),
+                     ("pxoxebhhktzklezg","$1.99",600),
+                            ("lioopgnzhunahgfy","$2.99",1150),
+                           
+                     ("rjcaopufshgxmmch","$4.99",2450),
+                            ("sdrgnhnjutyjtyjr","$5.99",2650),
+                            ("oaijeghutgfhfgtt","$8.99",4650),
+                     ("hwisjrlbpnklyzcq","$9.99",4900),
+                     ("vpjxrayqjkswcwpc","$19.99",9800),
+                     ("nyrjetssfpqjltkh","$49.99",24500),
+                     ("cotnxwosshqinyda","$99.99",49000)
+                            ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
         mincolViewSIPP.delegate = self
         mincolViewSIPP.dataSource = self
-        mincolViewSIPP.register(UINib.init(nibName: "LiSSpWallwnetBucue", bundle: nil), forCellWithReuseIdentifier: "LiSSpWallwnetBucueReused")
+        mincolViewSIPP.register(UINib.init(nibName: "LiSSpWallwnetvierell", bundle: nil), forCellWithReuseIdentifier: "LiSSpWallwnetBucueReused")
         if let oldamone = Int(LiSSpBArbucue.SSIPlA.logUoserdataSSIP["ssipDoimond"] ?? "0"){
    
             mineOladSSIP.text  = "\(oldamone)"

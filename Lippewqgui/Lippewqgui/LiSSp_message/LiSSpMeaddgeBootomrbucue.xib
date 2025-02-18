@@ -11,8 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiSSpMeaddgeBootomrbucue" customModule="Lippewqgui" customModuleProvider="target">
             <connections>
-                <outlet property="activVieSSIP" destination="rEI-sF-lwS" id="WKg-Ak-wrR"/>
-                <outlet property="notifationViewSSIP" destination="ezb-xI-yDS" id="6Pp-Qq-TmP"/>
+                <outlet property="activVieSSIP" destination="rEI-sF-lwS" id="BNb-fH-tga"/>
+                <outlet property="notifationViewSSIP" destination="ezb-xI-yDS" id="OSB-fR-Ofl"/>
                 <outlet property="relationlistSSIP" destination="Bbf-64-3T9" id="jUT-vF-K1E"/>
                 <outlet property="view" destination="WRA-Sv-2rB" id="uBj-ke-epa"/>
             </connections>
@@ -40,6 +40,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="listSSIPfans"/>
+                    <connections>
+                        <action selector="fanceToSIPP:" destination="-1" eventType="touchUpInside" id="cJd-vi-LAS"/>
+                    </connections>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="rEI-sF-lwS">
                     <rect key="frame" x="20" y="218" width="373" height="65"/>

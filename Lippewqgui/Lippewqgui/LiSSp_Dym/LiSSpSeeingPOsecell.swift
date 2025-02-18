@@ -2,8 +2,7 @@
 //  LiSSpSeeingPOsecell.swift
 //  Lippewqgui
 //
-//  Created by mumu on 2025/2/13.
-//
+
 
 import UIKit
 

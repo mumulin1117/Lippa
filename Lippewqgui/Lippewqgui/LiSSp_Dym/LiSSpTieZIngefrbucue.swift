@@ -50,7 +50,7 @@ class LiSSpTieZIngefrbucue:  LissipSecondFrbucue {
         ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
         postingUserimgSSIP.maskLippaRoundCorner(rMakLSSIpadius: 21.5)
         collecPost.isSelected = (postCenDataSSIP["islikeThisPublish"] == "SSIPLike")
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(ctterBsdNoingSSIP), name: NSNotification.Name.init("deleteUserSIPPish"), object: nil)
         collecPost.isSelected = (postCenDataSSIP["islikeThisPublish"] == "SSIPLike")
         postingUserimgSSIP.image = UIImage(named: postCenDataSSIP["ssipPicdty"] ?? "")
         postusernamSSIP.text = postCenDataSSIP["ssipNadme"]
@@ -96,8 +96,8 @@ class LiSSpTieZIngefrbucue:  LissipSecondFrbucue {
     
     @IBAction func getinguserSSUP(_ sender: UIButton) {
         let usermingming = postCenDataSSIP
+        self.navigationController?.pushViewController(LiSSpItmeringBucue.init(postCenDataSSIP: usermingming), animated: true)
         
-        self.present(LiSSpPesoncenstfrbucue.init(), animated: true)
     }
     
     @IBAction func colllectioChagentSSUP(_ sender: UIButton) {

@@ -10,22 +10,73 @@ import UIKit
 class LiSSpPesoncenstfrbucue:   LissipSecondFrbucue {
     @IBOutlet weak var ChokenSSIP: UIButton!
     
+    
+    @IBOutlet weak var whonameSIPP: UILabel!
+    
+    @IBOutlet weak var ownedSIpp: UIImageView!
+    
+    @IBOutlet weak var descnameSIPP: UILabel!
+    
+    
+    @IBOutlet weak var fancereCountSIpp: UILabel!
+    
+    @IBOutlet weak var fowerereCountSIpp: UILabel!
+    
+    
+    @IBOutlet weak var opwerSIPP: UIImageView!
+    
+    @IBOutlet weak var editSSSIPo: UIButton!
+    
+    @IBOutlet weak var shintestBuutonSSIP: UILabel!
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        ownedSIpp.image = LiSSpBArbucue.SSIPlA.logPucserdataSSIP
+        opwerSIPP.image = LiSSpBArbucue.SSIPlA.logPucserdataSSIP
+        whonameSIPP.text = LiSSpBArbucue.SSIPlA.logUoserdataSSIP["ssipNadme"]
+        
+        fancereCountSIpp.text = "\(LiSSpBArbucue.SSIPlA.facrewemeSSIP.count)"
+        
+        fowerereCountSIpp.text = "\(LiSSpBArbucue.SSIPlA.FolsdwemeSSIP.count)"
+        
+        descnameSIPP.text = LiSSpBArbucue.SSIPlA.logUoserdataSSIP["ssipDtfestBriedf"]
+        opwerSIPP.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMinYCorner]
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
-
-       
+        opwerSIPP.layer.masksToBounds = true
+        
+        editSSSIPo.maskLippaRoundCorner(rMakLSSIpadius: 16)
+        ownedSIpp.maskLippaRoundCorner(rMakLSSIpadius: 38)
+        opwerSIPP.maskLippaRoundCorner(rMakLSSIpadius: 38)
+        shintestBuutonSSIP.maskLippaRoundCorner(rMakLSSIpadius: 14)
+     
+        
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    @IBAction func collectiontableSSIP(_ sender: UIButton) {
+        if sender.tag == 990 {
+           
+            self.navigationController?.pushViewController(LiSSpEditFrBucue.init(), animated: true)
+            
+            return
+        }
+        let achiole = view.viewWithTag(34) as? UIButton
+        let achiole1 = view.viewWithTag(35) as? UIButton
+        achiole?.isSelected = false
+        achiole1?.isSelected = false
+        
+        
+        sender.isSelected = true
     }
-    */
-
+    
+    
+    
+    
+    
 }

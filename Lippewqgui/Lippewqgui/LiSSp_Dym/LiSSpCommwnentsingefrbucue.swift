@@ -16,7 +16,7 @@ class LiSSpCommwnentsingefrbucue:  LissipSecondFrbucue {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
+        ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIPDissmiss), for: .touchUpInside)
 
     }
 

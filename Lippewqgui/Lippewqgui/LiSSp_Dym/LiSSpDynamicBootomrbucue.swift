@@ -19,11 +19,21 @@ class LiSSpDynamicBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDataSour
         let selidINdfo =  LiSSpBArbucue.SSIPlA.totalvrdataSSIP[indexPath.row]
         let CellIDSIPP = collectionView.dequeueReusableCell(withReuseIdentifier: "LiSSpSeeingPOsecellreused", for: indexPath) as! LiSSpSeeingPOsecell
         CellIDSIPP.postCenDataSSIP = selidINdfo
+        CellIDSIPP.collecPost.isSelected = (selidINdfo["islikeThisPublish"] == "SSIPLike")
         return CellIDSIPP
        
     }
     
     @IBOutlet weak var topcircleImagSipp: UIImageView!
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        _rundatabviewSIPP?.reloadData()
+    }
+    
+    var  _rundatabviewSIPP:UICollectionView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +46,7 @@ class LiSSpDynamicBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDataSour
        
         let rundatabviewSIPP = UICollectionView.init(frame: .zero, collectionViewLayout: funflow)
         
-        
+       
         rundatabviewSIPP.delegate = self
         rundatabviewSIPP.dataSource = self
         rundatabviewSIPP.showsVerticalScrollIndicator = false
@@ -55,7 +65,7 @@ class LiSSpDynamicBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDataSour
             rundatabviewSIPP.isHidden = false
             AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
         }
-        
+        _rundatabviewSIPP = rundatabviewSIPP
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

@@ -11,6 +11,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiSSpChatVideostfrbucue" customModule="Lippewqgui" customModuleProvider="target">
             <connections>
                 <outlet property="ChokenSSIP" destination="h5j-QB-5cg" id="eQX-S7-H9V"/>
+                <outlet property="babdaerView" destination="u3Y-4X-vZg" id="OHK-T5-NPL"/>
+                <outlet property="haodaSSIP" destination="6OM-uT-wpb" id="HeT-By-FLw"/>
+                <outlet property="nicmerSSIP" destination="b3r-Ij-Jn1" id="2GB-BX-Wsx"/>
+                <outlet property="shinmaskerlayerSSip" destination="C96-aO-zno" id="jBk-8L-Phq"/>
                 <outlet property="view" destination="LBO-q8-fff" id="DA3-yQ-qhG"/>
             </connections>
         </placeholder>
@@ -19,7 +23,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6OM-uT-wpb">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6OM-uT-wpb">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u3Y-4X-vZg">
@@ -37,6 +41,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="moreportSSIPre"/>
+                    <connections>
+                        <action selector="chpickedCLIKSSip:" destination="-1" eventType="touchUpInside" id="xhT-LX-rHx"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3r-Ij-Jn1">
                     <rect key="frame" x="219.66666666666666" y="62.666666666666657" width="14" height="21"/>
@@ -71,6 +78,9 @@
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="SSIPvideo"/>
+                            <connections>
+                                <action selector="touchingDeRefused:" destination="-1" eventType="touchUpInside" id="wWz-yE-OZs"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fx1-tk-23k">
                             <rect key="frame" x="97" y="24" width="42" height="42"/>
@@ -80,6 +90,9 @@
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="Camera_SSIP flip"/>
+                            <connections>
+                                <action selector="touchingDeRefused:" destination="-1" eventType="touchUpInside" id="S1s-md-lvV"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bC-hC-QLD">
                             <rect key="frame" x="24" y="86" width="42" height="42"/>
@@ -89,6 +102,9 @@
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="SSIPvoice"/>
+                            <connections>
+                                <action selector="touchingDeRefused:" destination="-1" eventType="touchUpInside" id="ArH-Ze-NYQ"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVt-zB-uwW">
                             <rect key="frame" x="97" y="86" width="42" height="42"/>
@@ -98,6 +114,9 @@
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="SSIPsound"/>
+                            <connections>
+                                <action selector="touchingDeRefused:" destination="-1" eventType="touchUpInside" id="Xyz-1P-7vI"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.38360969387755101" colorSpace="custom" customColorSpace="sRGB"/>
@@ -114,7 +133,7 @@
                         <constraint firstAttribute="trailing" secondItem="LVt-zB-uwW" secondAttribute="trailing" constant="24" id="rVk-Kf-ktz"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvF-j1-WSe">
+                <button opaque="NO" tag="45" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvF-j1-WSe">
                     <rect key="frame" x="269" y="695" width="68" height="68"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="68" id="4ot-Pj-roi"/>
@@ -122,10 +141,13 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="haunupflip"/>
+                    <connections>
+                        <action selector="touchingDeRefused:" destination="-1" eventType="touchUpInside" id="zyz-Od-lpa"/>
+                    </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTh-7r-tkn">
-                    <rect key="frame" x="267" y="632.66666666666663" width="72.333333333333314" height="31.333333333333371"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="connecting...." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTh-7r-tkn">
+                    <rect key="frame" x="241.66666666666666" y="640" width="122.66666666666666" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>

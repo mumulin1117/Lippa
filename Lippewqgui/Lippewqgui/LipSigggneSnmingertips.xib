@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="entrtSSIPOEmail" destination="Fkd-Ya-9xi" id="tQS-ni-C9a"/>
                 <outlet property="entrtSSIPOPsw" destination="k92-nT-hVd" id="mmc-us-hmJ"/>
+                <outlet property="linkerConditonSSIp" destination="vg1-Dz-blC" id="ZA5-kx-opB"/>
                 <outlet property="signSSIPin" destination="Bdn-Bx-L1i" id="Jx1-In-ilv"/>
                 <outlet property="statauseSSIP" destination="1vf-1w-Ceg" id="c9W-km-zW9"/>
                 <outlet property="view" destination="tWs-ts-eAo" id="5re-7L-N43"/>
@@ -104,7 +105,7 @@
                     <state key="normal" image="LiSSpred_uncheck"/>
                     <state key="selected" image="LiSSpred_sel"/>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signing up，you agree to the User Agreement &amp; Privacy Agreement" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vg1-Dz-blC">
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signing up，you agree to the User Agreement &amp; Privacy Agreement" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vg1-Dz-blC">
                     <rect key="frame" x="51" y="758.33333333333337" width="322" height="28.666666666666629"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

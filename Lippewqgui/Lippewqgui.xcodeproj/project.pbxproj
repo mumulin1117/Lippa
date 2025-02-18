@@ -62,6 +62,7 @@
 		04D6953A2D5B1D4F004A38E5 /* LiSSpWallwnetvierell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D695382D5B1D4F004A38E5 /* LiSSpWallwnetvierell.swift */; };
 		04D6953B2D5B1D4F004A38E5 /* LiSSpWallwnetvierell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D695392D5B1D4F004A38E5 /* LiSSpWallwnetvierell.xib */; };
 		04E083132D5DE8CB00A8FD1A /* LiSSpmeassgrLifarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E083122D5DE8CB00A8FD1A /* LiSSpmeassgrLifarCell.swift */; };
+		04E0832D2D632A1B00A8FD1A /* LiSSTagwCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0832B2D632A1B00A8FD1A /* LiSSTagwCell.swift */; };
 		C5A91C6F2A45D122E1C52895 /* Pods_Lippewqgui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8844666650FA56509B7B4F /* Pods_Lippewqgui.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +124,7 @@
 		04D695382D5B1D4F004A38E5 /* LiSSpWallwnetvierell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiSSpWallwnetvierell.swift; sourceTree = "<group>"; };
 		04D695392D5B1D4F004A38E5 /* LiSSpWallwnetvierell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiSSpWallwnetvierell.xib; sourceTree = "<group>"; };
 		04E083122D5DE8CB00A8FD1A /* LiSSpmeassgrLifarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiSSpmeassgrLifarCell.swift; sourceTree = "<group>"; };
+		04E0832B2D632A1B00A8FD1A /* LiSSTagwCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiSSTagwCell.swift; sourceTree = "<group>"; };
 		061EB7F6F7AF2F70F5981D64 /* Pods-Lippewqgui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lippewqgui.release.xcconfig"; path = "Target Support Files/Pods-Lippewqgui/Pods-Lippewqgui.release.xcconfig"; sourceTree = "<group>"; };
 		6C8844666650FA56509B7B4F /* Pods_Lippewqgui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lippewqgui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92EADF3B99FDD32D50637B8B /* Pods-Lippewqgui.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lippewqgui.debug.xcconfig"; path = "Target Support Files/Pods-Lippewqgui/Pods-Lippewqgui.debug.xcconfig"; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				04CD40032D5AE9E0001D403C /* LiSSpPersionlistPostfrbucue.xib */,
 				04CD40062D5AEA19001D403C /* LiSSpChatstfrbucue.swift */,
 				04CD40072D5AEA19001D403C /* LiSSpChatstfrbucue.xib */,
+				04E0832B2D632A1B00A8FD1A /* LiSSTagwCell.swift */,
 				04CD400A2D5AEA37001D403C /* LiSSpChatVideostfrbucue.swift */,
 				04CD400B2D5AEA37001D403C /* LiSSpChatVideostfrbucue.xib */,
 				04E083122D5DE8CB00A8FD1A /* LiSSpmeassgrLifarCell.swift */,
@@ -428,6 +431,7 @@
 				04CD3FCC2D59D9DF001D403C /* LiSSpHomeBootomrbucue.swift in Sources */,
 				04CD3FB02D59928F001D403C /* AppDelegate.swift in Sources */,
 				04CD3FE32D59F8AF001D403C /* LiSSpPostColtomrbucue.swift in Sources */,
+				04E0832D2D632A1B00A8FD1A /* LiSSTagwCell.swift in Sources */,
 				04CD3FB92D59AD86001D403C /* LiSSpBArbucue.swift in Sources */,
 				04CD3FB62D5998C3001D403C /* LipSigggneSnmingertips.swift in Sources */,
 				04CD3FBB2D59AE20001D403C /* LiSSpBArBootomrbucue.swift in Sources */,
@@ -532,7 +536,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.linqian.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lwnetBucue.liowppa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

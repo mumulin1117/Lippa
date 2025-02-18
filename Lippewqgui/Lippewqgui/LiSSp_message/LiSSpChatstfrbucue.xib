@@ -11,8 +11,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiSSpChatstfrbucue" customModule="Lippewqgui" customModuleProvider="target">
             <connections>
                 <outlet property="ChokenSSIP" destination="b4G-DC-Cke" id="Bdq-1B-zdc"/>
+                <outlet property="appChatMeassgeSSIP" destination="zcs-sA-EjT" id="L6Q-GK-JbG"/>
                 <outlet property="babdaerView" destination="D3f-HK-i3W" id="n6s-AR-aZg"/>
                 <outlet property="nicmerSSIP" destination="Q4O-8J-sfY" id="on3-f3-tk0"/>
+                <outlet property="puitertView" destination="sM7-SM-Xyz" id="f17-sM-pPF"/>
                 <outlet property="view" destination="LuA-rl-4gw" id="hmb-Cj-tms"/>
             </connections>
         </placeholder>
@@ -78,6 +80,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="pullSSIPown"/>
+                    <connections>
+                        <action selector="surepostingSSIp:" destination="-1" eventType="touchUpInside" id="3Cz-Mt-XNB"/>
+                    </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zcs-sA-EjT">
                     <rect key="frame" x="16" y="112" width="361" height="622"/>

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import IQKeyboardManager
 class LipSigggneSnmingertips: UIViewController {
 
     @IBOutlet weak var signSSIPin: UIButton!
@@ -15,6 +15,7 @@ class LipSigggneSnmingertips: UIViewController {
     
     @IBOutlet weak var entrtSSIPOPsw: UITextField!
     
+    @IBOutlet weak var linkerConditonSSIp: UILabel!
     
     @IBOutlet weak var statauseSSIP: UIButton!
     
@@ -24,20 +25,37 @@ class LipSigggneSnmingertips: UIViewController {
         statauseSSIP.isSelected = LiSSpBArbucue.SSIPlA.isagreeeeSSIP
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if LiSSpELUABootomrbucue.ifShowendNoewLISSAP == false {
+            self.navigationController?.pushViewController(LiSSpELUABootomrbucue.init(controllerSSIPType: 0), animated: true)
+            LiSSpELUABootomrbucue.ifShowendNoewLISSAP = true
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        IQKeyboardManager.shared().isEnabled = true
         signSSIPin.layer.cornerRadius = 27
         signSSIPin.layer.masksToBounds = true
         
-        
+        addLinkkkUrelSSIP()
         statauseSSIP.addTarget(self, action: #selector(statusdiihiiSSIP), for: .touchUpInside)
         signSSIPin.addTarget(self, action: #selector(hihiiSSIP), for: .touchUpInside)
         
     }
     
     
+    private func addLinkkkUrelSSIP()  {
+        linkerConditonSSIp.isUserInteractionEnabled = true
+        linkerConditonSSIp.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(welcomnoingSSSIP)))
+    }
+    
     @objc func hihiiSSIP() {
+        self.entrtSSIPOEmail.resignFirstResponder()
+        self.entrtSSIPOPsw.resignFirstResponder()
+       
+        
         if LiSSpBArbucue.SSIPlA.isagreeeeSSIP == false {
             AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Please read and agree to the terms and conditions first.", loaingShowView: self.view)
           
