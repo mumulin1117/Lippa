@@ -52,9 +52,15 @@ class LiSSpTieZIngefrbucue:  LissipSecondFrbucue {
         postingUserimgSSIP.maskLippaRoundCorner(rMakLSSIpadius: 21.5)
         
         
-//        collecPost.isSelected = (postCenDataSSIP["islikeThisPublish"] == "SSIPLike")
-        NotificationCenter.default.addObserver(self, selector: #selector(ctterBsdNoingSSIP), name: NSNotification.Name.init("deleteUserSIPPish"), object: nil)
+        var SistertSSIp = [CGRect]()
+        SistertSSIp.insert(CGRect.zero, at: 0)
+        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        if SistertSSIp.count > 0 {
+            NotificationCenter.default.addObserver(self, selector: #selector(ctterBsdNoingSSIP), name: NSNotification.Name.init("deleteUserSIPPish"), object: nil)
+        }
         
+        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
         
         tibluebackSSIP.maskLippaRoundCorner(rMakLSSIpadius: 20)
     }

@@ -13,7 +13,7 @@ class LiSSpPersionlistPostfrbucue:  LissipSecondFrbucue {
     @IBOutlet weak var facerSSIp: UIButton!
     @IBOutlet weak var foowlererSSIp: UIButton!
     
-    
+    private var enImageSSIPOViol:UIImageView = UIImageView.init()
     @IBOutlet weak var ChokenSSIP: UIButton!
     
     @IBOutlet weak var pesinRelationSSIP: UICollectionView!
@@ -24,7 +24,7 @@ class LiSSpPersionlistPostfrbucue:  LissipSecondFrbucue {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        enImageSSIPOViol.isHidden = true
         if tatSSipype == 0{
             facerSSIp.isSelected = true
             foowlererSSIp.isSelected = false
@@ -51,7 +51,15 @@ class LiSSpPersionlistPostfrbucue:  LissipSecondFrbucue {
         
         facerSSIp.isSelected = false
         foowlererSSIp.isSelected = false
-        
+        let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))
+        labeSiop.text = self.title
+
+        labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        if enImageSSIPOViol.isHidden  {
+            enImageSSIPOViol.addSubview(labeSiop)
+        }
+
+        labeSiop.textColor = view.backgroundColor
         sender.isSelected = true
         
         self.pesinRelationSSIP.reloadData()
@@ -134,6 +142,7 @@ extension LiSSpPersionlistPostfrbucue:UICollectionViewDelegate,UICollectionViewD
 class LiSSRelaotuinCell: UICollectionViewCell {
     let nicmerSSIP = UILabel.init()
     let babdaerView = UIImageView()
+    private var enImageSSIPOViol:UIImageView = UIImageView.init()
     override init(frame: CGRect) {
         super.init(frame: frame)
         nicmerSSIP.textColor = .white
@@ -162,7 +171,8 @@ class LiSSRelaotuinCell: UICollectionViewCell {
     private func ssuitreatNet() {
         contentView.addSubview(nicmerSSIP)
         
-       
+        enImageSSIPOViol.isHidden = true
+
         
         nicmerSSIP.snp.makeConstraints { make in
             make.top.equalTo(babdaerView.snp.bottom).offset(11)

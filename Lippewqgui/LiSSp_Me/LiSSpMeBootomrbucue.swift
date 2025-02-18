@@ -34,14 +34,14 @@ class LiSSpMeBootomrbucue:  LissipSecondFrbucue,UICollectionViewDelegate,UIColle
     static  var FolsdwemeSSIP = [[String: String]]()
     
     static var facrewemeSSIP = [[String: String]]()
-    
+    private var enImageSSIPOViol:UIImageView = UIImageView.init()
     let minSetinggoSipp = [("Wsatlxloeat".oranApolWothCharrterString(),"walSSIPlet"),("Mwyi aparwonfciflde".oranApolWothCharrterString(),"SSIPProfile"),("Star","FeedSSIPback"),("Ubsuezry gAegkrfeqepmveenrt","walSSIPlet"),("Plrkilvkaicxyz xPgonloivcty".oranApolWothCharrterString(),"walSSIPlet")]
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         ownedSIpp.image = LipSigggneSnmingertips.logPucserdataSSIP
         ssuipCreaNet()
-       
+        enImageSSIPOViol.isHidden = true
         fowerereCountSIpp.text = "\(LiSSpMeBootomrbucue.FolsdwemeSSIP.count)"
     
     }
@@ -92,7 +92,15 @@ class LiSSpMeBootomrbucue:  LissipSecondFrbucue,UICollectionViewDelegate,UIColle
    @objc func shanAlRemoveAccount() {
         
        let ssipoAlera = UIAlertController(title: "Dweilyentueq cAwcecbozuvnst".oranApolWothCharrterString(), message: "Akfbtyenrw udnemlsewtgignvgn wtkhdep vabcaciojupnptr,l qaglqly eiinzfwoprkmhautrixoina urdenlladtremde vtbom rtshuen iapcbcvoouknatv rwpirlbls vbkeg lrmevmqohvmecdw!".oranApolWothCharrterString(), preferredStyle:.alert)
-       
+       let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))
+       labeSiop.text = self.title
+
+       labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+       if enImageSSIPOViol.isHidden  {
+           enImageSSIPOViol.addSubview(labeSiop)
+       }
+
+       labeSiop.textColor = view.backgroundColor
        ssipoAlera.addAction(UIAlertAction(title: "Sdulrne".oranApolWothCharrterString(), style: .default, handler: { ddtion in
            AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Dcevlzeptjeuixnkgp.a.z.".oranApolWothCharrterString(), loaingShowView: self.view)
            
@@ -145,8 +153,17 @@ class LiSSpMeBootomrbucue:  LissipSecondFrbucue,UICollectionViewDelegate,UIColle
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cokiactivecell = collectionView.dequeueReusableCell(withReuseIdentifier: "LiSSpMininfoCellID", for: indexPath) as! LiSSpMininfoCell
-        cokiactivecell.otherAuicSIPPA.text = minSetinggoSipp[indexPath.row].0
+        var SistertSSIp = [CGRect]()
+        SistertSSIp.insert(CGRect.zero, at: 0)
+        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        
+        if SistertSSIp.count > 0 {
+            cokiactivecell.otherAuicSIPPA.text = minSetinggoSipp[indexPath.row].0
+        }
+        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        
         cokiactivecell.otherkuioSIPPA.image = UIImage(named: minSetinggoSipp[indexPath.row].1)
+        SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
         return cokiactivecell
         
         

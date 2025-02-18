@@ -10,7 +10,7 @@ import SwiftyStoreKit
 
 class LiSSpWallwnetBucue:  LissipSecondFrbucue,UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var ChokenSSIP: UIButton!
-    
+    private var enImageSSIPOViol:UIImageView = UIImageView.init()
     @IBOutlet weak var mincolViewSIPP: UICollectionView!
     
     @IBOutlet weak var mineOladSSIP: UILabel!
@@ -34,7 +34,7 @@ class LiSSpWallwnetBucue:  LissipSecondFrbucue,UICollectionViewDelegateFlowLayou
     override func viewDidLoad() {
         super.viewDidLoad()
         ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
-        
+        enImageSSIPOViol.isHidden = true
         blanceidSSIPayID = [("nqixcbnohmlxhlrc","$k0b.d9h9".oranApolWothCharrterString(),400),
                          ("pxoxebhhktzklezg","$m1n.u9z9".oranApolWothCharrterString(),600),
                                 ("pxoxebhhktzklllip","$y2r.k9d9".oranApolWothCharrterString(),1150),
@@ -105,13 +105,28 @@ extension LiSSpWallwnetBucue:UICollectionViewDelegate,UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))
+        labeSiop.text = self.title
+
+        labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        if enImageSSIPOViol.isHidden  {
+            enImageSSIPOViol.addSubview(labeSiop)
+        }
+
+        labeSiop.textColor = view.backgroundColor
         view.isUserInteractionEnabled = false
         
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "lpotaxdfiznxgz.f.f.v.".oranApolWothCharrterString(), loaingShowView: self.view)
         let selidINdfo = self.blanceidSSIPayID[indexPath.row]
         
         SwiftyStoreKit.purchaseProduct(selidINdfo.0, atomically: true) { psResult in
+            var SistertSSIp = [CGRect]()
+            SistertSSIp.insert(CGRect.zero, at: 0)
+            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+
+            
             self.view.isUserInteractionEnabled = true
             if case .success(let coacadpos) = psResult {
                 
@@ -130,7 +145,9 @@ extension LiSSpWallwnetBucue:UICollectionViewDelegate,UICollectionViewDataSource
             }else if case .error(let error) = psResult {
                 
                 AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
-                
+                if SistertSSIp.count == 0 {
+                    return
+                }
                 if error.code != .paymentCancelled {
 //                    AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: error.localizedDescription, loaingShowView: self.view)
                     self.ChuanZaoErtoSSIP(errorDesc: error.localizedDescription)

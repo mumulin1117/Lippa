@@ -14,7 +14,7 @@ class LiSSpDynamicBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDataSour
         return 0
        
     }
-    
+    private var enImageSSIPOViol:UIImageView = UIImageView.init()
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        
         
@@ -37,13 +37,14 @@ class LiSSpDynamicBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDataSour
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         ssuipCreaNet()
-        
+        enImageSSIPOViol.isHidden = true
     }
     
     var  _rundatabviewSIPP:UICollectionView?
     
     
     private func ssuipCreaNet() {
+        enImageSSIPOViol.isHidden = true
         _rundatabviewSIPP?.reloadData()
     }
     
@@ -51,8 +52,13 @@ class LiSSpDynamicBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         let funflow  = UICollectionViewFlowLayout()
+        enImageSSIPOViol.isHidden = true
         funflow.itemSize = CGSize(width: UIScreen.main.bounds.width - 24, height: 420)
         funflow.minimumLineSpacing = 12
+        let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))
+        labeSiop.text = self.title
+
+        
         funflow.minimumInteritemSpacing = 12
         
                                   
@@ -62,6 +68,12 @@ class LiSSpDynamicBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDataSour
        
         rundatabviewSIPP.delegate = self
         rundatabviewSIPP.dataSource = self
+        labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        if enImageSSIPOViol.isHidden  {
+            enImageSSIPOViol.addSubview(labeSiop)
+        }
+
+        labeSiop.textColor = view.backgroundColor
         rundatabviewSIPP.showsVerticalScrollIndicator = false
         rundatabviewSIPP.backgroundColor = .clear
         rundatabviewSIPP.register(UINib(nibName: "LiSSpSeeingPOsecell", bundle: nil), forCellWithReuseIdentifier: "LiSSpSeeingPOsecellreused")

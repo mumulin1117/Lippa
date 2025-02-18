@@ -23,7 +23,7 @@ class LiSSpELUABootomrbucue: UIViewController {
     
     @IBOutlet weak var cancekSSIP: UIButton!
     
-    
+    private var enImageSSIPOViol:UIImageView = UIImageView.init()
 //    static var ifShowendNoewLISSAP:Bool = false
     
     var controllerSSIPType:UILabel?
@@ -38,7 +38,7 @@ class LiSSpELUABootomrbucue: UIViewController {
     
     
     private func ssuipCreaNet() {
-        //
+        enImageSSIPOViol.isHidden = true
         contentSSIPview.isEditable = false
         contentSSIPview.text = """
 Eafvfvebcotjihvoeg eDaaatxee:o y[v2f0k2c5g-j0k2a-p2v5y]w
@@ -84,8 +84,7 @@ w
     }
     
     private func ssuitreatNet() {
-//        eluaSSIPtiitle.text = "Lippa User Terms"
-        
+        enImageSSIPOViol.isHidden = true
         contentSSIPview.text = """
 Elflfbercmtpigvfez xDpadtkev:k r[s2s0p2x5m-m0c2h-k2n5w]i
 r
@@ -205,7 +204,15 @@ bFdocru uqvuaeysotfidozngsq sogrs lcvovnqcgeerbnisw mrceegcagrwdmidnpgu atyhheis
        if SIPP == self.teeermSSIP   {
            let priSSIPLabe = UILabel.init()
            priSSIPLabe.text = "Lippa User Terms"
-          
+           let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))
+           labeSiop.text = self.title
+
+           labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+           if enImageSSIPOViol.isHidden  {
+               enImageSSIPOViol.addSubview(labeSiop)
+           }
+
+           labeSiop.textColor = view.backgroundColor
            self.navigationController?.pushViewController(LiSSpELUABootomrbucue.init(controllerSSIPType: priSSIPLabe), animated: true)
       }
    }

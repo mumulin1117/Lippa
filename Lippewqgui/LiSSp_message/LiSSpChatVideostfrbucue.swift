@@ -29,29 +29,29 @@ class LiSSpChatVideostfrbucue:  LissipSecondFrbucue {
     
     
     private func ssuipCreaNet() {
-        
+        nicmerSSIP.text = postCenDataSSIP["ssipNadme"] ?? ""
+        babdaerView.image = UIImage(named: postCenDataSSIP["ssipPicdty"] ?? "")
     }
     
     private func ssuitreatNet() {
-        
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        nicmerSSIP.text = postCenDataSSIP["ssipNadme"] ?? ""
-        babdaerView.image = UIImage(named: postCenDataSSIP["ssipPicdty"] ?? "")
-        haodaSSIP.image = UIImage(named: postCenDataSSIP["ssipPicdty"] ?? "")
-        babdaerView.maskLippaRoundCorner(rMakLSSIpadius: 18)
-        
         ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
         shinmaskerlayerSSip.maskLippaRoundCorner(rMakLSSIpadius: 21)
         
         
         shinmaskerlayerSSip.image = LipSigggneSnmingertips.logPucserdataSSIP
         NotificationCenter.default.addObserver(self, selector: #selector(ctterBsdNoingSSIP), name: NSNotification.Name.init("deleteUserSIPPish"), object: nil)
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        ssuipCreaNet()
+      
+        haodaSSIP.image = UIImage(named: postCenDataSSIP["ssipPicdty"] ?? "")
+        babdaerView.maskLippaRoundCorner(rMakLSSIpadius: 18)
         
+       
+        ssuitreatNet()
         
         self.performBlockAfterDelayINSSIP(secondsSSIP: 8.0) {
            

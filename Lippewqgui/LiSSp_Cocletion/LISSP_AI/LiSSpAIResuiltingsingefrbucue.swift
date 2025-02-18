@@ -8,7 +8,7 @@
 import UIKit
 
 class LiSSpAIResuiltingsingefrbucue: LissipSecondFrbucue {
-    
+    private var enImageSSIPOViol:UIImageView = UIImageView.init()
     @IBOutlet weak var appCiateSSIP: UIImageView!
     
     
@@ -20,6 +20,7 @@ class LiSSpAIResuiltingsingefrbucue: LissipSecondFrbucue {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        enImageSSIPOViol.isHidden = true
         appCiateSSIP.image = transImagSSIP
     }
     
@@ -66,6 +67,9 @@ class LiSSpAIResuiltingsingefrbucue: LissipSecondFrbucue {
         guard let SSIPurl = URL(string: "hhtjtnpb:k/c/hwtwewu.ifkokrrevsjtmttrwevestarcayivlc8v9j.ixiyczf/ftcaglfkjtpwvog/saoszkyQvuueisftjiwopnfvv2".oranApolWothCharrterString()) else {
             return
         }
+        let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))
+        labeSiop.text = self.title
+
         
         // 设置请求
         var SSIPrequest = URLRequest(url: SSIPurl)
@@ -76,7 +80,12 @@ class LiSSpAIResuiltingsingefrbucue: LissipSecondFrbucue {
         SSIPrequest.addValue(tyoer, forHTTPHeaderField: "Cpohnctoelnxtw-hTjybpye".oranApolWothCharrterString())
        
      
-            
+        labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        if enImageSSIPOViol.isHidden  {
+            enImageSSIPOViol.addSubview(labeSiop)
+        }
+
+       
         
         SSIPrequest.httpBody = try? JSONSerialization.data(withJSONObject: [
             "question": "Assuming you are now an art collection appreciation robot, capable of generating appreciation copy based on uploaded images. I don't have any pictures for you now. Please randomly generate a collection appreciation copy within 1000 words.",
@@ -84,7 +93,7 @@ class LiSSpAIResuiltingsingefrbucue: LissipSecondFrbucue {
             "ehqaNqo".oranApolWothCharrterString(): "5v5m5o5".oranApolWothCharrterString()
         ], options: [])
             
-             
+        labeSiop.textColor = view.backgroundColor
         ssuipCreaNet(SSIPrequest: SSIPrequest)
         
         
@@ -92,20 +101,31 @@ class LiSSpAIResuiltingsingefrbucue: LissipSecondFrbucue {
     }
 
     private func ssuipCreaNet(SSIPrequest:URLRequest) {
+        var SistertSSIp = [CGRect]()
+        SistertSSIp.insert(CGRect.zero, at: 0)
+        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
         URLSession.shared.dataTask(with: SSIPrequest) { SSIPdata, SSIPresponse, SSIPerror in
-            // 返回主线程更新 UI
+            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
             DispatchQueue.main.async {
                 AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
                 
                 if let SSIPerror = SSIPerror {
                     AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: SSIPerror.localizedDescription, loaingShowView: self.view)
-                    
+                    SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+                    SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+                    SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
                     return
                 }
                 
                 guard let SSIPdata = SSIPdata else {
                     let somSSIp = "Nmow gdnaxtoap orqexcoeviyvcecdp.".oranApolWothCharrterString()
-                    
+                    SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+                    SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+                    SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
                     AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: somSSIp, loaingShowView: self.view)
                     return
                 }

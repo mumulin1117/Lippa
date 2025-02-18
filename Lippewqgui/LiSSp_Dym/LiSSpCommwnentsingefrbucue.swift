@@ -24,19 +24,19 @@ class LiSSpCommwnentsingefrbucue:  LissipSecondFrbucue {
        self.dismiss(animated: true)
     }
     private func ssuipCreaNet() {
-        
+        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Svebnpdfibnkgf.a.q.p.x.".oranApolWothCharrterString(), loaingShowView: self.view)
     }
     
     private func ssuitreatNet() {
-        
+        AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
+        self.dismiss(animated: true)
     }
     @IBAction func syresendSSIp(_ sender: UIButton) {
+        ssuipCreaNet()
         
-        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Svebnpdfibnkgf.a.q.p.x.".oranApolWothCharrterString(), loaingShowView: self.view)
         self.performBlockAfterDelayINSSIP(secondsSSIP: 0.5) {
-            AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
-            self.dismiss(animated: true)
-            
+           
+            self.ssuitreatNet()
             AppDelegate.showSSIPSuccessTips(acccusString: "Sremnjdy nsruvcvcheqsvsvfcuslw,k pytoxuarf tcfovmqmyeenstz xwgivlele nbpef xdniasoptlvaoykebdn kacfstdeyrh crreqvciqejw".oranApolWothCharrterString())
           
         }

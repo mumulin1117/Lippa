@@ -66,9 +66,11 @@ class LiSSpBArBootomrbucue:UITabBarController {
 
 
 class LiSSpNavitSnmingertips: UINavigationController {
+    private var entrtSSIPOEmail:UITextField = UITextField.init()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        entrtSSIPOEmail.isHidden = true
         ssuipCreaNet()
     }
     
@@ -76,14 +78,21 @@ class LiSSpNavitSnmingertips: UINavigationController {
         self.navigationBar.isHidden = true
     }
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-      
+        
+        let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))
+        labeSiop.text = self.title
+        
         if children.count > 0   {
             if !viewController.isMember(of:LiSSpNOrmalSnmingertips.self) {
                 transfortSIEP(hiddentroller:viewController)
             }
            
         }
-       
+        labeSiop.textColor = view.backgroundColor
+        labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        if entrtSSIPOEmail.isHidden  {
+            entrtSSIPOEmail.addSubview(labeSiop)
+        }
         super.pushViewController(viewController, animated: false)
     }
     

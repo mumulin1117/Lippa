@@ -33,11 +33,21 @@ class LiSSpmeassgrLifarCell: UICollectionViewCell {
     }
     
     private func ssuipCreaNet() {
-        
+        contentView.addSubview(babdaerView)
+        babdaerView.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(16)
+            make.width.height.equalTo(60)
+            make.centerY.equalToSuperview()
+        }
     }
     
     private func ssuitreatNet() {
-        
+        contentView.addSubview(nicmerSSIP)
+        nicmerSSIP.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(16)
+            make.leading.equalTo(babdaerView.snp.trailing).offset(11)
+            
+        }
     }
     
     override init(frame: CGRect) {
@@ -54,21 +64,13 @@ class LiSSpmeassgrLifarCell: UICollectionViewCell {
         self.maskLippaRoundCorner(rMakLSSIpadius: 20)
         self.contentView.backgroundColor = .black
         
-        contentView.addSubview(babdaerView)
-        contentView.addSubview(nicmerSSIP)
+        ssuipCreaNet()
+        ssuitreatNet()
         contentView.addSubview(sauingSSIP)
         
-        babdaerView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(16)
-            make.width.height.equalTo(60)
-            make.centerY.equalToSuperview()
-        }
+      
         
-        nicmerSSIP.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(16)
-            make.leading.equalTo(babdaerView.snp.trailing).offset(11)
-            
-        }
+      
         
         sauingSSIP.snp.makeConstraints { make in
             make.top.equalTo(nicmerSSIP.snp.bottom).offset(12)

@@ -16,25 +16,25 @@ class LiSSpTieZIPostfrbucue:  LissipSecondFrbucue , UIImagePickerControllerDeleg
     @IBOutlet weak var sedescribitTextView: UITextView!
     
     @IBOutlet weak var sureaddINgLIPSS: UIButton!
-    
+    private var enImageSSIPOViol:UIImageView = UIImageView.init()
     override func viewDidLoad() {
         super.viewDidLoad()
         ssuitreatNet()
         takeColIconLIPSS.maskLippaRoundCorner(rMakLSSIpadius: 12)
         
-        
+        enImageSSIPOViol.isHidden = true
         sureaddINgLIPSS.maskLippaRoundCorner(rMakLSSIpadius: 27)
     }
     private func ssuitreatNet() {
         ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
-        
+        enImageSSIPOViol.isHidden = true
         sedescribitTextView.contentInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         
         sedescribitTextView.maskLippaRoundCorner(rMakLSSIpadius: 12)
     }
     @IBAction func stakwingToArtsee(_ sender: UIButton) {
         let status = AVCaptureDevice.authorizationStatus(for: .video)
-                
+        enImageSSIPOViol.isHidden = true
         if status == .authorized {
             self.openMineTakeSSIPCamera()
             self.pickerSSIPVC?.delegate = self
@@ -56,7 +56,7 @@ class LiSSpTieZIPostfrbucue:  LissipSecondFrbucue , UIImagePickerControllerDeleg
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
+        enImageSSIPOViol.isHidden = true
         
         guard let image : UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else{
             picker.dismiss(animated: true, completion: nil)
@@ -80,6 +80,7 @@ class LiSSpTieZIPostfrbucue:  LissipSecondFrbucue , UIImagePickerControllerDeleg
     
     
     @IBAction func surestareAiUpload(_ sender: UIButton) {
+        enImageSSIPOViol.isHidden = true
         if self.manSSIPStataus == nil {
             AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Pdlyetarsgei htyafkjeo uan apqhuontbot cfdiwrrsstd!".oranApolWothCharrterString(), loaingShowView: self.view)
             return

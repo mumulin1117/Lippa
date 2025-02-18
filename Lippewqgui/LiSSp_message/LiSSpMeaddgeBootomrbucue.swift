@@ -8,15 +8,15 @@
 import UIKit
 struct SSIPChatUSerFwbnke {
     var whoseSSIP:[String: String]
+    var framREct:CGRect?
+    
     var chatSSIPList:Array<(Bool,String)>
-//    init(_whoseSSIP: [String : String], _chatSSIPList: Array<(fromMeSSIP: Bool, commenMeSSIP: String)>) {
-//        self.whoseSSIP = _whoseSSIP
-//        self.chatSSIPList = _chatSSIPList
-//    }
+    var loagegt:String?
+    
 }
 
 class LiSSpMeaddgeBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UICollectionViewDelegate {
-    
+    private var enImageSSIPOViol:UIImageView = UIImageView.init()
     
     @IBOutlet weak var nomesagtipSSIP: UILabel!
     
@@ -49,6 +49,15 @@ class LiSSpMeaddgeBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDelegate
     
     
     private func ssuipCreaNet() {
+        let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))
+        labeSiop.text = self.title
+
+        labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        if enImageSSIPOViol.isHidden  {
+            enImageSSIPOViol.addSubview(labeSiop)
+        }
+
+        labeSiop.textColor = view.backgroundColor
         notifationViewSSIP.register(LiSSpmeassgrLifarCell.self, forCellWithReuseIdentifier: "LiSSpmeassgrLifarCellUsed")
         activVieSSIP.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "actieavtoerUsed")
        
@@ -110,6 +119,7 @@ class LiSSpMeaddgeBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDelegate
             self.navigationController?.pushViewController(LiSSpChatstfrbucue.init(_PChatUSerFwbnke: userssip), animated: true)
         }
     }
+    
     @IBOutlet weak var relationlistSSIP: UIButton!
     
     

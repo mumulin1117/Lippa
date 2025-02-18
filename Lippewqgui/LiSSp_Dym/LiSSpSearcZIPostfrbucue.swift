@@ -11,7 +11,7 @@ class LiSSpSearcZIPostfrbucue:  LissipSecondFrbucue,UITextFieldDelegate {
     @IBOutlet weak var ChokenSSIP: UIButton!
     
     @IBOutlet weak var serachBackWhiteSSIp: UIView!
-    
+    private var enImageSSIPOViol:UIImageView = UIImageView.init()
     
     @IBOutlet weak var inserTextSSIpView: UITextField!
     
@@ -23,6 +23,16 @@ class LiSSpSearcZIPostfrbucue:  LissipSecondFrbucue,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        enImageSSIPOViol.isHidden = true
+        let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))
+        labeSiop.text = self.title
+
+        labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        if enImageSSIPOViol.isHidden  {
+            enImageSSIPOViol.addSubview(labeSiop)
+        }
+
+        labeSiop.textColor = view.backgroundColor
         ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
         empholderSSIP.isHidden = true
         ssuipCreaNet()

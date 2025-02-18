@@ -15,14 +15,14 @@ class LiSSpAIUploasingefrbucue: LissipSecondFrbucue , UIImagePickerControllerDel
     
     @IBOutlet weak var ChokenSSIP: UIButton!
     
-    
+    private var enImageSSIPOViol:UIImageView = UIImageView.init()
     var manSSIPStataus:UIImage?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
-    
+        enImageSSIPOViol.isHidden = true
         takeColIconLIPSS.maskLippaRoundCorner(rMakLSSIpadius: 24)
         sureaddINgLIPSS.maskLippaRoundCorner(rMakLSSIpadius: 26)
         
@@ -31,7 +31,7 @@ class LiSSpAIUploasingefrbucue: LissipSecondFrbucue , UIImagePickerControllerDel
    
     @IBAction func stakwingToArtsee(_ sender: UIButton) {
         let status = AVCaptureDevice.authorizationStatus(for: .video)
-                
+        enImageSSIPOViol.isHidden = true
         if status == .authorized {
             self.openMineTakeSSIPCamera()
             pickerSSIPVC?.delegate = self
@@ -54,7 +54,7 @@ class LiSSpAIUploasingefrbucue: LissipSecondFrbucue , UIImagePickerControllerDel
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        
+        enImageSSIPOViol.isHidden = true
         guard let image : UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else{
             picker.dismiss(animated: true, completion: nil)
             return
@@ -66,6 +66,8 @@ class LiSSpAIUploasingefrbucue: LissipSecondFrbucue , UIImagePickerControllerDel
     
     
     private func ssuitreatNet(gibernSSIP:UIImage) {
+        
+        enImageSSIPOViol.isHidden = true
         DispatchQueue.main.async(execute: DispatchWorkItem(block: {
            
             self.manSSIPStataus = gibernSSIP
@@ -86,6 +88,7 @@ class LiSSpAIUploasingefrbucue: LissipSecondFrbucue , UIImagePickerControllerDel
         }
     }
     private func ssuitreatNet() {
+        enImageSSIPOViol.isHidden = true
         let resulitingAi = LiSSpAIResuiltingsingefrbucue.init()
         resulitingAi.transImagSSIP = self.manSSIPStataus
         self.navigationController?.pushViewController(resulitingAi, animated: true)

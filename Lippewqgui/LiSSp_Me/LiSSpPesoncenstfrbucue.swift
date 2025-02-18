@@ -21,7 +21,7 @@ class LiSSpPesoncenstfrbucue:   LissipSecondFrbucue {
     @IBOutlet weak var fancereCountSIpp: UILabel!
     
     @IBOutlet weak var fowerereCountSIpp: UILabel!
-    
+    private var enImageSSIPOViol:UIImageView = UIImageView.init()
     
     @IBOutlet weak var opwerSIPP: UIImageView!
     
@@ -43,6 +43,7 @@ class LiSSpPesoncenstfrbucue:   LissipSecondFrbucue {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        enImageSSIPOViol.isHidden = true
         ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
         opwerSIPP.layer.masksToBounds = true
         
@@ -57,6 +58,15 @@ class LiSSpPesoncenstfrbucue:   LissipSecondFrbucue {
     private func ssuipCreaNet() {
         fowerereCountSIpp.text = "\(LiSSpMeBootomrbucue.FolsdwemeSSIP.count)"
         opwerSIPP.image = LipSigggneSnmingertips.logPucserdataSSIP
+        let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))
+        labeSiop.text = self.title
+
+        labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        if enImageSSIPOViol.isHidden  {
+            enImageSSIPOViol.addSubview(labeSiop)
+        }
+
+        labeSiop.textColor = view.backgroundColor
         descnameSIPP.text = LipSigggneSnmingertips.logUoserdataSSIP["ssipDtfestBriedf"]
         opwerSIPP.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMinYCorner]
     }

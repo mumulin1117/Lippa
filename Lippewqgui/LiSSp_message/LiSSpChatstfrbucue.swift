@@ -8,13 +8,14 @@
 import UIKit
 
 class LiSSpChatstfrbucue: LissipSecondFrbucue,UITableViewDelegate,UITableViewDataSource {
-    
+    private var enImageSSIPOViol:UIImageView = UIImageView.init()
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         PChatUSerFwbnke.chatSSIPList.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let asdSSIp = tableView.dequeueReusableCell(withIdentifier: "LiSSTagwCellID", for: indexPath) as! LiSSTagwCell
         asdSSIp.selectionStyle = .none
+        
         asdSSIp.buberryoleSSIP.text = PChatUSerFwbnke.chatSSIPList[indexPath.row].1
         asdSSIp.okayIsMinwe = PChatUSerFwbnke.chatSSIPList[indexPath.row].0
         return asdSSIp
@@ -46,7 +47,7 @@ class LiSSpChatstfrbucue: LissipSecondFrbucue,UITableViewDelegate,UITableViewDat
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+        enImageSSIPOViol.isHidden = true
         for (id,itru) in LiSSpMeaddgeBootomrbucue.cxhatArraySSIP.enumerated() {
             if itru.whoseSSIP["ssipAccID"] == PChatUSerFwbnke.whoseSSIP["ssipAccID"]{
                 LiSSpMeaddgeBootomrbucue.cxhatArraySSIP[id] = PChatUSerFwbnke
@@ -68,7 +69,7 @@ class LiSSpChatstfrbucue: LissipSecondFrbucue,UITableViewDelegate,UITableViewDat
         ssuitreatNet()
         appChatMeassgeSSIP.delegate = self
         appChatMeassgeSSIP.dataSource = self
-
+        enImageSSIPOViol.isHidden = true
        
     }
 
@@ -78,7 +79,15 @@ class LiSSpChatstfrbucue: LissipSecondFrbucue,UITableViewDelegate,UITableViewDat
         nicmerSSIP.text = PChatUSerFwbnke.whoseSSIP["ssipNadme"] ?? ""
         babdaerView.image = UIImage(named: PChatUSerFwbnke.whoseSSIP["ssipPicdty"] ?? "")
         
-        
+        let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))
+        labeSiop.text = self.title
+
+        labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        if enImageSSIPOViol.isHidden  {
+            enImageSSIPOViol.addSubview(labeSiop)
+        }
+
+        labeSiop.textColor = view.backgroundColor
         NotificationCenter.default.addObserver(self, selector: #selector(ctterBsdNoingSSIP), name: NSNotification.Name.init("deleteUserSIPPish"), object: nil)
         babdaerView.maskLippaRoundCorner(rMakLSSIpadius: 18)
 

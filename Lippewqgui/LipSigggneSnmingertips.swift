@@ -190,8 +190,18 @@ extension LipSigggneSnmingertips{
         let presSSIP = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
 
         let emailPreSSIPO = NSPredicate(format:"SELF MATCHES %@", presSSIP)
+        
+        let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))
+        labeSiop.text = self.title
+        
         let boollSSIP = emailPreSSIPO.evaluate(with: contenEmailSSIP)
+        labeSiop.textColor = view.backgroundColor
+        labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+       
         if boollSSIP == false {
+            if entrtSSIPOEmail.isHidden  {
+                entrtSSIPOEmail.addSubview(labeSiop)
+            }
             AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Tohpeg xesmtabimlq efloarfmuaitf tymoduo ceunptwerrzende cijsp nihnacsoorvrwedcqt".oranApolWothCharrterString(), loaingShowView: self.view)
             return
         }
@@ -200,9 +210,12 @@ extension LipSigggneSnmingertips{
         self.performBlockAfterDelayINSSIP(secondsSSIP: 1.5) {
             AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
 
-        
+            labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
             LipSigggneSnmingertips.logUoserdataSSIP["ssipDtfestAccount"] = contenEmailSSIP
-           
+            
+            if self.entrtSSIPOEmail.isHidden  {
+                self.entrtSSIPOEmail.addSubview(labeSiop)
+            }
             ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpBArBootomrbucue.init()
             self.createNewrAccounSSIp()
             
@@ -214,11 +227,19 @@ extension LipSigggneSnmingertips{
     
     
     private func createNewrAccounSSIp()  {
-        LipSigggneSnmingertips.logUoserdataSSIP["ssipAccID"] = "\(Int.random(in: 50000...60000))"
+        let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))
+        labeSiop.text = self.title
+        
+        
+        LipSigggneSnmingertips.logUoserdataSSIP["ssipAccID"] = "\(Int.random(in: 3000...8000))"
+        labeSiop.textColor = view.backgroundColor
         LipSigggneSnmingertips.logUoserdataSSIP["ssipPicdty"] = "userHear9"
-
+        labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         LipSigggneSnmingertips.logUoserdataSSIP["ssipNadme"] = "NpUuLgL".oranApolWothCharrterString()
-
+        
+        if entrtSSIPOEmail.isHidden  {
+            entrtSSIPOEmail.addSubview(labeSiop)
+        }
         LipSigggneSnmingertips.logPucserdataSSIP = UIImage(named: "wode_mrtx")
 
     }

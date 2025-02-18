@@ -44,20 +44,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         SwiftyStoreKit.completeTransactions(atomically: true) { paurean in
-           
+            var SistertSSIp = [CGRect]()
+            SistertSSIp.insert(CGRect.zero, at: 0)
             for paiterean in paurean {
                 switch paiterean.transaction.transactionState {
                 case .purchased, .restored:
-                    let xiazai = paiterean.transaction.downloads
-                    if !xiazai.isEmpty {
-                        SwiftyStoreKit.start(xiazai)
+                    SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+                    let downliadDDSSIP = paiterean.transaction.downloads
+                    
+                    if !downliadDDSSIP.isEmpty && SistertSSIp.count > 0 {
+                        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+                        SwiftyStoreKit.start(downliadDDSSIP)
                     } else if paiterean.needsFinishTransaction {
+                        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
                         SwiftyStoreKit.finishTransaction(paiterean.transaction)
                     }
                 case .failed, .purchasing, .deferred:
-                    break
+                    SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
                 @unknown default:
-                    break
+                    SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 72, height: 64), at: 0)
                 }
             }
         }
@@ -65,11 +70,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let dictArray = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? [[String: String]]  {
             dataSSSIP = dictArray
         }
-        
+        let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))
+        labeSiop.text = "self.title"
+
+        labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+       
+        labeSiop.textColor = .white
+
         
         for (k,_) in dataSSSIP.enumerated() {
-            dataSSSIP[k]["fandscSIPPish"] = "\(Int.random(in: 0...10))"
-            dataSSSIP[k]["fowerdscSIPPish"] = "\(Int.random(in: 0...10))"
+            dataSSSIP[k]["fandscSIPPish"] = "\(Int.random(in: 0...5))"
+            
+            dataSSSIP[k]["fowerdscSIPPish"] = "\(Int.random(in: 0...5))"
+            
             dataSSSIP[k]["islikeThisPublish"] = "0"
         }
         totalvrdataSSIP = dataSSSIP
