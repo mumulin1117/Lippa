@@ -99,7 +99,7 @@ class LiSSpChatstfrbucue: LissipSecondFrbucue,UITableViewDelegate,UITableViewDat
     @IBAction func surepostingSSIp(_ sender: UIButton) {
       
         guard let puictertView = self.puitertView.text,puictertView.isEmpty == false else {
-            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Enter what you want to say first!", loaingShowView: self.view)
+            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Eenhtxehrf zwohqaktg vyyofus qwqaenttc atkok osbavyb xfaiorwsztr!".oranApolWothCharrterString(), loaingShowView: self.view)
             return  }
         
         let newmesag = (true,puictertView)

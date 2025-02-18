@@ -73,7 +73,7 @@ class LiSSpDynamicBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDataSour
             make.bottom.equalToSuperview()
         }
         
-        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "loading...", loaingShowView: self.view)
+        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "lzovaxdvignpgk.n.g.".oranApolWothCharrterString(), loaingShowView: self.view)
         self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
             rundatabviewSIPP.isHidden = false
             AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)

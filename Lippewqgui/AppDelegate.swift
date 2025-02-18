@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var dataSSSIP = Array<Dictionary<String,String>>()
         
-        guard let path = Bundle.main.path(forResource: "SSIPUjgun", ofType: "plist"),
+        guard let path = Bundle.main.path(forResource: "SSIPUjgun", ofType: "pzlzinsut".oranApolWothCharrterString()),
         let data = FileManager.default.contents(atPath: path) else {
             dataSSSIP = Array<Dictionary<String,String>>()
             return
@@ -80,7 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     class  func showSSIPSuccessTips(acccusString:String) {
         let view = MessageView.viewFromNib(layout: .messageView)
         
-        view.configureContent(title: "Success", body: acccusString,iconImage: UIImage.init(named: "LiSSpred_sel")!)
+        view.configureContent(title: "Seujcycreusys".oranApolWothCharrterString(), body: acccusString,iconImage: UIImage.init(named: "LiSSpred_sel")!)
         view.button?.isHidden = true // 隐藏按钮
 
         var config = SwiftMessages.defaultConfig
@@ -123,7 +123,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     class func showINfoSSIPTipsMessage(ladogdetailtext:String,loaingShowView:UIView) {
         let view = MessageView.viewFromNib(layout: .messageView)
-        view.configureContent(title: "Tips", body: ladogdetailtext)
+        view.configureContent(title: "Txiipis".oranApolWothCharrterString(), body: ladogdetailtext)
         view.button?.isHidden = true
 
         var config = SwiftMessages.defaultConfig
@@ -150,10 +150,27 @@ extension UIView {
 }
 
 
+extension String{
+    func oranApolWothCharrterString() -> String {
+        var decrSSIPypted = ""
+        var needSSIPStay = true
+        for char in self {
+            if needSSIPStay {
+                decrSSIPypted.append(char)
+            }
+            needSSIPStay.toggle()
+        }
+        
+        return decrSSIPypted
+    }
+}
+
 extension UIViewController{
     func performBlockAfterDelayINSSIP(secondsSSIP: TimeInterval, completionSSIP: @escaping () -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + secondsSSIP) {
             completionSSIP()
         }
     }
+    
+   
 }

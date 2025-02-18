@@ -22,12 +22,13 @@ class LiSSpBArBootomrbucue:UITabBarController {
         let olkaoPageSSiptroller = LiSSpNavitSnmingertips.init(rootViewController: LiSSpDynamicBootomrbucue())
         let meaadhepageller = LiSSpNavitSnmingertips.init(rootViewController: LiSSpMeaddgeBootomrbucue())
  
-         
+        let hijioHome = "HoOuMkE".oranApolWothCharrterString()
+        
         let ilisat = [
            
-            UITabBarItem.init(title: "HOME", image: UIImage(named: "LiSSphome_black"), selectedImage: UIImage(named: "LiSSphome_pink")!.withRenderingMode(.alwaysOriginal)),
-            UITabBarItem.init(title: "POST", image: UIImage(named: "LiSSp_posBar_black"), selectedImage: UIImage(named: "LiSSp_posBar_pink")!.withRenderingMode(.alwaysOriginal)),
-            UITabBarItem.init(title: "MESSAGE", image: UIImage(named: "LiSSMeag_black"), selectedImage: UIImage(named: "LiSSMeag_pink")!.withRenderingMode(.alwaysOriginal))
+            UITabBarItem.init(title: hijioHome, image: UIImage(named: "LiSSphome_black"), selectedImage: UIImage(named: "LiSSphome_pink")!.withRenderingMode(.alwaysOriginal)),
+            UITabBarItem.init(title: "PkOnSxT".oranApolWothCharrterString(), image: UIImage(named: "LiSSp_posBar_black"), selectedImage: UIImage(named: "LiSSp_posBar_pink")!.withRenderingMode(.alwaysOriginal)),
+            UITabBarItem.init(title: "MxEaSoSiAjGoE".oranApolWothCharrterString(), image: UIImage(named: "LiSSMeag_black"), selectedImage: UIImage(named: "LiSSMeag_pink")!.withRenderingMode(.alwaysOriginal))
             
         ]
         

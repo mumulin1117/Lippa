@@ -81,13 +81,13 @@ class LiSSpTieZIPostfrbucue:  LissipSecondFrbucue , UIImagePickerControllerDeleg
     
     @IBAction func surestareAiUpload(_ sender: UIButton) {
         if self.manSSIPStataus == nil {
-            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Please take a photo first!", loaingShowView: self.view)
+            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Pdlyetarsgei htyafkjeo uan apqhuontbot cfdiwrrsstd!".oranApolWothCharrterString(), loaingShowView: self.view)
             return
         }
         
         guard let artdesc = sedescribitTextView.text,artdesc.isEmpty == false,artdesc != "Talkspace description" else {
             
-            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Please describ your post first!", loaingShowView: self.view)
+            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Pjlfezadsnez bdreesmcmrritbo kyaonufrb ipvoksatw xfgixrpsztk!".oranApolWothCharrterString(), loaingShowView: self.view)
             return
         }
         ssuipCreaNet()
@@ -95,13 +95,13 @@ class LiSSpTieZIPostfrbucue:  LissipSecondFrbucue , UIImagePickerControllerDeleg
      
     }
     private func ssuipCreaNet() {
-        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "uploading.....", loaingShowView: self.view)
+        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "uxpclbobandgienrgs.x.p.m.m.".oranApolWothCharrterString(), loaingShowView: self.view)
         self.performBlockAfterDelayINSSIP(secondsSSIP: 2.5) {
             AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
             
             self.navigationController?.popViewController(animated: true)
             
-            AppDelegate.showSSIPSuccessTips(acccusString: "Upload successful, your post will be displayed after review")
+            AppDelegate.showSSIPSuccessTips(acccusString: "Ucphleoealdc msquxckcjekscssfsudlb,p iyxocuqri zpcovsetm xwrieldlf ibuez xdqibsvpflrasyjeide oaafithesrj erueivriverw".oranApolWothCharrterString())
             
         }
     }

@@ -73,7 +73,7 @@ class LipSigggneSnmingertips: UIViewController {
        
         
         if statauseSSIP.isSelected == false {
-            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Please read and agree to the terms and conditions first.", loaingShowView: self.view)
+            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Pdlweralsfep proeeaydg famnwdo fadgwryeeeo itiot dtehger gtbepramjsl yaunidn uckoxnudzidtniqopndsj jfiirrnsztr.".oranApolWothCharrterString(), loaingShowView: self.view)
           
             return
         }
@@ -83,13 +83,13 @@ class LipSigggneSnmingertips: UIViewController {
         let contetntPaseSSIP = entrtSSIPOPsw.text,
               !contenEmailSSIP.isEmpty,
         !contetntPaseSSIP.isEmpty else {
-            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Email address or password can not be empty", loaingShowView: self.view)
+            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Ezmfariall kaidmdhrhersmsj iobrc sprapsosswpolrbdw zcjalns onyoqtw obxex levmbpgtfy".oranApolWothCharrterString(), loaingShowView: self.view)
             return
         }
         
         
         if contetntPaseSSIP.count < 6 || contetntPaseSSIP.count > 12 {
-            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "password count should be in (6-12 characters)", loaingShowView: self.view)
+            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "pdatsmsuweoqredv xcroaugnpte bsvhxobublodm ubaef aiwna n(i6e-o1n2u dchhsamrmahcvtqerrssc)".oranApolWothCharrterString(), loaingShowView: self.view)
             return
         }
        
@@ -105,7 +105,7 @@ class LipSigggneSnmingertips: UIViewController {
     }
     
     private func ssuipCreaNet() {
-        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "log in ....", loaingShowView: self.view)
+        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "lcoygx hiynd d.r.g.a.".oranApolWothCharrterString(), loaingShowView: self.view)
         self.performBlockAfterDelayINSSIP(secondsSSIP: 1.5) {
             AppDelegate.hideLoadingSSIPTipsIndicator( loaingShowView: self.view)
            
@@ -113,7 +113,7 @@ class LipSigggneSnmingertips: UIViewController {
 
             ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpBArBootomrbucue.init()
            
-            AppDelegate.showSSIPSuccessTips(acccusString: "Log in successful!")
+            AppDelegate.showSSIPSuccessTips(acccusString: "Lyoxgg fiunn lsfuycrckelswsxfeuqlm!".oranApolWothCharrterString())
            
         }
 
@@ -137,9 +137,9 @@ class LipSigggneSnmingertips: UIViewController {
     
     
     func comeSSIPONenterBottomUser() {
-        LipSigggneSnmingertips.logUoserdataSSIP = ["ssipNadme":"Aria",
+        LipSigggneSnmingertips.logUoserdataSSIP = ["ssipNadme":"Aberria",
                                           "ssipPicdty":"SSIPavator9",
-                                          "ssipDoimond":"200",
+                                          "ssipDoimond":"100",
                                           "ssipDtfestAccount":"lippa@gmail.com",
                                           "ssipDtfestBriedf":"🖤 Collector of forgotten stories | Preserving history, one treasure at a time 📜",
                                           "ssipAccID":"234589"
@@ -192,11 +192,11 @@ extension LipSigggneSnmingertips{
         let emailPreSSIPO = NSPredicate(format:"SELF MATCHES %@", presSSIP)
         let boollSSIP = emailPreSSIPO.evaluate(with: contenEmailSSIP)
         if boollSSIP == false {
-            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "The email format you entered is incorrect", loaingShowView: self.view)
+            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Tohpeg xesmtabimlq efloarfmuaitf tymoduo ceunptwerrzende cijsp nihnacsoorvrwedcqt".oranApolWothCharrterString(), loaingShowView: self.view)
             return
         }
         
-        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Create in ....", loaingShowView: self.view)
+        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Ckraewaetdef uilnw m.v.s.f.".oranApolWothCharrterString(), loaingShowView: self.view)
         self.performBlockAfterDelayINSSIP(secondsSSIP: 1.5) {
             AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
 
@@ -206,7 +206,7 @@ extension LipSigggneSnmingertips{
             ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpBArBootomrbucue.init()
             self.createNewrAccounSSIp()
             
-            AppDelegate.showSSIPSuccessTips(acccusString: "Log in successful!")
+            AppDelegate.showSSIPSuccessTips(acccusString: "Lyobgo licnh pseufcvcsezsjscfsullv!".oranApolWothCharrterString())
 
         }
        
@@ -217,7 +217,7 @@ extension LipSigggneSnmingertips{
         LipSigggneSnmingertips.logUoserdataSSIP["ssipAccID"] = "\(Int.random(in: 50000...60000))"
         LipSigggneSnmingertips.logUoserdataSSIP["ssipPicdty"] = "userHear9"
 
-        LipSigggneSnmingertips.logUoserdataSSIP["ssipNadme"] = "NULL"
+        LipSigggneSnmingertips.logUoserdataSSIP["ssipNadme"] = "NpUuLgL".oranApolWothCharrterString()
 
         LipSigggneSnmingertips.logPucserdataSSIP = UIImage(named: "wode_mrtx")
 

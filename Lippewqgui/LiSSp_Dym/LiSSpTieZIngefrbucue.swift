@@ -79,7 +79,7 @@ class LiSSpTieZIngefrbucue:  LissipSecondFrbucue {
    
     @IBAction func shingcaseOriginReport(_ sender: UIButton) {
         
-        let normailAreport = UIAlertController(title: "Report Content", message:nil, preferredStyle: .actionSheet)
+        let normailAreport = UIAlertController(title: "Rsexphojrotm gCnounutfeznjt".oranApolWothCharrterString(), message:nil, preferredStyle: .actionSheet)
         let reasonsdonin = ["Harassment or Bullying","Inappropriate Content","Spam or Scam Attempts","Hate Speech"]
         
         for item in reasonsdonin {
@@ -90,7 +90,7 @@ class LiSSpTieZIngefrbucue:  LissipSecondFrbucue {
         }
        
         
-        normailAreport.addAction(UIAlertAction(title: "cancel", style: .default))
+        normailAreport.addAction(UIAlertAction(title: "Cmabnvcjeel".oranApolWothCharrterString(), style: .default))
         
         self.present(normailAreport, animated: true)
         
@@ -100,7 +100,7 @@ class LiSSpTieZIngefrbucue:  LissipSecondFrbucue {
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "", loaingShowView: self.view)
         self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
             AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
-            AppDelegate.showSSIPSuccessTips(acccusString: "Thank you for your supervision. We will verify and handle it as soon as possible")
+            AppDelegate.showSSIPSuccessTips(acccusString: "Tpheahnlkf uyfojuh nfoobra oyooauqrr gsmuqpmemrfvjiosvimoxna.b iWreu tweimlllu fvreirpibfbyy calnedv ohwatnmdtlfef qiptg gabsa qsxoxoynx kajsa cpsonsespiabkloe".oranApolWothCharrterString())
         }
     }
     
@@ -122,7 +122,7 @@ class LiSSpTieZIngefrbucue:  LissipSecondFrbucue {
     }
     
     @IBAction func colllectioChagentSSUP(_ sender: UIButton) {
-        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Requesting...", loaingShowView: self.view)
+        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Rwedqkuleyssteiqnjgr.x.q.".oranApolWothCharrterString(), loaingShowView: self.view)
         self.performBlockAfterDelayINSSIP(secondsSSIP: 1.0) {
             sender.isSelected = !sender.isSelected
             

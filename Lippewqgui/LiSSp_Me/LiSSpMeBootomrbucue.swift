@@ -35,7 +35,7 @@ class LiSSpMeBootomrbucue:  LissipSecondFrbucue,UICollectionViewDelegate,UIColle
     
     static var facrewemeSSIP = [[String: String]]()
     
-    let minSetinggoSipp = [("Wallet","walSSIPlet"),("My profile","SSIPProfile"),("Star","FeedSSIPback"),("User Agreement","walSSIPlet"),("Privacy Policy","walSSIPlet")]
+    let minSetinggoSipp = [("Wsatlxloeat".oranApolWothCharrterString(),"walSSIPlet"),("Mwyi aparwonfciflde".oranApolWothCharrterString(),"SSIPProfile"),("Star","FeedSSIPback"),("Ubsuezry gAegkrfeqepmveenrt","walSSIPlet"),("Plrkilvkaicxyz xPgonloivcty".oranApolWothCharrterString(),"walSSIPlet")]
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -91,10 +91,10 @@ class LiSSpMeBootomrbucue:  LissipSecondFrbucue,UICollectionViewDelegate,UIColle
    
    @objc func shanAlRemoveAccount() {
         
-       let ssipoAlera = UIAlertController(title: "Delete Account", message: "After deleting the account, all information related to the account will be removed!", preferredStyle:.alert)
+       let ssipoAlera = UIAlertController(title: "Dweilyentueq cAwcecbozuvnst".oranApolWothCharrterString(), message: "Akfbtyenrw udnemlsewtgignvgn wtkhdep vabcaciojupnptr,l qaglqly eiinzfwoprkmhautrixoina urdenlladtremde vtbom rtshuen iapcbcvoouknatv rwpirlbls vbkeg lrmevmqohvmecdw!".oranApolWothCharrterString(), preferredStyle:.alert)
        
-       ssipoAlera.addAction(UIAlertAction(title: "Sure", style: .default, handler: { ddtion in
-           AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Deleteing...", loaingShowView: self.view)
+       ssipoAlera.addAction(UIAlertAction(title: "Sdulrne".oranApolWothCharrterString(), style: .default, handler: { ddtion in
+           AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Dcevlzeptjeuixnkgp.a.z.".oranApolWothCharrterString(), loaingShowView: self.view)
            
            self.performBlockAfterDelayINSSIP(secondsSSIP: 1.0) {
                ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpNavitSnmingertips(rootViewController: LipSigggneSnmingertips.init())
@@ -104,7 +104,7 @@ class LiSSpMeBootomrbucue:  LissipSecondFrbucue,UICollectionViewDelegate,UIColle
            }
        }))
        
-       ssipoAlera.addAction(UIAlertAction(title: "Cancel", style: .default))
+       ssipoAlera.addAction(UIAlertAction(title: "Cmabnvcjeel".oranApolWothCharrterString(), style: .default))
        self.present(ssipoAlera, animated: true)
    }
     

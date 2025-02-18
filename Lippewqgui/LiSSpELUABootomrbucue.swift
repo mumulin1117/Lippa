@@ -39,96 +39,96 @@ class LiSSpELUABootomrbucue: UIViewController {
     
     private func ssuipCreaNet() {
         //
-        
+        contentSSIPview.isEditable = false
         contentSSIPview.text = """
-Effective Date: [2025-02-25]
+Eafvfvebcotjihvoeg eDaaatxee:o y[v2f0k2c5g-j0k2a-p2v5y]w
+h
+h1j.e jIznftzrgoqdnubcdtqikohnt
+y
+eYsoaudre yporoicvfajckym kibst riumfpwozrntpahnots atuoi buhsx.t kTahaiusk nPernizvragczye aPwosleizciyh wevxwpyldakiqnhss jhboowe iLciupepaab hcaohlclfefcntsss,r iuvsvezsk,k oasnfdy rsxhdacrteusu uysoxuvrv lpsexrrseofnvaclo biznqfloarbmgaktiizonno rwqhfeonk wyqofue puzshes dotuwre cAapbpt.r
+k
+p2d.o kIinvfdourqmdaytuimonny gWlei eCooululvekcktv
+q
+vPzewrlsiohnraylo mIvnbfwokrymwaqtcilownp:d cWgeq cmhaxye zcgoalqlzeochta spwebrhsnoanzatln zimnbfxoprbmuaitdihoynk tsrugcghg larsu nyloquhry unrammdeu,c wemmjatihli aaidxdqrteusesy,c majnjdu fpirvoyfcidlhea ldgejtaabiqlrsu gwlhierns gylogus jctriejantxed radnr saqcqczoturnftw.b
+jUgsqegrn bCaocnbtiemnxtk:d cIdnufcodrsmvajtpikosne haebnoaudts nczowljlaefcttsinbwlzezsb yyooyuh wutptlzovaedp,u citnbcmldusdwixnrgz upxhgodtlonss vaonxdm hdhetsacxryijpntnivognfsc.y
+tUlspaygneb pDbadtaaj:i eWiet zcroqlqlnepcvtd vduaitgay aroeugqalrjdyiincgg mhqoywu nyyotur suusies ftkhpet qAvpipe,l uipntcblpuodwipndgu adyedvyifcqev tifnbflodramuaftfiuojnj,j oleodgf pdaautyad,o xavnsdg naqnjailfystuihcisc.m
+d3w.p tUhsker gonft tIknhfsoqremkabtpiloeno
+q
+rWiek tugsyer qyvomucry fiundfnozrtmpaettiwosnc dfootrz ctzhsek afkoolkluojwfinnmgp tpmuvrgprorsfewsb:d
+a
+vTuoh fcaoomimqugnzifcrartqea iwcietehi qyvotum kaobrozurtb vugpfdvactuecsa,g yphrrodmkoothiyomnuss,c qaxnydv vebvjehnntmsx.n
+mTnoc xabndaulnyuzkeg bahnwdy yiomxpardomveem eoxunrj xsfeqrdvpivcbetsp.j
+tTpoo npuriobvhiddbea qacnkdu qmfacipnvtbacicno btxhaeb nAwpqpj.p
+xThob pphrkogcjeosvsu pyoopuhry mrresquuxessbtmsj kaxntdm imwaxnxahgeeo xytoqulri aaucpcvoxucnpth.a
+t
+o4o.k mSlhjakrnigncgt zocfb lIunefyoqramnakteifornz
+e
+pWbeo odqoj knooftv yskeflsle myoofumrk fpcezryssoantaxlm liinofdoxrbmwaotzicocno ntmod ptchniyrydn spjafrmtuixetse.b iWcep amxacyx csqhxawrpeq eyhovuorr mipnhfzoxrkmzaatbikognk:v
+o
+mWqidtjhe lsmekrfvsijcqev ophrpojvvimdgeirnso zwrhrof aaasssriysvts wuisy oinns doupreerdautgianigb hoxuwre iAfphpy.q
+gIenn fcjommnpulgidahnzcten ewdiltchj plielgfaglk tosbqloihgwaatnijodnbsa fofrd ctiod vpkrqoktxebcmty lrlikgxhbtrsf davnidy nsmaifhefteyq.b
+n5n.g eDbatthap jSbebcguarhihtkyj
+b
+tWuec qiemppfleehmkezncts nroeyawsaoqnbatbglnew isuecceumrmixtsyv pmyegahsiurrbeksp dtzon mpmrfodtweacntj zyfoxufrr gpaefrosdoxnvavlw timnufxorrumxaptginovnh.g eHnobwbegvceurg,o gnyou qmwertzhnoodj yowfj ttyrravnisumaicsxsaisonnv jouvgetri cthhaer ricnftxeqrbnnentf jitsv ucnoomrpklfeltoewlayc usmeacdueraem.b
+v
+n6z.s wYcosugru fRhiegohbtasv
+a
+kYfomus ehqanvjeb htxhyeg hrsidgthvtk qttoy baqcwclersjsl,t zcfofrxrhegclth,g qoark dduedlpetteew eywobuyry pppedrhsboxnlaxlf wiwntfmoirbmoaptfizobns.y xFxoero vadnfyw jijnnqwujihrcizezsp zoiri yreewqpudewsxtbsi,t xpelueeapsgef gchoonmteaacltt uuqsg uastc b[yinnvskezrnta ycoojnatbaxcbtc eiinqfqoyrwmjaatvisonni]h.d
+i
+u7l.d lCphoaynzgheoss rtcoi fTqheifsh dPxoylsiwczyq
+y
+oWoep wmsaqyw wuhpqdragtvet gtyhjiusa ePfrjimvpadcmyt uPzollqijcxyc dfhrvohmz ttaiwmlef ftpob ytlivmreo.x xAuntyl pclhbajnegcehsa pwbimlyla mbzeb qpsoysmtueydb cwiibtrhsiyno wtghieb mLeippmpcan yAhpppv,z oakngdh iwgey oejnlcoomunrzaygkez dywobui ftpom zrvervoineawe ointp wpoeerwiiowdgiwcjaalklwyk.m
+w
 
-1. Introduction
-
-Your privacy is important to us. This Privacy Policy explains how Lippa collects, uses, and shares your personal information when you use our App.
-
-2. Information We Collect
-
-Personal Information: We may collect personal information such as your name, email address, and profile details when you create an account.
-User Content: Information about collectibles you upload, including photos and descriptions.
-Usage Data: We collect data regarding how you use the App, including device information, log data, and analytics.
-3. Use of Information
-
-We use your information for the following purposes:
-
-To communicate with you about updates, promotions, and events.
-To analyze and improve our services.
-To provide and maintain the App.
-To process your requests and manage your account.
-
-4. Sharing of Information
-
-We do not sell your personal information to third parties. We may share your information:
-
-With service providers who assist us in operating our App.
-In compliance with legal obligations or to protect rights and safety.
-5. Data Security
-
-We implement reasonable security measures to protect your personal information. However, no method of transmission over the internet is completely secure.
-
-6. Your Rights
-
-You have the right to access, correct, or delete your personal information. For any inquiries or requests, please contact us at [insert contact information].
-
-7. Changes to This Policy
-
-We may update this Privacy Policy from time to time. Any changes will be posted within the Lippa App, and we encourage you to review it periodically.
-
-
-"""
+""".oranApolWothCharrterString()
     }
     
     private func ssuitreatNet() {
 //        eluaSSIPtiitle.text = "Lippa User Terms"
         
         contentSSIPview.text = """
-Effective Date: [2025-02-25]
+Elflfbercmtpigvfez xDpadtkev:k r[s2s0p2x5m-m0c2h-k2n5w]i
+r
+c1f.z qAicccrespitvazngcqeg soafx bTjevrdmxsp
+j
+gByyj kaucacneesusbiincgq aoqrh oumsuidnggs athhaei bLfinpxpdac tAjpipr,r yybodun tavgnrfehea ltgov pbrev ybeoqupnidz qbdyb stthcehsxeh vUkscevra aTreprcmwsf.w dIzfv mykokuc rdcoo mnuowtj xazgzrxeveo,b adzoj onboxtg suesney mtphfel lAvpsph.v
+d
+f2f.d kEmlniwgginbtifluiqtsyp
+k
+dYtopuq nmvufsotl zbeee eaftv rlfekaesytl q1c3z jyjetanrlsr uoxlkdn wtxof nukszel utxhmew uAkpwpi.t kBiyd ruxsqipnggj ctlhder vAupepf,b jydooue yroehpiraeosnelnpth stuhqamto jyqoauu lmwejeatt stdhjitsa crueaqeuaiwrzesmkernntz.f
+n
+u3o.r qUusaezrd vCxobntdhupcdth
+q
+bYlobux pakgfrjeoew sngojtr athov:a
+p
+uHoairqacsfsg,y etchiriegaktmeunp,t noard paqbjuyslev toltkhteurr ouusaeerdsr.a
+lPzomsktu afeamlcsiec goira kmsigsllbejamdtilnogv pibncfsoiramgajtuisodnr jaybuouuktp uckodlclvescateirbwltejsv.y
+zUzpjlcogaodb wchohndtdernmtp mtjhiahtd xignifnrqiundgeefsu strheek wionztqedlqlrefcdtoudaflu kpjrpoxpgeqrftdyf srzidgdhmtask nobfd uogtehieirrse.j
+t4i.u mIgnhtveylalweucttzugaolm wPqrlojpgegrctsye
+g
+lAblklj acconnhtdeznitk tafnodm bmlaftcecrpitaclqst xwjixtvhuifny htzhtec yAupspt lahrdep wowwdnbesdf lbnyy kLsiipmpmay eodrd tintmsl hlqiccbecnusvoorhsw.a qYfotue umeamyv zngoetj fuzsweh oaonryr ycvojnqtzejnntr wwyihtahgoruktu qeexypxrhezsksu upjebremuigshsjivoxnc.c
+c
+e5s.c lCtopmcmfuynyiwtiyo cGqueisdjeelrimnxebsv
+k
+cUtsnedrnst tsthzosuplkds qevnugoamgiev rrdeosipaencntifnuolelbyc aamnedx fcoornfsstkruujcctxipvvejlcyr kwjittqhjimnp ntxhjei vcpoomemxulndittkyq.k uDlimspraexswpceocgtvffuxlv wogrd shwaurlmifwuxln kbuezhfabvniwoyrq gcjaknw arxezsfuvlgtz finnb yatcpciojupnwtm cslunsjpkennvsiitosny borrq btjepromjigngaltiiwounq.p
+p
+a6z.w bFvebekdlbpaiczkk
+n
+yIdfc hynozuo lpzrcotvciydgew ofdeyepdobuaicpkq pobrm tsvufgtggelsptviioyngst casbcocumtr qtuhfey kAwplpa,o qydosuo ogyryaznjty xLaiqpyphaw ctuhuew lryizghhjtr ytxom uuvsueq gsmuucwhf nfiedecdobsarcykm pwqiotyhtovuytx oalnfyw lokbylbingmantjijobnb utvot iykojuv.k
+i
+u7g.e jDbiislcxlyafirmmeyrh hogfd lWwanrlrzamnwtoioeqsc
+q
+vLkiupmpmab vmxakkpepsv dnpoc aweacrirbaknbtkiledsz jrheqgyaurcdsilnmgh gtyhheq trqeflmitaibiiolziqthyi,p uaovyahielvaxbuirlbiptpym,m doprt ppiezrnfcogrsmcaynvchet lobfh etbheem yAjprpz.v
+v
+q8x.k lCihyannogrecsw ttoob hTsedrymcsk
+x
+qLoilpvpeaj wmlatyt pmcoxdxiqfsyv ntbhuensoeo uUhsqeerp kTeebrumpse lastm vadnoyj ytuiumiet.x pYxowusrg ycaoynnthidniunepdi vuaszel kotfw wtlhnef pAlplpk dapfdtmerrb wcehsavnugoeksh fiingdfiqceaotpepsm mascrcjedpgtyannzcneh jotfx ftnhlep nnyeowr dtueorimlsh.t
+i
+a9q.p wCvosnvtoatcvtm sUmsz
+n
+bFdocru uqvuaeysotfidozngsq sogrs lcvovnqcgeerbnisw mrceegcagrwdmidnpgu atyhheistey aazghrfekegmuejnstlsz,b upaloenagswef fcnonnetkavcztl tumsz zafta kLjippjpyaaGcgimnatiklg.scmohmr.
 
-1. Acceptance of Terms
-
-By accessing or using the Lippa App, you agree to be bound by these User Terms. If you do not agree, do not use the App.
-
-2. Eligibility
-
-You must be at least 13 years old to use the App. By using the App, you represent that you meet this requirement.
-
-3. User Conduct
-
-You agree not to:
-
-Harass, threaten, or abuse other users.
-Post false or misleading information about collectibles.
-Upload content that infringes the intellectual property rights of others.
-4. Intellectual Property
-
-All content and materials within the App are owned by Lippa or its licensors. You may not use any content without express permission.
-
-5. Community Guidelines
-
-Users should engage respectfully and constructively within the community. Disrespectful or harmful behavior can result in account suspension or termination.
-
-6. Feedback
-
-If you provide feedback or suggestions about the App, you grant Lippa the right to use such feedback without any obligation to you.
-
-7. Disclaimer of Warranties
-
-Lippa makes no warranties regarding the reliability, availability, or performance of the App.
-
-8. Changes to Terms
-
-Lippa may modify these User Terms at any time. Your continued use of the App after changes indicates acceptance of the new terms.
-
-9. Contact Us
-
-For questions or concerns regarding these agreements, please contact us at LippaGgmail.com.
-
-"""
+""".oranApolWothCharrterString()
     
     }
     

@@ -32,12 +32,12 @@ class LiSSpCommwnentsingefrbucue:  LissipSecondFrbucue {
     }
     @IBAction func syresendSSIp(_ sender: UIButton) {
         
-        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Sending.....", loaingShowView: self.view)
+        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Svebnpdfibnkgf.a.q.p.x.".oranApolWothCharrterString(), loaingShowView: self.view)
         self.performBlockAfterDelayINSSIP(secondsSSIP: 0.5) {
             AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
             self.dismiss(animated: true)
             
-            AppDelegate.showSSIPSuccessTips(acccusString: "Send successful, your comment will be displayed after review")
+            AppDelegate.showSSIPSuccessTips(acccusString: "Sremnjdy nsruvcvcheqsvsvfcuslw,k pytoxuarf tcfovmqmyeenstz xwgivlele nbpef xdniasoptlvaoykebdn kacfstdeyrh crreqvciqejw".oranApolWothCharrterString())
           
         }
     }

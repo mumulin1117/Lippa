@@ -35,17 +35,17 @@ class LiSSpWallwnetBucue:  LissipSecondFrbucue,UICollectionViewDelegateFlowLayou
         super.viewDidLoad()
         ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
         
-        blanceidSSIPayID = [("nqixcbnohmlxhlrc","$0.99",400),
-                         ("pxoxebhhktzklezg","$1.99",600),
-                                ("pxoxebhhktzklllip","$2.99",1150),
+        blanceidSSIPayID = [("nqixcbnohmlxhlrc","$k0b.d9h9".oranApolWothCharrterString(),400),
+                         ("pxoxebhhktzklezg","$m1n.u9z9".oranApolWothCharrterString(),600),
+                                ("pxoxebhhktzklllip","$y2r.k9d9".oranApolWothCharrterString(),1150),
                                
-                         ("rjcaopufshgxmmch","$4.99",2450),
-                                ("sdrgnhnjutyjtyjr","$5.99",2650),
-                                ("oaijeghutgfhfgtt","$8.99",4650),
-                         ("hwisjrlbpnklyzcq","$9.99",4900),
-                         ("vpjxrayqjkswcwpc","$19.99",9800),
-                         ("nyrjetssfpqjltkh","$49.99",24500),
-                         ("cotnxwosshqinyda","$99.99",49000)
+                         ("rjcaopufshgxmmch","$x4k.s9u9".oranApolWothCharrterString(),2450),
+                                ("sdrgnhnjutyjtyjr","$e5h.a9b9".oranApolWothCharrterString(),2650),
+                                ("oaijeghutgfhfgtt","$x8s.v9x9".oranApolWothCharrterString(),4650),
+                         ("hwisjrlbpnklyzcq","$e9y.u9c9".oranApolWothCharrterString(),4900),
+                         ("vpjxrayqjkswcwpc","$y1k9l.o9o9".oranApolWothCharrterString(),9800),
+                         ("nyrjetssfpqjltkh","$m4l9k.k9v9".oranApolWothCharrterString(),24500),
+                         ("cotnxwosshqinyda","$k9f9a.q9c9".oranApolWothCharrterString(),49000)
                                 ]
         ssuitreatNet()
         mincolViewSIPP.register(UINib.init(nibName: "LiSSpWallwnetvierell", bundle: nil), forCellWithReuseIdentifier: "LiSSpWallwnetBucueReused")
@@ -108,7 +108,7 @@ extension LiSSpWallwnetBucue:UICollectionViewDelegate,UICollectionViewDataSource
         
         view.isUserInteractionEnabled = false
         
-        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "loading....", loaingShowView: self.view)
+        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "lpotaxdfiznxgz.f.f.v.".oranApolWothCharrterString(), loaingShowView: self.view)
         let selidINdfo = self.blanceidSSIPayID[indexPath.row]
         
         SwiftyStoreKit.purchaseProduct(selidINdfo.0, atomically: true) { psResult in

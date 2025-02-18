@@ -32,7 +32,7 @@ class LiSSpEditFrBucue:  LissipSecondFrbucue , UIImagePickerControllerDelegate &
         
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) == false{
             
-            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "The current device does not support  photos libary", loaingShowView: self.view)
+            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Tehlep bcouurwryegnptu ldgexvlilcnex ddxofejsn tnrootl ysuuhpipmolrbtr a gpthoojtcocsq vlgirbnaarmy".oranApolWothCharrterString(), loaingShowView: self.view)
             return
         }
         
@@ -50,7 +50,7 @@ class LiSSpEditFrBucue:  LissipSecondFrbucue , UIImagePickerControllerDelegate &
         
         else {
             
-            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Change name or Brief cant not be empty!", loaingShowView: self.view)
+            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Cxhyaenhgveu qnjakmjep uodrh lBcreiteafj fcbabngtd gnsolth uboek fexmopotpyp!".oranApolWothCharrterString(), loaingShowView: self.view)
             return
         }
         ssuipCreaNet(namesipp: namesipp, aboutsipp: aboutsipp)
@@ -59,14 +59,14 @@ class LiSSpEditFrBucue:  LissipSecondFrbucue , UIImagePickerControllerDelegate &
             
             self.navigationController?.popViewController(animated: true)
             
-            AppDelegate.showSSIPSuccessTips(acccusString: "update complete!")
+            AppDelegate.showSSIPSuccessTips(acccusString: "unpadtahthec ochowmxpqlueotwec!".oranApolWothCharrterString())
            
         }
        
         
     }
     private func ssuipCreaNet(namesipp:String,aboutsipp:String) {
-        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Changeing....", loaingShowView: self.view)
+        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Cbhcaonvgrerikncgq.x.j.a.".oranApolWothCharrterString(), loaingShowView: self.view)
         LipSigggneSnmingertips.logUoserdataSSIP["ssipNadme"] = namesipp
         
         LipSigggneSnmingertips.logUoserdataSSIP["ssipDtfestBriedf"] = aboutsipp

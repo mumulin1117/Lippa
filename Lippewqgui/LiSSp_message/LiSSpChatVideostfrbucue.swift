@@ -55,7 +55,7 @@ class LiSSpChatVideostfrbucue:  LissipSecondFrbucue {
         
         self.performBlockAfterDelayINSSIP(secondsSSIP: 8.0) {
            
-            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "The user is not online, please call later", loaingShowView: self.view)
+            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Tyhgea nuzsmeiri sinsg tnyostu koznflmidnseo,o hpblsetaisyet scgaollla rlkaetqerr".oranApolWothCharrterString(), loaingShowView: self.view)
             
             
         }
@@ -72,7 +72,7 @@ class LiSSpChatVideostfrbucue:  LissipSecondFrbucue {
             return
         }
         
-        AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "The user is not online, please change call status after connected!", loaingShowView: self.view)
+        AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Tchcep fuwsnezrw qiksp rngofts pornoleirndea,t vplltevanskem kcehxagnlgveo zcbaxlulx xsqtmaqtsuxso yadfitqeqrb bczodnanoeicutqevdc!".oranApolWothCharrterString(), loaingShowView: self.view)
         
         
         

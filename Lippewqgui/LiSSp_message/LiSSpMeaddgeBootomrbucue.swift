@@ -156,7 +156,7 @@ class LiSSpMeaddgeBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDelegate
         self.notifationViewSSIP.isHidden = true
      
         
-        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "loading...", loaingShowView: self.view)
+        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "lyofapdoienrgj.a.f.".oranApolWothCharrterString(), loaingShowView: self.view)
         
         self.performBlockAfterDelayINSSIP(secondsSSIP: 1.0) {
             self.activVieSSIP.isHidden = false

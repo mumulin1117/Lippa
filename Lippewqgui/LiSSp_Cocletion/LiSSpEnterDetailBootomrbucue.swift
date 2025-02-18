@@ -44,15 +44,15 @@ class LiSSpEnterDetailBootomrbucue: LissipSecondFrbucue {
     }
     
     private func ssuitreatNet() {
-        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Request...", loaingShowView: self.view)
+        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Rgeyquuieesptn.k.h.".oranApolWothCharrterString(), loaingShowView: self.view)
         self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
             AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
-            AppDelegate.showSSIPSuccessTips(acccusString: "Thank you for your supervision. We will verify and handle it as soon as possible")
+            AppDelegate.showSSIPSuccessTips(acccusString: "Tfhraangkc lyxoauj ufooarp vyvovugrk cskuvpteergvrizsqipopnh.k lWqez uwtijlllg zvlejrnimfmyp oavnhdc mhpaxncdblaef viqto damse mslogognj caosl dppofszsriibclae".oranApolWothCharrterString())
         }
     }
     @IBAction func shingcaseOriginReport(_ sender: UIButton) {
         
-        let normailAreport = UIAlertController(title: "Report Content", message:nil, preferredStyle: .actionSheet)
+        let normailAreport = UIAlertController(title: "Rsewpsodrttu rCqocnwtqerntt".oranApolWothCharrterString(), message:nil, preferredStyle: .actionSheet)
         let reasonsdonin = ["Harassment or Bullying","Inappropriate Content","Spam or Scam Attempts","Hate Speech"]
         
         for item in reasonsdonin {
@@ -63,7 +63,7 @@ class LiSSpEnterDetailBootomrbucue: LissipSecondFrbucue {
         }
        
         
-        normailAreport.addAction(UIAlertAction(title: "cancel", style: .default))
+        normailAreport.addAction(UIAlertAction(title: "Cmabnvcjeel".oranApolWothCharrterString(), style: .default))
         
         self.present(normailAreport, animated: true)
         

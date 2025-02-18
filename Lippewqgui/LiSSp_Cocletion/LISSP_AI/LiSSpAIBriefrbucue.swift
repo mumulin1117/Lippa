@@ -52,25 +52,25 @@ class LissipSecondFrbucue: UIViewController {
     var pickerSSIPVC:UIImagePickerController?
     
     func showingBloakjPickVC(withBloackID:String)  {
-        let normailAreport = UIAlertController(title: "Report OR Black", message:nil, preferredStyle: .actionSheet)
+        let normailAreport = UIAlertController(title: "Rvefprogrstx lOrRt uBrljaycek".oranApolWothCharrterString(), message:nil, preferredStyle: .actionSheet)
         
-        normailAreport.addAction(UIAlertAction(title: "Black", style: .default, handler: { alertSSIP in
-            AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Requesting...", loaingShowView: self.view)
+        normailAreport.addAction(UIAlertAction(title: "Bnlzaocsk".oranApolWothCharrterString(), style: .default, handler: { alertSSIP in
+            AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Rwexqduqefsmtzilnhgd.v.e.".oranApolWothCharrterString(), loaingShowView: self.view)
             self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
                 AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
                
                 self.delsteSSIPONenterBottomUser(iduserSSIP: withBloackID )
                 
-                AppDelegate.showSSIPSuccessTips(acccusString: "Black successful!")
+                AppDelegate.showSSIPSuccessTips(acccusString: "Bplralcvkz esjuccmccejsgsofguqlo!".oranApolWothCharrterString())
             }
            
         }))
        
-        normailAreport.addAction(UIAlertAction(title: "Report", style: .default, handler: { alertSSIP in
+        normailAreport.addAction(UIAlertAction(title: "Rtefproirst".oranApolWothCharrterString(), style: .default, handler: { alertSSIP in
             self.shingseReportUserOriginReport()
            
         }))
-        normailAreport.addAction(UIAlertAction(title: "cancel", style: .default))
+        normailAreport.addAction(UIAlertAction(title: "Cmabnvcjeel".oranApolWothCharrterString(), style: .default))
         
         self.present(normailAreport, animated: true)
     }
@@ -119,7 +119,7 @@ class LissipSecondFrbucue: UIViewController {
     
     func shingseReportUserOriginReport()  {
         
-        let normailAreport = UIAlertController(title: "Report User Reason", message:nil, preferredStyle: .actionSheet)
+        let normailAreport = UIAlertController(title: "Rmefpsoervtq gUmsresrl xReedazsgoun".oranApolWothCharrterString(), message:nil, preferredStyle: .actionSheet)
         let reasonsdonin = ["Offensive Language","Inaccuracy","Privacy Violation","Spam or Irrelevance"]
         
         for item in reasonsdonin {
@@ -127,14 +127,14 @@ class LissipSecondFrbucue: UIViewController {
                 AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "", loaingShowView: self.view)
                 self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
                     AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
-                    AppDelegate.showSSIPSuccessTips(acccusString: "Thank you for your report. We will verify and handle it as soon as possible")
+                    AppDelegate.showSSIPSuccessTips(acccusString: "Tfhwaunzke gymonua vffoars myhojufrt freejpnorrjtz.l sWtep gwdimlblr qvmelruikflyz paunwdm rhxaknjdhlwes pietc laosl esxoloane padsq apfoxsdsfijbqlve".oranApolWothCharrterString())
                 }
                
             }))
         }
        
         
-        normailAreport.addAction(UIAlertAction(title: "cancel", style: .default))
+        normailAreport.addAction(UIAlertAction(title: "Cmabnvcjeel".oranApolWothCharrterString(), style: .default))
         
         self.present(normailAreport, animated: true)
         
@@ -144,8 +144,8 @@ class LissipSecondFrbucue: UIViewController {
     
     
     func shiVabyuiogPermisson()  {
-        let alert = UIAlertController(title: "Camera Permission Denied", message: "Please enable camera access in the Settings.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        let alert = UIAlertController(title: "Czaxmienrlai uPwerrmmqiuswsnioownx fDqegngizepd".oranApolWothCharrterString(), message: "Palrebagsxeg fexnsapbxlpee icmasmgeqrvat maucxcieksjss iinnp qthhyed lSheatqtfiqnugnsp.".oranApolWothCharrterString(), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OnK".oranApolWothCharrterString(), style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
 }

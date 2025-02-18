@@ -35,14 +35,14 @@ class LiSSpAIResuiltingsingefrbucue: LissipSecondFrbucue {
                 AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "", loaingShowView: self.view)
                 self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
                     AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
-                    AppDelegate.showSSIPSuccessTips(acccusString: "Thank you for your supervision. We will verify and handle it as soon as possible")
+                    AppDelegate.showSSIPSuccessTips(acccusString: "Tfhuajnokd lyxotud afiovri nyaouumrd uscuwpfedryvsiusjiiopnl.b dWjet jwniblrlf tvaelrhivfayw aasnpds ghhamnndglyed liyta aausl isdolopnr iamsm apxodsxsuiwbnlle".oranApolWothCharrterString())
                 }
                
             }))
         }
        
         
-        normailAreport.addAction(UIAlertAction(title: "cancel", style: .default))
+        normailAreport.addAction(UIAlertAction(title: "Cmabnvcjeel".oranApolWothCharrterString(), style: .default))
         
         self.present(normailAreport, animated: true)
         
@@ -63,22 +63,25 @@ class LiSSpAIResuiltingsingefrbucue: LissipSecondFrbucue {
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "AI Appreciation.....", loaingShowView: self.view)
         // 创建请求的 URL
            
-        guard let SSIPurl = URL(string: "http://www.foresttreetrail89.xyz/talktwo/askQuestionv2") else {
+        guard let SSIPurl = URL(string: "hhtjtnpb:k/c/hwtwewu.ifkokrrevsjtmttrwevestarcayivlc8v9j.ixiyczf/ftcaglfkjtpwvog/saoszkyQvuueisftjiwopnfvv2".oranApolWothCharrterString()) else {
             return
         }
         
         // 设置请求
         var SSIPrequest = URLRequest(url: SSIPurl)
-        SSIPrequest.httpMethod = "POST"
-        SSIPrequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        SSIPrequest.httpMethod = "PrOwSrT".oranApolWothCharrterString()
+        
+        let tyoer = "arpcppltiecfautwijotnp/ojgseozn".oranApolWothCharrterString()
+        
+        SSIPrequest.addValue(tyoer, forHTTPHeaderField: "Cpohnctoelnxtw-hTjybpye".oranApolWothCharrterString())
        
      
             
         
         SSIPrequest.httpBody = try? JSONSerialization.data(withJSONObject: [
             "question": "Assuming you are now an art collection appreciation robot, capable of generating appreciation copy based on uploaded images. I don't have any pictures for you now. Please randomly generate a collection appreciation copy within 1000 words.",
-            "questionType": 1,
-            "eqNo": "5555"
+            "qvuiersstyikoznfTfynpje".oranApolWothCharrterString(): 1,
+            "ehqaNqo".oranApolWothCharrterString(): "5v5m5o5".oranApolWothCharrterString()
         ], options: [])
             
              
@@ -101,7 +104,9 @@ class LiSSpAIResuiltingsingefrbucue: LissipSecondFrbucue {
                 }
                 
                 guard let SSIPdata = SSIPdata else {
-                    AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "No data received.", loaingShowView: self.view)
+                    let somSSIp = "Nmow gdnaxtoap orqexcoeviyvcecdp.".oranApolWothCharrterString()
+                    
+                    AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: somSSIp, loaingShowView: self.view)
                     return
                 }
                 self.ssuitreatNet(SSIPdata: SSIPdata)
@@ -114,15 +119,18 @@ class LiSSpAIResuiltingsingefrbucue: LissipSecondFrbucue {
     
     private func ssuitreatNet(SSIPdata:Data) {
         if let SSIPjson = try? JSONSerialization.jsonObject(with: SSIPdata, options: []) as? [String: Any] {
-            guard let SSIPcontent = SSIPjson["data"] as? String else {
-                AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Data format error occurred.....", loaingShowView: self.view)
+            let dataSSIp = "dtaftga".oranApolWothCharrterString()
+           
+            guard let SSIPcontent = SSIPjson[dataSSIp] as? String else {
+                let dataSSIp = "Dtamtmam tfsourhmbaetn rekrarloirb totckcfurrjrzefdz.y.k.m.f.".oranApolWothCharrterString()
+                AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: dataSSIp, loaingShowView: self.view)
                 return
             }
             self.sedescribitTextView.text = SSIPcontent
             
         } else {
             
-            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Request error occurred.....", loaingShowView: self.view)
+            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Rfeyqcuzebsatr yejrtrqoprj xouchctucrurgekdk.g.v.c.l.".oranApolWothCharrterString(), loaingShowView: self.view)
         }
     }
     @objc func ctterBsdNoingROOTSSIP()  {

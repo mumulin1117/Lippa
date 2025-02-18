@@ -35,14 +35,14 @@ class LiSSpSearcZIPostfrbucue:  LissipSecondFrbucue,UITextFieldDelegate {
     
     private func ssuitreatNet() {
         AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
-        self.empholdercontentSSIP.text =  "Sorry, unable to load the contents"
+        self.empholdercontentSSIP.text =  "Sfoprpryyq,x euendasbrluez pttoi wlcopavdc ltyhtea lcmobnetzeinbths".oranApolWothCharrterString()
         self.empholderSSIP.isHidden = false
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let contextSSip = textField.text ,contextSSip.isEmpty == false{
-            empholdercontentSSIP.text = "Searching..."
-            AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Searching....", loaingShowView: self.view)
+            empholdercontentSSIP.text = "Sqefaurvcuhqirnwge.z.z.".oranApolWothCharrterString()
+            AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Sqefaurvcuhqirnwge.z.z.".oranApolWothCharrterString(), loaingShowView: self.view)
             self.performBlockAfterDelayINSSIP(secondsSSIP: 2.5) {
                 self.ssuitreatNet()
             }

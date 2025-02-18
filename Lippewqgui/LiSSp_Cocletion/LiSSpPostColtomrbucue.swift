@@ -89,13 +89,13 @@ class LiSSpPostColtomrbucue: LissipSecondFrbucue , UIImagePickerControllerDelega
     
     @IBAction func surestareAiUpload(_ sender: UIButton) {
         if self.manSSIPStataus == nil {
-            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Please upload photos of your collection first!", loaingShowView: self.view)
+            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Pqlheuacsbew quupclfovavdy xprhzottqoxse cosfz pyjokutrh hcpoqlalmercctlimornq nfsiarwsqtr!".oranApolWothCharrterString(), loaingShowView: self.view)
             return
         }
         
         guard let artdesc = sedescribitTextView.text,artdesc.isEmpty == false,artdesc != "Describ it:" else {
             
-            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Please describ your collection first!", loaingShowView: self.view)
+            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Pxloeeaksfeu odvelspclrvikbf cyqoguore mcuoololielcqtjigowng ufoifrzsitr!".oranApolWothCharrterString(), loaingShowView: self.view)
             return
         }
         
@@ -105,14 +105,14 @@ class LiSSpPostColtomrbucue: LissipSecondFrbucue , UIImagePickerControllerDelega
     
     
     private func ssuitreatNet() {
-        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "uploading.....", loaingShowView: self.view)
+        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "uxpclbobandgienrgs.x.p.m.m.".oranApolWothCharrterString(), loaingShowView: self.view)
         self.performBlockAfterDelayINSSIP(secondsSSIP: 2.5) {
             AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
             
             self.navigationController?.popViewController(animated: true)
             
             
-            AppDelegate.showSSIPSuccessTips(acccusString: "Upload successful, your sharing will be displayed after review")
+            AppDelegate.showSSIPSuccessTips(acccusString: "Ugpdleouatdi ksduicrcveisvsafmulln,b fyjowucre vslhtaqrpibnxgq twqiglzlo abjen qdwixsapalwaoyaexdf jaifytoehrb yrgenvnitetw".oranApolWothCharrterString())
            
         }
     }

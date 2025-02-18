@@ -80,7 +80,7 @@ class LiSSpAIUploasingefrbucue: LissipSecondFrbucue , UIImagePickerControllerDel
     
     @IBAction func surestareAiUpload(_ sender: UIButton) {
         if self.manSSIPStataus == nil {
-            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Please upload photos of your collection first!", loaingShowView: self.view)
+            AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: "Pxlcexaqskeu zuppklfoaamdc iphhxovtioksz morfu oyoonuxru ucnoiltlaetcbtbikonnu wfgikrxsrtb!".oranApolWothCharrterString(), loaingShowView: self.view)
         }else{
             ssuitreatNet()
         }
