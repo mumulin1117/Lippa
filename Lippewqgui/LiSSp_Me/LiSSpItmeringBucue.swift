@@ -27,6 +27,7 @@ class LiSSpItmeringBucue:  LissipSecondFrbucue {
     
     @IBOutlet weak var focusSSSIPo: UIButton!
     
+    @IBOutlet weak var ColooPickSSIp: UIButton!
     
     var postCenDataSSIP:Dictionary<String,String>?
     
@@ -60,7 +61,11 @@ class LiSSpItmeringBucue:  LissipSecondFrbucue {
         backDAtaimgeSSIP.maskLippaRoundCorner(rMakLSSIpadius: 14)
         focusSSSIPo.addTarget(self, action: #selector(liskinguserstatus), for: .touchUpInside)
        
-        
+        backDAtaimgeSSIP.snp.makeConstraints { make in
+            make.width.height.equalTo((UIScreen.main.bounds.height < 700) ? 115 : 163)
+            make.top.equalTo(ColooPickSSIp.snp.bottom).offset(14)
+            make.left.equalTo(ColooPickSSIp)
+        }
     }
     private func ssuipCreaNet() {
         

@@ -35,7 +35,7 @@ class LiSSpMeBootomrbucue:  LissipSecondFrbucue,UICollectionViewDelegate,UIColle
     
     static var facrewemeSSIP = [[String: String]]()
     private var enImageSSIPOViol:UIImageView = UIImageView.init()
-    let minSetinggoSipp = [("Wsatlxloeat".oranApolWothCharrterString(),"walSSIPlet"),("Mwyi aparwonfciflde".oranApolWothCharrterString(),"SSIPProfile"),("Star","FeedSSIPback"),("Ubsuezry gAegkrfeqepmveenrt","walSSIPlet"),("Plrkilvkaicxyz xPgonloivcty".oranApolWothCharrterString(),"walSSIPlet")]
+    let minSetinggoSipp = [("Wsatlxloeat".oranApolWothCharrterString(),"walSSIPlet"),("Mwyi aparwonfciflde".oranApolWothCharrterString(),"SSIPProfile"),("Ubsuezry gAegkrfeqepmveenrt".oranApolWothCharrterString(),"walSSIPlet"),("Plrkilvkaicxyz xPgonloivcty".oranApolWothCharrterString(),"walSSIPlet")]
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -178,19 +178,14 @@ class LiSSpMeBootomrbucue:  LissipSecondFrbucue,UICollectionViewDelegate,UIColle
         case 1:
             self.navigationController?.pushViewController(LiSSpPesoncenstfrbucue.init(), animated: true)
             
+       
         case 2:
-//#warning("idYOUR_APP_ID")
-            if let url = URL(string: "itms-apps://itunes.apple.com/app/6742132987?action=write-review") {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                
-            }
-        case 3:
             let priSSIPLabe = UILabel.init()
             priSSIPLabe.text = "Lippa Privacy Policy"
             
             self.navigationController?.pushViewController(LiSSpELUABootomrbucue.init(controllerSSIPType: priSSIPLabe), animated: true)
            
-        case 4:
+        case 3:
             let priSSIPLabe = UILabel.init()
             priSSIPLabe.text = "Lippa User Terms"
             

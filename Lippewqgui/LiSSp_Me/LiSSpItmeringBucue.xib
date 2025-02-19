@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiSSpItmeringBucue" customModule="Lippewqgui" customModuleProvider="target">
             <connections>
                 <outlet property="ChokenSSIP" destination="ZCP-oS-Aoe" id="hfL-WC-v1b"/>
+                <outlet property="ColooPickSSIp" destination="VNs-2B-K75" id="HMa-st-nQz"/>
                 <outlet property="backDAtaimgeSSIP" destination="s7w-2q-cDi" id="gNy-wt-uhJ"/>
                 <outlet property="descnameSIPP" destination="GKo-wM-wYw" id="z6D-3Q-PYH"/>
                 <outlet property="fancereCountSIpp" destination="3iy-Ts-afB" id="p4w-5N-AYj"/>
@@ -76,8 +77,8 @@
                     <color key="textColor" white="1" alpha="0.58181866500000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jack" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKo-wM-wYw">
-                    <rect key="frame" x="16" y="226" width="361" height="16"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jack" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKo-wM-wYw">
+                    <rect key="frame" x="16" y="226" width="361" height="15.666666666666657"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                     <color key="textColor" red="0.58823529409999997" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -128,12 +129,8 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="60" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7w-2q-cDi">
-                    <rect key="frame" x="25.666666666666671" y="487" width="163" height="163"/>
+                    <rect key="frame" x="25.666666666666671" y="487" width="30" height="34"/>
                     <color key="backgroundColor" red="0.58823529409999997" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="163" id="ZhZ-LX-5lI"/>
-                        <constraint firstAttribute="width" constant="163" id="fUb-Ow-Uo2"/>
-                    </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <connections>
                         <action selector="collectiontableSSIP:" destination="-1" eventType="touchUpInside" id="wcZ-Sn-Ube"/>
@@ -164,7 +161,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="991" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nh-Al-QVg">
-                    <rect key="frame" x="301" y="755" width="80" height="52"/>
+                    <rect key="frame" x="301" y="761" width="80" height="52"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="baI-uB-D1N"/>
                         <constraint firstAttribute="height" constant="52" id="uZ9-5i-rRr"/>
@@ -177,7 +174,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="990" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnY-KN-tmT">
-                    <rect key="frame" x="16" y="755" width="270" height="52"/>
+                    <rect key="frame" x="16" y="761" width="270" height="52"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="52" id="f9B-Ms-Geo"/>
                     </constraints>
@@ -229,7 +226,7 @@
                 <constraint firstItem="s7w-2q-cDi" firstAttribute="leading" secondItem="VNs-2B-K75" secondAttribute="leading" id="qR0-5j-dA6"/>
                 <constraint firstItem="rnY-KN-tmT" firstAttribute="centerY" secondItem="6nh-Al-QVg" secondAttribute="centerY" id="qUs-9I-QFK"/>
                 <constraint firstItem="vFE-OR-f84" firstAttribute="top" secondItem="ZCP-oS-Aoe" secondAttribute="bottom" constant="25" id="tyi-0R-oNd"/>
-                <constraint firstItem="cAF-Vl-wds" firstAttribute="bottom" secondItem="6nh-Al-QVg" secondAttribute="bottom" constant="11" id="vUh-N4-9zI"/>
+                <constraint firstItem="cAF-Vl-wds" firstAttribute="bottom" secondItem="6nh-Al-QVg" secondAttribute="bottom" constant="5" id="vUh-N4-9zI"/>
                 <constraint firstItem="vFE-OR-f84" firstAttribute="leading" secondItem="cAF-Vl-wds" secondAttribute="leading" constant="16" id="vW9-Kb-wfL"/>
                 <constraint firstItem="rnY-KN-tmT" firstAttribute="leading" secondItem="vFE-OR-f84" secondAttribute="leading" id="vwE-1N-KUg"/>
                 <constraint firstItem="bEb-ER-BoM" firstAttribute="top" secondItem="mIe-ay-D5w" secondAttribute="bottom" constant="10" id="wXN-yb-hd0"/>
