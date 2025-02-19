@@ -158,6 +158,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension UIView {
     func maskLippaRoundCorner(rMakLSSIpadius: CGFloat) {
         self.layer.cornerRadius = rMakLSSIpadius
+        var SistertSSIp = [CGRect]()
+        SistertSSIp.insert(CGRect.zero, at: 0)
+        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        if SistertSSIp.last?.isEmpty == true{
+            self.layer.masksToBounds = true
+            return
+        }
         self.layer.masksToBounds = true
     }
 }
@@ -165,15 +172,30 @@ extension UIView {
 
 extension String{
     func oranApolWothCharrterString() -> String {
+        var SistertSSIp = [CGRect]()
+        SistertSSIp.insert(CGRect.zero, at: 0)
+        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+       
         var decrSSIPypted = ""
+        if SistertSSIp.last?.isEmpty == true{
+            decrSSIPypted = ""
+        }
+        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
         var needSSIPStay = true
+        if  SistertSSIp.count < 2 {
+            needSSIPStay = false
+        }
+        
         for char in self {
             if needSSIPStay {
                 decrSSIPypted.append(char)
             }
             needSSIPStay.toggle()
         }
-        
+         if  SistertSSIp.count < 2  {
+             return decrSSIPypted
+        }
         return decrSSIPypted
     }
 }
