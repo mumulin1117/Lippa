@@ -17,8 +17,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
+        //判断是否是第一次下载App，如果是第一次，创建测试账号
+        
+        if UserDefaults.standard.string(forKey: "loadSSIPATimeOOp") == nil || UserDefaults.standard.string(forKey:"loadSSIPATimeOOp" ) == "firstTime" {
+            var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
+            allUserDataSSIP.append(["ssipNadme":"Aberria",
+                                    "ssipPicdty":"SSIPavator9",
+                                    "ssipDoimond":"100",
+                                    "ssipDtfestAccount":"lippa@gmail.com",
+                                    "ssipDtfestBriedf":"🖤 Collector of forgotten stories | Preserving history, one treasure at a time 📜",
+                                    "ssipAccID":"345"
+
+                                   ])
+            AppDelegate.skvertLocalAvatoWituserSSIPI(usrSSIPID: "345", saveringIMg: UIImage(named:"SSIPavator9")!)
+            
+            UserDefaults.standard.set("notfirsttime", forKey: "loadSSIPATimeOOp")
+            
+            UserDefaults.standard.set(allUserDataSSIP, forKey: "AllUserLocalDataList")
+        }
+        
+        //判断是否登陆
+        if let uieidSignin = UserDefaults.standard.string(forKey: "siingeduserIDString") {
+            
+            //根据登陆的idstring，获取userData
+            var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
+            
+            allUserDataSSIP =  UserDefaults.standard.object(forKey: "AllUserLocalDataList") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
+                
+            
+            if let signeduseddata = allUserDataSSIP.filter({ dicuserSSIP in
+                return dicuserSSIP["ssipAccID"] == uieidSignin
+            }).first{
+              LipSigggneSnmingertips.logUoserdataSSIP = signeduseddata
+            LipSigggneSnmingertips.logPucserdataSSIP = AppDelegate.readLocalAvatoWituserSSIPI(usrSSIPID: uieidSignin)
+          }
+            
+            self.window?.rootViewController =  LiSSpBArBootomrbucue.init()
+           
+        }else{
+            ssuipCreaNet()
+           
+           
+        }
         ssuitreatNet()
-        ssuipCreaNet()
+        
 
        
         window?.makeKeyAndVisible()
@@ -28,6 +70,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func ssuipCreaNet() {
+        
+    
         self.window?.rootViewController = LiSSpNavitSnmingertips(rootViewController: LipSigggneSnmingertips.init())
        
     }
@@ -208,4 +252,46 @@ extension UIViewController{
     }
     
    
+}
+
+
+extension AppDelegate {
+    
+    //根据用户ID，获取头像
+   class func readLocalAvatoWituserSSIPI(usrSSIPID:String) -> UIImage? {
+    
+        guard let documentDirectory =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            return UIImage(named: "wode_mrtx")
+        }
+        let ducupathSSIP = documentDirectory.appendingPathComponent("LippaimageCache")
+        
+        let imagePath = ducupathSSIP.appendingPathComponent("\(usrSSIPID).png")
+               
+               // 检查文件是否存在
+               if FileManager.default.fileExists(atPath: imagePath.path) {
+                   return UIImage(contentsOfFile: imagePath.path)
+               } else {
+                   return UIImage(named: "wode_mrtx")
+               }
+    }
+    
+    //根据用户ID，c储存头像
+    class func skvertLocalAvatoWituserSSIPI(usrSSIPID:String,saveringIMg:UIImage){
+        guard let documentDirectory =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            return
+        }
+        let ducupathSSIP = documentDirectory.appendingPathComponent("LippaimageCache")
+        
+        if !FileManager.default.fileExists(atPath: ducupathSSIP.path) {
+            try? FileManager.default.createDirectory(at: ducupathSSIP, withIntermediateDirectories: true, attributes: nil)
+               
+        }
+        
+        let imagePath = ducupathSSIP.appendingPathComponent("\(usrSSIPID).png")
+        if let imageData = saveringIMg.pngData() {
+            try? imageData.write(to: imagePath)
+               
+        }
+      
+    }
 }

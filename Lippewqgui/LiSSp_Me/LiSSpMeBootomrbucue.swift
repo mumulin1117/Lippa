@@ -106,6 +106,17 @@ class LiSSpMeBootomrbucue:  LissipSecondFrbucue,UICollectionViewDelegate,UIColle
            
            self.performBlockAfterDelayINSSIP(secondsSSIP: 1.0) {
                ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpNavitSnmingertips(rootViewController: LipSigggneSnmingertips.init())
+               //删除存储的账号相关列表的该数据
+               var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
+               
+               allUserDataSSIP =  UserDefaults.standard.object(forKey: "AllUserLocalDataList") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
+               let useiIDING = LipSigggneSnmingertips.logUoserdataSSIP["ssipAccID"]
+               for (ing,itemt) in allUserDataSSIP.enumerated() {
+                   if itemt["ssipAccID"] == useiIDING {
+                       allUserDataSSIP.remove(at: ing)
+                   }
+               }
+               UserDefaults.standard.set(allUserDataSSIP, forKey: "AllUserLocalDataList")
                
                self.quiteAlRemoveAccount()
                AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
@@ -118,7 +129,7 @@ class LiSSpMeBootomrbucue:  LissipSecondFrbucue,UICollectionViewDelegate,UIColle
     
     
     @objc func quiteAlRemoveAccount() {
-
+        
         ssuitreatNet()
         LipSigggneSnmingertips.logUoserdataSSIP.removeAll()
         LipSigggneSnmingertips.logPucserdataSSIP = nil
@@ -127,9 +138,10 @@ class LiSSpMeBootomrbucue:  LissipSecondFrbucue,UICollectionViewDelegate,UIColle
     
     }
     private func ssuitreatNet() {
+        UserDefaults.standard.set(nil, forKey: "siingeduserIDString")
         LiSSpMeBootomrbucue.FolsdwemeSSIP.removeAll()
         LiSSpMeBootomrbucue.facrewemeSSIP.removeAll()
-       
+      
         LiSSpMeaddgeBootomrbucue.cxhatArraySSIP.removeAll()
         
     }

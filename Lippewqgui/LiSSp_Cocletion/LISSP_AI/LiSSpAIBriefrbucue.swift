@@ -41,6 +41,18 @@ class LiSSpAIBriefrbucue: LissipSecondFrbucue {
         let startupload = LiSSpAIUploasingefrbucue.init()
         
         self.navigationController?.pushViewController(startupload, animated: true)
+        
+        //更新相关数据
+        var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
+        
+        allUserDataSSIP =  UserDefaults.standard.object(forKey: "AllUserLocalDataList") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
+        let useiIDING = LipSigggneSnmingertips.logUoserdataSSIP["ssipAccID"]
+        for (ing,itemt) in allUserDataSSIP.enumerated() {
+            if itemt["ssipAccID"] == useiIDING {
+                allUserDataSSIP[ing] = LipSigggneSnmingertips.logUoserdataSSIP
+            }
+        }
+        UserDefaults.standard.set(allUserDataSSIP, forKey: "AllUserLocalDataList")
     }
     
    

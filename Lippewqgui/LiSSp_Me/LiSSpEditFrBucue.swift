@@ -71,6 +71,20 @@ class LiSSpEditFrBucue:  LissipSecondFrbucue , UIImagePickerControllerDelegate &
         
         LipSigggneSnmingertips.logUoserdataSSIP["ssipDtfestBriedf"] = aboutsipp
         LipSigggneSnmingertips.logPucserdataSSIP = self.shineView.image
+        
+        //更新相关数据
+        var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
+        
+        allUserDataSSIP =  UserDefaults.standard.object(forKey: "AllUserLocalDataList") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
+        let useiIDING = LipSigggneSnmingertips.logUoserdataSSIP["ssipAccID"]
+        for (ing,itemt) in allUserDataSSIP.enumerated() {
+            if itemt["ssipAccID"] == useiIDING {
+                allUserDataSSIP[ing] = LipSigggneSnmingertips.logUoserdataSSIP
+            }
+        }
+        UserDefaults.standard.set(allUserDataSSIP, forKey: "AllUserLocalDataList")
+        
+        AppDelegate.skvertLocalAvatoWituserSSIPI(usrSSIPID: useiIDING ?? "345", saveringIMg: self.shineView.image!)
     }
     
     

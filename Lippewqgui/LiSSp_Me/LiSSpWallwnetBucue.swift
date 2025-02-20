@@ -98,10 +98,21 @@ extension LiSSpWallwnetBucue:UICollectionViewDelegate,UICollectionViewDataSource
             self.mineOladSSIP.text  = "\(oldamone)"
          }
         
+        //更新相关数据
+        var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
+        
+        allUserDataSSIP =  UserDefaults.standard.object(forKey: "AllUserLocalDataList") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
+        let useiIDING = LipSigggneSnmingertips.logUoserdataSSIP["ssipAccID"]
+        for (ing,itemt) in allUserDataSSIP.enumerated() {
+            if itemt["ssipAccID"] == useiIDING {
+                allUserDataSSIP[ing] = LipSigggneSnmingertips.logUoserdataSSIP
+            }
+        }
+        UserDefaults.standard.set(allUserDataSSIP, forKey: "AllUserLocalDataList")
         
         AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
        
-        self.navigationController?.popViewController(animated: true)
+//        self.navigationController?.popViewController(animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -119,6 +130,11 @@ extension LiSSpWallwnetBucue:UICollectionViewDelegate,UICollectionViewDataSource
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "lpotaxdfiznxgz.f.f.v.".oranApolWothCharrterString(), loaingShowView: self.view)
         let selidINdfo = self.blanceidSSIPayID[indexPath.row]
         
+//#if DEBUG
+//        self.getingReallIDREsultSSSIp(diomondAccount: selidINdfo.2)
+//        #else
+//        
+
         SwiftyStoreKit.purchaseProduct(selidINdfo.0, atomically: true) { psResult in
             var SistertSSIp = [CGRect]()
             SistertSSIp.insert(CGRect.zero, at: 0)
@@ -154,6 +170,8 @@ extension LiSSpWallwnetBucue:UICollectionViewDelegate,UICollectionViewDataSource
                 }
             }
         }
+        
+//#endif
     }
     
     

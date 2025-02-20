@@ -93,12 +93,12 @@ class LipSigggneSnmingertips: UIViewController {
             return
         }
        
-        if contenEmailSSIP == "lippa@gmail.com" {
-            ssuipCreaNet()
-            
-            return
-
-        }
+//        if contenEmailSSIP == "lippa@gmail.com" {
+//            ssuipCreaNet()
+//             
+//            return
+//
+//        }
         
         self.readyLippaToCreateNew(contenEmailSSIP: contenEmailSSIP)
         
@@ -119,8 +119,6 @@ class LipSigggneSnmingertips: UIViewController {
 
     }
     
-    
-
     @objc func statusdiihiiSSIP() {
         statauseSSIP.isSelected = !statauseSSIP.isSelected
         UserDefaults.standard.set(statauseSSIP.isSelected, forKey: "isagreeeeSSIP")
@@ -137,18 +135,10 @@ class LipSigggneSnmingertips: UIViewController {
     
     
     func comeSSIPONenterBottomUser() {
-        LipSigggneSnmingertips.logUoserdataSSIP = ["ssipNadme":"Aberria",
-                                          "ssipPicdty":"SSIPavator9",
-                                          "ssipDoimond":"100",
-                                          "ssipDtfestAccount":"lippa@gmail.com",
-                                          "ssipDtfestBriedf":"🖤 Collector of forgotten stories | Preserving history, one treasure at a time 📜",
-                                          "ssipAccID":"234589"
-                                         
-                                          
-        
-        ]
+     
 
-        LipSigggneSnmingertips.logPucserdataSSIP = UIImage(named:"SSIPavator9")
+        
+        LipSigggneSnmingertips.logPucserdataSSIP = AppDelegate.readLocalAvatoWituserSSIPI(usrSSIPID:"345")
         
         if let appledeelgate = (UIApplication.shared.delegate) as? AppDelegate {
             
@@ -206,42 +196,88 @@ extension LipSigggneSnmingertips{
             return
         }
         
-        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Ckraewaetdef uilnw m.v.s.f.".oranApolWothCharrterString(), loaingShowView: self.view)
-        self.performBlockAfterDelayINSSIP(secondsSSIP: 1.5) {
-            AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
-
-            labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
-            LipSigggneSnmingertips.logUoserdataSSIP["ssipDtfestAccount"] = contenEmailSSIP
-            
-            if self.entrtSSIPOEmail.isHidden  {
-                self.entrtSSIPOEmail.addSubview(labeSiop)
+        //判断该邮箱是否注册，注册了，就是登陆-获取本地数据，
+        var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
+        
+        allUserDataSSIP =  UserDefaults.standard.object(forKey: "AllUserLocalDataList") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
+      
+        if let yxaccount = allUserDataSSIP.filter({ dicUserSSIP in
+            return dicUserSSIP["ssipDtfestAccount"] == contenEmailSSIP
+        }).first {
+            LipSigggneSnmingertips.logUoserdataSSIP = yxaccount//注册了，就是登陆-获取本地数据
+            let useid = yxaccount["ssipAccID"]
+            if useid == "345" {//如果是测试账号，添加测试数据
+                self.comeSSIPONenterBottomUser()
+            }else{
+                LipSigggneSnmingertips.logPucserdataSSIP = AppDelegate.readLocalAvatoWituserSSIPI(usrSSIPID: useid ?? "345")//UIImage(named: "wode_mrtx")
             }
-            ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpBArBootomrbucue.init()
-            self.createNewrAccounSSIp()
+            UserDefaults.standard.set(useid, forKey: "siingeduserIDString")
             
-            AppDelegate.showSSIPSuccessTips(acccusString: "Lyobgo licnh pseufcvcsezsjscfsullv!".oranApolWothCharrterString())
+            AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "lcoygx hiynd d.r.g.a.".oranApolWothCharrterString(), loaingShowView: self.view)
+            self.performBlockAfterDelayINSSIP(secondsSSIP: 1.5) {
+                AppDelegate.hideLoadingSSIPTipsIndicator( loaingShowView: self.view)
+               
+                ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpBArBootomrbucue.init()
+               
+                AppDelegate.showSSIPSuccessTips(acccusString: "Lyoxgg fiunn lsfuycrckelswsxfeuqlm!".oranApolWothCharrterString())
+               
+            }
+            
+        }else{
+          //没注册就是创建，
+            let uid = "\(Int.random(in: 9000...10000))"
+            UserDefaults.standard.set(uid, forKey: "siingeduserIDString")
+            
+            let newUserSSIP =  ["ssipNadme":"NpUuLgL".oranApolWothCharrterString(),
+                                                                       
+                                "ssipPicdty":"wode_mrtx",
+                                "ssipDoimond":"0",
+                                "ssipDtfestAccount":contenEmailSSIP,
+                                "ssipDtfestBriedf":"NpUuLgL".oranApolWothCharrterString(),
+                                "ssipAccID":uid
+                                  
+            ]
+            
+            allUserDataSSIP.append(newUserSSIP)
+            UserDefaults.standard.set(allUserDataSSIP, forKey: "AllUserLocalDataList")
+            
+            
+            LipSigggneSnmingertips.logUoserdataSSIP = newUserSSIP
+            LipSigggneSnmingertips.logPucserdataSSIP = UIImage(named: "wode_mrtx")
+            
+          
+            
+            labeSiop.textColor = view.backgroundColor
+            
+            labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+            
+           
+            
+            
+            
+            AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Ckraewaetdef uilnw m.v.s.f.".oranApolWothCharrterString(), loaingShowView: self.view)
+            self.performBlockAfterDelayINSSIP(secondsSSIP: 1.5) {
+                AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
 
+                labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+                 
+                if self.entrtSSIPOEmail.isHidden  {
+                    self.entrtSSIPOEmail.addSubview(labeSiop)
+                }
+                
+                
+                
+                ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpBArBootomrbucue.init()
+                
+                
+                AppDelegate.showSSIPSuccessTips(acccusString: "Lyobgo licnh pseufcvcsezsjscfsullv!".oranApolWothCharrterString())
+
+            }
         }
+        
+        
        
     }
     
-    
-    private func createNewrAccounSSIp()  {
-        let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))
-        labeSiop.text = self.title
-        
-        
-        LipSigggneSnmingertips.logUoserdataSSIP["ssipAccID"] = "\(Int.random(in: 3000...8000))"
-        labeSiop.textColor = view.backgroundColor
-        LipSigggneSnmingertips.logUoserdataSSIP["ssipPicdty"] = "userHear9"
-        labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
-        LipSigggneSnmingertips.logUoserdataSSIP["ssipNadme"] = "NpUuLgL".oranApolWothCharrterString()
-        
-        if entrtSSIPOEmail.isHidden  {
-            entrtSSIPOEmail.addSubview(labeSiop)
-        }
-        LipSigggneSnmingertips.logPucserdataSSIP = UIImage(named: "wode_mrtx")
-
-    }
-    
+   
 }
