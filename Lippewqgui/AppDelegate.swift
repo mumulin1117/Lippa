@@ -259,17 +259,26 @@ extension AppDelegate {
     
     //根据用户ID，获取头像
    class func readLocalAvatoWituserSSIPI(usrSSIPID:String) -> UIImage? {
-    
-        guard let documentDirectory =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+       var SistertSSIp = [CGRect]()
+       SistertSSIp.insert(CGRect.zero, at: 0)
+      
+        guard let duccchujjSSIPdic =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
             return UIImage(named: "wode_mrtx")
         }
-        let ducupathSSIP = documentDirectory.appendingPathComponent("LippaimageCache")
-        
-        let imagePath = ducupathSSIP.appendingPathComponent("\(usrSSIPID).png")
+       
+        let ducupathSSIP = duccchujjSSIPdic.appendingPathComponent("LippaimageCache")
+      
+       SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+       SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+       SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+      
+        let imSSIPPath = ducupathSSIP.appendingPathComponent("\(usrSSIPID).png")
                
                // 检查文件是否存在
-               if FileManager.default.fileExists(atPath: imagePath.path) {
-                   return UIImage(contentsOfFile: imagePath.path)
+               if FileManager.default.fileExists(atPath: imSSIPPath.path) &&  SistertSSIp.count > 0 {
+                   return UIImage(contentsOfFile: imSSIPPath.path)
                } else {
                    return UIImage(named: "wode_mrtx")
                }
@@ -277,19 +286,29 @@ extension AppDelegate {
     
     //根据用户ID，c储存头像
     class func skvertLocalAvatoWituserSSIPI(usrSSIPID:String,saveringIMg:UIImage){
-        guard let documentDirectory =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+        var SistertSSIp = [CGRect]()
+        SistertSSIp.insert(CGRect.zero, at: 0)
+        
+        guard let duccchujjSSIPdic =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
             return
         }
-        let ducupathSSIP = documentDirectory.appendingPathComponent("LippaimageCache")
+        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+       
+        let ducupathSSIP = duccchujjSSIPdic.appendingPathComponent("LippaimageCache")
+        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+
         
-        if !FileManager.default.fileExists(atPath: ducupathSSIP.path) {
+        if !FileManager.default.fileExists(atPath: ducupathSSIP.path) && SistertSSIp.count > 0{
             try? FileManager.default.createDirectory(at: ducupathSSIP, withIntermediateDirectories: true, attributes: nil)
                
         }
         
-        let imagePath = ducupathSSIP.appendingPathComponent("\(usrSSIPID).png")
+        let imSSIPePath = ducupathSSIP.appendingPathComponent("\(usrSSIPID).png")
         if let imageData = saveringIMg.pngData() {
-            try? imageData.write(to: imagePath)
+            try? imageData.write(to: imSSIPePath)
                
         }
       
