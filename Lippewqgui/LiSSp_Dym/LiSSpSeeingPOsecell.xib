@@ -67,7 +67,7 @@
                         <state key="normal" image="colGreywe"/>
                         <state key="selected" image="yellowCol"/>
                     </button>
-                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFx-6V-cgY">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFx-6V-cgY">
                         <rect key="frame" x="225" y="316" width="24" height="24"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" image="baimoJIkmore"/>
@@ -106,6 +106,7 @@
                 <outlet property="postingContetntesxrSSIP" destination="qS5-Jf-fns" id="62J-E7-pAG"/>
                 <outlet property="postingUserimgSSIP" destination="9R8-Aj-zrc" id="kYT-d7-phD"/>
                 <outlet property="postusernamSSIP" destination="KgB-Y5-oNf" id="ci2-uO-FGv"/>
+                <outlet property="reoipLSIPP" destination="iFx-6V-cgY" id="f3v-5R-q2w"/>
             </connections>
             <point key="canvasLocation" x="193.12977099236642" y="63.380281690140848"/>
         </collectionViewCell>

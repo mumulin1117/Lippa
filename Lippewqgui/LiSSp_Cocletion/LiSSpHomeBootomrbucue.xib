@@ -145,6 +145,18 @@
                         <constraint firstAttribute="width" constant="36" id="Mwu-Cq-rED"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHr-x0-SjF">
+                    <rect key="frame" x="25" y="379" width="39" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="39" id="gqk-gs-05h"/>
+                        <constraint firstAttribute="height" constant="38" id="jOO-NX-LGq"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="purpureJIkmore"/>
+                    <connections>
+                        <action selector="reportCollectionONt:" destination="-1" eventType="touchUpInside" id="JZr-GG-g4y"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -154,11 +166,13 @@
                 <constraint firstItem="NFz-aE-iOV" firstAttribute="leading" secondItem="yqj-27-FFE" secondAttribute="leading" id="4V6-0Z-RbA"/>
                 <constraint firstItem="aH9-bT-EQy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4lS-eS-oh1"/>
                 <constraint firstItem="KZ9-X9-nCN" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-30" id="4rW-rK-dWa"/>
+                <constraint firstItem="NFz-aE-iOV" firstAttribute="top" secondItem="bHr-x0-SjF" secondAttribute="bottom" constant="6" id="5je-5Z-9cb"/>
                 <constraint firstItem="FJg-SN-jbh" firstAttribute="centerX" secondItem="aH9-bT-EQy" secondAttribute="centerX" id="5xa-CN-eWy"/>
                 <constraint firstItem="KVG-KY-MHU" firstAttribute="top" secondItem="3vr-Q3-qTr" secondAttribute="bottom" constant="1" id="7Lt-Yz-oyS"/>
                 <constraint firstItem="FJg-SN-jbh" firstAttribute="centerY" secondItem="aH9-bT-EQy" secondAttribute="centerY" id="8jc-rC-7fA"/>
                 <constraint firstItem="KVG-KY-MHU" firstAttribute="bottom" secondItem="KZ9-X9-nCN" secondAttribute="bottom" constant="12" id="FAX-jj-ROi"/>
                 <constraint firstItem="NFz-aE-iOV" firstAttribute="trailing" secondItem="yqj-27-FFE" secondAttribute="trailing" id="Fnl-AP-9pj"/>
+                <constraint firstItem="bHr-x0-SjF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="IJ7-tZ-emj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Zza-fU-a33" secondAttribute="trailing" constant="32" id="Jup-JO-rX7"/>
                 <constraint firstItem="KVG-KY-MHU" firstAttribute="top" secondItem="yqj-27-FFE" secondAttribute="bottom" constant="21" id="PHb-dr-HH1"/>
                 <constraint firstItem="yqj-27-FFE" firstAttribute="top" secondItem="aHV-Xe-O7Y" secondAttribute="bottom" constant="-64" id="QjF-AT-PJD"/>
@@ -203,6 +217,7 @@
         <image name="Lippa_oiu" width="88.5" height="25"/>
         <image name="SSIpCollec0" width="736" height="981"/>
         <image name="lippa_you_qj" width="32" height="96"/>
+        <image name="purpureJIkmore" width="30" height="30"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

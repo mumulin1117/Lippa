@@ -103,7 +103,7 @@ class LiSSpTieZIngefrbucue:  LissipSecondFrbucue {
         
     }
     private func ssuitreatNet() {
-        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "", loaingShowView: self.view)
+        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Rgeyquuieesptn.k.h.".oranApolWothCharrterString(), loaingShowView: self.view)
         self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
             AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
             AppDelegate.showSSIPSuccessTips(acccusString: "Tpheahnlkf uyfojuh nfoobra oyooauqrr gsmuqpmemrfvjiosvimoxna.b iWreu tweimlllu fvreirpibfbyy calnedv ohwatnmdtlfef qiptg gabsa qsxoxoynx kajsa cpsonsespiabkloe".oranApolWothCharrterString())

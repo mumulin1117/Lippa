@@ -25,6 +25,8 @@ class LiSSpDynamicBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDataSour
             
             CellIDSIPP.postCenDataSSIP = selidINdfo
             CellIDSIPP.collecPost.isSelected = (selidINdfo["islikeThisPublish"] == "SSIPLike")
+            CellIDSIPP.reoipLSIPP.addTarget(self, action: #selector(shingcaseOriginReport), for: .touchUpInside)
+            
         }
        
         return CellIDSIPP
@@ -122,5 +124,33 @@ class LiSSpDynamicBootomrbucue: LiSSpNOrmalSnmingertips,UICollectionViewDataSour
         
     }
     
+    
+    @objc func shingcaseOriginReport(_ sender: UIButton) {
+        
+        let normailAreport = UIAlertController(title: "Rsexphojrotm gCnounutfeznjt".oranApolWothCharrterString(), message:nil, preferredStyle: .actionSheet)
+        let reasonsdonin = ["Harassment or Bullying","Inappropriate Content","Spam or Scam Attempts","Hate Speech"]
+        
+        for item in reasonsdonin {
+            normailAreport.addAction(UIAlertAction(title: item, style: .default, handler: { alertSSIP in
+                self.DetailssuitreatNet()
+               
+            }))
+        }
+       
+        
+        normailAreport.addAction(UIAlertAction(title: "Cmabnvcjeel".oranApolWothCharrterString(), style: .default))
+        
+        self.present(normailAreport, animated: true)
+        
+        
+    }
+    private func DetailssuitreatNet() {
+//        AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Rgeyquuieesptn.k.h.".oranApolWothCharrterString(), loaingShowView: self.view)
+//        self.performBlockAfterDelayINSSIP(secondsSSIP: 2.0) {
+//            
+//            AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
+            AppDelegate.showSSIPSuccessTips(acccusString: "Tfhraangkc lyxoauj ufooarp vyvovugrk cskuvpteergvrizsqipopnh.k lWqez uwtijlllg zvlejrnimfmyp oavnhdc mhpaxncdblaef viqto damse mslogognj caosl dppofszsriibclae".oranApolWothCharrterString())
+//        }
+    }
 
 }

@@ -20,6 +20,7 @@ class LiSSpSeeingPOsecell: UICollectionViewCell {
     @IBOutlet weak var postingContetntesxrSSIP: UILabel!
     
     
+    @IBOutlet weak var reoipLSIPP: UIButton!
     
     @IBOutlet weak var coaprmentSSIP: UIButton!
     
