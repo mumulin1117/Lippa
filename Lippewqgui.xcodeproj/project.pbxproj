@@ -12,6 +12,7 @@
 		042D1C462D5B292300854E10 /* SSIPUjgun.plist in Resources */ = {isa = PBXBuildFile; fileRef = 042D1C452D5B292300854E10 /* SSIPUjgun.plist */; };
 		042D1C492D5DC07300854E10 /* LiSSpSeeingPOsecell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D1C472D5DC07300854E10 /* LiSSpSeeingPOsecell.swift */; };
 		042D1C4A2D5DC07300854E10 /* LiSSpSeeingPOsecell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042D1C482D5DC07300854E10 /* LiSSpSeeingPOsecell.xib */; };
+		047218962D7057760028B44D /* LiSSpBucueTruber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047218952D7057760028B44D /* LiSSpBucueTruber.swift */; };
 		04CD3FB02D59928F001D403C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD3FAA2D59928F001D403C /* AppDelegate.swift */; };
 		04CD3FB12D59928F001D403C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CD3FAB2D59928F001D403C /* Assets.xcassets */; };
 		04CD3FB32D59928F001D403C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CD3FAE2D59928F001D403C /* LaunchScreen.storyboard */; };
@@ -71,6 +72,7 @@
 		042D1C452D5B292300854E10 /* SSIPUjgun.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SSIPUjgun.plist; sourceTree = "<group>"; };
 		042D1C472D5DC07300854E10 /* LiSSpSeeingPOsecell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiSSpSeeingPOsecell.swift; sourceTree = "<group>"; };
 		042D1C482D5DC07300854E10 /* LiSSpSeeingPOsecell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiSSpSeeingPOsecell.xib; sourceTree = "<group>"; };
+		047218952D7057760028B44D /* LiSSpBucueTruber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiSSpBucueTruber.swift; sourceTree = "<group>"; };
 		04CD3F922D599265001D403C /* Lippewqgui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lippewqgui.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CD3FAA2D59928F001D403C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04CD3FAB2D59928F001D403C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				04CD3FB42D5998C3001D403C /* LipSigggneSnmingertips.swift */,
 				04CD3FB52D5998C3001D403C /* LipSigggneSnmingertips.xib */,
 				04CD3FBA2D59AE20001D403C /* LiSSpBArBootomrbucue.swift */,
+				047218952D7057760028B44D /* LiSSpBucueTruber.swift */,
 				042D1C452D5B292300854E10 /* SSIPUjgun.plist */,
 			);
 			path = Lippewqgui;
@@ -420,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04CD3FF42D5A0361001D403C /* LiSSpCommwnentsingefrbucue.swift in Sources */,
+				047218962D7057760028B44D /* LiSSpBucueTruber.swift in Sources */,
 				04CD3FEC2D59FE58001D403C /* LiSSpAIUploasingefrbucue.swift in Sources */,
 				04CD3FD42D59DA03001D403C /* LiSSpMeaddgeBootomrbucue.swift in Sources */,
 				04CD3FDF2D59F577001D403C /* LiSSpEnterDetailBootomrbucue.swift in Sources */,
@@ -471,14 +475,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				EXCLUDED_ARCHS = "";
+				EXCLUDED_ARCHS = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Lippewqgui/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Lippa;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Lippa requests access to your camera so that you can take photos to upload your profile picture and transmit video during audio and video calls. ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To make use of the iCloud camera's location functionalities,Lippa needs location permissions";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Lippa request access to your microphone to enable audio and video calls";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Lippa request access to your photo album to allow you to upload dynamic images and photos of your collectibles.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -491,7 +496,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lwnetBucues.liowppa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -512,14 +517,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				EXCLUDED_ARCHS = "";
+				EXCLUDED_ARCHS = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Lippewqgui/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Lippa;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Lippa requests access to your camera so that you can take photos to upload your profile picture and transmit video during audio and video calls. ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To make use of the iCloud camera's location functionalities,Lippa needs location permissions";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Lippa request access to your microphone to enable audio and video calls";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Lippa request access to your photo album to allow you to upload dynamic images and photos of your collectibles.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -532,7 +538,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lwnetBucues.liowppa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

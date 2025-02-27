@@ -10,9 +10,9 @@ target 'Lippewqgui' do
 pod 'SnapKit'
 pod 'SwiftMessages'
 pod 'IQKeyboardManager'
-
+pod 'FBSDKCoreKit'
 pod 'SwiftyStoreKit'
-
+pod 'Alamofire'
 
 end
 post_install do |installer_representation|

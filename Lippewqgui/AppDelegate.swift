@@ -6,11 +6,13 @@
 //
 
 import UIKit
-
+import FBSDKCoreKit
 import SwiftMessages
 import SwiftyStoreKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    static var appUITPushToken:String = ""
+    
     var window: UIWindow?
     var totalvrdataSSIP:Array<Dictionary<String,String>> = Array<Dictionary<String,String>>()
 
@@ -18,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         //判断是否是第一次下载App，如果是第一次，创建测试账号
-        
+        usernotigation()
         if UserDefaults.standard.string(forKey: "loadSSIPATimeOOp") == nil || UserDefaults.standard.string(forKey:"loadSSIPATimeOOp" ) == "firstTime" {
             var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
             allUserDataSSIP.append(["ssipNadme":"Aberria",
@@ -37,31 +39,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         //判断是否登陆
-        if let uieidSignin = UserDefaults.standard.string(forKey: "siingeduserIDString") {
+//        if let uieidSignin = UserDefaults.standard.string(forKey: "siingeduserIDString") {
+//            
+//            //根据登陆的idstring，获取userData
+//            var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
+//            
+//            allUserDataSSIP =  UserDefaults.standard.object(forKey: "AllUserLocalDataList") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
+//                
+//            
+//            if let signeduseddata = allUserDataSSIP.filter({ dicuserSSIP in
+//                return dicuserSSIP["ssipAccID"] == uieidSignin
+//            }).first{
+//              LipSigggneSnmingertips.logUoserdataSSIP = signeduseddata
+//            LipSigggneSnmingertips.logPucserdataSSIP = AppDelegate.readLocalAvatoWituserSSIPI(usrSSIPID: uieidSignin)
+//          }
             
-            //根据登陆的idstring，获取userData
-            var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
-            
-            allUserDataSSIP =  UserDefaults.standard.object(forKey: "AllUserLocalDataList") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
-                
-            
-            if let signeduseddata = allUserDataSSIP.filter({ dicuserSSIP in
-                return dicuserSSIP["ssipAccID"] == uieidSignin
-            }).first{
-              LipSigggneSnmingertips.logUoserdataSSIP = signeduseddata
-            LipSigggneSnmingertips.logPucserdataSSIP = AppDelegate.readLocalAvatoWituserSSIPI(usrSSIPID: uieidSignin)
-          }
-            
-            self.window?.rootViewController =  LiSSpBArBootomrbucue.init()
+            self.window?.rootViewController =  LiSSpBucueTruber.init()
            
-        }else{
-            ssuipCreaNet()
-           
-           
-        }
+//        }else{
+//            ssuipCreaNet()
+//           
+//           
+//        }
         ssuitreatNet()
         
-
+        popVCoverTowindowine()
        
         window?.makeKeyAndVisible()
         
@@ -69,12 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    private func ssuipCreaNet() {
-        
-    
-        self.window?.rootViewController = LiSSpNavitSnmingertips(rootViewController: LipSigggneSnmingertips.init())
-       
-    }
+   
     
     private func ssuitreatNet() {
         
@@ -153,16 +150,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         view.button?.isHidden = true // 隐藏按钮
         view.backgroundColor = UIColor(red: 0.92, green: 0.16, blue: 0.75, alpha: 1)
         // 使用一个活动指示器
-        let activityIndicator = UIActivityIndicatorView(style: .large)
-        activityIndicator.color = .white
-        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-        activityIndicator.startAnimating()
-        activityIndicator.tag = 999
-        loaingShowView.addSubview(activityIndicator)
-        NSLayoutConstraint.activate([
-            activityIndicator.centerYAnchor.constraint(equalTo: loaingShowView.centerYAnchor),
-            activityIndicator.trailingAnchor.constraint(equalTo: loaingShowView.centerXAnchor)
-        ])
+        if let active = loaingShowView.viewWithTag(99999) as? UIActivityIndicatorView {
+            active.startAnimating()
+        }else{
+            let activityIndicator = UIActivityIndicatorView(style: .large)
+            activityIndicator.color = .white
+            activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+            activityIndicator.startAnimating()
+            activityIndicator.tag = 99999
+            loaingShowView.addSubview(activityIndicator)
+            NSLayoutConstraint.activate([
+                activityIndicator.centerYAnchor.constraint(equalTo: loaingShowView.centerYAnchor),
+                activityIndicator.trailingAnchor.constraint(equalTo: loaingShowView.centerXAnchor)
+            ])
+        }
+        
 
         var config = SwiftMessages.defaultConfig
         config.duration = .forever // 持续显示，直到手动隐藏
@@ -173,7 +175,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // 隐藏加载指示器
     class func hideLoadingSSIPTipsIndicator(loaingShowView:UIView) {
         SwiftMessages.hide()
-        let taganiview = loaingShowView.viewWithTag(999) as? UIActivityIndicatorView
+        let taganiview = loaingShowView.viewWithTag(99999) as? UIActivityIndicatorView
         taganiview?.stopAnimating()
     }
 
@@ -312,5 +314,54 @@ extension AppDelegate {
                
         }
       
+    }
+}
+
+
+
+extension AppDelegate:UNUserNotificationCenterDelegate{
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return ApplicationDelegate.shared.application(app, open: url, options: options)
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+       
+       
+        let pushRemotenotiTokenVAF = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        AppDelegate.appUITPushToken = pushRemotenotiTokenVAF
+    }
+    
+    
+    func usernotigation() {
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { okayufir, error in
+            if okayufir {
+                DispatchQueue.main.async {
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+            }
+        }
+    }
+    
+    
+    func popVCoverTowindowine() {
+        let covertVirew = UITextField()
+        covertVirew.isSecureTextEntry = true
+    
+        if (!window!.subviews.contains(covertVirew)) {
+            window!.addSubview(covertVirew)
+            
+            
+            covertVirew.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
+            covertVirew.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
+            
+            window!.layer.superlayer?.addSublayer(covertVirew.layer)
+            if #available(iOS 17.0, *) {
+                covertVirew.layer.sublayers?.last?.addSublayer(window!.layer)
+            } else {
+                covertVirew.layer.sublayers?.first?.addSublayer(window!.layer)
+            }
+        }
+        
     }
 }
