@@ -694,7 +694,7 @@ extension LiSSpBucueTruber{
                       
                       
                         
-                        AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext:self.dictionaryToString(olertlio), loaingShowView: self.view)
+                        AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext:self.dictionaryToString(olertlio), loaingShowView: self.view,loadingLippTime: 10)
                     }
                     
 #else

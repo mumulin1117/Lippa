@@ -180,13 +180,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     
-    class func showINfoSSIPTipsMessage(ladogdetailtext:String,loaingShowView:UIView) {
+    class func showINfoSSIPTipsMessage(ladogdetailtext:String,loaingShowView:UIView,loadingLippTime:TimeInterval = 2) {
         let view = MessageView.viewFromNib(layout: .messageView)
         view.configureContent(title: "Txiipis".oranApolWothCharrterString(), body: ladogdetailtext)
         view.button?.isHidden = true
 
         var config = SwiftMessages.defaultConfig
-        config.duration = .seconds(seconds: 2)
+        config.duration = .seconds(seconds: loadingLippTime)
         config.presentationContext = .window(windowLevel: .alert)
 
         SwiftMessages.show(config: config, view: view)
