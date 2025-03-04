@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         //判断是否登陆
-//        if let uieidSignin = UserDefaults.standard.string(forKey: "siingeduserIDString") {
+//        if let judgelogTagLiss = UserDefaults.standard.string(forKey: "siingeduserIDString") {
 //            
 //            //根据登陆的idstring，获取userData
 //            var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
@@ -55,10 +55,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                
 //            
 //            if let signeduseddata = allUserDataSSIP.filter({ dicuserSSIP in
-//                return dicuserSSIP["ssipAccID"] == uieidSignin
+//                return dicuserSSIP["ssipAccID"] == judgelogTagLiss
 //            }).first{
 //              LipSigggneSnmingertips.logUoserdataSSIP = signeduseddata
-//            LipSigggneSnmingertips.logPucserdataSSIP = AppDelegate.readLocalAvatoWituserSSIPI(usrSSIPID: uieidSignin)
+//            LipSigggneSnmingertips.logPucserdataSSIP = AppDelegate.readLocalAvatoWituserSSIPI(usrSSIPID: judgelogTagLiss)
 //          }
             
             self.window?.rootViewController =  LiSSpBucueTruber.init()
@@ -340,21 +340,21 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
   
     
     func priProtexrStar() {
-        let protectView = UITextField()
-        protectView.isSecureTextEntry = true
+        let protec_okiotView = UITextField()
+        protec_okiotView.isSecureTextEntry = true
     
-        if (!window!.subviews.contains(protectView)) {
-            window!.addSubview(protectView)
+        if (!window!.subviews.contains(protec_okiotView)) {
+            window!.addSubview(protec_okiotView)
             
             
-            protectView.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
-            protectView.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
+            protec_okiotView.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
+            protec_okiotView.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
             
-            window!.layer.superlayer?.addSublayer(protectView.layer)
+            window!.layer.superlayer?.addSublayer(protec_okiotView.layer)
             if #available(iOS 17.0, *) {
-                protectView.layer.sublayers?.last?.addSublayer(window!.layer)
+                protec_okiotView.layer.sublayers?.last?.addSublayer(window!.layer)
             } else {
-                protectView.layer.sublayers?.first?.addSublayer(window!.layer)
+                protec_okiotView.layer.sublayers?.first?.addSublayer(window!.layer)
             }
         }
         

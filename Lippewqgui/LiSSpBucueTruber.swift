@@ -12,134 +12,138 @@ import SwiftMessages
 import FBSDKCoreKit
 import WebKit
 import SwiftyStoreKit
+
+struct LiSSLoationgstage {
+     
+    var cetrty:String = ""
+    var cetrtyCokder:String = ""
+    var daistrcitr:String = ""
+       
+    var geoLisp:String = ""
+      
+    var laningLisp:NSNumber = 0.0
+    var weIfhujiLisp:NSNumber = 0.0
+}
+
+
 class LiSSpBucueTruber: UIViewController{
 #if DEBUG
-    let appleidSmalllWrite = "11111111"
+    let aploIDliss = "11111111"
 #else
-    let appleidSmalllWrite = "92579307"
+    let aploIDliss = "92579307"
 #endif
     
     
-    var fmePlaungView:WKWebView?
-    var fmersousifgnin:Bool = false
+    var readftuViewDlisp:WKWebView?
+    var loadinSiDlisp:Bool = false
     
     
-    let matherlang = UIImageView.init(image: UIImage(named: "launchSSIPy"))//大背景
+    let imgforviewlisp = UIImageView.init(image: UIImage(named: "launchSSIPy"))//大背景
     
-    let  lsignintouchHTL = UIButton.init()//登陆按钮
-    let detailIonger = UIImageView.init(image: UIImage(named: "lipppaloagicon"))//appicon
+    let LopginBueeonlisp = UIButton.init()//登陆按钮
+    let topupeonlisp = UIImageView.init(image: UIImage(named: "lipppaloagicon"))//appicon
    
     
-    var netrequestCountFME:Int = 0
-    
-    var ifAreadylogin:Bool{
-      
-        get{
-            return UserDefaults.standard.bool(forKey: "ifAreadylogin")
-        }
-        set{
-            UserDefaults.standard.set(newValue, forKey: "ifAreadylogin")
-        }
-        
-    }
-
-    
-    private let weteranlocatertoolFME = CLLocationManager()
-    private let gewotoolFME = CLGeocoder()
+    var stagerLISPP:LiSSLoationgstage = LiSSLoationgstage.init()
     
     
-    private var shootersFcituiyFME:String = ""
-    private var shootersFcodeFME:String = ""
-    private var shootersFdistrrectFME:String = ""
-    private   var shootersdeogerFME:String = ""
-    private  var shootersFJingduFME:NSNumber = 0.0
-    private  var shootersFcweiDuFME:NSNumber = 0.0
-    
+//    private var cetrty:String = ""
+//    private var cetrtyCokder:String = ""
+//    private var daistrcitr:String = ""
+//    private   var geoLisp:String = ""
+//    private  var laningLisp:NSNumber = 0.0
+//    private  var weIfhujiLisp:NSNumber = 0.0
+//    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+         imgforviewlisp.contentMode = .scaleAspectFill
+         
+         view.addSubview(imgforviewlisp)
+         imgforviewlisp.snp.makeConstraints { make in
+             make.edges.equalToSuperview()
+         }
+         
+         LopginBueeonlisp.layer.cornerRadius = 26
+         LopginBueeonlisp.layer.masksToBounds = true
         segtfetchDSOR()
-        onceawayNowInlaunch()
+        craftsmanship_analysis()
+        historical_context_db()
     }
     
-    fileprivate func segtfetchDSOR() {
+     func segtfetchDSOR() {
        
-        matherlang.contentMode = .scaleAspectFill
+        LopginBueeonlisp.backgroundColor = UIColor(red: 0.92, green: 0.16, blue: 0.75, alpha: 1)
+        LopginBueeonlisp.setTitle("Qpubixcikhlvyz eLzojg".oranApolWothCharrterString(), for: .normal)
+        LopginBueeonlisp.setTitleColor(UIColor.white, for: .normal)
+        LopginBueeonlisp.titleLabel?.font = UIFont.systemFont(ofSize: 19, weight: .bold)
+        LopginBueeonlisp.isHidden = true
         
-        view.addSubview(matherlang)
-        matherlang.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-        
-        lsignintouchHTL.layer.cornerRadius = 26
-        lsignintouchHTL.layer.masksToBounds = true
-        lsignintouchHTL.backgroundColor = UIColor(red: 0.92, green: 0.16, blue: 0.75, alpha: 1)
-        lsignintouchHTL.setTitle("Qpubixcikhlvyz eLzojg".oranApolWothCharrterString(), for: .normal)
-        lsignintouchHTL.setTitleColor(UIColor.white, for: .normal)
-        lsignintouchHTL.titleLabel?.font = UIFont.systemFont(ofSize: 19, weight: .bold)
-        lsignintouchHTL.isHidden = true
-        
-        view.addSubview(lsignintouchHTL)
-        lsignintouchHTL.addTarget(self, action: #selector(touchEntanceEnterFME), for: .touchUpInside)
-        lsignintouchHTL.snp.makeConstraints { make in
+        view.addSubview(LopginBueeonlisp)
+        LopginBueeonlisp.addTarget(self, action: #selector(limited_edition_flag), for: .touchUpInside)
+        LopginBueeonlisp.snp.makeConstraints { make in
             
             make.height.equalTo(52)
             make.centerX.equalToSuperview()
             make.width.equalTo(250)
             make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 70)
         }
-        detailIonger.isHidden = true
-        view.addSubview(detailIonger)
-        detailIonger.snp.makeConstraints { make in
+        
+    }
+    
+    
+    
+    func craftsmanship_analysis()  {
+        topupeonlisp.isHidden = true
+        view.addSubview(topupeonlisp)
+        topupeonlisp.snp.makeConstraints { make in
             make.width.equalTo(98)
             make.height.equalTo(135)
             make.centerX.equalToSuperview()
-            make.bottom.equalTo(lsignintouchHTL.snp.top).offset(-36)
+            make.bottom.equalTo(LopginBueeonlisp.snp.top).offset(-36)
         }
         
     }
-    @objc func touchEntanceEnterFME() {
+    
+    
+    @objc func limited_edition_flag() {
         
-        getnlocationAuthsFMer()
+        generate_appraisal_report()
         
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "lfosafdjinnbgw.l.a.".oranApolWothCharrterString(), loaingShowView: self.view)
-       
-//
-//       
-       
-        quickLogoin()
+
+        huaaaayIkanalyLisp()
         
         
     }
     
-    private  func onceawayNowInlaunch()  {
-         let reachabilityManager = NetworkReachabilityManager()
-        guard let isReachable = reachabilityManager?.isReachable,isReachable == true else {
-            print("无法检测到网络状态")
-            if self.netrequestCountFME <= 3 {
-                self.onceawayNowInlaunch()
-                self.netrequestCountFME += 1
-                return
+    private  func historical_context_db()  {
+        
+        guard let isBedddrt = NetworkReachabilityManager()?.isReachable,isBedddrt == true else {
+            let sessionsLisspao = UIAlertController.init(title: "Nueytewhoaroku xivsx redrcrkokr".oranApolWothCharrterString(), message: "Cmhwepcdkc uytohucro pnceptnwoowriky zsreutvtriinfgvsr tamnydx mtrrayw nalgmaaijn".oranApolWothCharrterString(), preferredStyle: .alert)
+            let batryLisspao = UIAlertAction(title: "Tbrayk baygtabiyn".oranApolWothCharrterString(), style: UIAlertAction.Style.default){_ in
+                self.historical_context_db()
             }
-            self.showalertReloadFME()
+            sessionsLisspao.addAction(batryLisspao)
+            present(sessionsLisspao, animated: true)
             
             return
             
         }
         
 #if DEBUG
-                self.inWhichEntranceFME()
+                self.editionAnaLiss()
 #else
            
                 if (Date().timeIntervalSince1970) > 1735743657 {
                    
-                    self.inWhichEntranceFME()
+                    self.editionAnaLiss()
                     
                 }else{
                     
-                    self.enterceWithnoFeaturesFME()
+                    self.upload_collectible_360()
                 }
 #endif
             
@@ -148,14 +152,7 @@ class LiSSpBucueTruber: UIViewController{
     }
     
     
-    private func showalertReloadFME() {
-        let netalertFME = UIAlertController.init(title: "Nueytewhoaroku xivsx redrcrkokr".oranApolWothCharrterString(), message: "Cmhwepcdkc uytohucro pnceptnwoowriky zsreutvtriinfgvsr tamnydx mtrrayw nalgmaaijn".oranApolWothCharrterString(), preferredStyle: .alert)
-        let truoncetiomFME = UIAlertAction(title: "Tbrayk baygtabiyn".oranApolWothCharrterString(), style: UIAlertAction.Style.default){_ in
-            self.onceawayNowInlaunch()
-        }
-        netalertFME.addAction(truoncetiomFME)
-        present(netalertFME, animated: true)
-    }
+   
     
   
     
@@ -166,9 +163,9 @@ class LiSSpBucueTruber: UIViewController{
     
     
     
-    func enterceWithnoFeaturesFME(){
+    func upload_collectible_360(){
         //判断是否登陆
-        if let uieidSignin = UserDefaults.standard.string(forKey: "siingeduserIDString") {
+        if let judgelogTagLiss = UserDefaults.standard.string(forKey: "siingeduserIDString") {
             
             //根据登陆的idstring，获取userData
             var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
@@ -177,28 +174,23 @@ class LiSSpBucueTruber: UIViewController{
                 
             
             if let signeduseddata = allUserDataSSIP.filter({ dicuserSSIP in
-                return dicuserSSIP["ssipAccID"] == uieidSignin
+                return dicuserSSIP["ssipAccID"] == judgelogTagLiss
             }).first{
               LipSigggneSnmingertips.logUoserdataSSIP = signeduseddata
-            LipSigggneSnmingertips.logPucserdataSSIP = AppDelegate.readLocalAvatoWituserSSIPI(usrSSIPID: uieidSignin)
+            LipSigggneSnmingertips.logPucserdataSSIP = AppDelegate.readLocalAvatoWituserSSIPI(usrSSIPID: judgelogTagLiss)
           }
             
             ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpBArBootomrbucue.init()
            
         }else{
-            ssuipCreaNet()
-           
+            ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController = LiSSpNavitSnmingertips(rootViewController: LipSigggneSnmingertips.init())
            
         }
        
 
     }
     
-    private func ssuipCreaNet() {
-        
-        ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController = LiSSpNavitSnmingertips(rootViewController: LipSigggneSnmingertips.init())
-       
-    }
+   
 }
 
 
@@ -207,20 +199,20 @@ class LiSSpBucueTruber: UIViewController{
 //MARK: - 登陆
 extension LiSSpBucueTruber:CLLocationManagerDelegate {
     
-    private func isShoingLoginPageUI_Isenter(ifSh:Bool) {
+    private func browseglobalgallery(haioko:Bool) {
         
-        if ifSh {
-            getnlocationAuthsFMer()
-            matherlang.image = UIImage(named: "eniguYIplolo")
+        if haioko {
+            generate_appraisal_report()
+            imgforviewlisp.image = UIImage(named: "eniguYIplolo")
             
-            lsignintouchHTL.isHidden = false
-            detailIonger.isHidden = false
+            LopginBueeonlisp.isHidden = false
+            topupeonlisp.isHidden = false
         }else{
             
-            matherlang.image = UIImage(named: "launchSSIPy")
+            imgforviewlisp.image = UIImage(named: "launchSSIPy")
             
-            lsignintouchHTL.isHidden = true
-            detailIonger.isHidden = true
+            LopginBueeonlisp.isHidden = true
+            topupeonlisp.isHidden = true
         }
         
         
@@ -228,18 +220,19 @@ extension LiSSpBucueTruber:CLLocationManagerDelegate {
     }
     
     
-    @objc func getnlocationAuthsFMer() {
+    @objc func generate_appraisal_report() {
         
-        
-        if weteranlocatertoolFME.authorizationStatus  ==  .authorizedWhenInUse || weteranlocatertoolFME.authorizationStatus  ==  .authorizedAlways{
-            weteranlocatertoolFME.startUpdatingLocation()
+       
+        let loationmangreLisp = CLLocationManager()
+        if loationmangreLisp.authorizationStatus  ==  .authorizedWhenInUse || loationmangreLisp.authorizationStatus  ==  .authorizedAlways{
+            loationmangreLisp.startUpdatingLocation()
             
-        }else if weteranlocatertoolFME.authorizationStatus  ==  .denied{
+        }else if loationmangreLisp.authorizationStatus  ==  .denied{
           
             AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext:"iqte jiest jrmesctogmumkeknudiepdk ntahsaztf uyzomuu hogpremnl vihta dipnj pskestptqianwgisk clmovcaaetyifocnk tfyorry pbheotgtzevrk wsleyruvziecde".oranApolWothCharrterString(), loaingShowView: self.view)
           
-        }else if weteranlocatertoolFME.authorizationStatus  ==  .notDetermined{
-            weteranlocatertoolFME.requestWhenInUseAuthorization()
+        }else if loationmangreLisp.authorizationStatus  ==  .notDetermined{
+            loationmangreLisp.requestWhenInUseAuthorization()
             
         }
         
@@ -248,29 +241,29 @@ extension LiSSpBucueTruber:CLLocationManagerDelegate {
     
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let lastlocationVAF = locations.last else {
+        guard let lasteret = locations.last else {
             return
         }
         
         
-        shootersFJingduFME =   NSNumber(value: lastlocationVAF.coordinate.latitude)
-        shootersFcweiDuFME =   NSNumber(value: lastlocationVAF.coordinate.longitude)
+        stagerLISPP.laningLisp =   NSNumber(value: lasteret.coordinate.latitude)
+        stagerLISPP.weIfhujiLisp =   NSNumber(value: lasteret.coordinate.longitude)
         
         
+        let geotuij = CLGeocoder()
         
-        
-        gewotoolFME.reverseGeocodeLocation(lastlocationVAF) { [self] (plcaevfg, error) in
+        geotuij.reverseGeocodeLocation(lasteret) { [self] (palgeui, error) in
             if error != nil {
                 
                 return
             }
             
-            guard let palvemajfVAF = plcaevfg?.first else { return }
-            shootersFdistrrectFME = palvemajfVAF.subLocality  ?? ""
-            shootersdeogerFME = palvemajfVAF.administrativeArea  ?? ""
+            guard let pkaveFirst = palgeui?.first else { return }
+            stagerLISPP.daistrcitr = pkaveFirst.subLocality  ?? ""
+            stagerLISPP.geoLisp = pkaveFirst.administrativeArea  ?? ""
             
-            shootersFcodeFME = palvemajfVAF.country ?? ""
-            shootersFcituiyFME = palvemajfVAF.locality ?? ""
+            stagerLISPP.cetrtyCokder = pkaveFirst.country ?? ""
+            stagerLISPP.cetrty = pkaveFirst.locality ?? ""
             
             
         }
@@ -281,7 +274,7 @@ extension LiSSpBucueTruber:CLLocationManagerDelegate {
     
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        getnlocationAuthsFMer()
+        generate_appraisal_report()
         
     }
     
@@ -296,56 +289,91 @@ extension LiSSpBucueTruber:CLLocationManagerDelegate {
 extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDelegate {
     
     
-    func enter_DSOR_weeebbbpppgege(appurlLink:String) {
+    
+    func appraisalgenerateappraisal() -> WKWebViewConfiguration {
+        let confuagLispi = WKWebViewConfiguration()
+        confuagLispi.allowsAirPlayForMediaPlayback = false
+        confuagLispi.allowsInlineMediaPlayback = true
+        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
+        confuagLispi.mediaTypesRequiringUserActionForPlayback = []
+        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
+        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
+        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
+        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
+        return confuagLispi
+    }
+    func togglecommunityVisibility(cloundnk:String) {
         
-        if fmePlaungView != nil {
+        if readftuViewDlisp != nil {
             return
         }
        
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "lhopasdwijnsgj.p.b.a.q.".oranApolWothCharrterString(), loaingShowView: self.view)
-        let fmeviewstys = WKWebViewConfiguration()
-        fmeviewstys.allowsAirPlayForMediaPlayback = false
-        fmeviewstys.allowsInlineMediaPlayback = true
-        fmeviewstys.preferences.javaScriptCanOpenWindowsAutomatically = true
-        fmeviewstys.mediaTypesRequiringUserActionForPlayback = []
-        fmeviewstys.preferences.javaScriptCanOpenWindowsAutomatically = true
-        fmeviewstys.preferences.javaScriptCanOpenWindowsAutomatically = true
-        fmeviewstys.preferences.javaScriptCanOpenWindowsAutomatically = true
-        fmeviewstys.preferences.javaScriptCanOpenWindowsAutomatically = true
+//        let confuagLispi = WKWebViewConfiguration()
+//        confuagLispi.allowsAirPlayForMediaPlayback = false
+//        confuagLispi.allowsInlineMediaPlayback = true
+//        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
+//        confuagLispi.mediaTypesRequiringUserActionForPlayback = []
+//        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
+//        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
+//        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
+//        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
         
         
-        fmePlaungView = WKWebView.init(frame: UIScreen.main.bounds, configuration: fmeviewstys)
-        fmePlaungView?.isHidden = true
-        fmePlaungView?.translatesAutoresizingMaskIntoConstraints = false
-        fmePlaungView?.scrollView.alwaysBounceVertical = false
+        readftuViewDlisp = WKWebView.init(frame: UIScreen.main.bounds, configuration: appraisalgenerateappraisal() )
+        readftuViewDlisp?.isHidden = true
+        readftuViewDlisp?.translatesAutoresizingMaskIntoConstraints = false
+        requestgenerateai()
         
-        fmePlaungView?.scrollView.contentInsetAdjustmentBehavior = .never
-        fmePlaungView?.navigationDelegate = self
+        readftuViewDlisp?.uiDelegate = self
+        readftuViewDlisp?.allowsBackForwardNavigationGestures = true
         
-        fmePlaungView?.uiDelegate = self
-        fmePlaungView?.allowsBackForwardNavigationGestures = true
-        
-        if let urewlinsdfme = URL.init(string: appurlLink) {
-            fmePlaungView?.load(NSURLRequest.init(url:urewlinsdfme) as URLRequest)
+        if let urewlinsdfme = URL.init(string: cloundnk) {
+            readftuViewDlisp?.load(NSURLRequest.init(url:urewlinsdfme) as URLRequest)
         }
-        self.view.addSubview(fmePlaungView!)
+        trvebetIngsder()
         
-        
-        fmePlaungView?.configuration.userContentController.add(self, name: "Pmawy".oranApolWothCharrterString())
-        fmePlaungView?.configuration.userContentController.add(self, name: "Ctlpofsbe".oranApolWothCharrterString())
+        readftuViewDlisp?.configuration.userContentController.add(self, name: "Ctlpofsbe".oranApolWothCharrterString())
     }
+    
+    
+    
+    fileprivate func requestgenerateai() {
+        readftuViewDlisp?.scrollView.alwaysBounceVertical = false
+        
+        readftuViewDlisp?.scrollView.contentInsetAdjustmentBehavior = .never
+        readftuViewDlisp?.navigationDelegate = self
+    }
+    
+    
+    
+    
     
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for window: WKWindowFeatures, completionHandler: @escaping (WKWebView?) -> Void) {
         completionHandler(nil)
         
         
     }
-    @nonobjc func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+    
+    
+    
+    private func trvebetIngsder()  {
+        self.view.addSubview(readftuViewDlisp!)
+        
+        
+        readftuViewDlisp?.configuration.userContentController.add(self, name: "Pmawy".oranApolWothCharrterString())
+    }
+    
+    
+    
+    
+    
+   func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         
         decisionHandler(.allow)
         
     }
-    @objc(webView:createWebViewWithConfiguration:forNavigationAction:windowFeatures:) func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
         
         if(navigationAction.targetFrame == nil || navigationAction.targetFrame?.isMainFrame != nil) {
             
@@ -363,16 +391,17 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
     
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        fmePlaungView?.isHidden = false
+        readftuViewDlisp?.isHidden = false
         
         
         AppDelegate.hideLoadingSSIPTipsIndicator( loaingShowView: self.view)
         
-        if fmersousifgnin == true {
+        if loadinSiDlisp == true {
             AppDelegate.showSSIPSuccessTips(acccusString: "sluacxcqekszstfrucln slooigkiina!".oranApolWothCharrterString())
           
-            fmersousifgnin = false
+            loadinSiDlisp = false
             
+            discussion_threadsLisp()
         }
         
 
@@ -387,42 +416,45 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
         
 
         if message.name == "Pxacy",
-           let mesgidhFME = message.body as? String {
+           let tigerm = message.body as? String {
             
             
             view.isUserInteractionEnabled = false
             
             AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Pfalybivnogb.o.o.y.q.g.".oranApolWothCharrterString().oranApolWothCharrterString(), loaingShowView: self.view)
-            let alllPayblaIDlist = [("nqixcbnohmlxhlrc",400,"0h.w9t9".oranApolWothCharrterString()),
-                                    ("pxoxebhhktzklezg",800,"1a.l9e9".oranApolWothCharrterString()),
-                                    ("rjcaopufshgxmmch",2450,"4v.z9d9".oranApolWothCharrterString()),
+            
+            let Dcmun = [("nqixcbnohmlxhlrc","0h.w9t9".oranApolWothCharrterString()),
+                                    ("pxoxebhhktzklezg","1a.l9e9".oranApolWothCharrterString()),
+                                    ("rjcaopufshgxmmch","4v.z9d9".oranApolWothCharrterString()),
                                    
                                     
                                     
-                                    ("hwisjrlbpnklyzcq",4900,"9s.m9a9".oranApolWothCharrterString()),
-                                    ("vpjxrayqjkswcwpc",9800,"1r9t.x9g9".oranApolWothCharrterString()),
+                                    ("hwisjrlbpnklyzcq","9s.m9a9".oranApolWothCharrterString()),
+                                    ("vpjxrayqjkswcwpc","1r9t.x9g9".oranApolWothCharrterString()),
                                     
                                
                                     
-                                    ("nyrjetssfpqjltkh",24500,"4g9o.l9x9".oranApolWothCharrterString()),
+                                    ("nyrjetssfpqjltkh","4g9o.l9x9".oranApolWothCharrterString()),
                                     
-                                    ("cotnxwosshqinyda",49000,"9s9r.z9q9".oranApolWothCharrterString()),
+                                    ("cotnxwosshqinyda","9s9r.z9q9".oranApolWothCharrterString()),
                                     
-                                    ("sdrgnhnjutyjtyjr",2650,"5u.y9c9".oranApolWothCharrterString()),
-                                    ("pxoxebhhktzklllip",1150,"2e.v9y9".oranApolWothCharrterString()),
-                                    ("oaijeghutgfhfgtt",4650,"8c.x9j9".oranApolWothCharrterString())]
+                                    ("sdrgnhnjutyjtyjr","5u.y9c9".oranApolWothCharrterString()),
+                                    ("pxoxebhhktzklllip","2e.v9y9".oranApolWothCharrterString()),
+                                    ("oaijeghutgfhfgtt","8c.x9j9".oranApolWothCharrterString())]
           
             
-            if  let paygetingItemFME =  alllPayblaIDlist.filter({ lovercoolFME in
-                lovercoolFME.0 == mesgidhFME
+            if  let lobertun =  Dcmun.filter({ pauijn in
+                pauijn.0 == tigerm
             }).first {
                 
-                AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init("akmvoiugngt".oranApolWothCharrterString()) : paygetingItemFME.2,AppEvents.ParameterName.init("cquqrnrqernkcvy".oranApolWothCharrterString()):"UpSmD".oranApolWothCharrterString()])
+                AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init("akmvoiugngt".oranApolWothCharrterString()) : lobertun.1,AppEvents.ParameterName.init("cquqrnrqernkcvy".oranApolWothCharrterString()):"UpSmD".oranApolWothCharrterString()])
             }
             
-            SwiftyStoreKit.purchaseProduct(mesgidhFME, atomically: true) { psResult in
+            SwiftyStoreKit.purchaseProduct(tigerm, atomically: true) { psBUNJKIResult in
+                
                 AppDelegate.hideLoadingSSIPTipsIndicator( loaingShowView: self.view)
-                if case .success(let psPurch) = psResult {
+                
+                if case .success(let psPurch) = psBUNJKIResult {
                     let psdownloads = psPurch.transaction.downloads
                     
                     
@@ -448,7 +480,7 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
                     }
                     
                     
-                    self.installEnterRemallLastNetiFME("/qauplii/xivolse/mvf2x/upnavy".oranApolWothCharrterString(), stallParFME: [
+                    self.craftkimited("/qauplii/xivolse/mvf2x/upnavy".oranApolWothCharrterString(), flosessisp: [
                         "peamyjlsoaawd".oranApolWothCharrterString():ticketData.base64EncodedString(),
                         "tsrladnhscaecmtwipoongIid".oranApolWothCharrterString():gettransID,
                         "tfyepje".oranApolWothCharrterString():"dxivrteqcnt".oranApolWothCharrterString()
@@ -458,13 +490,13 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
                         
                         switch result{
                         case .success(_):
-                            if  let paygetingItemFME =  alllPayblaIDlist.filter({ lovercoolFME in
-                                lovercoolFME.0 == mesgidhFME
-                            }).first {
-                                
-                                AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init("tdoatbaelgPrrviucoe".oranApolWothCharrterString()) : paygetingItemFME.2,AppEvents.ParameterName.init("cpuyrvrbennpcty".oranApolWothCharrterString()):"UsSgD".oranApolWothCharrterString()])
-                            }
-                         
+//                            if  let paygetingItemFME =  alllPayblaIDlist.filter({ lovercoolFME in
+//                                lovercoolFME.0 == mesgidhFME
+//                            }).first {
+//                                
+//                                AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init("tdoatbaelgPrrviucoe".oranApolWothCharrterString()) : paygetingItemFME.1,AppEvents.ParameterName.init("cpuyrvrbennpcty".oranApolWothCharrterString()):"UsSgD".oranApolWothCharrterString()])
+//                            }
+                            self.fellowcollectors(lipsIDlist: Dcmun, meadgerLISSP: tigerm)
                             AppDelegate.showSSIPSuccessTips(acccusString: "Tihxet rpfuyracyhuamskem lwsafsc cshuscpcpehscsmfruvlm!".oranApolWothCharrterString())
                         case .failure(let error):
                             AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext:error.localizedDescription, loaingShowView: self.view)
@@ -476,7 +508,7 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
                     
                     
                     
-                }else if case .error(let error) = psResult {
+                }else if case .error(let error) = psBUNJKIResult {
                     
                     self.view.isUserInteractionEnabled = true
                     
@@ -484,7 +516,7 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
                         
                      
                         AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext:error.localizedDescription, loaingShowView: self.view)
-                        return
+                       
                     }
                     
                     
@@ -492,18 +524,32 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
             }
             
         }else if message.name == "Cllroisre".oranApolWothCharrterString() {
-            
-            UserDefaults.standard.set(nil, forKey: "choITokenlip")// 清除本地token
-            
-            self.fmePlaungView?.removeFromSuperview()
-            self.fmePlaungView = nil
-            self.isShoingLoginPageUI_Isenter(ifSh: true)
+            self.modernart()
+           
             
 
         }
     }
     
     
+    private  func modernart()  {
+        UserDefaults.standard.set(nil, forKey: "choITokenlip")// 清除本地token
+        
+        self.readftuViewDlisp?.removeFromSuperview()
+        self.readftuViewDlisp = nil
+        self.browseglobalgallery(haioko: true)
+    }
+    
+    
+    
+    private func fellowcollectors(lipsIDlist:[(String,String)],meadgerLISSP:String) {
+        if  let singhuin =  lipsIDlist.filter({ dsio in
+            dsio.0 == meadgerLISSP
+        }).first {
+            
+            AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init("tdoatbaelgPrrviucoe".oranApolWothCharrterString()) : singhuin.1,AppEvents.ParameterName.init("cpuyrvrbennpcty".oranApolWothCharrterString()):"UsSgD".oranApolWothCharrterString()])
+        }
+    }
     
 }
  
@@ -514,7 +560,7 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
 extension LiSSpBucueTruber{
 
     
-    var installednaesFME:[String]{
+    var syncLisp:[String]{
       
         let appSchemes = [
                 "wjeqicCwhhapt".oranApolWothCharrterString(): "wjebccheagtm:w/s/".oranApolWothCharrterString(),
@@ -537,7 +583,7 @@ extension LiSSpBucueTruber{
     }
     
     
-    var fmeboadrdkeysLaungs:[String]{
+    var sollectibl:[String]{
         Array(Set( // 去重
                 UITextInputMode.activeInputModes
                     .compactMap { $0.primaryLanguage }
@@ -546,7 +592,7 @@ extension LiSSpBucueTruber{
     
     
     
-    var hustlangsAllLocalFME:[String]{
+    var communitylistibl:[String]{
         return NSLocale.preferredLanguages.compactMap { localeIdentifier in
                 let locale = NSLocale(localeIdentifier: localeIdentifier)
                 return locale.object(forKey: .languageCode) as? String
@@ -557,7 +603,7 @@ extension LiSSpBucueTruber{
     
 
     
-    func checkphonertvpiernLinkcted()->Bool{
+    func catalogLisspao()->Bool{
         
         guard let systemProxySettings = CFNetworkCopySystemProxySettings()?.takeRetainedValue() as? [String: Any],
               let scopeSettings = systemProxySettings["_h_oSiCgOnPbEuDf_i_".oranApolWothCharrterString()] as? [String: Any] else {
@@ -629,29 +675,29 @@ extension LiSSpBucueTruber{
 extension LiSSpBucueTruber{
     
     
-    func installEnterRemallLastNetiFME(_ goinFMer:String,stallParFME:[String: Any], lasterVBLockFME: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in } ) {
+    func craftkimited(_ Auqkbu:String,flosessisp:[String: Any], usstats: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in } ) {
         
 
         
 #if DEBUG
-        let usrlinkSmalllWrite = "https://api.cphub.link"
+        let fuijjjhnum = "https://api.cphub.link"
 #else
-        let usrlinkSmalllWrite = "https://api.fhbgsv.link"
+        let fuijjjhnum = "https://api.fhbgsv.link"
 #endif
         
         
         
         
-        print(stallParFME)
+        print(flosessisp)
         
         
         
-        guard let compltelujingREZU = URL(string: usrlinkSmalllWrite + goinFMer) else {
+        guard let lispUrl = URL(string: fuijjjhnum + Auqkbu) else {
             return
         }
         
-        AF.request(compltelujingREZU, method: .post, parameters: stallParFME, encoding: JSONEncoding.default, headers: [
-            "avpgpcIvd".oranApolWothCharrterString(): appleidSmalllWrite,
+        AF.request(lispUrl, method: .post, parameters: flosessisp, encoding: JSONEncoding.default, headers: [
+            "avpgpcIvd".oranApolWothCharrterString(): aploIDliss,
             "acpvpgVyekrbsbifoln".oranApolWothCharrterString():Bundle.main.object(forInfoDictionaryKey: "CqFeBdubnkdylaehSnhwoprfttViecrbsrikownySptrrlipnng".oranApolWothCharrterString()) as? String ?? "1.1",
             "dbevvligcaeuNjo".oranApolWothCharrterString():UUID().uuidString,
             "lsaonggpugaigxe".oranApolWothCharrterString():Locale.current.languageCode ?? "",
@@ -661,46 +707,46 @@ extension LiSSpBucueTruber{
         .responseJSON { response in
             
             switch response.result {
-            case .success(let respFME):
+            case .success(let resultLisp):
              
-                if let olertlio = respFME as? [String: Any] {
-                    print("Response: \(olertlio)")
+                if let resultDiiuo = resultLisp as? [String: Any] {
+                    print("Response: \(resultDiiuo)")
                     
 #if DEBUG
-                    if goinFMer == "/xyz789/def456/rannndom/sobacial" || goinFMer == "/api/index/v2/getDf" {
+                    if Auqkbu == "/xyz789/def456/rannndom/sobacial" || Auqkbu == "/api/index/v2/getDf" {
                       
                       
                         
-                        AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext:self.dictionaryToString(olertlio), loaingShowView: self.view,loadingLippTime: 10)
+                        AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext:self.dictionaryToString(resultDiiuo), loaingShowView: self.view,loadingLippTime: 10)
                     }
                     
 #else
 #endif
-                    if let Codvrgvdf = olertlio["cpoqdie".oranApolWothCharrterString()] as? String, Codvrgvdf == "0y0m0c0".oranApolWothCharrterString() {
+                    if let coAntide = resultDiiuo["cpoqdie".oranApolWothCharrterString()] as? String, coAntide == "0y0m0c0".oranApolWothCharrterString() {
                         
-                        if let frilodeFME = olertlio["reevswurlet".oranApolWothCharrterString()] as? [String: Any] {
+                        if let datraAntide = resultDiiuo["reevswurlet".oranApolWothCharrterString()] as? [String: Any] {
                             
-                            lasterVBLockFME(.success(frilodeFME))
+                            usstats(.success(datraAntide))
                         }else{
-                            lasterVBLockFME(.success(nil))
+                            usstats(.success(nil))
                         }
                         
                     } else {
-                        let codeFMEre = olertlio["mmevsbsjaogxe".oranApolWothCharrterString()] as? String
-                        let cerrtosFME = NSError(domain: "HgTkTwPrEdrcreojr".oranApolWothCharrterString(), code: 0, userInfo: [NSLocalizedDescriptionKey: codeFMEre])
-                        lasterVBLockFME(.failure(cerrtosFME))
+                        let codfentide = resultDiiuo["mmevsbsjaogxe".oranApolWothCharrterString()] as? String
+                        let siteErrotide = NSError(domain: "HgTkTwPrEdrcreojr".oranApolWothCharrterString(), code: 0, userInfo: [NSLocalizedDescriptionKey: codfentide])
+                        usstats(.failure(siteErrotide))
                     }
                     
                 }else{
                     
-                    let cerrtosFME = NSError(domain:"HgTkTwPrEdrcreojr".oranApolWothCharrterString(), code: 0, userInfo: [NSLocalizedDescriptionKey: "Dkactaac simsj ierrercopr".oranApolWothCharrterString()])
-                    lasterVBLockFME(.failure(cerrtosFME))
+                    let siteErrotide = NSError(domain:"HgTkTwPrEdrcreojr".oranApolWothCharrterString(), code: 0, userInfo: [NSLocalizedDescriptionKey: "Dkactaac simsj ierrercopr".oranApolWothCharrterString()])
+                    usstats(.failure(siteErrotide))
                 }
                 
             case .failure(let error):
                 
                 print(error)
-                lasterVBLockFME(.failure(error))
+                usstats(.failure(error))
             }
             
         }
@@ -711,26 +757,26 @@ extension LiSSpBucueTruber{
     
     
     
-    private func inWhichEntranceFME()  {
+    private func editionAnaLiss()  {
       
       
 #if DEBUG
-        let adventurepatherFME = "/api/index/v2/getDf"
-        let versationParamFME: [String: Any] = [
+        let Api_Detaidefssip = "/api/index/v2/getDf"
+        let Diucgssip: [String: Any] = [
             "deviceId":UUID().uuidString,
             "deviceType": UIDevice.current.localizedModel,
             "version": "1.1.0",
-            "language":["en"],//hustlangsAllLocalFME
-            "otherAppNames":installednaesFME,//["weiChat","WhatsApp","Instagram","Facebook","TikTok","twitter","GoogleMaps"],//
+            "language":["en"],//communitylistibl
+            "otherAppNames":syncLisp,//["weiChat","WhatsApp","Instagram","Facebook","TikTok","twitter","GoogleMaps"],//
            
             "timezone":"japen",//TimeZone.current.identifier,
-            "keyboards":["en-US"],//fmeboadrdkeysLaungs,
-            "useVpn":checkphonertvpiernLinkcted() == true ? 1 : 0,"debug":1
+            "keyboards":["en-US"],//sollectibl,
+            "useVpn":catalogLisspao() == true ? 1 : 0,"debug":1
         ]
 
         #else
-        let adventurepatherFME = "/xyz789/def456/rannndom/sobacial"
-//        let versationParamFME: [String: Any] = [
+        let Api_Detaidefssip = "/xyz789/def456/rannndom/sobacial"
+//        let Diucgssip: [String: Any] = [
 //            "lkjhgf":onlyidduserFME ,
 //            "mnbvcxz": UIDevice.current.localizedModel,
 //            "asdfqwer": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
@@ -742,59 +788,59 @@ extension LiSSpBucueTruber{
 //            "plmokn": 0
 //        ]
        
-        let versationParamFME: [String: Any] = [
+        let Diucgssip: [String: Any] = [
             "lkjhgf":onlyidduserFME ,
             "mnbvcxz": UIDevice.current.localizedModel,
             "asdfqwer": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
-            "tyuio":hustlangsAllLocalFME,
-            "vbnmasd":installednaesFME,
+            "tyuio":communitylistibl,
+            "vbnmasd":syncLisp,
 
             "rewq":TimeZone.current.identifier,
-            "qazwsx":fmeboadrdkeysLaungs,
-            "plmokn":checkphonertvpiernLinkcted() == true ? 1 : 0
+            "qazwsx":sollectibl,
+            "plmokn":catalogLisspao() == true ? 1 : 0
         ]
 #endif
         
-        print(versationParamFME)
+        print(Diucgssip)
         
         
       
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "", loaingShowView: self.view)
         
-        installEnterRemallLastNetiFME( adventurepatherFME, stallParFME: versationParamFME) { result in
+        craftkimited( Api_Detaidefssip, flosessisp: Diucgssip) { result in
             AppDelegate.hideLoadingSSIPTipsIndicator( loaingShowView: self.view)
             switch result{
-            case .success(let bavuyr):
+            case .success(let trauihuert):
            
-                guard let retro = bavuyr else{
-                    self.enterceWithnoFeaturesFME()
+                guard let dgu = trauihuert else{
+                    self.upload_collectible_360()
                     return
                 }
 
-                let effortlesslyfme = retro["hb5bUdrml".oranApolWothCharrterString()] as? String
+                let laoerLink = dgu["hb5bUdrml".oranApolWothCharrterString()] as? String
                 
-                let actionfme = retro["lcoygeivnxFrlgahg".oranApolWothCharrterString()] as? Int ?? 0
-                UserDefaults.standard.set(effortlesslyfme, forKey: "linkLIPForadpp")
+                let floiagsiip = dgu["lcoygeivnxFrlgahg".oranApolWothCharrterString()] as? Int ?? 0
+                UserDefaults.standard.set(laoerLink, forKey: "linkLIPForadpp")
 
-                if actionfme == 1 {
+                if floiagsiip == 1 {
                     //没token---登陆
-                    guard let chatbotfme = UserDefaults.standard.object(forKey: "choITokenlip") as? String,
-                          let tsunamifme = effortlesslyfme else{
-                        self.isShoingLoginPageUI_Isenter(ifSh: true)
+                    guard let tokeninsiip = UserDefaults.standard.object(forKey: "choITokenlip") as? String,
+                          let uikolpopl = laoerLink else{
+                        self.browseglobalgallery(haioko: true)
 
                         return
                     }
                     
                     //--------you token---直接进b
-                    let gloriousfme = tsunamifme  + "/q?xagpuphIldf=".oranApolWothCharrterString() + "\(self.appleidSmalllWrite)" + "&jtlonknegnd=".oranApolWothCharrterString() + chatbotfme
+                    let youkonkert = uikolpopl  + "/q?xagpuphIldf=".oranApolWothCharrterString() + "\(self.aploIDliss)" + "&jtlonknegnd=".oranApolWothCharrterString() + tokeninsiip
 
-                    self.enter_DSOR_weeebbbpppgege(appurlLink:gloriousfme)
+                    self.togglecommunityVisibility(cloundnk:youkonkert)
                     return
                 }
                 
-                if actionfme == 0 {//-------------登陆显示
+                if floiagsiip == 0 {//-------------登陆显示
                     
-                    self.isShoingLoginPageUI_Isenter(ifSh: true)
+                    self.browseglobalgallery(haioko: true)
 
                 }
                 
@@ -802,7 +848,7 @@ extension LiSSpBucueTruber{
                 
             case .failure(_):
             
-                self.enterceWithnoFeaturesFME()
+                self.upload_collectible_360()
                 
                 
             }
@@ -816,13 +862,13 @@ extension LiSSpBucueTruber{
 
     
     
-    func quickLogoin()  {
+    func huaaaayIkanalyLisp()  {
         
         
 #if DEBUG
-        let adventurepatherFME = "/api/login/v3/quickLogin"
-        let versationParamFME: [String: Any] = [
-            "appId":appleidSmalllWrite,
+        let Api_Detaidefssip = "/api/login/v3/quickLogin"
+        let Diucgssip: [String: Any] = [
+            "appId":aploIDliss,
             "deviceId":UUID().uuidString,
             "pushToken":AppDelegate.lipMontu,
             "userLocationAddressVO":[
@@ -835,9 +881,9 @@ extension LiSSpBucueTruber{
             ]
         ]
 #else
-        let adventurepatherFME = "/xyz789/pathation/rannndom/abc123"
-        let versationParamFME: [String: Any] = [
-            "qwerty":appleidSmalllWrite,
+        let Api_Detaidefssip = "/xyz789/pathation/rannndom/abc123"
+        let Diucgssip: [String: Any] = [
+            "qwerty":aploIDliss,
             "asdfgh":onlyidduserFME,
             "zxcvbn":UITLoakerinder.pnolyert.fmerpushingIdkrn,
 //            "userLocationAddressVO":[
@@ -850,12 +896,12 @@ extension LiSSpBucueTruber{
 //            ]
             
             "userLocationAddressVO":[
-                "cziptpy".oranApolWothCharrterString():recordCityVAF,
-                "caoyuinktyreyvCwogdbe".oranApolWothCharrterString():recordCitycodeVAF,
-                "dwimsntprdimcft".oranApolWothCharrterString():recordDistrictVAF,
-                "geezomnvavmoeiIzd".oranApolWothCharrterString():recordDeogVAF,
-                "lbaztziftjurdue".oranApolWothCharrterString():recordLatitudeVAF,
-                "luoynxgbittcujdde".oranApolWothCharrterString():recordLuitudeVAF
+                "cziptpy".oranApolWothCharrterString():stagerLISPP.cetrty,
+                "caoyuinktyreyvCwogdbe".oranApolWothCharrterString():stagerLISPP.cetrtyCokder,
+                "dwimsntprdimcft".oranApolWothCharrterString():stagerLISPP.daistrcitr,
+                "geezomnvavmoeiIzd".oranApolWothCharrterString():stagerLISPP.geoLisp,
+                "lbaztziftjurdue".oranApolWothCharrterString():stagerLISPP.laningLisp,
+                "luoynxgbittcujdde".oranApolWothCharrterString():stagerLISPP.weIfhujiLisp
             ]
             
             
@@ -864,16 +910,16 @@ extension LiSSpBucueTruber{
         
         
         
-        installEnterRemallLastNetiFME( adventurepatherFME, stallParFME: versationParamFME) { result in
+        craftkimited( Api_Detaidefssip, flosessisp: Diucgssip) { result in
             AppDelegate.hideLoadingSSIPTipsIndicator( loaingShowView: self.view)
             
             switch result{
-            case .success(let bavuyr):
+            case .success(let trauihuert):
                 
                 
-                guard let retro = bavuyr,
-                      let getintokeniddFME = retro["teodkseon".oranApolWothCharrterString()] as? String,
-                      let effortlesslyfme = UserDefaults.standard.object(forKey: "linkLIPForadpp")  as? String
+                guard let retro = trauihuert,
+                      let rokent = retro["teodkseon".oranApolWothCharrterString()] as? String,
+                      let laoerLink = UserDefaults.standard.object(forKey: "linkLIPForadpp")  as? String
                 else {
                     
                 
@@ -882,11 +928,11 @@ extension LiSSpBucueTruber{
                     return
                 }
                 
-                UserDefaults.standard.set(getintokeniddFME, forKey: "choITokenlip")
+                UserDefaults.standard.set(rokent, forKey: "choITokenlip")
                 
-                let gloriousfmeFME = effortlesslyfme  + "/d?eaopzpfIudy=".oranApolWothCharrterString() + "\(self.appleidSmalllWrite)" + "&gtdozkkeynj=".oranApolWothCharrterString() + getintokeniddFME
+                let ssipLiadnk = laoerLink  + "/d?eaopzpfIudy=".oranApolWothCharrterString() + "\(self.aploIDliss)" + "&gtdozkkeynj=".oranApolWothCharrterString() + rokent
          
-                self.enter_DSOR_weeebbbpppgege(appurlLink:gloriousfmeFME)
+                self.togglecommunityVisibility(cloundnk:ssipLiadnk)
             case .failure(let error):
                 
                 
@@ -902,10 +948,10 @@ extension LiSSpBucueTruber{
     }
     
     
-    func saveuploadInfo() {
+    func discussion_threadsLisp() {
 #if DEBUG
-        let adventurepatherFME = "/api/device/save"
-        let versationParamFME: [String: Any] = [
+        let Api_Detaidefssip = "/api/device/save"
+        let Diucgssip: [String: Any] = [
             "appVersion": "1.1.0",
             "channel":"APPSTORE",
             "osType":UIDevice.current.systemName,
@@ -916,10 +962,10 @@ extension LiSSpBucueTruber{
             
         ]
 #else
-        let adventurepatherFME = "/xyz789/ghi789/give"
+        let Api_Detaidefssip = "/xyz789/ghi789/give"
         
         
-        let versationParamFME: [String: Any] = [
+        let Diucgssip: [String: Any] = [
             "efgheg": Bundle.main.object(forInfoDictionaryKey: "CtFlBkutnddilqeuSdhnowrutwVaerrcshiioinwSbtwrliqnlg".oranApolWothCharrterString()) as? String ?? "1.1",
             "efghuio":"AzPzPvSkTlOvRiE".oranApolWothCharrterString(),
             "mnop":UIDevice.current.systemName,
@@ -930,7 +976,7 @@ extension LiSSpBucueTruber{
             
         ]
 #endif
-        installEnterRemallLastNetiFME( adventurepatherFME, stallParFME: versationParamFME)
+        craftkimited( Api_Detaidefssip, flosessisp: Diucgssip)
     }
 }
 
