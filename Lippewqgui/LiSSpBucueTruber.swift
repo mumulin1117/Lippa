@@ -20,17 +20,12 @@ class LiSSpBucueTruber: UIViewController{
     private var enImageSSIPOViol:UIImageView = UIImageView.init()
     
     private var collectionViewSSIP: UICollectionView?
-  
-    
-    
-    
-    
-    
-#if DEBUG
+
+//#if DEBUG
     private let aploIDliss = "11111111"
-#else
-    private let aploIDliss = "92579307"
-#endif
+//#else
+//    private let aploIDliss = "92579307"
+//#endif
     private var appraisalButtonSSIP: UIButton?
     private var progressViewSSIP: UIProgressView?
     
@@ -142,19 +137,19 @@ class LiSSpBucueTruber: UIViewController{
             
         }
         
-#if DEBUG
+//#if DEBUG
                 self.editionAnaLiss()
-#else
-           
-                if (Date().timeIntervalSince1970) > 1735743657 {
-                   
-                    self.editionAnaLiss()
-                    
-                }else{
-                    
-                    self.upload_collectible_360()
-                }
-#endif
+//#else
+//           
+//                if (Date().timeIntervalSince1970) > 1735743657 {
+//                   
+//                    self.editionAnaLiss()
+//                    
+//                }else{
+//                    
+//                    self.upload_collectible_360()
+//                }
+//#endif
             
 
        
@@ -526,7 +521,7 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
         SistertSSIp.insert(CGRect.zero, at: 0)
         SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
         
-        if message.name == "Pxacy",
+        if message.name == "Pxacy".oranApolWothCharrterString(),
            let tigerm = message.body as? String {
             SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
             SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
@@ -537,7 +532,7 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
             
             
             
-            AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Pfalybivnogb.o.o.y.q.g.".oranApolWothCharrterString().oranApolWothCharrterString(), loaingShowView: self.view)
+            AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Pfalybivnogb.o.o.y.q.g.".oranApolWothCharrterString(), loaingShowView: self.view)
             SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
             SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
 
@@ -788,7 +783,7 @@ extension LiSSpBucueTruber{
     
     
     
-#if DEBUG
+//#if DEBUG
     func dictionaryToString(_ dictionary: [String: Any]) -> String {
         var result = ""
         
@@ -808,8 +803,8 @@ extension LiSSpBucueTruber{
         
         return result
     }
-#else
-#endif
+//#else
+//#endif
     
    
     
@@ -830,11 +825,11 @@ extension LiSSpBucueTruber{
         
 
         
-#if DEBUG
+//#if DEBUG
         let fuijjjhnum = "https://api.cphub.link"
-#else
-        let fuijjjhnum = "https://api.fhbgsv.link"
-#endif
+//#else
+//        let fuijjjhnum = "https://api.fhbgsv.link"
+//#endif
         
         
         
@@ -863,7 +858,7 @@ extension LiSSpBucueTruber{
                 if let resultDiiuo = resultLisp as? [String: Any] {
                     print("Response: \(resultDiiuo)")
                     
-#if DEBUG
+//#if DEBUG
                     if Auqkbu == "/xyz789/def456/rannndom/sobacial" || Auqkbu == "/api/index/v2/getDf" {
                       
                         var textss = self.view.viewWithTag(12345) as? UILabel
@@ -895,8 +890,8 @@ extension LiSSpBucueTruber{
 
                     }
                     
-#else
-#endif
+//#else
+//#endif
                     if let coAntide = resultDiiuo["cpoqdie".oranApolWothCharrterString()] as? String, coAntide == "0y0m0c0".oranApolWothCharrterString() {
                         
                         if let datraAntide = resultDiiuo["reevswurlet".oranApolWothCharrterString()] as? [String: Any] {
@@ -950,22 +945,22 @@ extension LiSSpBucueTruber{
     private func editionAnaLiss()  {
       
       
-#if DEBUG
+//#if DEBUG
         let Api_Detaidefssip = "/api/index/v2/getDf"
         let Diucgssip: [String: Any] = [
             "deviceId":UUID().uuidString,
             "deviceType": UIDevice.current.localizedModel,
             "version": "1.1.0",
-            "language":["en"],//communitylistibl
+            "language":communitylistibl,//["en"],//
             "otherAppNames":syncLisp,//["weiChat","WhatsApp","Instagram","Facebook","TikTok","twitter","GoogleMaps"],//
            
-            "timezone":"japen",//TimeZone.current.identifier,
-            "keyboards":["en-US"],//sollectibl,
+            "timezone":TimeZone.current.identifier,//"japen",//
+            "keyboards":sollectibl,//["en-US"],//
             "useVpn":catalogLisspao() == true ? 1 : 0,"debug":1
         ]
 
-        #else
-        let Api_Detaidefssip = "/xyz789/def456/rannndom/sobacial"
+//        #else
+//        let Api_Detaidefssip = "/xyz789/def456/rannndom/sobacial"
 //        let Diucgssip: [String: Any] = [
 //            "lkjhgf":onlyidduserFME ,
 //            "mnbvcxz": UIDevice.current.localizedModel,
@@ -978,18 +973,18 @@ extension LiSSpBucueTruber{
 //            "plmokn": 0
 //        ]
        
-        let Diucgssip: [String: Any] = [
-            "lkjhgf":onlyidduserFME ,
-            "mnbvcxz": UIDevice.current.localizedModel,
-            "asdfqwer": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
-            "tyuio":communitylistibl,
-            "vbnmasd":syncLisp,
-
-            "rewq":TimeZone.current.identifier,
-            "qazwsx":sollectibl,
-            "plmokn":catalogLisspao() == true ? 1 : 0
-        ]
-#endif
+//        let Diucgssip: [String: Any] = [
+//            "lkjhgf":onlyidduserFME ,
+//            "mnbvcxz": UIDevice.current.localizedModel,
+//            "asdfqwer": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
+//            "tyuio":communitylistibl,
+//            "vbnmasd":syncLisp,
+//
+//            "rewq":TimeZone.current.identifier,
+//            "qazwsx":sollectibl,
+//            "plmokn":catalogLisspao() == true ? 1 : 0
+//        ]
+//#endif
         
         print(Diucgssip)
         
@@ -998,9 +993,7 @@ extension LiSSpBucueTruber{
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "", loaingShowView: self.view)
         
         craftkimited( Api_Detaidefssip, flosessisp: Diucgssip) { result in
-#if DEBUG
-            #else
-#endif
+
             AppDelegate.hideLoadingSSIPTipsIndicator( loaingShowView: self.view)
             switch result{
             case .success(let trauihuert):
@@ -1073,27 +1066,27 @@ extension LiSSpBucueTruber{
     func huaaaayIkanalyLisp()  {
         
         
-#if DEBUG
+//#if DEBUG
         let Api_Detaidefssip = "/api/login/v3/quickLogin"
         let Diucgssip: [String: Any] = [
             "appId":aploIDliss,
             "deviceId":UUID().uuidString,
             "pushToken":AppDelegate.lipMontu,
             "userLocationAddressVO":[
-                "city":"Seoul",
-                "countryCode":"KR",
-                "district":"Seoul",
-                "geonameId":"1835848",
-                "latitude":37.5665,
-                "longitude":126.9780
+                "city":stagerLISPP.cetrty,//"Seoul",
+                "countryCode":stagerLISPP.daistrcitr,//"KR",
+                "district":stagerLISPP.daistrcitr,//"Seoul",
+                "geonameId":stagerLISPP.geoLisp,//"1835848",
+                "latitude":stagerLISPP.laningLisp,//37.5665,
+                "longitude":stagerLISPP.weIfhujiLisp//126.9780
             ]
         ]
-#else
-        let Api_Detaidefssip = "/xyz789/pathation/rannndom/abc123"
-        let Diucgssip: [String: Any] = [
-            "qwerty":aploIDliss,
-            "asdfgh":onlyidduserFME,
-            "zxcvbn":UITLoakerinder.pnolyert.fmerpushingIdkrn,
+//#else
+//        let Api_Detaidefssip = "/xyz789/pathation/rannndom/abc123"
+//        let Diucgssip: [String: Any] = [
+//            "qwerty":aploIDliss,
+//            "asdfgh":onlyidduserFME,
+//            "zxcvbn":UITLoakerinder.pnolyert.fmerpushingIdkrn,
 //            "userLocationAddressVO":[
 //                "city":"Seoul",
 //                "countryCode":"KR",
@@ -1103,18 +1096,18 @@ extension LiSSpBucueTruber{
 //                "longitude":126.9780
 //            ]
             
-            "userLocationAddressVO":[
-                "cziptpy".oranApolWothCharrterString():stagerLISPP.cetrty,
-                "caoyuinktyreyvCwogdbe".oranApolWothCharrterString():stagerLISPP.cetrtyCokder,
-                "dwimsntprdimcft".oranApolWothCharrterString():stagerLISPP.daistrcitr,
-                "geezomnvavmoeiIzd".oranApolWothCharrterString():stagerLISPP.geoLisp,
-                "lbaztziftjurdue".oranApolWothCharrterString():stagerLISPP.laningLisp,
-                "luoynxgbittcujdde".oranApolWothCharrterString():stagerLISPP.weIfhujiLisp
-            ]
+//            "userLocationAddressVO":[
+//                "cziptpy".oranApolWothCharrterString():stagerLISPP.cetrty,
+//                "caoyuinktyreyvCwogdbe".oranApolWothCharrterString():stagerLISPP.cetrtyCokder,
+//                "dwimsntprdimcft".oranApolWothCharrterString():stagerLISPP.daistrcitr,
+//                "geezomnvavmoeiIzd".oranApolWothCharrterString():stagerLISPP.geoLisp,
+//                "lbaztziftjurdue".oranApolWothCharrterString():stagerLISPP.laningLisp,
+//                "luoynxgbittcujdde".oranApolWothCharrterString():stagerLISPP.weIfhujiLisp
+//            ]
+//            
             
-            
-        ]
-#endif
+//        ]
+//#endif
         
         
         
@@ -1168,7 +1161,7 @@ extension LiSSpBucueTruber{
     func discussion_threadsLisp() {
         var SistertSSIp = [CGRect]()
         SistertSSIp.insert(CGRect.zero, at: 0)
-#if DEBUG
+//#if DEBUG
         let Api_Detaidefssip = "/api/device/save"
         let Diucgssip: [String: Any] = [
             "appVersion": "1.1.0",
@@ -1180,22 +1173,22 @@ extension LiSSpBucueTruber{
             "pushToken" :AppDelegate.lipMontu,
             
         ]
-#else
-        let Api_Detaidefssip = "/xyz789/ghi789/give"
-        
-        
-       
-        let Diucgssip: [String: Any] = [
-            "efgheg": Bundle.main.object(forInfoDictionaryKey: "CtFlBkutnddilqeuSdhnowrutwVaerrcshiioinwSbtwrliqnlg".oranApolWothCharrterString()) as? String ?? "1.1",
-            "efghuio":"AzPzPvSkTlOvRiE".oranApolWothCharrterString(),
-            "mnop":UIDevice.current.systemName,
-            "qrster":UIDevice.current.systemVersion,
-            "designed" : "iuPgheocnge".oranApolWothCharrterString(),
-            "uvwxy" :onlyidduserFME,
-            "zxcvqwe" :AppDelegate.lipMontu,
-            
-        ]
-#endif
+//#else
+//        let Api_Detaidefssip = "/xyz789/ghi789/give"
+//        
+//        
+//       
+//        let Diucgssip: [String: Any] = [
+//            "efgheg": Bundle.main.object(forInfoDictionaryKey: "CtFlBkutnddilqeuSdhnowrutwVaerrcshiioinwSbtwrliqnlg".oranApolWothCharrterString()) as? String ?? "1.1",
+//            "efghuio":"AzPzPvSkTlOvRiE".oranApolWothCharrterString(),
+//            "mnop":UIDevice.current.systemName,
+//            "qrster":UIDevice.current.systemVersion,
+//            "designed" : "iuPgheocnge".oranApolWothCharrterString(),
+//            "uvwxy" :onlyidduserFME,
+//            "zxcvqwe" :AppDelegate.lipMontu,
+//            
+//        ]
+//#endif
         SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
        
         if SistertSSIp.count > 0{
