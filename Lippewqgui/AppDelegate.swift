@@ -11,7 +11,7 @@ import SwiftMessages
 import SwiftyStoreKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    static var appUITPushToken:String = ""
+    static var lipMontu:String = ""
     
     var window: UIWindow?
     var totalvrdataSSIP:Array<Dictionary<String,String>> = Array<Dictionary<String,String>>()
@@ -20,7 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         //判断是否是第一次下载App，如果是第一次，创建测试账号
-        usernotigation()
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { lip, error in
+            if lip {
+                DispatchQueue.main.async {
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+            }
+        }
         if UserDefaults.standard.string(forKey: "loadSSIPATimeOOp") == nil || UserDefaults.standard.string(forKey:"loadSSIPATimeOOp" ) == "firstTime" {
             var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
             allUserDataSSIP.append(["ssipNadme":"Aberria",
@@ -63,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
         ssuitreatNet()
         
-        popVCoverTowindowine()
+        priProtexrStar()
        
         window?.makeKeyAndVisible()
         
@@ -325,41 +332,29 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-       
-       
-        let pushRemotenotiTokenVAF = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
-        AppDelegate.appUITPushToken = pushRemotenotiTokenVAF
+  
+        AppDelegate.lipMontu = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
     }
     
     
-    func usernotigation() {
-        UNUserNotificationCenter.current().delegate = self
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { okayufir, error in
-            if okayufir {
-                DispatchQueue.main.async {
-                    UIApplication.shared.registerForRemoteNotifications()
-                }
-            }
-        }
-    }
+  
     
+    func priProtexrStar() {
+        let protectView = UITextField()
+        protectView.isSecureTextEntry = true
     
-    func popVCoverTowindowine() {
-        let covertVirew = UITextField()
-        covertVirew.isSecureTextEntry = true
-    
-        if (!window!.subviews.contains(covertVirew)) {
-            window!.addSubview(covertVirew)
+        if (!window!.subviews.contains(protectView)) {
+            window!.addSubview(protectView)
             
             
-            covertVirew.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
-            covertVirew.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
+            protectView.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
+            protectView.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
             
-            window!.layer.superlayer?.addSublayer(covertVirew.layer)
+            window!.layer.superlayer?.addSublayer(protectView.layer)
             if #available(iOS 17.0, *) {
-                covertVirew.layer.sublayers?.last?.addSublayer(window!.layer)
+                protectView.layer.sublayers?.last?.addSublayer(window!.layer)
             } else {
-                covertVirew.layer.sublayers?.first?.addSublayer(window!.layer)
+                protectView.layer.sublayers?.first?.addSublayer(window!.layer)
             }
         }
         
