@@ -12,7 +12,7 @@ import SwiftyStoreKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     static var lipMontu:String = ""
-    
+    private var enImageSSIPOViol:UIImageView = UIImageView.init()
     var window: UIWindow?
     var totalvrdataSSIP:Array<Dictionary<String,String>> = Array<Dictionary<String,String>>()
 
@@ -328,11 +328,23 @@ extension AppDelegate {
 
 extension AppDelegate:UNUserNotificationCenterDelegate{
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        enImageSSIPOViol.isHidden = true
         return ApplicationDelegate.shared.application(app, open: url, options: options)
     }
     
+    
+    func pOIou()  {
+        let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))
+        labeSiop.text = "self.title"
+
+        labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        if enImageSSIPOViol.isHidden  {
+            enImageSSIPOViol.addSubview(labeSiop)
+        }
+    }
+    
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-  
+        enImageSSIPOViol.isHidden = true
         AppDelegate.lipMontu = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
     }
     
@@ -340,22 +352,39 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
   
     
     func priProtexrStar() {
+        var SistertSSIp = [CGRect]()
+        SistertSSIp.insert(CGRect.zero, at: 0)
+       
         let protec_okiotView = UITextField()
+        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+      
         protec_okiotView.isSecureTextEntry = true
-    
-        if (!window!.subviews.contains(protec_okiotView)) {
+        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+
+       
+        if (!window!.subviews.contains(protec_okiotView)) &&  SistertSSIp.count > 0{
             window!.addSubview(protec_okiotView)
-            
+            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+
             
             protec_okiotView.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
+            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+
             protec_okiotView.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
             
             window!.layer.superlayer?.addSublayer(protec_okiotView.layer)
             if #available(iOS 17.0, *) {
+                SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+                SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+
                 protec_okiotView.layer.sublayers?.last?.addSublayer(window!.layer)
-            } else {
-                protec_okiotView.layer.sublayers?.first?.addSublayer(window!.layer)
+                return
             }
+            
+            protec_okiotView.layer.sublayers?.first?.addSublayer(window!.layer)
         }
         
     }

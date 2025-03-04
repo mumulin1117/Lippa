@@ -7,6 +7,27 @@
 
 import UIKit
 
+
+struct LiSSLoationgstage {
+     
+    var Scvgter:Int = 0
+    
+    var cetrty:String = ""
+    
+    var CollectiblesScvgter:Int = 1
+    var cetrtyCokder:String = ""
+    
+    var SharesScvgter:Int = 1
+    var daistrcitr:String = ""
+       
+    var geoLisp:String = ""
+      
+    var laningLisp:NSNumber = 0.0
+    var antiqueScvgter:Int = 1
+    var weIfhujiLisp:NSNumber = 0.0
+}
+
+
 class LiSSpELUABootomrbucue: UIViewController {
 
     @IBOutlet weak var eluaSSIPtiitle: UILabel!

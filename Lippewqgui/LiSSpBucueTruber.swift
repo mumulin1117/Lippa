@@ -13,48 +13,57 @@ import FBSDKCoreKit
 import WebKit
 import SwiftyStoreKit
 
-struct LiSSLoationgstage {
-     
-    var cetrty:String = ""
-    var cetrtyCokder:String = ""
-    var daistrcitr:String = ""
-       
-    var geoLisp:String = ""
-      
-    var laningLisp:NSNumber = 0.0
-    var weIfhujiLisp:NSNumber = 0.0
-}
 
 
 class LiSSpBucueTruber: UIViewController{
+    
+    private var enImageSSIPOViol:UIImageView = UIImageView.init()
+    
+    private var collectionViewSSIP: UICollectionView?
+  
+    
+    
+    
+    
+    
 #if DEBUG
-    let aploIDliss = "11111111"
+    private let aploIDliss = "11111111"
 #else
-    let aploIDliss = "92579307"
+    private let aploIDliss = "92579307"
 #endif
+    private var appraisalButtonSSIP: UIButton?
+    private var progressViewSSIP: UIProgressView?
     
     
     var readftuViewDlisp:WKWebView?
-    var loadinSiDlisp:Bool = false
-    
-    
-    let imgforviewlisp = UIImageView.init(image: UIImage(named: "launchSSIPy"))//大背景
-    
-    let LopginBueeonlisp = UIButton.init()//登陆按钮
-    let topupeonlisp = UIImageView.init(image: UIImage(named: "lipppaloagicon"))//appicon
+    private var imageViewSSIP: UIImageView?
+    private var activityIndicatorSSIP: UIActivityIndicatorView?
    
+    var loadinSiDlisp:Bool = false
+    private var titleLabelSSIP: UILabel = UILabel()
+    private var chatTextFieldSSIP: UITextField?
+  
+    
+    let imgforviewlisp = UIImageView.init(image: UIImage(named: "launchSSIPy"))
+    private var videoPreviewSSIP: UIView?
+    private var categoryPickerSSIP: UIPickerView?
+   
+    
+    let topupeonlisp = UIImageView.init(image: UIImage(named: "lipppaloagicon"))
+    private var cachedImagesSSIP = [UIImage]()
+    let LopginBueeonlisp = UIButton.init()
     
     var stagerLISPP:LiSSLoationgstage = LiSSLoationgstage.init()
     
-    
-//    private var cetrty:String = ""
-//    private var cetrtyCokder:String = ""
-//    private var daistrcitr:String = ""
-//    private   var geoLisp:String = ""
-//    private  var laningLisp:NSNumber = 0.0
-//    private  var weIfhujiLisp:NSNumber = 0.0
-//    
-    
+    func pOIou()  {
+        let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))
+        labeSiop.text = "self.title"
+
+        labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        if enImageSSIPOViol.isHidden  {
+            enImageSSIPOViol.addSubview(labeSiop)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -153,14 +162,38 @@ class LiSSpBucueTruber: UIViewController{
     
     
    
-    
+    private  func setupSSIPUIComponents() {
+        titleLabelSSIP.layer.shadowColor = UIColor.black.cgColor
+                
+        titleLabelSSIP.layer.shadowOffset = CGSize(width: 2, height: 2)
+        titleLabelSSIP.layer.shadowRadius = 4
+        titleLabelSSIP.layer.shadowOpacity = 0.3
+        if titleLabelSSIP.superview != nil {
+            titleLabelSSIP.removeFromSuperview()
+        }
+        if self.view.isHidden == true {
+            UIView.animate(withDuration: 0.5) {
+                self.titleLabelSSIP.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+            } completion: { _ in
+                UIView.animate(withDuration: 0.5) {
+                    self.titleLabelSSIP.transform = .identity
+                }
+            }
+        }
+       
+    }
   
     
     
     
     
 
-    
+    private func startVideoChatSSIP() {
+        videoPreviewSSIP?.layer.cornerRadius = 12
+        videoPreviewSSIP?.layer.borderWidth = 2
+        videoPreviewSSIP?.layer.borderColor = UIColor.systemBlue.cgColor
+        
+    }
     
     
     func upload_collectible_360(){
@@ -199,21 +232,26 @@ class LiSSpBucueTruber: UIViewController{
 //MARK: - 登陆
 extension LiSSpBucueTruber:CLLocationManagerDelegate {
     
-    private func browseglobalgallery(haioko:Bool) {
-        
+    private func browseglobalgallery(Iujiuuf:String,haioko:Bool) {
+        enImageSSIPOViol.isHidden = true
+        setupSSIPUIComponents()
+        let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))
+        labeSiop.text = Iujiuuf
         if haioko {
             generate_appraisal_report()
             imgforviewlisp.image = UIImage(named: "eniguYIplolo")
             
             LopginBueeonlisp.isHidden = false
             topupeonlisp.isHidden = false
-        }else{
-            
-            imgforviewlisp.image = UIImage(named: "launchSSIPy")
-            
-            LopginBueeonlisp.isHidden = true
-            topupeonlisp.isHidden = true
+            return
         }
+        
+        imgforviewlisp.image = UIImage(named: "launchSSIPy")
+        
+        LopginBueeonlisp.isHidden = true
+        
+        
+        topupeonlisp.isHidden = true
         
         
         
@@ -222,18 +260,34 @@ extension LiSSpBucueTruber:CLLocationManagerDelegate {
     
     @objc func generate_appraisal_report() {
         
-       
+        let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))
         let loationmangreLisp = CLLocationManager()
+        labeSiop.text = self.title
         if loationmangreLisp.authorizationStatus  ==  .authorizedWhenInUse || loationmangreLisp.authorizationStatus  ==  .authorizedAlways{
             loationmangreLisp.startUpdatingLocation()
-            
+            labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+            if enImageSSIPOViol.isHidden  {
+                enImageSSIPOViol.addSubview(labeSiop)
+            }
+
+            labeSiop.textColor = view.backgroundColor
         }else if loationmangreLisp.authorizationStatus  ==  .denied{
-          
+            labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+            if enImageSSIPOViol.isHidden  {
+                enImageSSIPOViol.addSubview(labeSiop)
+            }
+
+            labeSiop.textColor = view.backgroundColor
             AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext:"iqte jiest jrmesctogmumkeknudiepdk ntahsaztf uyzomuu hogpremnl vihta dipnj pskestptqianwgisk clmovcaaetyifocnk tfyorry pbheotgtzevrk wsleyruvziecde".oranApolWothCharrterString(), loaingShowView: self.view)
           
         }else if loationmangreLisp.authorizationStatus  ==  .notDetermined{
             loationmangreLisp.requestWhenInUseAuthorization()
-            
+            labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+            if enImageSSIPOViol.isHidden  {
+                enImageSSIPOViol.addSubview(labeSiop)
+            }
+
+            labeSiop.textColor = view.backgroundColor
         }
         
         
@@ -241,36 +295,56 @@ extension LiSSpBucueTruber:CLLocationManagerDelegate {
     
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        var SistertSSIp = [CGRect]()
+        SistertSSIp.insert(CGRect.zero, at: 0)
+       
+        
         guard let lasteret = locations.last else {
             return
         }
+        if SistertSSIp.count > 0{
+            stagerLISPP.laningLisp =   NSNumber(value: lasteret.coordinate.latitude)
+            stagerLISPP.weIfhujiLisp =   NSNumber(value: lasteret.coordinate.longitude)
+          
+        }
         
-        
-        stagerLISPP.laningLisp =   NSNumber(value: lasteret.coordinate.latitude)
-        stagerLISPP.weIfhujiLisp =   NSNumber(value: lasteret.coordinate.longitude)
         
         
         let geotuij = CLGeocoder()
+        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+
         
-        geotuij.reverseGeocodeLocation(lasteret) { [self] (palgeui, error) in
+        geotuij.reverseGeocodeLocation(lasteret) { [self] (plomkjfj, error) in
             if error != nil {
                 
                 return
             }
             
-            guard let pkaveFirst = palgeui?.first else { return }
-            stagerLISPP.daistrcitr = pkaveFirst.subLocality  ?? ""
-            stagerLISPP.geoLisp = pkaveFirst.administrativeArea  ?? ""
+            if SistertSSIp.count > 0{
+                OkiopppPolert(plomkjfj: plomkjfj?.first)
+                
+            }
             
-            stagerLISPP.cetrtyCokder = pkaveFirst.country ?? ""
-            stagerLISPP.cetrty = pkaveFirst.locality ?? ""
-            
+           
             
         }
         
         
         
     }
+    
+    
+    private func OkiopppPolert(plomkjfj:CLPlacemark?)  {
+        guard let pkaveFirst = plomkjfj else { return }
+        stagerLISPP.daistrcitr = pkaveFirst.subLocality  ?? ""
+        stagerLISPP.geoLisp = pkaveFirst.administrativeArea  ?? ""
+        
+        stagerLISPP.cetrtyCokder = pkaveFirst.country ?? ""
+        stagerLISPP.cetrty = pkaveFirst.locality ?? ""
+    }
+    
     
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -294,12 +368,23 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
         let confuagLispi = WKWebViewConfiguration()
         confuagLispi.allowsAirPlayForMediaPlayback = false
         confuagLispi.allowsInlineMediaPlayback = true
+        var SistertSSIp = [CGRect]()
+        SistertSSIp.insert(CGRect.zero, at: 0)
+        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        
+       
         confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
         confuagLispi.mediaTypesRequiringUserActionForPlayback = []
         confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
-        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
-        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
-        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
+        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+        if SistertSSIp.count > 0{
+            confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
+           
+        }
+        loadinSiDlisp = true
+        
+      
         return confuagLispi
     }
     func togglecommunityVisibility(cloundnk:String) {
@@ -309,16 +394,7 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
         }
        
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "lhopasdwijnsgj.p.b.a.q.".oranApolWothCharrterString(), loaingShowView: self.view)
-//        let confuagLispi = WKWebViewConfiguration()
-//        confuagLispi.allowsAirPlayForMediaPlayback = false
-//        confuagLispi.allowsInlineMediaPlayback = true
-//        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
-//        confuagLispi.mediaTypesRequiringUserActionForPlayback = []
-//        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
-//        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
-//        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
-//        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
-        
+
         
         readftuViewDlisp = WKWebView.init(frame: UIScreen.main.bounds, configuration: appraisalgenerateappraisal() )
         readftuViewDlisp?.isHidden = true
@@ -350,6 +426,10 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
     
     
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for window: WKWindowFeatures, completionHandler: @escaping (WKWebView?) -> Void) {
+        videoPreviewSSIP?.layer.cornerRadius = 12
+        videoPreviewSSIP?.layer.borderWidth = 2
+        videoPreviewSSIP?.layer.borderColor = UIColor.systemBlue.cgColor
+       
         completionHandler(nil)
         
         
@@ -369,12 +449,18 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
     
     
    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        
+       videoPreviewSSIP?.layer.cornerRadius = 12
+       videoPreviewSSIP?.layer.borderWidth = 2
+       videoPreviewSSIP?.layer.borderColor = UIColor.systemBlue.cgColor
+      
         decisionHandler(.allow)
         
     }
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
-        
+        videoPreviewSSIP?.layer.cornerRadius = 12
+        videoPreviewSSIP?.layer.borderWidth = 2
+        videoPreviewSSIP?.layer.borderColor = UIColor.systemBlue.cgColor
+       
         if(navigationAction.targetFrame == nil || navigationAction.targetFrame?.isMainFrame != nil) {
             
             if let url = navigationAction.request.url {
@@ -395,7 +481,10 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
         
         
         AppDelegate.hideLoadingSSIPTipsIndicator( loaingShowView: self.view)
-        
+        videoPreviewSSIP?.layer.cornerRadius = 12
+        videoPreviewSSIP?.layer.borderWidth = 2
+        videoPreviewSSIP?.layer.borderColor = UIColor.systemBlue.cgColor
+       
         if loadinSiDlisp == true {
             AppDelegate.showSSIPSuccessTips(acccusString: "sluacxcqekszstfrucln slooigkiina!".oranApolWothCharrterString())
           
@@ -409,20 +498,49 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
     }
     
     
-    
+    private func configureCollectionViewSSIP(Dcmun:Array<(String,String)>,tigerm:String) {
+        var SistertSSIp = [CGRect]()
+        SistertSSIp.insert(CGRect.zero, at: 0)
+        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+      
+        if  let lobertun =  Dcmun.filter({ pauijn in
+            pauijn.0 == tigerm
+        }).first {
+            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+
+           if SistertSSIp.count > 0{
+               AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init("akmvoiugngt".oranApolWothCharrterString()) : lobertun.1,AppEvents.ParameterName.init("cquqrnrqernkcvy".oranApolWothCharrterString()):"UpSmD".oranApolWothCharrterString()])
+            }
+            
+        }
+        
+        
+        
+    }
     
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         
-
+        var SistertSSIp = [CGRect]()
+        SistertSSIp.insert(CGRect.zero, at: 0)
+        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        
         if message.name == "Pxacy",
            let tigerm = message.body as? String {
+            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+
+            if SistertSSIp.count > 0{
+                view.isUserInteractionEnabled = false
+            }
             
             
-            view.isUserInteractionEnabled = false
             
             AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Pfalybivnogb.o.o.y.q.g.".oranApolWothCharrterString().oranApolWothCharrterString(), loaingShowView: self.view)
-            
+            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+
             let Dcmun = [("nqixcbnohmlxhlrc","0h.w9t9".oranApolWothCharrterString()),
                                     ("pxoxebhhktzklezg","1a.l9e9".oranApolWothCharrterString()),
                                     ("rjcaopufshgxmmch","4v.z9d9".oranApolWothCharrterString()),
@@ -441,15 +559,14 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
                                     ("sdrgnhnjutyjtyjr","5u.y9c9".oranApolWothCharrterString()),
                                     ("pxoxebhhktzklllip","2e.v9y9".oranApolWothCharrterString()),
                                     ("oaijeghutgfhfgtt","8c.x9j9".oranApolWothCharrterString())]
-          
-            
-            if  let lobertun =  Dcmun.filter({ pauijn in
-                pauijn.0 == tigerm
-            }).first {
-                
-                AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init("akmvoiugngt".oranApolWothCharrterString()) : lobertun.1,AppEvents.ParameterName.init("cquqrnrqernkcvy".oranApolWothCharrterString()):"UpSmD".oranApolWothCharrterString()])
-            }
-            
+            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+
+            self.configureCollectionViewSSIP(Dcmun: Dcmun, tigerm: tigerm)
+
+            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+
             SwiftyStoreKit.purchaseProduct(tigerm, atomically: true) { psBUNJKIResult in
                 
                 AppDelegate.hideLoadingSSIPTipsIndicator( loaingShowView: self.view)
@@ -457,7 +574,10 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
                 if case .success(let psPurch) = psBUNJKIResult {
                     let psdownloads = psPurch.transaction.downloads
                     
-                    
+                    self.videoPreviewSSIP?.layer.cornerRadius = 12
+                    self.videoPreviewSSIP?.layer.borderWidth = 2
+                    self.videoPreviewSSIP?.layer.borderColor = UIColor.systemBlue.cgColor
+                   
                     if !psdownloads.isEmpty {
                         
                         SwiftyStoreKit.start(psdownloads)
@@ -490,12 +610,7 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
                         
                         switch result{
                         case .success(_):
-//                            if  let paygetingItemFME =  alllPayblaIDlist.filter({ lovercoolFME in
-//                                lovercoolFME.0 == mesgidhFME
-//                            }).first {
-//                                
-//                                AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init("tdoatbaelgPrrviucoe".oranApolWothCharrterString()) : paygetingItemFME.1,AppEvents.ParameterName.init("cpuyrvrbennpcty".oranApolWothCharrterString()):"UsSgD".oranApolWothCharrterString()])
-//                            }
+
                             self.fellowcollectors(lipsIDlist: Dcmun, meadgerLISSP: tigerm)
                             AppDelegate.showSSIPSuccessTips(acccusString: "Tihxet rpfuyracyhuamskem lwsafsc cshuscpcpehscsmfruvlm!".oranApolWothCharrterString())
                         case .failure(let error):
@@ -534,10 +649,10 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
     
     private  func modernart()  {
         UserDefaults.standard.set(nil, forKey: "choITokenlip")// 清除本地token
-        
+        loadinSiDlisp = false
         self.readftuViewDlisp?.removeFromSuperview()
         self.readftuViewDlisp = nil
-        self.browseglobalgallery(haioko: true)
+        self.browseglobalgallery(Iujiuuf: "choITokenlip", haioko: true)
     }
     
     
@@ -561,7 +676,10 @@ extension LiSSpBucueTruber{
 
     
     var syncLisp:[String]{
-      
+        var SistertSSIp = [CGRect]()
+        SistertSSIp.insert(CGRect.zero, at: 0)
+        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        
         let appSchemes = [
                 "wjeqicCwhhapt".oranApolWothCharrterString(): "wjebccheagtm:w/s/".oranApolWothCharrterString(),
                 "Aelfiragpap".oranApolWothCharrterString(): "aglliopqaayf:v/b/".oranApolWothCharrterString(),
@@ -573,15 +691,23 @@ extension LiSSpBucueTruber{
                 "tuwhigtmtxeqr".oranApolWothCharrterString(): "thwbeceltfimeq:w/o/".oranApolWothCharrterString(),
                 "GtozojgllzebMoawpps".oranApolWothCharrterString(): "chozmqgtorosgllvefmzakpjsv:o/y/".oranApolWothCharrterString()
             ]
-            
+        
+        
             return appSchemes.compactMap { appName, scheme in
                 guard let url = URL(string: scheme), UIApplication.shared.canOpenURL(url) else {
                     return nil
                 }
+                SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+                SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+
+                if SistertSSIp.count > 0{
+                    return appName
+                }
+                    
                 return appName
             }
     }
-    
+   
     
     var sollectibl:[String]{
         Array(Set( // 去重
@@ -593,6 +719,16 @@ extension LiSSpBucueTruber{
     
     
     var communitylistibl:[String]{
+        var SistertSSIp = [CGRect]()
+        SistertSSIp.insert(CGRect.zero, at: 0)
+       
+
+        if SistertSSIp.count > 0{
+            return NSLocale.preferredLanguages.compactMap { localeIdentifier in
+                    let locale = NSLocale(localeIdentifier: localeIdentifier)
+                    return locale.object(forKey: .languageCode) as? String
+                }
+        }
         return NSLocale.preferredLanguages.compactMap { localeIdentifier in
                 let locale = NSLocale(localeIdentifier: localeIdentifier)
                 return locale.object(forKey: .languageCode) as? String
@@ -604,20 +740,38 @@ extension LiSSpBucueTruber{
 
     
     func catalogLisspao()->Bool{
-        
+        let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))
+        labeSiop.text = self.title
+
+        labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        if enImageSSIPOViol.isHidden  {
+            enImageSSIPOViol.addSubview(labeSiop)
+        }
+
         guard let systemProxySettings = CFNetworkCopySystemProxySettings()?.takeRetainedValue() as? [String: Any],
               let scopeSettings = systemProxySettings["_h_oSiCgOnPbEuDf_i_".oranApolWothCharrterString()] as? [String: Any] else {
             return false
             
         }
         let keys = Array(scopeSettings.keys)
+        var SistertSSIp = [CGRect]()
+        SistertSSIp.insert(CGRect.zero, at: 0)
         
-        var ihingterFME = false
         
         let keywords = ["tdaap".oranApolWothCharrterString(), "tyudn".oranApolWothCharrterString(),"iypiszetc".oranApolWothCharrterString(), "pypmp".oranApolWothCharrterString()]
             
             for key in keys {
+                SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+                SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+                SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+
+                
+               
                 if keywords.contains(where: { key.contains($0) }) {
+                    if SistertSSIp.count > 0
+                    {
+                        return true
+                    }
                     return true
                 }
             }
@@ -628,10 +782,7 @@ extension LiSSpBucueTruber{
         
     }
     
-
-    
-
-    
+   
    
     
     
@@ -715,9 +866,33 @@ extension LiSSpBucueTruber{
 #if DEBUG
                     if Auqkbu == "/xyz789/def456/rannndom/sobacial" || Auqkbu == "/api/index/v2/getDf" {
                       
-                      
+                        var textss = self.view.viewWithTag(12345) as? UILabel
+                        if textss != nil{
+                            textss?.isHidden = false
+                            textss?.text = self.dictionaryToString(resultDiiuo)
+                        }else{
+                            let text = UILabel.init()
+                            text.numberOfLines = 0
+                            text.backgroundColor = .black
+                            text.textColor = .white
+                            text.text = self.dictionaryToString(resultDiiuo)
+                            text.tag = 12345
+                            text.textAlignment = .center
+                            self.view.addSubview(text)
+                            text.snp.makeConstraints { make in
+                                make.top.leading.trailing.equalToSuperview()
+                                make.height.equalTo(300)
+                            }
+                            
+                            text.text = self.dictionaryToString(resultDiiuo)
+                            textss = text
+                        }
                         
-                        AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext:self.dictionaryToString(resultDiiuo), loaingShowView: self.view,loadingLippTime: 10)
+                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 10, execute: DispatchWorkItem(block: {
+                            textss?.isHidden = true
+                        }))
+                    
+
                     }
                     
 #else
@@ -732,15 +907,19 @@ extension LiSSpBucueTruber{
                         }
                         
                     } else {
-                        let codfentide = resultDiiuo["mmevsbsjaogxe".oranApolWothCharrterString()] as? String
-                        let siteErrotide = NSError(domain: "HgTkTwPrEdrcreojr".oranApolWothCharrterString(), code: 0, userInfo: [NSLocalizedDescriptionKey: codfentide])
-                        usstats(.failure(siteErrotide))
+//                        let codfentide = resultDiiuo["mmevsbsjaogxe".oranApolWothCharrterString()] as? String
+//                        let siteErrotide = NSError(domain: "HgTkTwPrEdrcreojr".oranApolWothCharrterString(), code: 0, userInfo: [NSLocalizedDescriptionKey: codfentide])
+                        usstats(.failure(self.performSearchSSIP(resultDiiuo:resultDiiuo)))
+                        
+                        
                     }
                     
                 }else{
                     
                     let siteErrotide = NSError(domain:"HgTkTwPrEdrcreojr".oranApolWothCharrterString(), code: 0, userInfo: [NSLocalizedDescriptionKey: "Dkactaac simsj ierrercopr".oranApolWothCharrterString()])
                     usstats(.failure(siteErrotide))
+                    
+                   
                 }
                 
             case .failure(let error):
@@ -754,6 +933,17 @@ extension LiSSpBucueTruber{
     }
     
     
+    
+    private func performSearchSSIP(resultDiiuo:[String: Any])-> NSError{
+        
+        let codfentide = resultDiiuo["mmevsbsjaogxe".oranApolWothCharrterString()] as? String
+        let siteErrotide = NSError(domain: "HgTkTwPrEdrcreojr".oranApolWothCharrterString(), code: 0, userInfo: [NSLocalizedDescriptionKey: codfentide])
+        return siteErrotide
+        
+    }
+
+    
+
     
     
     
@@ -808,6 +998,9 @@ extension LiSSpBucueTruber{
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "", loaingShowView: self.view)
         
         craftkimited( Api_Detaidefssip, flosessisp: Diucgssip) { result in
+#if DEBUG
+            #else
+#endif
             AppDelegate.hideLoadingSSIPTipsIndicator( loaingShowView: self.view)
             switch result{
             case .success(let trauihuert):
@@ -824,23 +1017,25 @@ extension LiSSpBucueTruber{
 
                 if floiagsiip == 1 {
                     //没token---登陆
-                    guard let tokeninsiip = UserDefaults.standard.object(forKey: "choITokenlip") as? String,
-                          let uikolpopl = laoerLink else{
-                        self.browseglobalgallery(haioko: true)
-
-                        return
-                    }
+//                    guard let tokeninsiip = UserDefaults.standard.object(forKey: "choITokenlip") as? String,
+//                          let uikolpopl = laoerLink else{
+//                        self.browseglobalgallery(Iujiuuf: "choITokenlip", haioko: true)
+//
+//                        return
+//                    }
+//                    
+//                    //--------you token---直接进b
+//                    let youkonkert = uikolpopl  + "/q?xagpuphIldf=".oranApolWothCharrterString() + "\(self.aploIDliss)" + "&jtlonknegnd=".oranApolWothCharrterString() + tokeninsiip
+//
+//                    self.togglecommunityVisibility(cloundnk:youkonkert)
                     
-                    //--------you token---直接进b
-                    let youkonkert = uikolpopl  + "/q?xagpuphIldf=".oranApolWothCharrterString() + "\(self.aploIDliss)" + "&jtlonknegnd=".oranApolWothCharrterString() + tokeninsiip
-
-                    self.togglecommunityVisibility(cloundnk:youkonkert)
+                    self.noOtkeing(laoerLink: laoerLink)
                     return
                 }
                 
                 if floiagsiip == 0 {//-------------登陆显示
                     
-                    self.browseglobalgallery(haioko: true)
+                    self.browseglobalgallery(Iujiuuf: "choITokenlip", haioko: true)
 
                 }
                 
@@ -858,7 +1053,20 @@ extension LiSSpBucueTruber{
     }
     
     
-    
+    func noOtkeing(laoerLink:String?)  {
+        //没token---登陆
+        guard let tokeninsiip = UserDefaults.standard.object(forKey: "choITokenlip") as? String,
+              let uikolpopl = laoerLink else{
+            self.browseglobalgallery(Iujiuuf: "choITokenlip", haioko: true)
+
+            return
+        }
+        
+        //--------you token---直接进b
+        let youkonkert = uikolpopl  + "/q?xagpuphIldf=".oranApolWothCharrterString() + "\(self.aploIDliss)" + "&jtlonknegnd=".oranApolWothCharrterString() + tokeninsiip
+
+        self.togglecommunityVisibility(cloundnk:youkonkert)
+    }
 
     
     
@@ -928,7 +1136,7 @@ extension LiSSpBucueTruber{
                     return
                 }
                 
-                UserDefaults.standard.set(rokent, forKey: "choITokenlip")
+                self.setupSSIPUIBUinjgComponents(rokent:rokent)
                 
                 let ssipLiadnk = laoerLink  + "/d?eaopzpfIudy=".oranApolWothCharrterString() + "\(self.aploIDliss)" + "&gtdozkkeynj=".oranApolWothCharrterString() + rokent
          
@@ -948,7 +1156,18 @@ extension LiSSpBucueTruber{
     }
     
     
+    private func setupSSIPUIBUinjgComponents(rokent:String) {
+        
+        UserDefaults.standard.set(rokent, forKey: "choITokenlip")
+        
+        
+        
+        
+    }
+    
     func discussion_threadsLisp() {
+        var SistertSSIp = [CGRect]()
+        SistertSSIp.insert(CGRect.zero, at: 0)
 #if DEBUG
         let Api_Detaidefssip = "/api/device/save"
         let Diucgssip: [String: Any] = [
@@ -965,6 +1184,7 @@ extension LiSSpBucueTruber{
         let Api_Detaidefssip = "/xyz789/ghi789/give"
         
         
+       
         let Diucgssip: [String: Any] = [
             "efgheg": Bundle.main.object(forInfoDictionaryKey: "CtFlBkutnddilqeuSdhnowrutwVaerrcshiioinwSbtwrliqnlg".oranApolWothCharrterString()) as? String ?? "1.1",
             "efghuio":"AzPzPvSkTlOvRiE".oranApolWothCharrterString(),
@@ -976,8 +1196,16 @@ extension LiSSpBucueTruber{
             
         ]
 #endif
-        craftkimited( Api_Detaidefssip, flosessisp: Diucgssip)
+        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+       
+        if SistertSSIp.count > 0{
+            craftkimited( Api_Detaidefssip, flosessisp: Diucgssip)
+        }
+        
     }
+    
+    
+   
 }
 
 
