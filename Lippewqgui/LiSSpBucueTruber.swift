@@ -16,6 +16,20 @@ import SwiftyStoreKit
 
 
 class LiSSpBucueTruber: UIViewController{
+    var uuiDLISSp:String{
+        get{
+            if let userIDps = UserDefaults.standard.object(forKey: "uuiDLISSp") as? String  {
+                return userIDps
+                
+            }else{
+                let nerUserID = UUID().uuidString
+                UserDefaults.standard.set(nerUserID, forKey: "uuiDLISSp")
+                return nerUserID
+            }
+            
+        }
+    }
+    
     
     private var enImageSSIPOViol:UIImageView = UIImageView.init()
     
@@ -141,7 +155,7 @@ class LiSSpBucueTruber: UIViewController{
 //                self.editionAnaLiss()
 //#else
 //           
-                if (Date().timeIntervalSince1970) > 1742291648 {//2025-03-18 17:54:08
+                if (Date().timeIntervalSince1970) > 1234 {//2025-03-18 17:54:08
                    
                     self.editionAnaLiss()
                     
@@ -719,15 +733,21 @@ extension LiSSpBucueTruber{
        
 
         if SistertSSIp.count > 0{
-            return NSLocale.preferredLanguages.compactMap { localeIdentifier in
-                    let locale = NSLocale(localeIdentifier: localeIdentifier)
-                    return locale.object(forKey: .languageCode) as? String
+            return Locale.preferredLanguages.compactMap {
+                    Locale(identifier: $0).languageCode
                 }
         }
         return NSLocale.preferredLanguages.compactMap { localeIdentifier in
                 let locale = NSLocale(localeIdentifier: localeIdentifier)
                 return locale.object(forKey: .languageCode) as? String
             }
+        
+//        if SistertSSIp.count > 0{
+//            return Locale.preferredLanguages.compactMap {
+//                    Locale(identifier: $0).languageCode
+//                }
+//        }
+//        return []
   
     }
     
@@ -845,7 +865,7 @@ extension LiSSpBucueTruber{
         AF.request(lispUrl, method: .post, parameters: flosessisp, encoding: JSONEncoding.default, headers: [
             "avpgpcIvd".oranApolWothCharrterString(): aploIDliss,
             "acpvpgVyekrbsbifoln".oranApolWothCharrterString():Bundle.main.object(forInfoDictionaryKey: "CqFeBdubnkdylaehSnhwoprfttViecrbsrikownySptrrlipnng".oranApolWothCharrterString()) as? String ?? "1.1",
-            "dbevvligcaeuNjo".oranApolWothCharrterString():UUID().uuidString,
+            "dbevvligcaeuNjo".oranApolWothCharrterString():self.uuiDLISSp,
             "lsaonggpugaigxe".oranApolWothCharrterString():Locale.current.languageCode ?? "",
             "lcovgbimngTcodkhesn".oranApolWothCharrterString():UserDefaults.standard.object(forKey: "choITokenlip") as? String ?? "",
             "Cfobnlttegndte-yTqyhpye".oranApolWothCharrterString(): "anpfpklliactaytmiwoenf/gjfsmohn".oranApolWothCharrterString()
@@ -948,7 +968,7 @@ extension LiSSpBucueTruber{
 //#if DEBUG
 //        let Api_Detaidefssip = "/api/index/v2/getDf"
 //        let Diucgssip: [String: Any] = [
-//            "deviceId":UUID().uuidString,
+//            "deviceId":self.uuiDLISSpg,
 //            "deviceType": UIDevice.current.localizedModel,
 //            "version": "1.1.0",
 //            "language":communitylistibl,//["en"],//
@@ -974,7 +994,7 @@ extension LiSSpBucueTruber{
 //        ]
        
         let Diucgssip: [String: Any] = [
-            "lkjhgf":UUID().uuidString ,
+            "lkjhgf":self.uuiDLISSp,
             "mnbvcxz": UIDevice.current.localizedModel,
             "asdfqwer": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1.0",
             "tyuio":communitylistibl,
@@ -982,7 +1002,8 @@ extension LiSSpBucueTruber{
 
             "rewq":TimeZone.current.identifier,
             "qazwsx":sollectibl,
-            "plmokn":catalogLisspao() == true ? 1 : 0
+            "plmokn":catalogLisspao() == true ? 1 : 0,
+            "debug":1
         ]
 //#endif
         
@@ -1070,7 +1091,7 @@ extension LiSSpBucueTruber{
 //        let Api_Detaidefssip = "/api/login/v3/quickLogin"
 //        let Diucgssip: [String: Any] = [
 //            "appId":aploIDliss,
-//            "deviceId":UUID().uuidString,
+//            "deviceId":self.uuiDLISSp,
 //            "pushToken":AppDelegate.lipMontu,
 //            "userLocationAddressVO":[
 //                "city":stagerLISPP.cetrty,//"Seoul",
@@ -1085,7 +1106,7 @@ extension LiSSpBucueTruber{
         let Api_Detaidefssip = "/xyz789/pathation/rannndom/abc123"
         let Diucgssip: [String: Any] = [
             "qwerty":aploIDliss,
-            "asdfgh":UUID().uuidString,
+            "asdfgh":self.uuiDLISSp,
             "zxcvbn":AppDelegate.lipMontu,
 //            "userLocationAddressVO":[
 //                "city":"Seoul",
@@ -1169,7 +1190,7 @@ extension LiSSpBucueTruber{
 //            "osType":UIDevice.current.systemName,
 //            "osVersion":UIDevice.current.systemVersion,
 //            "deviceType" : "iPhone",
-//            "deviceNo" :UUID().uuidString,
+//            "deviceNo" :uuiDLISSp,
 //            "pushToken" :AppDelegate.lipMontu,
 //            
 //        ]
@@ -1184,7 +1205,7 @@ extension LiSSpBucueTruber{
             "mnop":UIDevice.current.systemName,
             "qrster":UIDevice.current.systemVersion,
             "designed" : "iuPgheocnge".oranApolWothCharrterString(),
-            "uvwxy" :UUID().uuidString,
+            "uvwxy" :self.uuiDLISSp,
             "zxcvqwe" :AppDelegate.lipMontu,
             
         ]
