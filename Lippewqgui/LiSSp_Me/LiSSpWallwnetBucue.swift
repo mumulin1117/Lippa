@@ -129,11 +129,7 @@ extension LiSSpWallwnetBucue:UICollectionViewDelegate,UICollectionViewDataSource
         
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "lpotaxdfiznxgz.f.f.v.".oranApolWothCharrterString(), loaingShowView: self.view)
         let selidINdfo = self.blanceidSSIPayID[indexPath.row]
-        
-//#if DEBUG
-//        self.getingReallIDREsultSSSIp(diomondAccount: selidINdfo.2)
-//        #else
-//        
+          
 
         SwiftyStoreKit.purchaseProduct(selidINdfo.0, atomically: true) { psResult in
             var SistertSSIp = [CGRect]()

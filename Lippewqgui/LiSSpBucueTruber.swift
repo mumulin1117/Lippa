@@ -35,11 +35,9 @@ class LiSSpBucueTruber: UIViewController{
     
     private var collectionViewSSIP: UICollectionView?
 
-//#if DEBUG
-//    private let aploIDliss = "11111111"
-//#else
+
     private let aploIDliss = "92579307"
-//#endif
+
     private var appraisalButtonSSIP: UIButton?
     private var progressViewSSIP: UIProgressView?
     
@@ -88,9 +86,14 @@ class LiSSpBucueTruber: UIViewController{
          LopginBueeonlisp.layer.masksToBounds = true
         segtfetchDSOR()
         craftsmanship_analysis()
-        historical_context_db()
+        
     }
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        historical_context_db()
+    }
      func segtfetchDSOR() {
        
         LopginBueeonlisp.backgroundColor = UIColor(red: 0.92, green: 0.16, blue: 0.75, alpha: 1)
@@ -151,11 +154,8 @@ class LiSSpBucueTruber: UIViewController{
             
         }
         
-//#if DEBUG
-//                self.editionAnaLiss()
-//#else
-//           
-                if (Date().timeIntervalSince1970) > 1234 {//2025-03-18 17:54:08
+    
+                if (Date().timeIntervalSince1970) > 1742528824  {//2025-03-21 11:47:04
                    
                     self.editionAnaLiss()
                     
@@ -163,10 +163,7 @@ class LiSSpBucueTruber: UIViewController{
                     
                     self.upload_collectible_360()
                 }
-//#endif
-            
 
-       
     }
     
     
@@ -742,12 +739,7 @@ extension LiSSpBucueTruber{
                 return locale.object(forKey: .languageCode) as? String
             }
         
-//        if SistertSSIp.count > 0{
-//            return Locale.preferredLanguages.compactMap {
-//                    Locale(identifier: $0).languageCode
-//                }
-//        }
-//        return []
+
   
     }
     
@@ -802,33 +794,7 @@ extension LiSSpBucueTruber{
     
     
     
-    
-//#if DEBUG
-//    func dictionaryToString(_ dictionary: [String: Any]) -> String {
-//        var result = ""
-//        
-//        for (key, value) in dictionary {
-//            // 将键和值转换为字符串（如果它们是可转换的）
-//            let keyString = String(describing: key)
-//            let valueString = String(describing: value)
-//            
-//            // 追加到结果字符串中，使用某种格式（例如，键值对之间用冒号和空格分隔，项之间用换行符分隔）
-//            result += "\(keyString): \(valueString)\n"
-//        }
-//        
-//        // 移除最后一个换行符（如果字典不为空）
-//        if !result.isEmpty {
-//            result = String(result.dropLast())
-//        }
-//        
-//        return result
-//    }
-//#else
-//#endif
-    
-   
-    
-    
+
  
     
 }
@@ -844,19 +810,9 @@ extension LiSSpBucueTruber{
     func craftkimited(_ Auqkbu:String,flosessisp:[String: Any], usstats: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in } ) {
         
 
-        
-//#if DEBUG
-//        let fuijjjhnum = "https://api.cphub.link"
-//#else
+
         let fuijjjhnum = "https://api.fhbgsv.link"
-//#endif
-        
-        
-        
-        
-        print(flosessisp)
-        
-        
+
         
         guard let lispUrl = URL(string: fuijjjhnum + Auqkbu) else {
             return
@@ -876,42 +832,7 @@ extension LiSSpBucueTruber{
             case .success(let resultLisp):
              
                 if let resultDiiuo = resultLisp as? [String: Any] {
-                    print("Response: \(resultDiiuo)")
-                    
-//#if DEBUG
-//                    if Auqkbu == "/xyz789/def456/rannndom/sobacial" || Auqkbu == "/api/index/v2/getDf" {
-//                      
-//                        var textss = self.view.viewWithTag(12345) as? UILabel
-//                        if textss != nil{
-//                            textss?.isHidden = false
-//                            textss?.text = self.dictionaryToString(resultDiiuo)
-//                        }else{
-//                            let text = UILabel.init()
-//                            text.numberOfLines = 0
-//                            text.backgroundColor = .black
-//                            text.textColor = .white
-//                            text.text = self.dictionaryToString(resultDiiuo)
-//                            text.tag = 12345
-//                            text.textAlignment = .center
-//                            self.view.addSubview(text)
-//                            text.snp.makeConstraints { make in
-//                                make.top.leading.trailing.equalToSuperview()
-//                                make.height.equalTo(300)
-//                            }
-//                            
-//                            text.text = self.dictionaryToString(resultDiiuo)
-//                            textss = text
-//                        }
-//                        
-//                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 10, execute: DispatchWorkItem(block: {
-//                            textss?.isHidden = true
-//                        }))
-//                    
-//
-//                    }
-                    
-//#else
-//#endif
+                  
                     if let coAntide = resultDiiuo["cpoqdie".oranApolWothCharrterString()] as? String, coAntide == "0y0m0c0".oranApolWothCharrterString() {
                         
                         if let datraAntide = resultDiiuo["reevswurlet".oranApolWothCharrterString()] as? [String: Any] {
@@ -922,8 +843,7 @@ extension LiSSpBucueTruber{
                         }
                         
                     } else {
-//                        let codfentide = resultDiiuo["mmevsbsjaogxe".oranApolWothCharrterString()] as? String
-//                        let siteErrotide = NSError(domain: "HgTkTwPrEdrcreojr".oranApolWothCharrterString(), code: 0, userInfo: [NSLocalizedDescriptionKey: codfentide])
+
                         usstats(.failure(self.performSearchSSIP(resultDiiuo:resultDiiuo)))
                         
                         
@@ -939,7 +859,7 @@ extension LiSSpBucueTruber{
                 
             case .failure(let error):
                 
-                print(error)
+               
                 usstats(.failure(error))
             }
             
@@ -964,34 +884,9 @@ extension LiSSpBucueTruber{
     
     private func editionAnaLiss()  {
       
-      
-//#if DEBUG
-//        let Api_Detaidefssip = "/api/index/v2/getDf"
-//        let Diucgssip: [String: Any] = [
-//            "deviceId":self.uuiDLISSpg,
-//            "deviceType": UIDevice.current.localizedModel,
-//            "version": "1.1.0",
-//            "language":communitylistibl,//["en"],//
-//            "otherAppNames":syncLisp,//["weiChat","WhatsApp","Instagram","Facebook","TikTok","twitter","GoogleMaps"],//
-//           
-//            "timezone":TimeZone.current.identifier,//"japen",//
-//            "keyboards":sollectibl,//["en-US"],//
-//            "useVpn":catalogLisspao() == true ? 1 : 0,"debug":1
-//        ]
 
-//        #else
         let Api_Detaidefssip = "/xyz789/def456/rannndom/sobacial"
-//        let Diucgssip: [String: Any] = [
-//            "lkjhgf":onlyidduserFME ,
-//            "mnbvcxz": UIDevice.current.localizedModel,
-//            "asdfqwer": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
-//            "vbnmasd":["en-CU"],
-//            "hJ9tF":["GoogleMaps","WhatsApp","Instagram","Facebook","TikTok","twitter"],
-//
-//            "rewq":"America/New_York",
-//            "qazwsx":["en-US"],
-//            "plmokn": 0
-//        ]
+       
        
         let Diucgssip: [String: Any] = [
             "lkjhgf":self.uuiDLISSp,
@@ -1002,15 +897,10 @@ extension LiSSpBucueTruber{
 
             "rewq":TimeZone.current.identifier,
             "qazwsx":sollectibl,
-            "plmokn":catalogLisspao() == true ? 1 : 0,
-            "debug":1
+            "plmokn":catalogLisspao() == true ? 1 : 0
         ]
-//#endif
-        
-        print(Diucgssip)
-        
-        
-      
+
+       
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "", loaingShowView: self.view)
         
         craftkimited( Api_Detaidefssip, flosessisp: Diucgssip) { result in
@@ -1030,24 +920,12 @@ extension LiSSpBucueTruber{
                 UserDefaults.standard.set(laoerLink, forKey: "linkLIPForadpp")
 
                 if floiagsiip == 1 {
-                    //没token---登陆
-//                    guard let tokeninsiip = UserDefaults.standard.object(forKey: "choITokenlip") as? String,
-//                          let uikolpopl = laoerLink else{
-//                        self.browseglobalgallery(Iujiuuf: "choITokenlip", haioko: true)
-//
-//                        return
-//                    }
-//                    
-//                    //--------you token---直接进b
-//                    let youkonkert = uikolpopl  + "/q?xagpuphIldf=".oranApolWothCharrterString() + "\(self.aploIDliss)" + "&jtlonknegnd=".oranApolWothCharrterString() + tokeninsiip
-//
-//                    self.togglecommunityVisibility(cloundnk:youkonkert)
-                    
+ 
                     self.noOtkeing(laoerLink: laoerLink)
                     return
                 }
                 
-                if floiagsiip == 0 {//-------------登陆显示
+                if floiagsiip == 0 {
                     
                     self.browseglobalgallery(Iujiuuf: "choITokenlip", haioko: true)
 
@@ -1068,15 +946,14 @@ extension LiSSpBucueTruber{
     
     
     func noOtkeing(laoerLink:String?)  {
-        //没token---登陆
+     
         guard let tokeninsiip = UserDefaults.standard.object(forKey: "choITokenlip") as? String,
               let uikolpopl = laoerLink else{
             self.browseglobalgallery(Iujiuuf: "choITokenlip", haioko: true)
 
             return
         }
-        
-        //--------you token---直接进b
+       
         let youkonkert = uikolpopl  + "/q?xagpuphIldf=".oranApolWothCharrterString() + "\(self.aploIDliss)" + "&jtlonknegnd=".oranApolWothCharrterString() + tokeninsiip
 
         self.togglecommunityVisibility(cloundnk:youkonkert)
@@ -1086,37 +963,13 @@ extension LiSSpBucueTruber{
     
     func huaaaayIkanalyLisp()  {
         
-        
-//#if DEBUG
-//        let Api_Detaidefssip = "/api/login/v3/quickLogin"
-//        let Diucgssip: [String: Any] = [
-//            "appId":aploIDliss,
-//            "deviceId":self.uuiDLISSp,
-//            "pushToken":AppDelegate.lipMontu,
-//            "userLocationAddressVO":[
-//                "city":stagerLISPP.cetrty,//"Seoul",
-//                "countryCode":stagerLISPP.daistrcitr,//"KR",
-//                "district":stagerLISPP.daistrcitr,//"Seoul",
-//                "geonameId":stagerLISPP.geoLisp,//"1835848",
-//                "latitude":stagerLISPP.laningLisp,//37.5665,
-//                "longitude":stagerLISPP.weIfhujiLisp//126.9780
-//            ]
-//        ]
-//#else
+ 
         let Api_Detaidefssip = "/xyz789/pathation/rannndom/abc123"
         let Diucgssip: [String: Any] = [
             "qwerty":aploIDliss,
             "asdfgh":self.uuiDLISSp,
             "zxcvbn":AppDelegate.lipMontu,
-//            "userLocationAddressVO":[
-//                "city":"Seoul",
-//                "countryCode":"KR",
-//                "district":"Seoul",
-//                "geonameId":"1835848",
-//                "latitude":37.5665,
-//                "longitude":126.9780
-//            ]
-            
+
             "ufspesrbLzoxcjaqtyiaownsArdodorsebsqsqVbO".oranApolWothCharrterString():[
                 "cziptpy".oranApolWothCharrterString():stagerLISPP.cetrty,
                 "caoyuinktyreyvCwogdbe".oranApolWothCharrterString():stagerLISPP.cetrtyCokder,
@@ -1128,10 +981,7 @@ extension LiSSpBucueTruber{
             
             
         ]
-//#endif
-        
-        
-        
+
         craftkimited( Api_Detaidefssip, flosessisp: Diucgssip) { result in
             AppDelegate.hideLoadingSSIPTipsIndicator( loaingShowView: self.view)
             
@@ -1182,23 +1032,9 @@ extension LiSSpBucueTruber{
     func discussion_threadsLisp() {
         var SistertSSIp = [CGRect]()
         SistertSSIp.insert(CGRect.zero, at: 0)
-//#if DEBUG
-//        let Api_Detaidefssip = "/api/device/save"
-//        let Diucgssip: [String: Any] = [
-//            "appVersion": "1.1.0",
-//            "channel":"APPSTORE",
-//            "osType":UIDevice.current.systemName,
-//            "osVersion":UIDevice.current.systemVersion,
-//            "deviceType" : "iPhone",
-//            "deviceNo" :uuiDLISSp,
-//            "pushToken" :AppDelegate.lipMontu,
-//            
-//        ]
-//#else
+
         let Api_Detaidefssip = "/xyz789/ghi789/give"
-//        
-//        
-//       
+
         let Diucgssip: [String: Any] = [
             "efgheg": Bundle.main.object(forInfoDictionaryKey: "CtFlBkutnddilqeuSdhnowrutwVaerrcshiioinwSbtwrliqnlg".oranApolWothCharrterString()) as? String ?? "1.1.0",
             "efghuio":"AzPzPvSkTlOvRiE".oranApolWothCharrterString(),
@@ -1209,7 +1045,7 @@ extension LiSSpBucueTruber{
             "zxcvqwe" :AppDelegate.lipMontu,
             
         ]
-//#endif
+
         SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
        
         if SistertSSIp.count > 0{
