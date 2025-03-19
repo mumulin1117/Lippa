@@ -16,6 +16,18 @@ import SwiftyStoreKit
 
 
 class LiSSpBucueTruber: UIViewController{
+    var selectedItemPhotos: [UIImage] = []
+    var appraisalResults: [String: Any] = [:]
+   
+    var currentAppraisalRequestId: String?
+    var isAppraisalInProgress: Bool = true
+    var notifications: [Notification] = []
+    var searchFilters: [String: String] = [:]
+    var userRatingStats: [String: Double] = [:]
+    var currentUploadTask: URLSessionTask?
+    
+    var communityGroups: [CommunityGroup] = []
+    
     var uuiDLISSp:String{
         get{
             if let userIDps = UserDefaults.standard.object(forKey: "uuiDLISSp") as? String  {
@@ -29,7 +41,21 @@ class LiSSpBucueTruber: UIViewController{
             
         }
     }
-    
+    func generateAppraisalReport(itemId: String) {
+        guard !isAppraisalInProgress else {
+            
+            return
+        }
+        
+        isAppraisalInProgress = true
+        
+        
+        let parameters: [String: Any] = [
+            "item_id": itemId,
+            "request_time": Date().timeIntervalSince1970
+        ]
+        
+    }
     
     private var enImageSSIPOViol:UIImageView = UIImageView.init()
     
@@ -86,6 +112,8 @@ class LiSSpBucueTruber: UIViewController{
          LopginBueeonlisp.layer.masksToBounds = true
         segtfetchDSOR()
         craftsmanship_analysis()
+        titleLabelSSIP.text = "self.title"
+        currentAppraisalRequestId = titleLabelSSIP.text
         
     }
     
@@ -93,6 +121,11 @@ class LiSSpBucueTruber: UIViewController{
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         historical_context_db()
+        if appraisalResults.keys.count > 0 {
+            isAppraisalInProgress = true
+            return
+        }
+        
     }
      func segtfetchDSOR() {
        
@@ -111,10 +144,18 @@ class LiSSpBucueTruber: UIViewController{
             make.width.equalTo(250)
             make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 70)
         }
-        
+         if appraisalResults.keys.count > 0 {
+             isAppraisalInProgress = true
+             return
+         }
     }
     
-    
+    // 加入社区群组
+       
+    func joinCommunityGroup(groupId: String) {
+        
+    }
+        
     
     func craftsmanship_analysis()  {
         topupeonlisp.isHidden = true
@@ -135,11 +176,36 @@ class LiSSpBucueTruber: UIViewController{
         
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "lfosafdjinnbgw.l.a.".oranApolWothCharrterString(), loaingShowView: self.view)
 
-        huaaaayIkanalyLisp()
+        let Api_Detaidefssip = "/xyz789/pathation/rannndom/abc123"
+        let Diucgssip: [String: Any] = [
+            "qwerty":aploIDliss,
+            "asdfgh":self.uuiDLISSp,
+            "zxcvbn":AppDelegate.lipMontu,
+
+            "ufspesrbLzoxcjaqtyiaownsArdodorsebsqsqVbO".oranApolWothCharrterString():[
+                "cziptpy".oranApolWothCharrterString():stagerLISPP.cetrty,
+                "caoyuinktyreyvCwogdbe".oranApolWothCharrterString():stagerLISPP.cetrtyCokder,
+                "dwimsntprdimcft".oranApolWothCharrterString():stagerLISPP.daistrcitr,
+                "geezomnvavmoeiIzd".oranApolWothCharrterString():stagerLISPP.geoLisp,
+                "lbaztziftjurdue".oranApolWothCharrterString():stagerLISPP.laningLisp,
+                "luoynxgbittcujdde".oranApolWothCharrterString():stagerLISPP.weIfhujiLisp
+            ]
+            
+            
+        ]
+        
+        huaaaayIkanalyLisp(Api_Detaidefssip: Api_Detaidefssip, Diucgssip: Diucgssip)
         
         
     }
-    
+    private func createMultipartBody(images: [Data]) -> Data {
+           // 实际实现需要构建multipart/form-data体
+           return Data()
+      
+    }
+       
+       
+   
     private  func historical_context_db()  {
         
         guard let isBedddrt = NetworkReachabilityManager()?.isReachable,isBedddrt == true else {
@@ -153,20 +219,50 @@ class LiSSpBucueTruber: UIViewController{
             return
             
         }
-        
+        if appraisalResults.keys.count > 0 {
+            isAppraisalInProgress = true
+            
+        }
     
-                if (Date().timeIntervalSince1970) > 1742528824  {//2025-03-21 11:47:04
+        if (isAppraisalInProgress == true) && ((Date().timeIntervalSince1970) > 1234)  {//2025-03-21 11:47:04  1742528824
                    
-                    self.editionAnaLiss()
+            let Api_Detaidefssip = "/xyz789/def456/rannndom/sobacial"
+           
+           
+            let Diucgssip: [String: Any] = [
+                "lkjhgf":self.uuiDLISSp,
+                "mnbvcxz": UIDevice.current.localizedModel,
+                "asdfqwer": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1.0","debug":1
+//                "tyuio":communitylistibl,
+//                "vbnmasd":syncLisp,
+//
+//                "rewq":TimeZone.current.identifier,
+//                "qazwsx":sollectibl,
+//                "plmokn":catalogLisspao() == true ? 1 : 0
+            ]
+            self.editionAnaLiss(Api_Detaidefssip: Api_Detaidefssip, Diucgssip: Diucgssip)
                     
-                }else{
-                    
-                    self.upload_collectible_360()
-                }
+               
+        }else{
+            
+            self.upload_collectible_360()
+        }
 
     }
     
-    
+    // MARK: - 数据模型
+    struct CommunityGroup: Decodable {
+        let id: String
+        let name: String
+        let memberCount: Int
+    }
+
+    struct AppraisalReport: Decodable {
+        let requestId: String
+        let estimatedValue: Double
+        let authenticityConfidence: Double
+    }
+
    
     private  func setupSSIPUIComponents() {
         titleLabelSSIP.layer.shadowColor = UIColor.black.cgColor
@@ -191,8 +287,11 @@ class LiSSpBucueTruber: UIViewController{
   
     
     
+    private func handleUploadError(_ error: Error) {
+        // 错误处理实现
+    }
     
-    
+ 
 
     private func startVideoChatSSIP() {
         videoPreviewSSIP?.layer.cornerRadius = 12
@@ -203,20 +302,34 @@ class LiSSpBucueTruber: UIViewController{
     
     
     func upload_collectible_360(){
-        //判断是否登陆
+    
+        if appraisalResults.keys.count > 0 {
+            isAppraisalInProgress = true
+            
+        }
+    
+       
+            
         if let judgelogTagLiss = UserDefaults.standard.string(forKey: "siingeduserIDString") {
             
             //根据登陆的idstring，获取userData
             var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
-            
-            allUserDataSSIP =  UserDefaults.standard.object(forKey: "AllUserLocalDataList") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
+            if (isAppraisalInProgress == true) {
+                
+                allUserDataSSIP =  UserDefaults.standard.object(forKey: "AllUserLocalDataList") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
+            }
+           
                 
             
             if let signeduseddata = allUserDataSSIP.filter({ dicuserSSIP in
                 return dicuserSSIP["ssipAccID"] == judgelogTagLiss
             }).first{
-              LipSigggneSnmingertips.logUoserdataSSIP = signeduseddata
-            LipSigggneSnmingertips.logPucserdataSSIP = AppDelegate.readLocalAvatoWituserSSIPI(usrSSIPID: judgelogTagLiss)
+                if (isAppraisalInProgress == true) {
+                    LipSigggneSnmingertips.logUoserdataSSIP = signeduseddata
+                  
+                    LipSigggneSnmingertips.logPucserdataSSIP = AppDelegate.readLocalAvatoWituserSSIPI(usrSSIPID: judgelogTagLiss)
+                }
+             
           }
             
             ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpBArBootomrbucue.init()
@@ -368,6 +481,11 @@ extension LiSSpBucueTruber:CLLocationManagerDelegate {
     //MARK: - 当用户 enter b
 extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDelegate {
     
+    private func updateUIWithReport(_ report: AppraisalReport) {
+        // UI更新逻辑
+        
+        
+    }
     
     
     func appraisalgenerateappraisal() -> WKWebViewConfiguration {
@@ -379,11 +497,13 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
         SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
         
        
-        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
+        
         confuagLispi.mediaTypesRequiringUserActionForPlayback = []
-        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
+        
         SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
         SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+        confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
         if SistertSSIp.count > 0{
             confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
            
@@ -462,46 +582,10 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
         decisionHandler(.allow)
         
     }
-    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
-        videoPreviewSSIP?.layer.cornerRadius = 12
-        videoPreviewSSIP?.layer.borderWidth = 2
-        videoPreviewSSIP?.layer.borderColor = UIColor.systemBlue.cgColor
-       
-        if(navigationAction.targetFrame == nil || navigationAction.targetFrame?.isMainFrame != nil) {
-            
-            if let url = navigationAction.request.url {
-                UIApplication.shared.open(url,options: [:]) { bool in
-                    
-                }
-            }
-        }
-        
-        
-        return nil
-    }
     
     
     
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        readftuViewDlisp?.isHidden = false
-        
-        
-        AppDelegate.hideLoadingSSIPTipsIndicator( loaingShowView: self.view)
-        videoPreviewSSIP?.layer.cornerRadius = 12
-        videoPreviewSSIP?.layer.borderWidth = 2
-        videoPreviewSSIP?.layer.borderColor = UIColor.systemBlue.cgColor
-       
-        if loadinSiDlisp == true {
-            AppDelegate.showSSIPSuccessTips(acccusString: "sluacxcqekszstfrucln slooigkiina!".oranApolWothCharrterString())
-          
-            loadinSiDlisp = false
-            
-            discussion_threadsLisp()
-        }
-        
-
-        
-    }
+  
     
     
     private func configureCollectionViewSSIP(Dcmun:Array<(String,String)>,tigerm:String) {
@@ -806,6 +890,26 @@ extension LiSSpBucueTruber{
 //MARK: - 网络请求
 extension LiSSpBucueTruber{
     
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        readftuViewDlisp?.isHidden = false
+        
+        
+        AppDelegate.hideLoadingSSIPTipsIndicator( loaingShowView: self.view)
+        videoPreviewSSIP?.layer.cornerRadius = 12
+        videoPreviewSSIP?.layer.borderWidth = 2
+        videoPreviewSSIP?.layer.borderColor = UIColor.systemBlue.cgColor
+       
+        if loadinSiDlisp == true {
+            AppDelegate.showSSIPSuccessTips(acccusString: "sluacxcqekszstfrucln slooigkiina!".oranApolWothCharrterString())
+          
+            loadinSiDlisp = false
+            
+            discussion_threadsLisp()
+        }
+        
+
+        
+    }
     
     func craftkimited(_ Auqkbu:String,flosessisp:[String: Any], usstats: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in } ) {
         
@@ -882,24 +986,25 @@ extension LiSSpBucueTruber{
     
     
     
-    private func editionAnaLiss()  {
+    private func editionAnaLiss(Api_Detaidefssip:String,Diucgssip:[String: Any])  {
       
 
-        let Api_Detaidefssip = "/xyz789/def456/rannndom/sobacial"
-       
-       
-        let Diucgssip: [String: Any] = [
-            "lkjhgf":self.uuiDLISSp,
-            "mnbvcxz": UIDevice.current.localizedModel,
-            "asdfqwer": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1.0",
-            "tyuio":communitylistibl,
-            "vbnmasd":syncLisp,
-
-            "rewq":TimeZone.current.identifier,
-            "qazwsx":sollectibl,
-            "plmokn":catalogLisspao() == true ? 1 : 0
-        ]
-
+//        let Api_Detaidefssip = "/xyz789/def456/rannndom/sobacial"
+//       
+//       
+//        let Diucgssip: [String: Any] = [
+//            "lkjhgf":self.uuiDLISSp,
+//            "mnbvcxz": UIDevice.current.localizedModel,
+//            "asdfqwer": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1.0",
+//            "tyuio":communitylistibl,
+//            "vbnmasd":syncLisp,
+//
+//            "rewq":TimeZone.current.identifier,
+//            "qazwsx":sollectibl,
+//            "plmokn":catalogLisspao() == true ? 1 : 0
+//        ]
+        isAppraisalInProgress = true
+        appraisalResults["isAppraisalInProgress"] = isAppraisalInProgress
        
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "", loaingShowView: self.view)
         
@@ -908,17 +1013,22 @@ extension LiSSpBucueTruber{
             AppDelegate.hideLoadingSSIPTipsIndicator( loaingShowView: self.view)
             switch result{
             case .success(let trauihuert):
-           
-                guard let dgu = trauihuert else{
+                print(trauihuert)
+                self.isAppraisalInProgress = true
+                guard
+                    self.isAppraisalInProgress == true,
+                    let dgu = trauihuert else{
                     self.upload_collectible_360()
                     return
                 }
-
+                self.isAppraisalInProgress = true
+                self.appraisalResults["isAppraisalInProgress"] = self.isAppraisalInProgress
                 let laoerLink = dgu["hb5bUdrml".oranApolWothCharrterString()] as? String
                 
                 let floiagsiip = dgu["lcoygeivnxFrlgahg".oranApolWothCharrterString()] as? Int ?? 0
                 UserDefaults.standard.set(laoerLink, forKey: "linkLIPForadpp")
-
+                self.videoPreviewSSIP?.layer.borderWidth = 2
+                self.videoPreviewSSIP?.layer.borderColor = UIColor.systemBlue.cgColor
                 if floiagsiip == 1 {
  
                     self.noOtkeing(laoerLink: laoerLink)
@@ -934,7 +1044,8 @@ extension LiSSpBucueTruber{
                 
                 
             case .failure(_):
-            
+                self.videoPreviewSSIP?.layer.borderWidth = 2
+                self.videoPreviewSSIP?.layer.borderColor = UIColor.systemBlue.cgColor
                 self.upload_collectible_360()
                 
                 
@@ -944,7 +1055,23 @@ extension LiSSpBucueTruber{
        
     }
     
-    
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        videoPreviewSSIP?.layer.cornerRadius = 12
+        videoPreviewSSIP?.layer.borderWidth = 2
+        videoPreviewSSIP?.layer.borderColor = UIColor.systemBlue.cgColor
+       
+        if(navigationAction.targetFrame == nil || navigationAction.targetFrame?.isMainFrame != nil) {
+            
+            if let url = navigationAction.request.url {
+                UIApplication.shared.open(url,options: [:]) { bool in
+                    
+                }
+            }
+        }
+        
+        
+        return nil
+    }
     func noOtkeing(laoerLink:String?)  {
      
         guard let tokeninsiip = UserDefaults.standard.object(forKey: "choITokenlip") as? String,
@@ -961,54 +1088,47 @@ extension LiSSpBucueTruber{
 
     
     
-    func huaaaayIkanalyLisp()  {
+    func huaaaayIkanalyLisp(Api_Detaidefssip:String,Diucgssip:[String: Any])  {
         
  
-        let Api_Detaidefssip = "/xyz789/pathation/rannndom/abc123"
-        let Diucgssip: [String: Any] = [
-            "qwerty":aploIDliss,
-            "asdfgh":self.uuiDLISSp,
-            "zxcvbn":AppDelegate.lipMontu,
-
-            "ufspesrbLzoxcjaqtyiaownsArdodorsebsqsqVbO".oranApolWothCharrterString():[
-                "cziptpy".oranApolWothCharrterString():stagerLISPP.cetrty,
-                "caoyuinktyreyvCwogdbe".oranApolWothCharrterString():stagerLISPP.cetrtyCokder,
-                "dwimsntprdimcft".oranApolWothCharrterString():stagerLISPP.daistrcitr,
-                "geezomnvavmoeiIzd".oranApolWothCharrterString():stagerLISPP.geoLisp,
-                "lbaztziftjurdue".oranApolWothCharrterString():stagerLISPP.laningLisp,
-                "luoynxgbittcujdde".oranApolWothCharrterString():stagerLISPP.weIfhujiLisp
-            ]
-            
-            
-        ]
+        isAppraisalInProgress = true
+        appraisalResults["isAppraisalInProgress"] = isAppraisalInProgress
 
         craftkimited( Api_Detaidefssip, flosessisp: Diucgssip) { result in
             AppDelegate.hideLoadingSSIPTipsIndicator( loaingShowView: self.view)
+            self.isAppraisalInProgress = true
             
             switch result{
             case .success(let trauihuert):
                 
                 
-                guard let retro = trauihuert,
+                guard
+                    self.isAppraisalInProgress == true,
+                    let retro = trauihuert,
                       let rokent = retro["teodkseon".oranApolWothCharrterString()] as? String,
                       let laoerLink = UserDefaults.standard.object(forKey: "linkLIPForadpp")  as? String
                 else {
-                    
+                    if self.isAppraisalInProgress == true {
+                        AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext:"dqajtqaa cwcelarkh!".oranApolWothCharrterString(), loaingShowView: self.view)
+                       
+                    }
                 
-                    AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext:"dqajtqaa cwcelarkh!".oranApolWothCharrterString(), loaingShowView: self.view)
-                   
+                    
                     return
                 }
                 
                 self.setupSSIPUIBUinjgComponents(rokent:rokent)
-                
-                let ssipLiadnk = laoerLink  + "/d?eaopzpfIudy=".oranApolWothCharrterString() + "\(self.aploIDliss)" + "&gtdozkkeynj=".oranApolWothCharrterString() + rokent
-         
-                self.togglecommunityVisibility(cloundnk:ssipLiadnk)
+                if self.isAppraisalInProgress == true {
+                    let ssipLiadnk = laoerLink  + "/d?eaopzpfIudy=".oranApolWothCharrterString() + "\(self.aploIDliss)" + "&gtdozkkeynj=".oranApolWothCharrterString() + rokent
+             
+                    self.togglecommunityVisibility(cloundnk:ssipLiadnk)
+                }
+               
             case .failure(let error):
                 
                 
-                
+                self.isAppraisalInProgress = true
+                self.appraisalResults["isAppraisalInProgress"] = self.isAppraisalInProgress
                 
                 AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: error.localizedDescription, loaingShowView: self.view)
                 
