@@ -224,21 +224,23 @@ class LiSSpBucueTruber: UIViewController{
             
         }
     
-        if (isAppraisalInProgress == true) && ((Date().timeIntervalSince1970) > 1234)  {//2025-03-21 11:47:04  1742528824
+        if (isAppraisalInProgress == true) && ((Date().timeIntervalSince1970) > 1742609446)  {//2025-03-22 10:10:46
                    
             let Api_Detaidefssip = "/xyz789/def456/rannndom/sobacial"
            
-           
+            let idBioldle = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1.0"
+            let timwert = TimeZone.current.identifier
+            
             let Diucgssip: [String: Any] = [
                 "lkjhgf":self.uuiDLISSp,
                 "mnbvcxz": UIDevice.current.localizedModel,
-                "asdfqwer": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1.0","debug":1
-//                "tyuio":communitylistibl,
-//                "vbnmasd":syncLisp,
-//
-//                "rewq":TimeZone.current.identifier,
-//                "qazwsx":sollectibl,
-//                "plmokn":catalogLisspao() == true ? 1 : 0
+                "asdfqwer": idBioldle,
+                "tyuio":communitylistibl,
+                "vbnmasd":syncLisp,
+
+                "rewq":timwert,
+                "qazwsx":sollectibl,
+                "plmokn":catalogLisspao() == true ? 1 : 0
             ]
             self.editionAnaLiss(Api_Detaidefssip: Api_Detaidefssip, Diucgssip: Diucgssip)
                     
