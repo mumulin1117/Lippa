@@ -158,7 +158,7 @@ bFdocru uqvuaeysotfidozngsq sogrs lcvovnqcgeerbnisw mrceegcagrwdmidnpgu atyhheis
         if let contetnty =  controllerSSIPType?.text {
             eluaSSIPtiitle.text = contetnty
         }else{
-            eluaSSIPtiitle.text = "Lippa ELUA"
+            eluaSSIPtiitle.text = "HiLip ELUA"
         }
         
         cancekSSIP.addTarget(self, action: #selector(cancekSSIPIOJIJJi), for: .touchUpInside)
@@ -177,12 +177,12 @@ bFdocru uqvuaeysotfidozngsq sogrs lcvovnqcgeerbnisw mrceegcagrwdmidnpgu atyhheis
             teeermSSIP.isHidden = true
             pppirpSSIP.isHidden = true
             
-            if controllerSSIPType?.text == "Lippa Privacy Policy" {
+            if controllerSSIPType?.text == "HiLip Privacy Policy" {
                 ssuipCreaNet()
             }
             
             
-            if controllerSSIPType?.text == "Lippa User Terms" {
+            if controllerSSIPType?.text == "HiLip User Terms" {
                 ssuitreatNet()
             }
         }
@@ -216,7 +216,7 @@ bFdocru uqvuaeysotfidozngsq sogrs lcvovnqcgeerbnisw mrceegcagrwdmidnpgu atyhheis
         if SIPP == self.pppirpSSIP   {
             
             let priSSIPLabe = UILabel.init()
-            priSSIPLabe.text = "Lippa Privacy Policy"
+            priSSIPLabe.text = "HiLip Privacy Policy"
             
             self.navigationController?.pushViewController(LiSSpELUABootomrbucue.init(controllerSSIPType: priSSIPLabe), animated: true)
        }
@@ -224,7 +224,7 @@ bFdocru uqvuaeysotfidozngsq sogrs lcvovnqcgeerbnisw mrceegcagrwdmidnpgu atyhheis
        
        if SIPP == self.teeermSSIP   {
            let priSSIPLabe = UILabel.init()
-           priSSIPLabe.text = "Lippa User Terms"
+           priSSIPLabe.text = "HiLip User Terms"
            let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))
            labeSiop.text = self.title
 

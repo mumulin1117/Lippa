@@ -24,8 +24,8 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lippa ELUA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAK-LD-W9B">
-                    <rect key="frame" x="151.66666666666666" y="83" width="90" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HiLip ELUA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAK-LD-W9B">
+                    <rect key="frame" x="153.33333333333334" y="83" width="86.666666666666657" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                     <color key="textColor" red="0.91764705879999997" green="0.1647058824" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -33,40 +33,40 @@
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiC-Cx-EwI">
                     <rect key="frame" x="20" y="124" width="353" height="510"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <string key="text">Effective Date: [2025-02-25]
+                    <mutableString key="text">Effective Date: [2025-02-25]
 
 1. Acceptance of Terms
 
-By downloading, installing, or using the Lippa app (“App”), you agree to comply with and be bound by this EULA. If you do not agree to these terms, please do not use the App.
+By downloading, installing, or using the HiLip app (“App”), you agree to comply with and be bound by this EULA. If you do not agree to these terms, please do not use the App.
 
 2. License Grant
 
-Lippa grants you a limited, non-exclusive, non-transferable license to use the App for personal and non-commercial purposes only.
+HiLip grants you a limited, non-exclusive, non-transferable license to use the App for personal and non-commercial purposes only.
 
 3. User Responsibilities
 
 You are responsible for maintaining the confidentiality of your account information.
 You agree to use the App in compliance with all applicable laws and regulations.
-You may not modify, reverse engineer, or distribute the App without prior written permission from Lippa.
+You may not modify, reverse engineer, or distribute the App without prior written permission from HiLip.
 4. Termination
 
-Lippa reserves the right to terminate or suspend your access to the App at any time, without notice, for conduct that violates this EULA or is harmful to other users, Lippa, or third parties.
+HiLip reserves the right to terminate or suspend your access to the App at any time, without notice, for conduct that violates this EULA or is harmful to other users, HiLip, or third parties.
 
 5. Disclaimers
 
-The App is provided on an "as-is" basis without warranties of any kind. Lippa does not guarantee the accuracy or reliability of appraisal reports or user-generated content.
+The App is provided on an "as-is" basis without warranties of any kind. HiLip does not guarantee the accuracy or reliability of appraisal reports or user-generated content.
 
 6. Limitation of Liability
 
-To the fullest extent permitted by law, Lippa shall not be liable for any direct, indirect, incidental, or consequential damages arising out of or related to your use of the App.
+To the fullest extent permitted by law, HiLip shall not be liable for any direct, indirect, incidental, or consequential damages arising out of or related to your use of the App.
 
 7. Modifications
 
-Lippa reserves the right to modify this EULA at any time. Your continued use of the App following any changes constitutes acceptance of those changes.
+HiLip reserves the right to modify this EULA at any time. Your continued use of the App following any changes constitutes acceptance of those changes.
 
 8. Governing Law
 
-This EULA shall be governed by the laws of [insert jurisdiction].</string>
+This EULA shall be governed by the laws of [insert jurisdiction].</mutableString>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

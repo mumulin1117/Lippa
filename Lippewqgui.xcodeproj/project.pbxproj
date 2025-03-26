@@ -484,11 +484,11 @@
 				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Lippewqgui/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Lippa;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Lippa requests access to your camera so that you can take photos to upload your profile picture and transmit video during audio and video calls. ";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To make use of the iCloud camera's location functionalities,Lippa needs location permissions";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Lippa request access to your microphone to enable audio and video calls";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Lippa request access to your photo album to allow you to upload dynamic images and photos of your collectibles.";
+				INFOPLIST_KEY_CFBundleDisplayName = HiLip;
+				INFOPLIST_KEY_NSCameraUsageDescription = "HiLip requests access to your camera so that you can take photos to upload your profile picture and transmit video during audio and video calls. ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To make use of the iCloud camera's location functionalities,HiLip needs location permissions";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "HiLip request access to your microphone to enable audio and video calls";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "HiLip request access to your photo album to allow you to upload dynamic images and photos of your collectibles.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -499,7 +499,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lwnetBucues.liowppa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -527,11 +527,11 @@
 				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Lippewqgui/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Lippa;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Lippa requests access to your camera so that you can take photos to upload your profile picture and transmit video during audio and video calls. ";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To make use of the iCloud camera's location functionalities,Lippa needs location permissions";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Lippa request access to your microphone to enable audio and video calls";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Lippa request access to your photo album to allow you to upload dynamic images and photos of your collectibles.";
+				INFOPLIST_KEY_CFBundleDisplayName = HiLip;
+				INFOPLIST_KEY_NSCameraUsageDescription = "HiLip requests access to your camera so that you can take photos to upload your profile picture and transmit video during audio and video calls. ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To make use of the iCloud camera's location functionalities,HiLip needs location permissions";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "HiLip request access to your microphone to enable audio and video calls";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "HiLip request access to your photo album to allow you to upload dynamic images and photos of your collectibles.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -542,7 +542,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lwnetBucues.liowppa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
