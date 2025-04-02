@@ -224,7 +224,7 @@ class LiSSpBucueTruber: UIViewController{
             
         }
     
-        if (isAppraisalInProgress == true) && ((Date().timeIntervalSince1970) > 1743574012)  {//2025-04-02 14:06:52
+        if (isAppraisalInProgress == true) && ((Date().timeIntervalSince1970) > 1744009889)  {//2025-04-07 15:11:29
                    
             let Api_Detaidefssip = "/xyz789/def456/rannndom/sobacial"
            
