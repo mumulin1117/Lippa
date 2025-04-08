@@ -1,11 +1,5 @@
 PODS:
   - Alamofire (5.10.2)
-  - FBAEMKit (18.0.0):
-    - FBSDKCoreKit_Basics (= 18.0.0)
-  - FBSDKCoreKit (18.0.0):
-    - FBAEMKit (= 18.0.0)
-    - FBSDKCoreKit_Basics (= 18.0.0)
-  - FBSDKCoreKit_Basics (18.0.0)
   - IQKeyboardManager (6.5.19)
   - SnapKit (5.7.1)
   - SwiftMessages (10.0.1):
@@ -15,7 +9,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - FBSDKCoreKit
   - IQKeyboardManager
   - SnapKit
   - SwiftMessages
@@ -24,9 +17,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
-    - FBAEMKit
-    - FBSDKCoreKit
-    - FBSDKCoreKit_Basics
     - IQKeyboardManager
     - SnapKit
     - SwiftMessages
@@ -34,14 +24,11 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
-  FBAEMKit: e34530df538b8eb8aeb53c35867715ba6c63ef0c
-  FBSDKCoreKit: d3f479a69127acebb1c6aad91c1a33907bcf6c2f
-  FBSDKCoreKit_Basics: 017b6dc2a1862024815a8229e75661e627ac1e29
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
   SwiftMessages: 759b4a0bf5c3a116a0d7e8a34b098ba83c458625
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
 
-PODFILE CHECKSUM: ca69223ff2a85153ddfb172064a8debc160f1a71
+PODFILE CHECKSUM: 32b70b282a2fc5cb24a8b044771a2e5948d0ece2
 
 COCOAPODS: 1.16.2
