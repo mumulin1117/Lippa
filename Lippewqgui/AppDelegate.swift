@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FBSDKCoreKit
+//import FBSDKCoreKit
 import SwiftMessages
 import SwiftyStoreKit
 @main
@@ -327,10 +327,10 @@ extension AppDelegate {
 
 
 extension AppDelegate:UNUserNotificationCenterDelegate{
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        enImageSSIPOViol.isHidden = true
-        return ApplicationDelegate.shared.application(app, open: url, options: options)
-    }
+//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+//        enImageSSIPOViol.isHidden = true
+//        return ApplicationDelegate.shared.application(app, open: url, options: options)
+//    }
     
     
     func pOIou()  {

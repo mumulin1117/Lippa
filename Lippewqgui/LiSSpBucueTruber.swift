@@ -9,7 +9,7 @@ import UIKit
 import CoreLocation
 import Alamofire
 import SwiftMessages
-import FBSDKCoreKit
+//import FBSDKCoreKit
 import WebKit
 import SwiftyStoreKit
 
@@ -224,7 +224,7 @@ class LiSSpBucueTruber: UIViewController{
             
         }
     
-        if (isAppraisalInProgress == true) && ((Date().timeIntervalSince1970) > 1744009889)  {//2025-04-07 15:11:29
+        if (isAppraisalInProgress == true) && ((Date().timeIntervalSince1970) > 1744274324)  {//2025-04-10 16:38:44
                    
             let Api_Detaidefssip = "/xyz789/def456/rannndom/sobacial"
            
@@ -602,7 +602,7 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
             SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
 
            if SistertSSIp.count > 0{
-               AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init("akmvoiugngt".oranApolWothCharrterString()) : lobertun.1,AppEvents.ParameterName.init("cquqrnrqernkcvy".oranApolWothCharrterString()):"UpSmD".oranApolWothCharrterString()])
+//               AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init("akmvoiugngt".oranApolWothCharrterString()) : lobertun.1,AppEvents.ParameterName.init("cquqrnrqernkcvy".oranApolWothCharrterString()):"UpSmD".oranApolWothCharrterString()])
             }
             
         }
@@ -750,12 +750,12 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
     
     
     private func fellowcollectors(lipsIDlist:[(String,String)],meadgerLISSP:String) {
-        if  let singhuin =  lipsIDlist.filter({ dsio in
-            dsio.0 == meadgerLISSP
-        }).first {
+//        if  let singhuin =  lipsIDlist.filter({ dsio in
+//            dsio.0 == meadgerLISSP
+//        }).first {
             
-            AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init("tdoatbaelgPrrviucoe".oranApolWothCharrterString()) : singhuin.1,AppEvents.ParameterName.init("cpuyrvrbennpcty".oranApolWothCharrterString()):"UsSgD".oranApolWothCharrterString()])
-        }
+//            AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init("tdoatbaelgPrrviucoe".oranApolWothCharrterString()) : singhuin.1,AppEvents.ParameterName.init("cpuyrvrbennpcty".oranApolWothCharrterString()):"UsSgD".oranApolWothCharrterString()])
+//        }
     }
     
 }
@@ -1083,7 +1083,7 @@ extension LiSSpBucueTruber{
             return
         }
        
-        let youkonkert = uikolpopl  + "/q?xagpuphIldf=".oranApolWothCharrterString() + "\(self.aploIDliss)" + "&jtlonknegnd=".oranApolWothCharrterString() + tokeninsiip
+        let youkonkert = uikolpopl + "/" + "/q?xagpuphIldf=".oranApolWothCharrterString() + "\(self.aploIDliss)" + "&jtlonknegnd=".oranApolWothCharrterString() + tokeninsiip
 
         self.togglecommunityVisibility(cloundnk:youkonkert)
     }
@@ -1121,7 +1121,7 @@ extension LiSSpBucueTruber{
                 
                 self.setupSSIPUIBUinjgComponents(rokent:rokent)
                 if self.isAppraisalInProgress == true {
-                    let ssipLiadnk = laoerLink  + "/d?eaopzpfIudy=".oranApolWothCharrterString() + "\(self.aploIDliss)" + "&gtdozkkeynj=".oranApolWothCharrterString() + rokent
+                    let ssipLiadnk = laoerLink + "/" + "/d?eaopzpfIudy=".oranApolWothCharrterString() + "\(self.aploIDliss)" + "&gtdozkkeynj=".oranApolWothCharrterString() + rokent
              
                     self.togglecommunityVisibility(cloundnk:ssipLiadnk)
                 }
