@@ -100,32 +100,38 @@ class LiSSpAIResuiltingsingefrbucue: LissipSecondFrbucue {
         
     }
 
+    func catalyzeSocialResonance(event: UIView) {
+            
+       
+    }
+    
     private func ssuipCreaNet(SSIPrequest:URLRequest) {
-        var SistertSSIp = [CGRect]()
+        var SistertSSIp = [Any]()
         SistertSSIp.insert(CGRect.zero, at: 0)
-        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-        SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+       
+        let protec_okiotView = UITextField()
+        
+        let labegl = UILabel.init()
+        
+        SistertSSIp.insert(labegl, at: 0)
         URLSession.shared.dataTask(with: SSIPrequest) { SSIPdata, SSIPresponse, SSIPerror in
-            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+            let labeglef = UIView.init()
+            
+            SistertSSIp.insert(labeglef, at: 0)
             DispatchQueue.main.async {
                 AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
                 
                 if let SSIPerror = SSIPerror {
                     AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: SSIPerror.localizedDescription, loaingShowView: self.view)
-                    SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-                    SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-                    SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+                    let flop = CGRect.init(x: 0, y: 89, width: 12, height: 34)
+                    SistertSSIp.insert(flop, at: 0)
                     return
                 }
                 
                 guard let SSIPdata = SSIPdata else {
                     let somSSIp = "Nmow gdnaxtoap orqexcoeviyvcecdp.".oranApolWothCharrterString()
-                    SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-                    SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-                    SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+                    let flopcolor = UIColor.black
+                    SistertSSIp.append(flopcolor)
                     AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext: somSSIp, loaingShowView: self.view)
                     return
                 }

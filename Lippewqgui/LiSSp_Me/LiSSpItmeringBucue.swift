@@ -41,26 +41,21 @@ class LiSSpItmeringBucue:  LissipSecondFrbucue {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var SistertSSIp = [CGRect]()
-        SistertSSIp.insert(CGRect.zero, at: 0)
-        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-      
-        if SistertSSIp.count > 0 {
-            NotificationCenter.default.addObserver(self, selector: #selector(ctterBsdNoingSSIP), name: NSNotification.Name.init("deleteUserSIPPish"), object: nil)
-            
-        }
+        var SistertSSIp = [Any]()
+       
        
         
        
-        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-        SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
-
+       
+        
         focusSSSIPo.maskLippaRoundCorner(rMakLSSIpadius: 16)
+        SistertSSIp.insert(self.view.frame, at: 0)
         ownedSIpp.maskLippaRoundCorner(rMakLSSIpadius: 38)
         
         backDAtaimgeSSIP.maskLippaRoundCorner(rMakLSSIpadius: 14)
         focusSSSIPo.addTarget(self, action: #selector(liskinguserstatus), for: .touchUpInside)
-       
+        NotificationCenter.default.addObserver(self, selector: #selector(ctterBsdNoingSSIP), name: NSNotification.Name.init("deleteUserSIPPish"), object: nil)
+        
         backDAtaimgeSSIP.snp.makeConstraints { make in
             make.width.height.equalTo((UIScreen.main.bounds.height < 700) ? 115 : 163)
             make.top.equalTo(ColooPickSSIp.snp.bottom).offset(14)
@@ -108,17 +103,17 @@ class LiSSpItmeringBucue:  LissipSecondFrbucue {
             
             return
         }
-        var SistertSSIp = [CGRect]()
-        SistertSSIp.insert(CGRect.zero, at: 0)
-        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        var SistertSSIp = [Any]()
+        SistertSSIp.append(self.ChokenSSIP.titleLabel?.text ?? "")
         
        if SistertSSIp.count == 0{
             return
         }
         
         if sender.tag == 991 {
-            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+            let laedr = UILabel.init()
+            
+            SistertSSIp.append(laedr)
 
             self.navigationController?.pushViewController(LiSSpChatVideostfrbucue.init(postCenDataSSIP: postCenDataSSIP ?? [:]), animated: true)
             
@@ -142,10 +137,10 @@ class LiSSpItmeringBucue:  LissipSecondFrbucue {
             let teizige = LiSSpTieZIngefrbucue.init()
             teizige.postCenDataSSIP = postCenDataSSIP ?? [:]
             SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+            
+            self.navigationController?.pushViewController(teizige, animated: true)
             SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
 
-            self.navigationController?.pushViewController(teizige, animated: true)
-            
             return
         }
         
@@ -158,21 +153,22 @@ class LiSSpItmeringBucue:  LissipSecondFrbucue {
         
         sender.isSelected = true
         if sender.tag == 34 {
-            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
-
+            let opdhui = UISearchBar.init()
+            
+            SistertSSIp.insert(opdhui, at: 0)
             backDAtaimgeSSIP.setBackgroundImage(UIImage.init(named: postCenDataSSIP?["ssipColletionPic"] ?? ""), for: .normal)
           
         }
         
         
         if sender.tag == 35 {
-            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+            let opdhui = UISearchBar.init()
+            
+            
 
             backDAtaimgeSSIP.setBackgroundImage(UIImage.init(named: postCenDataSSIP?["ssipPublishPic"] ?? ""), for: .normal)
           
-          
+            SistertSSIp.insert(opdhui, at: 0)
         }
        
       

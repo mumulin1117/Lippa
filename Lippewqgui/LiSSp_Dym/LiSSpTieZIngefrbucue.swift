@@ -52,17 +52,21 @@ class LiSSpTieZIngefrbucue:  LissipSecondFrbucue {
         postingUserimgSSIP.maskLippaRoundCorner(rMakLSSIpadius: 21.5)
         
         
-        var SistertSSIp = [CGRect]()
+        var SistertSSIp = [Any]()
         SistertSSIp.insert(CGRect.zero, at: 0)
-        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-        if SistertSSIp.count > 0 {
-            NotificationCenter.default.addObserver(self, selector: #selector(ctterBsdNoingSSIP), name: NSNotification.Name.init("deleteUserSIPPish"), object: nil)
-        }
+       
+        let protec_okiotView = UITextField()
         
-        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-        SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+        let labegl = UILabel.init()
+        
+        SistertSSIp.insert(labegl, at: 0)
+        NotificationCenter.default.addObserver(self, selector: #selector(ctterBsdNoingSSIP), name: NSNotification.Name.init("deleteUserSIPPish"), object: nil)
+        
+        let djpo = UIView()
+        
         
         tibluebackSSIP.maskLippaRoundCorner(rMakLSSIpadius: 20)
+        SistertSSIp.append(djpo)
     }
     
     override func viewWillAppear(_ animated: Bool) {

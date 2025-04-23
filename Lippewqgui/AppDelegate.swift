@@ -21,16 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         //判断是否是第一次下载App，如果是第一次，创建测试账号
         UNUserNotificationCenter.current().delegate = self
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { lip, error in
-            if lip {
-                DispatchQueue.main.async {
-                    UIApplication.shared.registerForRemoteNotifications()
-                }
-            }
-        }
+       
         if UserDefaults.standard.string(forKey: "loadSSIPATimeOOp") == nil || UserDefaults.standard.string(forKey:"loadSSIPATimeOOp" ) == "firstTime" {
-            var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
-            allUserDataSSIP.append(["ssipNadme":"Aberria",
+            var jiwer:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
+            jiwer.append(["ssipNadme":"Aberria",
                                     "ssipPicdty":"SSIPavator9",
                                     "ssipDoimond":"100",
                                     "ssipDtfestAccount":"lippa@gmail.com",
@@ -42,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             UserDefaults.standard.set("notfirsttime", forKey: "loadSSIPATimeOOp")
             
-            UserDefaults.standard.set(allUserDataSSIP, forKey: "AllUserLocalDataList")
+            UserDefaults.standard.set(jiwer, forKey: "AllUserLocalDataList")
         }
         
         //判断是否登陆
@@ -69,7 +63,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //           
 //        }
         ssuitreatNet()
-        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { lip, error in
+            if lip {
+                DispatchQueue.main.async {
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+            }
+        }
         priProtexrStar()
        
         window?.makeKeyAndVisible()
@@ -92,8 +92,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         SwiftyStoreKit.completeTransactions(atomically: true) { paurean in
-            var SistertSSIp = [CGRect]()
-            SistertSSIp.insert(CGRect.zero, at: 0)
+            var SistertSSIp = [Any]()
+            let vuuyi = UIView()
+            vuuyi.layer.borderColor = UIColor.red.cgColor
+            
+            SistertSSIp.insert(vuuyi, at: 0)
             for paiterean in paurean {
                 switch paiterean.transaction.transactionState {
                 case .purchased, .restored:
@@ -211,13 +214,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension UIView {
     func maskLippaRoundCorner(rMakLSSIpadius: CGFloat) {
         self.layer.cornerRadius = rMakLSSIpadius
-        var SistertSSIp = [CGRect]()
-        SistertSSIp.insert(CGRect.zero, at: 0)
+        var SistertSSIp = [Any]()
+        let vuuyi = UIView()
+        vuuyi.layer.borderColor = UIColor.red.cgColor
+        
+        SistertSSIp.insert(vuuyi, at: 0)
+    
         SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-        if SistertSSIp.last?.isEmpty == true{
-            self.layer.masksToBounds = true
-            return
-        }
+       
         self.layer.masksToBounds = true
     }
 }
@@ -225,18 +229,19 @@ extension UIView {
 
 extension String{
     func oranApolWothCharrterString() -> String {
-        var SistertSSIp = [CGRect]()
-        SistertSSIp.insert(CGRect.zero, at: 0)
-        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        var SistertSSIp = [Any]()
+        let vuuyi = UIView()
+        
        
         var decrSSIPypted = ""
-        if SistertSSIp.last?.isEmpty == true{
+        if SistertSSIp.count == 0{
             decrSSIPypted = ""
         }
-        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-        SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+        vuuyi.layer.borderColor = UIColor.red.cgColor
+        
+        SistertSSIp.insert(vuuyi, at: 0)
         var needSSIPStay = true
-        if  SistertSSIp.count < 2 {
+        if  SistertSSIp.count < 1 {
             needSSIPStay = false
         }
         
@@ -268,20 +273,20 @@ extension AppDelegate {
     
     //根据用户ID，获取头像
    class func readLocalAvatoWituserSSIPI(usrSSIPID:String) -> UIImage? {
-       var SistertSSIp = [CGRect]()
-       SistertSSIp.insert(CGRect.zero, at: 0)
+       var SistertSSIp = [Any]()
+       let vuuyi = UIView()
+       
       
+       var decrSSIPypted = ""
         guard let duccchujjSSIPdic =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+            SistertSSIp.append(vuuyi)
             return UIImage(named: "wode_mrtx")
         }
        
         let ducupathSSIP = duccchujjSSIPdic.appendingPathComponent("LippaimageCache")
       
-       SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
-       SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-       SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+       vuuyi.backgroundColor = .blue
+       SistertSSIp.append(vuuyi)
       
         let imSSIPPath = ducupathSSIP.appendingPathComponent("\(usrSSIPID).png")
                
@@ -295,20 +300,20 @@ extension AppDelegate {
     
     //根据用户ID，c储存头像
     class func skvertLocalAvatoWituserSSIPI(usrSSIPID:String,saveringIMg:UIImage){
-        var SistertSSIp = [CGRect]()
-        SistertSSIp.insert(CGRect.zero, at: 0)
+        var SistertSSIp = [Any]()
+        let vuuyi = UIView()
+        
+       
+        var decrSSIPypted = ""
         
         guard let duccchujjSSIPdic =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+            SistertSSIp.append(vuuyi)
             return
         }
         SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
        
         let ducupathSSIP = duccchujjSSIPdic.appendingPathComponent("LippaimageCache")
-        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-        SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
-
+        SistertSSIp.append(decrSSIPypted)
         
         if !FileManager.default.fileExists(atPath: ducupathSSIP.path) && SistertSSIp.count > 0{
             try? FileManager.default.createDirectory(at: ducupathSSIP, withIntermediateDirectories: true, attributes: nil)
@@ -352,35 +357,41 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
   
     
     func priProtexrStar() {
-        var SistertSSIp = [CGRect]()
+        var SistertSSIp = [Any]()
         SistertSSIp.insert(CGRect.zero, at: 0)
        
         let protec_okiotView = UITextField()
-        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        
+        let labegl = UILabel.init()
+        
+        SistertSSIp.insert(labegl, at: 0)
       
         protec_okiotView.isSecureTextEntry = true
-        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-        SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+        let labeglef = UIView.init()
+        
+        SistertSSIp.insert(labeglef, at: 0)
 
        
         if (!window!.subviews.contains(protec_okiotView)) &&  SistertSSIp.count > 0{
             window!.addSubview(protec_okiotView)
-            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+            let flop = CGRect.init(x: 0, y: 89, width: 12, height: 34)
+            SistertSSIp.insert(flop, at: 0)
 
             
             protec_okiotView.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
-            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+            let flopcolor = UIColor.white
+            SistertSSIp.append(flopcolor)
 
             protec_okiotView.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
             
             window!.layer.superlayer?.addSublayer(protec_okiotView.layer)
             if #available(iOS 17.0, *) {
-                SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-                SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+                let flopcolor = UIColor.black
+               
+
 
                 protec_okiotView.layer.sublayers?.last?.addSublayer(window!.layer)
+                SistertSSIp.append(flopcolor)
                 return
             }
             

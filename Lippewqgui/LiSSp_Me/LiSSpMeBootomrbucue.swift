@@ -165,9 +165,8 @@ class LiSSpMeBootomrbucue:  LissipSecondFrbucue,UICollectionViewDelegate,UIColle
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cokiactivecell = collectionView.dequeueReusableCell(withReuseIdentifier: "LiSSpMininfoCellID", for: indexPath) as! LiSSpMininfoCell
-        var SistertSSIp = [CGRect]()
-        SistertSSIp.insert(CGRect.zero, at: 0)
-        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        var SistertSSIp = [Any]()
+        SistertSSIp.insert(self.view.backgroundColor ?? UIColor.white, at: 0)
         
         if SistertSSIp.count > 0 {
             cokiactivecell.otherAuicSIPPA.text = minSetinggoSipp[indexPath.row].0

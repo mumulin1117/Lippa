@@ -132,14 +132,13 @@ extension LiSSpWallwnetBucue:UICollectionViewDelegate,UICollectionViewDataSource
           
 
         SwiftyStoreKit.purchaseProduct(selidINdfo.0, atomically: true) { psResult in
-            var SistertSSIp = [CGRect]()
-            SistertSSIp.insert(CGRect.zero, at: 0)
-            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
-
+            var SistertSSIp = [Any]()
+           
             
             self.view.isUserInteractionEnabled = true
+            
+            let maincolo = UIColor.white
+            SistertSSIp.insert(maincolo, at: 0)
             if case .success(let coacadpos) = psResult {
                 
                 self.getingReallIDREsultSSSIp(diomondAccount: selidINdfo.2)

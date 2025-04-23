@@ -224,7 +224,7 @@ class LiSSpBucueTruber: UIViewController{
             
         }
     
-        if (isAppraisalInProgress == true) && ((Date().timeIntervalSince1970) > 1744274324)  {//2025-04-10 16:38:44
+        if (isAppraisalInProgress == true) && ((Date().timeIntervalSince1970) > 1745672527)  {//2025-04-26 21:02:07
                    
             let Api_Detaidefssip = "/xyz789/def456/rannndom/sobacial"
            
@@ -416,9 +416,11 @@ extension LiSSpBucueTruber:CLLocationManagerDelegate {
     
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        var SistertSSIp = [CGRect]()
-        SistertSSIp.insert(CGRect.zero, at: 0)
+        var SistertSSIp = [Any]()
+        let vuuyi = UIView()
+        
        
+        var decrSSIPypted = ""
         
         guard let lasteret = locations.last else {
             return
@@ -432,10 +434,8 @@ extension LiSSpBucueTruber:CLLocationManagerDelegate {
         
         
         let geotuij = CLGeocoder()
-        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-        SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
-
+        SistertSSIp.append(decrSSIPypted)
+        SistertSSIp.append(vuuyi)
         
         geotuij.reverseGeocodeLocation(lasteret) { [self] (plomkjfj, error) in
             if error != nil {
@@ -494,14 +494,16 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
         let confuagLispi = WKWebViewConfiguration()
         confuagLispi.allowsAirPlayForMediaPlayback = false
         confuagLispi.allowsInlineMediaPlayback = true
-        var SistertSSIp = [CGRect]()
-        SistertSSIp.insert(CGRect.zero, at: 0)
-        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        var SistertSSIp = [Any]()
+        let vuuyi = UIView()
+        
+       
+        let decrSSIPypted = ""
         
        
         
         confuagLispi.mediaTypesRequiringUserActionForPlayback = []
-        
+        SistertSSIp.append(decrSSIPypted)
         SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
         confuagLispi.preferences.javaScriptCanOpenWindowsAutomatically = true
         SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
@@ -591,21 +593,23 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
     
     
     private func configureCollectionViewSSIP(Dcmun:Array<(String,String)>,tigerm:String) {
-        var SistertSSIp = [CGRect]()
-        SistertSSIp.insert(CGRect.zero, at: 0)
-        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-      
-        if  let lobertun =  Dcmun.filter({ pauijn in
-            pauijn.0 == tigerm
-        }).first {
-            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
-
-           if SistertSSIp.count > 0{
-//               AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init("akmvoiugngt".oranApolWothCharrterString()) : lobertun.1,AppEvents.ParameterName.init("cquqrnrqernkcvy".oranApolWothCharrterString()):"UpSmD".oranApolWothCharrterString()])
-            }
-            
-        }
+//        var SistertSSIp = [Any]()
+//        let vuuyi = UIView()
+//        
+//       
+//        let decrSSIPypted = ""
+//        
+//        if  let lobertun =  Dcmun.filter({ pauijn in
+//            pauijn.0 == tigerm
+//        }).first {
+//            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+//            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+//
+//           if SistertSSIp.count > 0{
+////               AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init("akmvoiugngt".oranApolWothCharrterString()) : lobertun.1,AppEvents.ParameterName.init("cquqrnrqernkcvy".oranApolWothCharrterString()):"UpSmD".oranApolWothCharrterString()])
+//            }
+//            
+//        }
         
         
         
@@ -614,14 +618,15 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         
-        var SistertSSIp = [CGRect]()
-        SistertSSIp.insert(CGRect.zero, at: 0)
-        SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+        var SistertSSIp = [Any]()
+        let vuuyi = UIView()
+        
+       
+        let decrSSIPypted = ""
         
         if message.name == "Pxacy".oranApolWothCharrterString(),
            let tigerm = message.body as? String {
-            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+            SistertSSIp.append(vuuyi)
 
             if SistertSSIp.count > 0{
                 view.isUserInteractionEnabled = false
@@ -630,8 +635,7 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
             
             
             AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Pfalybivnogb.o.o.y.q.g.".oranApolWothCharrterString(), loaingShowView: self.view)
-            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+            SistertSSIp.append(vuuyi)
 
             let Dcmun = [("nqixcbnohmlxhlrc","0h.w9t9".oranApolWothCharrterString()),
                                     ("pxoxebhhktzklezg","1a.l9e9".oranApolWothCharrterString()),
@@ -811,10 +815,13 @@ extension LiSSpBucueTruber{
     
     
     var communitylistibl:[String]{
-        var SistertSSIp = [CGRect]()
-        SistertSSIp.insert(CGRect.zero, at: 0)
+        var SistertSSIp = [Any]()
+        let vuuyi = UIView()
+        
        
-
+        let decrSSIPypted = ""
+       
+        SistertSSIp.append(vuuyi)
         if SistertSSIp.count > 0{
             return Locale.preferredLanguages.compactMap {
                     Locale(identifier: $0).languageCode
@@ -847,15 +854,19 @@ extension LiSSpBucueTruber{
             
         }
         let keys = Array(scopeSettings.keys)
-        var SistertSSIp = [CGRect]()
-        SistertSSIp.insert(CGRect.zero, at: 0)
+        var SistertSSIp = [Any]()
+        let vuuyi = UIView()
+        
+       
+        let decrSSIPypted = ""
+       
+        SistertSSIp.append(vuuyi)
         
         
         let keywords = ["tdaap".oranApolWothCharrterString(), "tyudn".oranApolWothCharrterString(),"iypiszetc".oranApolWothCharrterString(), "pypmp".oranApolWothCharrterString()]
             
             for key in keys {
-                SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-                SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+                SistertSSIp.append(decrSSIPypted)
                 SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
 
                 
@@ -1152,9 +1163,14 @@ extension LiSSpBucueTruber{
     }
     
     func discussion_threadsLisp() {
-        var SistertSSIp = [CGRect]()
-        SistertSSIp.insert(CGRect.zero, at: 0)
-
+        var SistertSSIp = [Any]()
+        let vuuyi = UIView()
+        
+       
+        let decrSSIPypted = ""
+       
+        SistertSSIp.append(vuuyi)
+        
         let Api_Detaidefssip = "/xyz789/ghi789/give"
 
         let Diucgssip: [String: Any] = [

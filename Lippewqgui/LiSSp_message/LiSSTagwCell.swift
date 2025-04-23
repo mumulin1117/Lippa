@@ -16,33 +16,36 @@ class LiSSTagwCell: UITableViewCell {
     var okayIsMinwe:Bool = true{
         didSet{
             enImageSSIPOViol.isHidden = true
-            var SistertSSIp = [CGRect]()
+            var SistertSSIp = [Any]()
             SistertSSIp.insert(CGRect.zero, at: 0)
-            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+           
+            let protec_okiotView = UITextField()
+            
+            let labegl = UILabel.init()
+            
+            SistertSSIp.insert(labegl, at: 0)
+           
             
             buberryoleSSIP.textAlignment = okayIsMinwe ? .right : .left
-            
+            SistertSSIp.append(protec_okiotView)
             if okayIsMinwe && SistertSSIp.count > 1 {
-                SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-                SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+                let mangcolor = UIColor.red
+                
                 buberryoleSSIP.textColor = .white
+                SistertSSIp.insert(mangcolor, at: 0)
                 syingwhtaSSIP.layer.maskedCorners  = [.layerMinXMinYCorner,.layerMaxXMinYCorner,
                                                       .layerMinXMaxYCorner]
                 buberryoleSSIP.numberOfLines = 0
                 syingwhtaSSIP.backgroundColor = UIColor(red: 0.92, green: 0.16, blue: 0.75, alpha: 1)
-                var SistertSSIp = [CGRect]()
+                var SisASDtertSSIp = [Any]()
                  buberryoleSSIP.snp.remakeConstraints { make in
                      make.right.equalToSuperview().offset(-40)
                      make.top.equalToSuperview().offset(16 + 30)
                     
-                     SistertSSIp.insert(CGRect.zero, at: 0)
-                     SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-                     SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-                     SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+                     let yellocolor = UIColor.yellow
+                     SisASDtertSSIp.append(yellocolor)
 
-                     if SistertSSIp.count > 0 {
+                     if SisASDtertSSIp.count > 0 {
                          make.bottom.equalToSuperview().offset(-16 - 30)
                      }
                     
@@ -51,14 +54,15 @@ class LiSSTagwCell: UITableViewCell {
                  }
                  
                  syingwhtaSSIP.snp.remakeConstraints { make in
-                     SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-                     SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+                     let yellocolor = UIColor.yellow
+                     SisASDtertSSIp.append(yellocolor)
 
                      make.right.equalTo(buberryoleSSIP.snp.right).offset(16)
                      make.left.equalTo(buberryoleSSIP.snp.left).offset(-16)
-                     if SistertSSIp.count > 0 {
-                         make.top.equalTo(buberryoleSSIP.snp.top).offset(-16)
-                     }
+                     SisASDtertSSIp.removeAll()
+                         
+                     make.top.equalTo(buberryoleSSIP.snp.top).offset(-16)
+                     
                      
                      make.bottom.equalTo(buberryoleSSIP.snp.bottom).offset(16)
                  }
