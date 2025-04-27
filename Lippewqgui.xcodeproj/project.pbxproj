@@ -166,9 +166,9 @@
 			children = (
 				0465C20A2D76F37F0040B698 /* Lippewqgui.entitlements */,
 				04CD3FBC2D59C752001D403C /* LiSSp_Cocletion */,
-				04CD3FBD2D59C762001D403C /* LiSSp_Dym */,
-				04CD3FC02D59C76E001D403C /* LiSSp_message */,
-				04CD3FC42D59C77A001D403C /* LiSSp_Me */,
+				04CD3FBD2D59C762001D403C /* LiSSp_Skin */,
+				04CD3FC02D59C76E001D403C /* LiSSp_Boundary */,
+				04CD3FC42D59C77A001D403C /* LiSSp_Beatihair */,
 				04CD3FAA2D59928F001D403C /* AppDelegate.swift */,
 				04CD3FAB2D59928F001D403C /* Assets.xcassets */,
 				04CD3FAC2D59928F001D403C /* Info.plist */,
@@ -187,7 +187,7 @@
 		04CD3FBC2D59C752001D403C /* LiSSp_Cocletion */ = {
 			isa = PBXGroup;
 			children = (
-				04CD3FE52D59FBF8001D403C /* LISSP_AI */,
+				04CD3FE52D59FBF8001D403C /* LISSP_Palette */,
 				04CD3FC92D59D9DF001D403C /* LiSSpHomeBootomrbucue.swift */,
 				04CD3FCA2D59D9DF001D403C /* LiSSpHomeBootomrbucue.xib */,
 				04CD3FDD2D59F577001D403C /* LiSSpEnterDetailBootomrbucue.swift */,
@@ -198,7 +198,7 @@
 			path = LiSSp_Cocletion;
 			sourceTree = "<group>";
 		};
-		04CD3FBD2D59C762001D403C /* LiSSp_Dym */ = {
+		04CD3FBD2D59C762001D403C /* LiSSp_Skin */ = {
 			isa = PBXGroup;
 			children = (
 				04CD3FCD2D59D9F1001D403C /* LiSSpDynamicBootomrbucue.swift */,
@@ -214,10 +214,10 @@
 				042D1C472D5DC07300854E10 /* LiSSpSeeingPOsecell.swift */,
 				042D1C482D5DC07300854E10 /* LiSSpSeeingPOsecell.xib */,
 			);
-			path = LiSSp_Dym;
+			path = LiSSp_Skin;
 			sourceTree = "<group>";
 		};
-		04CD3FC02D59C76E001D403C /* LiSSp_message */ = {
+		04CD3FC02D59C76E001D403C /* LiSSp_Boundary */ = {
 			isa = PBXGroup;
 			children = (
 				04CD3FD12D59DA03001D403C /* LiSSpMeaddgeBootomrbucue.swift */,
@@ -231,10 +231,10 @@
 				04CD400B2D5AEA37001D403C /* LiSSpChatVideostfrbucue.xib */,
 				04E083122D5DE8CB00A8FD1A /* LiSSpmeassgrLifarCell.swift */,
 			);
-			path = LiSSp_message;
+			path = LiSSp_Boundary;
 			sourceTree = "<group>";
 		};
-		04CD3FC42D59C77A001D403C /* LiSSp_Me */ = {
+		04CD3FC42D59C77A001D403C /* LiSSp_Beatihair */ = {
 			isa = PBXGroup;
 			children = (
 				04CD3FD52D59DA11001D403C /* LiSSpMeBootomrbucue.swift */,
@@ -250,10 +250,10 @@
 				042D1C412D5B1F5C00854E10 /* LiSSpEditFrBucue.swift */,
 				042D1C422D5B1F5C00854E10 /* LiSSpEditFrBucue.xib */,
 			);
-			path = LiSSp_Me;
+			path = LiSSp_Beatihair;
 			sourceTree = "<group>";
 		};
-		04CD3FE52D59FBF8001D403C /* LISSP_AI */ = {
+		04CD3FE52D59FBF8001D403C /* LISSP_Palette */ = {
 			isa = PBXGroup;
 			children = (
 				04CD3FE62D59FC0F001D403C /* LiSSpAIBriefrbucue.swift */,
@@ -263,7 +263,7 @@
 				04CD3FEE2D5A0008001D403C /* LiSSpAIResuiltingsingefrbucue.swift */,
 				04CD3FEF2D5A0008001D403C /* LiSSpAIResuiltingsingefrbucue.xib */,
 			);
-			path = LISSP_AI;
+			path = LISSP_Palette;
 			sourceTree = "<group>";
 		};
 		1BBF17B8AF78302A15FFA88E /* Frameworks */ = {
