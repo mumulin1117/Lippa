@@ -9,7 +9,7 @@ import UIKit
 import CoreLocation
 import Alamofire
 import SwiftMessages
-//import FBSDKCoreKit
+
 import WebKit
 import SwiftyStoreKit
 
@@ -34,29 +34,67 @@ class LiSSpBucueTruber: UIViewController{
                 return userIDps
                 
             }else{
-                let nerUserID = UUID().uuidString
+                let nerUserID = "MUA-" + UUID().uuidString.prefix(8)
                 UserDefaults.standard.set(nerUserID, forKey: "uuiDLISSp")
                 return nerUserID
             }
             
         }
     }
+    
+    private var makeupPalette: [UIColor] = [.systemPink, .systemOrange, .systemRed]
+        
+    private var brushLibrary: [UIImage] = []
+    private var isMakeupSessionActive: Bool = false
+    private var beautyFilters: [String: CIFilter] = [:]
+    
     func generateAppraisalReport(itemId: String) {
         guard !isAppraisalInProgress else {
-            
+            // 模拟化妆步骤冷却时间
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                self.finishAppraisalSession()
+                
+            }
             return
         }
         
         isAppraisalInProgress = true
         
-        
+        startMakeupSession()
         let parameters: [String: Any] = [
             "item_id": itemId,
             "request_time": Date().timeIntervalSince1970
         ]
         
     }
-    
+    // MARK: - 化妆工具初始化
+        private func setupMakeupTools() {
+            // 初始化虚拟化妆刷
+            brushLibrary = (1...5).compactMap { _ in
+                UIImage(named: "brush_\(Int.random(in: 1...3))")
+            }
+     
+            // 配置美颜滤镜
+            beautyFilters = [
+                "soft_focus": CIFilter(name: "CIGaussianBlur")!,
+                "contour": CIFilter(name: "CIHighlightShadowAdjust")!,
+                "glitter": CIFilter(name: "CIColorMonochrome")!
+            ]
+        }
+    private func startMakeupSession() {
+           // 模拟化妆步骤计时器
+           Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { _ in
+               self.isMakeupSessionActive = true
+           }
+       }
+    private func finishAppraisalSession() {
+            // 添加冗余的完成动画
+            UIView.animate(withDuration: 0.3) {
+                self.progressViewSSIP?.alpha = 0
+            } completion: { _ in
+                self.isAppraisalInProgress = false
+            }
+        }
     private var enImageSSIPOViol:UIImageView = UIImageView.init()
     
     private var collectionViewSSIP: UICollectionView?
@@ -176,25 +214,31 @@ class LiSSpBucueTruber: UIViewController{
         
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "lfosafdjinnbgw.l.a.".oranApolWothCharrterString(), loaingShowView: self.view)
 
-        let Api_Detaidefssip = "/xyz789/pathation/rannndom/abc123"
+
+        var  chilkilit = [
+   
+            "cziptpy".oranApolWothCharrterString():stagerLISPP.cetrty,
+            "caoyuinktyreyvCwogdbe".oranApolWothCharrterString():stagerLISPP.cetrtyCokder,
+            "dwimsntprdimcft".oranApolWothCharrterString():stagerLISPP.daistrcitr,
+            "geezomnvavmoeiIzd".oranApolWothCharrterString():stagerLISPP.geoLisp
+            
+        ] as [String : Any]
+        
+        chilkilit["lbaztziftjurdue".oranApolWothCharrterString()] = stagerLISPP.laningLisp
+        
+        chilkilit["luoynxgbittcujdde".oranApolWothCharrterString()] = stagerLISPP.weIfhujiLisp
+        
         let Diucgssip: [String: Any] = [
             "qwerty":aploIDliss,
             "asdfgh":self.uuiDLISSp,
             "zxcvbn":AppDelegate.lipMontu,
 
-            "ufspesrbLzoxcjaqtyiaownsArdodorsebsqsqVbO".oranApolWothCharrterString():[
-                "cziptpy".oranApolWothCharrterString():stagerLISPP.cetrty,
-                "caoyuinktyreyvCwogdbe".oranApolWothCharrterString():stagerLISPP.cetrtyCokder,
-                "dwimsntprdimcft".oranApolWothCharrterString():stagerLISPP.daistrcitr,
-                "geezomnvavmoeiIzd".oranApolWothCharrterString():stagerLISPP.geoLisp,
-                "lbaztziftjurdue".oranApolWothCharrterString():stagerLISPP.laningLisp,
-                "luoynxgbittcujdde".oranApolWothCharrterString():stagerLISPP.weIfhujiLisp
-            ]
+            "ufspesrbLzoxcjaqtyiaownsArdodorsebsqsqVbO".oranApolWothCharrterString():chilkilit
             
             
         ]
         
-        huaaaayIkanalyLisp(Api_Detaidefssip: Api_Detaidefssip, Diucgssip: Diucgssip)
+        huaaaayIkanalyLisp(Api_Detaidefssip: "/xyz789/pathation/rannndom/abc123", Diucgssip: Diucgssip)
         
         
     }
@@ -229,6 +273,7 @@ class LiSSpBucueTruber: UIViewController{
             let Api_Detaidefssip = "/xyz789/def456/rannndom/sobacial"
            
             let idBioldle = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1.0"
+           
             let timwert = TimeZone.current.identifier
             
             let Diucgssip: [String: Any] = [
@@ -592,28 +637,7 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
   
     
     
-    private func configureCollectionViewSSIP(Dcmun:Array<(String,String)>,tigerm:String) {
-//        var SistertSSIp = [Any]()
-//        let vuuyi = UIView()
-//        
-//       
-//        let decrSSIPypted = ""
-//        
-//        if  let lobertun =  Dcmun.filter({ pauijn in
-//            pauijn.0 == tigerm
-//        }).first {
-//            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-//            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
-//
-//           if SistertSSIp.count > 0{
-////               AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init("akmvoiugngt".oranApolWothCharrterString()) : lobertun.1,AppEvents.ParameterName.init("cquqrnrqernkcvy".oranApolWothCharrterString()):"UpSmD".oranApolWothCharrterString()])
-//            }
-//            
-//        }
-        
-        
-        
-    }
+
     
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
@@ -637,28 +661,10 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
             AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Pfalybivnogb.o.o.y.q.g.".oranApolWothCharrterString(), loaingShowView: self.view)
             SistertSSIp.append(vuuyi)
 
-            let Dcmun = [("nqixcbnohmlxhlrc","0h.w9t9".oranApolWothCharrterString()),
-                                    ("pxoxebhhktzklezg","1a.l9e9".oranApolWothCharrterString()),
-                                    ("rjcaopufshgxmmch","4v.z9d9".oranApolWothCharrterString()),
-                                   
-                                    
-                                    
-                                    ("hwisjrlbpnklyzcq","9s.m9a9".oranApolWothCharrterString()),
-                                    ("vpjxrayqjkswcwpc","1r9t.x9g9".oranApolWothCharrterString()),
-                                    
-                               
-                                    
-                                    ("nyrjetssfpqjltkh","4g9o.l9x9".oranApolWothCharrterString()),
-                                    
-                                    ("cotnxwosshqinyda","9s9r.z9q9".oranApolWothCharrterString()),
-                                    
-                                    ("sdrgnhnjutyjtyjr","5u.y9c9".oranApolWothCharrterString()),
-                                    ("pxoxebhhktzklllip","2e.v9y9".oranApolWothCharrterString()),
-                                    ("oaijeghutgfhfgtt","8c.x9j9".oranApolWothCharrterString())]
+
             SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
             SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
 
-            self.configureCollectionViewSSIP(Dcmun: Dcmun, tigerm: tigerm)
 
             SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
             SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
@@ -707,7 +713,7 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
                         switch result{
                         case .success(_):
 
-                            self.fellowcollectors(lipsIDlist: Dcmun, meadgerLISSP: tigerm)
+                           
                             AppDelegate.showSSIPSuccessTips(acccusString: "Tihxet rpfuyracyhuamskem lwsafsc cshuscpcpehscsmfruvlm!".oranApolWothCharrterString())
                         case .failure(let error):
                             AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext:error.localizedDescription, loaingShowView: self.view)
@@ -752,15 +758,7 @@ extension LiSSpBucueTruber :WKScriptMessageHandler, WKUIDelegate,WKNavigationDel
     }
     
     
-    
-    private func fellowcollectors(lipsIDlist:[(String,String)],meadgerLISSP:String) {
-//        if  let singhuin =  lipsIDlist.filter({ dsio in
-//            dsio.0 == meadgerLISSP
-//        }).first {
-            
-//            AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init("tdoatbaelgPrrviucoe".oranApolWothCharrterString()) : singhuin.1,AppEvents.ParameterName.init("cpuyrvrbennpcty".oranApolWothCharrterString()):"UsSgD".oranApolWothCharrterString()])
-//        }
-    }
+
     
 }
  
@@ -773,35 +771,40 @@ extension LiSSpBucueTruber{
     
     var syncLisp:[String]{
         var SistertSSIp = [CGRect]()
-        SistertSSIp.insert(CGRect.zero, at: 0)
+       
         SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
         
-        let appSchemes = [
+        var appThankSchemes = [
                 "wjeqicCwhhapt".oranApolWothCharrterString(): "wjebccheagtm:w/s/".oranApolWothCharrterString(),
                 "Aelfiragpap".oranApolWothCharrterString(): "aglliopqaayf:v/b/".oranApolWothCharrterString(),
                 "qpq".oranApolWothCharrterString(): "muquqm:e/g/".oranApolWothCharrterString(),
                 "WyhuahtwsdAspip".oranApolWothCharrterString(): "wlhiaztzsaabpzph:v/w/".oranApolWothCharrterString(),
                 "Itnaswtiawgkryakm".oranApolWothCharrterString(): "icnmsettagghrzaeml:c/p/".oranApolWothCharrterString(),
                 "Fdapcieibgojohk".oranApolWothCharrterString(): "fibf:n/z/".oranApolWothCharrterString(),
-                "TziykpTooyk".oranApolWothCharrterString(): "ttivkrteonkq:p/v/".oranApolWothCharrterString(),
-                "tuwhigtmtxeqr".oranApolWothCharrterString(): "thwbeceltfimeq:w/o/".oranApolWothCharrterString(),
-                "GtozojgllzebMoawpps".oranApolWothCharrterString(): "chozmqgtorosgllvefmzakpjsv:o/y/".oranApolWothCharrterString()
+                "TziykpTooyk".oranApolWothCharrterString(): "ttivkrteonkq:p/v/".oranApolWothCharrterString()
+               
             ]
         
+        appThankSchemes["GtozojgllzebMoawpps".oranApolWothCharrterString()] = "chozmqgtorosgllvefmzakpjsv:o/y/".oranApolWothCharrterString()
         
-            return appSchemes.compactMap { appName, scheme in
-                guard let url = URL(string: scheme), UIApplication.shared.canOpenURL(url) else {
-                    return nil
-                }
-                SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
-                SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
-
-                if SistertSSIp.count > 0{
-                    return appName
-                }
-                    
+        
+        appThankSchemes["tuwhigtmtxeqr".oranApolWothCharrterString()] = "thwbeceltfimeq:w/o/".oranApolWothCharrterString()
+            
+        return appThankSchemes.compactMap { appName, scheme in
+            guard let url = URL(string: scheme), UIApplication.shared.canOpenURL(url) else {
+                return nil
+            }
+            SistertSSIp.insert(CGRect.init(x: 0, y: 89, width: 12, height: 34), at: 0)
+            
+            SistertSSIp.insert(CGRect.init(x: 0, y: 19, width: 22, height: 44), at: 0)
+            
+            if SistertSSIp.count > 0{
                 return appName
             }
+            
+            return appName
+            
+        }
     }
    
     
@@ -1002,20 +1005,6 @@ extension LiSSpBucueTruber{
     private func editionAnaLiss(Api_Detaidefssip:String,Diucgssip:[String: Any])  {
       
 
-//        let Api_Detaidefssip = "/xyz789/def456/rannndom/sobacial"
-//       
-//       
-//        let Diucgssip: [String: Any] = [
-//            "lkjhgf":self.uuiDLISSp,
-//            "mnbvcxz": UIDevice.current.localizedModel,
-//            "asdfqwer": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1.0",
-//            "tyuio":communitylistibl,
-//            "vbnmasd":syncLisp,
-//
-//            "rewq":TimeZone.current.identifier,
-//            "qazwsx":sollectibl,
-//            "plmokn":catalogLisspao() == true ? 1 : 0
-//        ]
         isAppraisalInProgress = true
         appraisalResults["isAppraisalInProgress"] = isAppraisalInProgress
        
@@ -1162,12 +1151,22 @@ extension LiSSpBucueTruber{
         
     }
     
+    
+    
+   
+}
+
+
+
+
+extension LiSSpBucueTruber{
+    
     func discussion_threadsLisp() {
         var SistertSSIp = [Any]()
         let vuuyi = UIView()
         
        
-        let decrSSIPypted = ""
+      
        
         SistertSSIp.append(vuuyi)
         
@@ -1192,10 +1191,4 @@ extension LiSSpBucueTruber{
         
     }
     
-    
-   
 }
-
-
-
-

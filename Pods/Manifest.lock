@@ -5,6 +5,7 @@ PODS:
   - SwiftMessages (10.0.1):
     - SwiftMessages/App (= 10.0.1)
   - SwiftMessages/App (10.0.1)
+  - SwiftyJSON (5.0.2)
   - SwiftyStoreKit (0.16.1)
 
 DEPENDENCIES:
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - IQKeyboardManager
   - SnapKit
   - SwiftMessages
+  - SwiftyJSON
   - SwiftyStoreKit
 
 SPEC REPOS:
@@ -20,6 +22,7 @@ SPEC REPOS:
     - IQKeyboardManager
     - SnapKit
     - SwiftMessages
+    - SwiftyJSON
     - SwiftyStoreKit
 
 SPEC CHECKSUMS:
@@ -27,8 +30,9 @@ SPEC CHECKSUMS:
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
   SwiftMessages: 759b4a0bf5c3a116a0d7e8a34b098ba83c458625
+  SwiftyJSON: f5b1bf1cd8dd53cd25887ac0eabcfd92301c6a5a
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
 
-PODFILE CHECKSUM: 32b70b282a2fc5cb24a8b044771a2e5948d0ece2
+PODFILE CHECKSUM: 797e53a9a85f2a32b3c719a30c7fcbf23202158f
 
 COCOAPODS: 1.16.2
