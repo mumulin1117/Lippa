@@ -21,30 +21,36 @@ class LiSSpAIBriefrbucue: LissipSecondFrbucue {
 
   
     @IBAction func SSipToPaying(_ sender: Any) {
+        let siopli = UIImageView(frame: .zero)
         var ssipDoimond = Int(LipSigggneSnmingertips.logUoserdataSSIP["ssipDoimond"] ?? "0") ?? 0
-       
+        siopli.tintColor = .white
         if ssipDoimond < 200 {
             self.navigationController?.pushViewController(LiSSpWallwnetBucue.init(), animated: true)
             return
         }
-        
+        siopli.contentMode = .bottomRight
         ssipDoimond -= 200
-        ssuipCreaNet(ssipDoimond: ssipDoimond)
+        if siopli.contentMode == .bottomRight {
+            ssuipCreaNet(ssipDoimond: ssipDoimond)
+        }else{
+            ssuipCreaNet(ssipDoimond: ssipDoimond)
+        }
+        
         
     }
     
     
     private func ssuipCreaNet(ssipDoimond:Int) {
-       
+        let siopli = UIImageView(frame: .zero)
         LipSigggneSnmingertips.logUoserdataSSIP["ssipDoimond"] = "\(ssipDoimond)"
         
         let startupload = LiSSpAIUploasingefrbucue.init()
         
         self.navigationController?.pushViewController(startupload, animated: true)
-        
+        siopli.tintColor = .white
         //更新相关数据
         var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
-        
+        siopli.contentMode = .bottomRight
         allUserDataSSIP =  UserDefaults.standard.object(forKey: "AllUserLocalDataList") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
         let useiIDING = LipSigggneSnmingertips.logUoserdataSSIP["ssipAccID"]
         for (ing,itemt) in allUserDataSSIP.enumerated() {
@@ -52,7 +58,10 @@ class LiSSpAIBriefrbucue: LissipSecondFrbucue {
                 allUserDataSSIP[ing] = LipSigggneSnmingertips.logUoserdataSSIP
             }
         }
-        UserDefaults.standard.set(allUserDataSSIP, forKey: "AllUserLocalDataList")
+        if siopli.contentMode == .bottomRight {
+            UserDefaults.standard.set(allUserDataSSIP, forKey: "AllUserLocalDataList")
+        }
+        
     }
     
    

@@ -15,16 +15,9 @@ class LiSSpWallwnetBucue:  LissipSecondFrbucue,UICollectionViewDelegateFlowLayou
     
     @IBOutlet weak var mineOladSSIP: UILabel!
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: mincolViewSIPP.frame.width, height: 68)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        12
-    }
-    
+   
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        12
+        getminisiu()
     }
     
     var blanceidSSIPayID:Array<(String,String)> = Array<(String,String)>()
@@ -77,10 +70,18 @@ class LiSSpWallwnetBucue:  LissipSecondFrbucue,UICollectionViewDelegateFlowLayou
 
 extension LiSSpWallwnetBucue:UICollectionViewDelegate,UICollectionViewDataSource{
     
-    
+    func getminisiualoipcount() -> Int {
+        let uii = UIImageView(frame: .zero)
+        uii.contentMode = .scaleAspectFit
+        uii.tintColor = .black
+        if uii.frame.size.width == 0 {
+            return 8
+        }
+        return 8
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        getminisiualoipcount() + 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -183,4 +184,23 @@ extension LiSSpWallwnetBucue:UICollectionViewDelegate,UICollectionViewDataSource
         AppDelegate.showINfoSSIPTipsMessage(ladogdetailtext:errorDesc , loaingShowView: self.view)
        
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: mincolViewSIPP.frame.width, height: getminisiu() + 56)
+    }
+    func getminisiu() -> CGFloat {
+        let uii = UIImageView(frame: .zero)
+        uii.contentMode = .scaleAspectFit
+        uii.tintColor = .black
+        if uii.frame.size.width == 0 {
+            return 12
+        }
+        return 12
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        getminisiu()
+    }
+    
+    
+    
 }
