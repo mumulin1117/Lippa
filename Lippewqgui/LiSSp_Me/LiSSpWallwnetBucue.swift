@@ -27,7 +27,7 @@ class LiSSpWallwnetBucue:  LissipSecondFrbucue,UICollectionViewDelegateFlowLayou
         12
     }
     
-    var blanceidSSIPayID:Array<(String,String,Int)> = Array<(String,String,Int)>()
+    var blanceidSSIPayID:Array<(String,String)> = Array<(String,String)>()
     
    
     
@@ -35,17 +35,20 @@ class LiSSpWallwnetBucue:  LissipSecondFrbucue,UICollectionViewDelegateFlowLayou
         super.viewDidLoad()
         ChokenSSIP.addTarget(self, action: #selector(ctterBsdNoingSSIP), for: .touchUpInside)
         enImageSSIPOViol.isHidden = true
-        blanceidSSIPayID = [("nqixcbnohmlxhlrc","$k0b.d9h9".oranApolWothCharrterString(),400),
-                         ("pxoxebhhktzklezg","$m1n.u9z9".oranApolWothCharrterString(),600),
-                                ("pxoxebhhktzklllip","$y2r.k9d9".oranApolWothCharrterString(),1150),
+        
+        
+        
+        blanceidSSIPayID = [("nqixcbnohmlxhlrc","$k0b.d9h9".oranApolWothCharrterString()),
+                         ("pxoxebhhktzklezg","$m1n.u9z9".oranApolWothCharrterString()),
+                                ("pxoxebhhktzklllip","$y2r.k9d9".oranApolWothCharrterString()),
                                
-                         ("rjcaopufshgxmmch","$x4k.s9u9".oranApolWothCharrterString(),2450),
-                                ("sdrgnhnjutyjtyjr","$e5h.a9b9".oranApolWothCharrterString(),2650),
-                                ("oaijeghutgfhfgtt","$x8s.v9x9".oranApolWothCharrterString(),4650),
-                         ("hwisjrlbpnklyzcq","$e9y.u9c9".oranApolWothCharrterString(),4900),
-                         ("vpjxrayqjkswcwpc","$y1k9l.o9o9".oranApolWothCharrterString(),9800),
-                         ("nyrjetssfpqjltkh","$m4l9k.k9v9".oranApolWothCharrterString(),24500),
-                         ("cotnxwosshqinyda","$k9f9a.q9c9".oranApolWothCharrterString(),49000)
+                         ("rjcaopufshgxmmch","$x4k.s9u9".oranApolWothCharrterString()),
+                                ("sdrgnhnjutyjtyjr","$e5h.a9b9".oranApolWothCharrterString()),
+                                ("oaijeghutgfhfgtt","$x8s.v9x9".oranApolWothCharrterString()),
+                         ("hwisjrlbpnklyzcq","$e9y.u9c9".oranApolWothCharrterString()),
+                         ("vpjxrayqjkswcwpc","$y1k9l.o9o9".oranApolWothCharrterString()),
+                         ("nyrjetssfpqjltkh","$m4l9k.k9v9".oranApolWothCharrterString()),
+                         ("cotnxwosshqinyda","$k9f9a.q9c9".oranApolWothCharrterString())
                                 ]
         ssuitreatNet()
         mincolViewSIPP.register(UINib.init(nibName: "LiSSpWallwnetvierell", bundle: nil), forCellWithReuseIdentifier: "LiSSpWallwnetBucueReused")
@@ -84,7 +87,10 @@ extension LiSSpWallwnetBucue:UICollectionViewDelegate,UICollectionViewDataSource
         let selidINdfo = self.blanceidSSIPayID[indexPath.row]
         let CellIDSIPP = collectionView.dequeueReusableCell(withReuseIdentifier: "LiSSpWallwnetBucueReused", for: indexPath) as! LiSSpWallwnetvierell
         CellIDSIPP.speendTisSSIP.text = selidINdfo.1
-        CellIDSIPP.ownedThisSSIP.text = "\(selidINdfo.2)"
+        let lasll = ["4n0v0","6y0r0","1l1l5n0","2a4g5s0","2m6k5v0","4y6l5b0","4s9k0y0","9r8i0o0","2p4k5t0e0","4q9p0n0c0"].map { stryu in
+            stryu.oranApolWothCharrterString()
+        }
+        CellIDSIPP.ownedThisSSIP.text = lasll[indexPath.row]
         return CellIDSIPP
         
     }
@@ -129,7 +135,9 @@ extension LiSSpWallwnetBucue:UICollectionViewDelegate,UICollectionViewDataSource
         
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "lpotaxdfiznxgz.f.f.v.".oranApolWothCharrterString(), loaingShowView: self.view)
         let selidINdfo = self.blanceidSSIPayID[indexPath.row]
-          
+       let lasll = ["4n0v0","6y0r0","1l1l5n0","2a4g5s0","2m6k5v0","4y6l5b0","4s9k0y0","9r8i0o0","2p4k5t0e0","4q9p0n0c0"].map { stryu in
+           stryu.oranApolWothCharrterString()
+       }[indexPath.row]
 
         SwiftyStoreKit.purchaseProduct(selidINdfo.0, atomically: true) { psResult in
             var SistertSSIp = [Any]()
@@ -141,7 +149,7 @@ extension LiSSpWallwnetBucue:UICollectionViewDelegate,UICollectionViewDataSource
             SistertSSIp.insert(maincolo, at: 0)
             if case .success(let coacadpos) = psResult {
                 
-                self.getingReallIDREsultSSSIp(diomondAccount: selidINdfo.2)
+                self.getingReallIDREsultSSSIp(diomondAccount:Int(lasll) ?? 0 )
                 
                 let psdownloads = coacadpos.transaction.downloads
                 

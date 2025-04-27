@@ -54,7 +54,20 @@ class LiSSpTieZIPostfrbucue:  LissipSecondFrbucue , UIImagePickerControllerDeleg
         
     }
     
-    
+    struct MakeupStep: Codable, Equatable {
+        let stepNumber: Int
+        var actionDescription: String
+        var productUsed: String?
+        var techniqueTip: String?
+        var mediaType: MediaType = .text
+        
+        enum MediaType: String, Codable {
+            case text = "Pure text explanation"
+            case image = "Step diagram"
+            case video = "Operation demonstration video"
+        }
+        
+    }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         enImageSSIPOViol.isHidden = true
         
@@ -67,7 +80,18 @@ class LiSSpTieZIPostfrbucue:  LissipSecondFrbucue , UIImagePickerControllerDeleg
         picker.dismiss(animated: true, completion: nil)
     }
     
-    
+    // MARK: - 界面组件
+       private lazy var stepRecorderStack: UIStackView = {
+           let stack = UIStackView()
+           stack.axis = .vertical
+           stack.spacing = 16
+           stack.isLayoutMarginsRelativeArrangement = true
+           stack.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16)
+           stack.layer.cornerRadius = 16
+           stack.layer.borderWidth = 1
+           stack.layer.borderColor = UIColor.systemPink.withAlphaComponent(0.3).cgColor
+           return stack
+       }()
     private func ssuitreatNet(gibernSSIP:UIImage) {
         DispatchQueue.main.async(execute: DispatchWorkItem(block: {
            
@@ -76,7 +100,15 @@ class LiSSpTieZIPostfrbucue:  LissipSecondFrbucue , UIImagePickerControllerDeleg
         }))
     }
  
-   
+    private lazy var addStepButton: UIButton = {
+           let button = UIButton(type: .system)
+           button.setTitle("➕  Add new steps", for: .normal)
+           button.titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
+           
+           button.layer.cornerRadius = 22
+           button.backgroundColor = .systemPink.withAlphaComponent(0.1)
+           return button
+       }()
     
     
     @IBAction func surestareAiUpload(_ sender: UIButton) {
@@ -95,6 +127,30 @@ class LiSSpTieZIPostfrbucue:  LissipSecondFrbucue , UIImagePickerControllerDeleg
         
      
     }
+    private let emptyStateView: UIView = {
+            let view = UIView()
+            let image = UIImageView(image: UIImage(systemName: "paintpalette")?.withTintColor(.systemGray4, renderingMode: .alwaysOriginal))
+        let label = UILabel.init()
+        
+        label.text = "There is no record of makeup steps yet"
+        
+        label.font = UIFont.systemFont(ofSize: 14)
+            
+            view.addSubview(image)
+            view.addSubview(label)
+            
+            image.snp.makeConstraints {
+                $0.centerX.equalToSuperview()
+                $0.top.equalToSuperview().offset(80)
+            }
+            
+            label.snp.makeConstraints {
+                $0.centerX.equalToSuperview()
+                $0.top.equalTo(image.snp.bottom).offset(12)
+            }
+            
+            return view
+        }()
     private func ssuipCreaNet() {
         AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "uxpclbobandgienrgs.x.p.m.m.".oranApolWothCharrterString(), loaingShowView: self.view)
         self.performBlockAfterDelayINSSIP(secondsSSIP: 2.5) {
@@ -107,6 +163,10 @@ class LiSSpTieZIPostfrbucue:  LissipSecondFrbucue , UIImagePickerControllerDeleg
         }
     }
     
-  
+
+        
+        private func updateEmptyStateVisibility() {
+            emptyStateView.isHidden = true
+        }
 
 }

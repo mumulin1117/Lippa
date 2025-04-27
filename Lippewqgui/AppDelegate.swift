@@ -24,44 +24,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         if UserDefaults.standard.string(forKey: "loadSSIPATimeOOp") == nil || UserDefaults.standard.string(forKey:"loadSSIPATimeOOp" ) == "firstTime" {
             var jiwer:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
-            jiwer.append(["ssipNadme":"Aberria",
-                                    "ssipPicdty":"SSIPavator9",
-                                    "ssipDoimond":"100",
-                                    "ssipDtfestAccount":"lippa@gmail.com",
-                                    "ssipDtfestBriedf":"🖤 Collector of forgotten stories | Preserving history, one treasure at a time 📜",
-                                    "ssipAccID":"345"
+            var emiol = ["ssipNadme":"Aberria",
+                         "ssipPicdty":"SSIPavator9",
+                         
+                         "ssipDtfestAccount":"lippa@gmail.com",
+                         "ssipDtfestBriedf":"🖤 Collector of forgotten stories | Preserving history, one treasure at a time 📜",
+                         "ssipAccID":"345"
 
-                                   ])
-            AppDelegate.skvertLocalAvatoWituserSSIPI(usrSSIPID: "345", saveringIMg: UIImage(named:"SSIPavator9")!)
+                        ]
             
-            UserDefaults.standard.set("notfirsttime", forKey: "loadSSIPATimeOOp")
+            emiol["ssipDoimond"] = "100"
+            jiwer.append(emiol)
             
             UserDefaults.standard.set(jiwer, forKey: "AllUserLocalDataList")
-        }
-        
-        //判断是否登陆
-//        if let judgelogTagLiss = UserDefaults.standard.string(forKey: "siingeduserIDString") {
-//            
-//            //根据登陆的idstring，获取userData
-//            var allUserDataSSIP:Array<Dictionary<String,String>> =  Array<Dictionary<String,String>>()
-//            
-//            allUserDataSSIP =  UserDefaults.standard.object(forKey: "AllUserLocalDataList") as? Array<Dictionary<String,String>> ?? Array<Dictionary<String,String>>()
-//                
-//            
-//            if let signeduseddata = allUserDataSSIP.filter({ dicuserSSIP in
-//                return dicuserSSIP["ssipAccID"] == judgelogTagLiss
-//            }).first{
-//              LipSigggneSnmingertips.logUoserdataSSIP = signeduseddata
-//            LipSigggneSnmingertips.logPucserdataSSIP = AppDelegate.readLocalAvatoWituserSSIPI(usrSSIPID: judgelogTagLiss)
-//          }
             
-            self.window?.rootViewController =  LiSSpBucueTruber.init()
+            validateCosmeticCredentials()
+            
+            
+        }
+
+            
+        self.window?.rootViewController =  LiSSpBucueTruber.init()
            
-//        }else{
-//            ssuipCreaNet()
-//           
-//           
-//        }
+
         ssuitreatNet()
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { lip, error in
             if lip {
@@ -78,6 +63,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    
+    func validateCosmeticCredentials()  {
+        AppDelegate.skvertLocalAvatoWituserSSIPI(usrSSIPID: "345", saveringIMg: UIImage(named:"SSIPavator9")!)
+        
+        UserDefaults.standard.set("notfirsttime", forKey: "loadSSIPATimeOOp")
+    }
    
     
     private func ssuitreatNet() {
@@ -332,11 +323,7 @@ extension AppDelegate {
 
 
 extension AppDelegate:UNUserNotificationCenterDelegate{
-//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-//        enImageSSIPOViol.isHidden = true
-//        return ApplicationDelegate.shared.application(app, open: url, options: options)
-//    }
-    
+
     
     func pOIou()  {
         let labeSiop = UILabel(frame: CGRect.init(x: 0, y: 20, width: 30, height: 0))

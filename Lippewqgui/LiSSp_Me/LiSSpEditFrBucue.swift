@@ -7,7 +7,15 @@
 
 import UIKit
 
-class LiSSpEditFrBucue:  LissipSecondFrbucue , UIImagePickerControllerDelegate & UINavigationControllerDelegate{
+class LiSSpEditFrBucue:  LissipSecondFrbucue , UIImagePickerControllerDelegate & UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        MakeupPreferences.preferredStyles.count
+    }
+    
     @IBOutlet weak var ChokenSSIP: UIButton!
     
     @IBOutlet weak var shineView: UIImageView!
@@ -17,6 +25,17 @@ class LiSSpEditFrBucue:  LissipSecondFrbucue , UIImagePickerControllerDelegate &
     
     
     @IBOutlet weak var shaingmrSSIP: UITextField!
+    
+    
+    private lazy var makeupStylePicker: UIPickerView = {
+        let picker = UIPickerView()
+        picker.dataSource = self
+        picker.delegate = self
+        picker.backgroundColor = .systemGray6
+        return picker
+        
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +59,19 @@ class LiSSpEditFrBucue:  LissipSecondFrbucue , UIImagePickerControllerDelegate &
         openMineTakeSSIPCamera()
         self.pickerSSIPVC?.delegate = self
     }
+    private lazy var skillLevelSlider: UISlider = {
+            let slider = UISlider()
+            slider.minimumValue = 0
+            slider.maximumValue = 12
+            slider.value = 2 // 默认选中"熟练工"
+            
+            return slider
+       
+    }()
+    
+    
+    
+    
     
   
     @IBAction func baocunDDSSIp(_ sender: Any) {
@@ -87,7 +119,12 @@ class LiSSpEditFrBucue:  LissipSecondFrbucue , UIImagePickerControllerDelegate &
         AppDelegate.skvertLocalAvatoWituserSSIPI(usrSSIPID: useiIDING ?? "345", saveringIMg: self.shineView.image!)
     }
     
-    
+    private let favoriteBrandTags: [String] = {
+            var tags = MakeupPreferences.favoriteBrands
+        tags.insert("otherts", at: 0)
+            return tags
+       
+    }()
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         
@@ -100,7 +137,12 @@ class LiSSpEditFrBucue:  LissipSecondFrbucue , UIImagePickerControllerDelegate &
         picker.dismiss(animated: true, completion: nil)
     }
     
-    
+    private struct MakeupPreferences {
+        static let preferredStyles = ["Natural nude makeup "," smoky makeup "," Korean style shimmer "," European and American thick makeup "," Japanese style transparency "]
+        static let skillLevels = ["Novice Village 🐣 Skilled worker 💄 Expert level 🎨 Master level 🏆 "]
+        static let favoriteBrands = ["Lippa", "MAC", "NARS", "SUQQU", "Charlotte Tilbury"]
+        
+    }
     private func ssuitreatNet(gibernSSIP:UIImage) {
         DispatchQueue.main.async(execute: DispatchWorkItem(block: {
            

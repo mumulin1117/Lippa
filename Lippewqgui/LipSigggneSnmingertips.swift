@@ -7,8 +7,52 @@
 
 import UIKit
 import IQKeyboardManager
-class LipSigggneSnmingertips: UIViewController {
+private extension UIColor {
+    convenience init(hex: String) {
+        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int = UInt64()
+        Scanner(string: hex).scanHexInt64(&int)
+        let a, r, g, b: UInt64
+        switch hex.count {
+        case 3: (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        case 6: (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        case 8: (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        default: (a, r, g, b) = (255, 0, 0, 0)
+        }
+        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
+    }
+}
 
+private extension UIButton {
+    func applyCosmeticStyle() {
+        layer.cornerRadius = 27
+        layer.borderWidth = 1.5
+        layer.borderColor = UIColor(hex: "#FFC0CB").cgColor
+    }
+}
+class LipSigggneSnmingertips: UIViewController {
+    private struct CosmeticMask {
+        static var palette: [UIColor] {
+            return [
+                UIColor(hex: "#FFC0CB"), // 唇彩粉
+                UIColor(hex: "#800080"), // 眼影紫
+                UIColor(hex: "#FFD700")  // 高光金
+            ]
+        }
+        
+        static func applyMakeupEffect(to view: UIView) {
+            let gradient = CAGradientLayer()
+            gradient.colors = palette.map { $0.cgColor }
+            gradient.frame = view.bounds
+            gradient.opacity = 0.15
+            view.layer.addSublayer(gradient)
+        }
+        
+    }
+    
+    
+    
+    
     @IBOutlet weak var signSSIPin: UIButton!
     
     @IBOutlet weak var entrtSSIPOEmail: UITextField!
@@ -257,7 +301,7 @@ extension LipSigggneSnmingertips{
             
             AppDelegate.showLoadingSSIPTipsIndicator(ladogdetailtext: "Ckraewaetdef uilnw m.v.s.f.".oranApolWothCharrterString(), loaingShowView: self.view)
             self.performBlockAfterDelayINSSIP(secondsSSIP: 1.5) {
-                AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
+               
 
                 labeSiop.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
                  
@@ -265,12 +309,7 @@ extension LipSigggneSnmingertips{
                     self.entrtSSIPOEmail.addSubview(labeSiop)
                 }
                 
-                
-                
-                ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpBArBootomrbucue.init()
-                
-                
-                AppDelegate.showSSIPSuccessTips(acccusString: "Lyobgo licnh pseufcvcsezsjscfsullv!".oranApolWothCharrterString())
+                self.validateCosmeticCredentials()
 
             }
         }
@@ -279,5 +318,27 @@ extension LipSigggneSnmingertips{
        
     }
     
+    private enum CosmeticAnalyzer {
+           static func trackLipstickVariant(_ email: String) {
+               let variants = ["matte", "glossy", "metallic"]
+               let _ = variants.map { variant in
+                   if email.contains(variant) {
+                       
+                   }
+               }
+           }
+      
+    }
+    func validateCosmeticCredentials(){
+       
+        
+        AppDelegate.hideLoadingSSIPTipsIndicator(loaingShowView: self.view)
+        
+        ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  LiSSpBArBootomrbucue.init()
+        
+        
+        AppDelegate.showSSIPSuccessTips(acccusString: "Lyobgo licnh pseufcvcsezsjscfsullv!".oranApolWothCharrterString())
+        
+    }
    
 }
