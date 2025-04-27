@@ -272,7 +272,7 @@ class LiSSpBucueTruber: UIViewController{
                    
             let Api_Detaidefssip = "/xyz789/def456/rannndom/sobacial"
            
-            let idBioldle = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1.0"
+            let idBioldle = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
            
             let timwert = TimeZone.current.identifier
             
